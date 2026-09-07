@@ -5,6 +5,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
+
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.enums.SecuritySchemeType;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import io.swagger.v3.oas.annotations.security.SecurityScheme;
+
+@OpenAPIDefinition(security = {@SecurityRequirement(name = "bearerAuth")})
+@SecurityScheme(name = "bearerAuth", type = SecuritySchemeType.HTTP, scheme = "bearer", bearerFormat = "JWT")
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableFeignClients
@@ -13,3 +21,4 @@ public class MsValoracionesApplication {
         SpringApplication.run(MsValoracionesApplication.class, args);
     }
 }
+

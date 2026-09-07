@@ -1,0 +1,86 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< com.homefixer:ms-solicitudes >--------------------
+[INFO] Building ms-solicitudes 1.0.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.2.4:run (default-cli) > test-compile @ ms-solicitudes >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ ms-solicitudes ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ ms-solicitudes ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ ms-solicitudes ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-solicitudes\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ ms-solicitudes ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< spring-boot:3.2.4:run (default-cli) < test-compile @ ms-solicitudes <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.2.4:run (default-cli) @ ms-solicitudes ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.4)
+
+2026-09-07T14:47:17.839-03:00  INFO 3728 --- [ms-solicitudes] [           main] c.h.s.MsSolicitudesApplication           : Starting MsSolicitudesApplication using Java 21.0.12 with PID 3728 (C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-solicitudes\target\classes started by drojas in C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-solicitudes)
+2026-09-07T14:47:17.843-03:00  INFO 3728 --- [ms-solicitudes] [           main] c.h.s.MsSolicitudesApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-09-07T14:47:18.405-03:00  INFO 3728 --- [ms-solicitudes] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-07T14:47:18.496-03:00  INFO 3728 --- [ms-solicitudes] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 86 ms. Found 1 JPA repository interface.
+2026-09-07T14:47:18.652-03:00  INFO 3728 --- [ms-solicitudes] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=04c01238-63e5-35d5-89b4-2b2bab09c7c7
+2026-09-07T14:47:18.729-03:00  WARN 3728 --- [ms-solicitudes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-09-07T14:47:18.731-03:00  WARN 3728 --- [ms-solicitudes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-09-07T14:47:18.926-03:00  INFO 3728 --- [ms-solicitudes] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2026-09-07T14:47:18.934-03:00  INFO 3728 --- [ms-solicitudes] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-07T14:47:18.934-03:00  INFO 3728 --- [ms-solicitudes] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-09-07T14:47:18.986-03:00  INFO 3728 --- [ms-solicitudes] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-07T14:47:18.986-03:00  INFO 3728 --- [ms-solicitudes] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1084 ms
+2026-09-07T14:47:19.098-03:00  INFO 3728 --- [ms-solicitudes] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-09-07T14:47:19.131-03:00  INFO 3728 --- [ms-solicitudes] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-09-07T14:47:19.151-03:00  INFO 3728 --- [ms-solicitudes] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-09-07T14:47:19.292-03:00  INFO 3728 --- [ms-solicitudes] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-07T14:47:19.308-03:00  INFO 3728 --- [ms-solicitudes] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-07T14:47:21.183-03:00  INFO 3728 --- [ms-solicitudes] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2cc61b3b
+2026-09-07T14:47:21.184-03:00  INFO 3728 --- [ms-solicitudes] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-07T14:47:21.378-03:00  WARN 3728 --- [ms-solicitudes] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-09-07T14:47:22.286-03:00  INFO 3728 --- [ms-solicitudes] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-07T14:47:22.981-03:00  INFO 3728 --- [ms-solicitudes] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-07T14:47:23.366-03:00  WARN 3728 --- [ms-solicitudes] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-07T14:47:23.433-03:00  INFO 3728 --- [ms-solicitudes] [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'ms-ubicacion' URL not provided. Will try picking an instance via load-balancing.
+2026-09-07T14:47:23.813-03:00  INFO 3728 --- [ms-solicitudes] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-09-07T14:47:23.831-03:00  WARN 3728 --- [ms-solicitudes] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-09-07T14:47:23.852-03:00  INFO 3728 --- [ms-solicitudes] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-09-07T14:47:23.918-03:00  INFO 3728 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-09-07T14:47:23.922-03:00  INFO 3728 --- [ms-solicitudes] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-07T14:47:23.936-03:00  INFO 3728 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-09-07T14:47:23.936-03:00  INFO 3728 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-09-07T14:47:23.936-03:00  INFO 3728 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-09-07T14:47:23.936-03:00  INFO 3728 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-09-07T14:47:23.936-03:00  INFO 3728 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-09-07T14:47:23.936-03:00  INFO 3728 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-09-07T14:47:23.936-03:00  INFO 3728 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-09-07T14:47:24.151-03:00  INFO 3728 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-09-07T14:47:24.153-03:00  INFO 3728 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-09-07T14:47:24.155-03:00  INFO 3728 --- [ms-solicitudes] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-09-07T14:47:24.158-03:00  INFO 3728 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1788803244158 with initial instances count: 1
+2026-09-07T14:47:24.160-03:00  INFO 3728 --- [ms-solicitudes] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MS-SOLICITUDES with eureka with status UP
+2026-09-07T14:47:24.160-03:00  INFO 3728 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1788803244160, current=UP, previous=STARTING]
+2026-09-07T14:47:24.162-03:00  INFO 3728 --- [ms-solicitudes] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-SOLICITUDES/DROJAS.localdomain:ms-solicitudes:8082: registering service...
+2026-09-07T14:47:24.176-03:00  INFO 3728 --- [ms-solicitudes] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path ''
+2026-09-07T14:47:24.177-03:00  INFO 3728 --- [ms-solicitudes] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2026-09-07T14:47:24.185-03:00  INFO 3728 --- [ms-solicitudes] [           main] c.h.s.MsSolicitudesApplication           : Started MsSolicitudesApplication in 6.647 seconds (process running for 6.917)
+2026-09-07T14:47:24.190-03:00  INFO 3728 --- [ms-solicitudes] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-SOLICITUDES/DROJAS.localdomain:ms-solicitudes:8082 - registration status: 204
+2026-09-07T14:52:23.953-03:00  INFO 3728 --- [ms-solicitudes] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+^C

@@ -12,3 +12,6 @@ target/
 ### Mac/Windows ###
 .DS_Store
 Thumbs.db
+
+### Entorno ###
+.env

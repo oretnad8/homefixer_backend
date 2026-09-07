@@ -1,6 +1,30 @@
 server:
   port: 8080
 
+springdoc:
+  swagger-ui:
+    urls:
+      - name: Usuarios
+        url: /v3/api-docs/ms-usuarios
+      - name: Solicitudes
+        url: /v3/api-docs/ms-solicitudes
+      - name: Autenticacion
+        url: /v3/api-docs/ms-autenticacion
+      - name: Maestria
+        url: /v3/api-docs/ms-maestria
+      - name: Ubicacion
+        url: /v3/api-docs/ms-ubicacion
+      - name: Notificacion
+        url: /v3/api-docs/ms-notificacion
+      - name: Pagos
+        url: /v3/api-docs/ms-pagos
+      - name: Valoraciones
+        url: /v3/api-docs/ms-valoraciones
+      - name: Promociones
+        url: /v3/api-docs/ms-promociones
+      - name: Reportes
+        url: /v3/api-docs/ms-reportes
+
 spring:
   application:
     name: api-gateway
@@ -11,51 +35,110 @@ spring:
           uri: lb://ms-usuarios
           predicates:
             - Path=/api/usuarios/**, /api/clientes/**, /api/tecnicos/**
+        - id: ms-usuarios-docs
+          uri: lb://ms-usuarios
+          predicates:
+            - Path=/v3/api-docs/ms-usuarios
+          filters:
+            - RewritePath=/v3/api-docs/ms-usuarios, /v3/api-docs
         - id: ms-solicitudes
           uri: lb://ms-solicitudes
           predicates:
             - Path=/api/solicitudes/**
+        - id: ms-solicitudes-docs
+          uri: lb://ms-solicitudes
+          predicates:
+            - Path=/v3/api-docs/ms-solicitudes
+          filters:
+            - RewritePath=/v3/api-docs/ms-solicitudes, /v3/api-docs
         - id: ms-autenticacion
           uri: lb://ms-autenticacion
           predicates:
             - Path=/api/auth/**
+        - id: ms-autenticacion-docs
+          uri: lb://ms-autenticacion
+          predicates:
+            - Path=/v3/api-docs/ms-autenticacion
+          filters:
+            - RewritePath=/v3/api-docs/ms-autenticacion, /v3/api-docs
         - id: ms-maestria
           uri: lb://ms-maestria
           predicates:
             - Path=/api/maestria/**, /api/categorias/**
+        - id: ms-maestria-docs
+          uri: lb://ms-maestria
+          predicates:
+            - Path=/v3/api-docs/ms-maestria
+          filters:
+            - RewritePath=/v3/api-docs/ms-maestria, /v3/api-docs
         - id: ms-ubicacion
           uri: lb://ms-ubicacion
           predicates:
             - Path=/api/ubicacion/**
+        - id: ms-ubicacion-docs
+          uri: lb://ms-ubicacion
+          predicates:
+            - Path=/v3/api-docs/ms-ubicacion
+          filters:
+            - RewritePath=/v3/api-docs/ms-ubicacion, /v3/api-docs
         - id: ms-notificacion
           uri: lb://ms-notificacion
           predicates:
             - Path=/api/notificaciones/**
+        - id: ms-notificacion-docs
+          uri: lb://ms-notificacion
+          predicates:
+            - Path=/v3/api-docs/ms-notificacion
+          filters:
+            - RewritePath=/v3/api-docs/ms-notificacion, /v3/api-docs
         - id: ms-pagos
           uri: lb://ms-pagos
           predicates:
             - Path=/api/pagos/**
+        - id: ms-pagos-docs
+          uri: lb://ms-pagos
+          predicates:
+            - Path=/v3/api-docs/ms-pagos
+          filters:
+            - RewritePath=/v3/api-docs/ms-pagos, /v3/api-docs
         - id: ms-valoraciones
           uri: lb://ms-valoraciones
           predicates:
             - Path=/api/valoraciones/**
+        - id: ms-valoraciones-docs
+          uri: lb://ms-valoraciones
+          predicates:
+            - Path=/v3/api-docs/ms-valoraciones
+          filters:
+            - RewritePath=/v3/api-docs/ms-valoraciones, /v3/api-docs
         - id: ms-promociones
           uri: lb://ms-promociones
           predicates:
             - Path=/api/promociones/**
+        - id: ms-promociones-docs
+          uri: lb://ms-promociones
+          predicates:
+            - Path=/v3/api-docs/ms-promociones
+          filters:
+            - RewritePath=/v3/api-docs/ms-promociones, /v3/api-docs
         - id: ms-reportes
           uri: lb://ms-reportes
           predicates:
             - Path=/api/reportes/**
+        - id: ms-reportes-docs
+          uri: lb://ms-reportes
+          predicates:
+            - Path=/v3/api-docs/ms-reportes
+          filters:
+            - RewritePath=/v3/api-docs/ms-reportes, /v3/api-docs
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${SUPABASE_JWT_ISSUER:https://qglwohwurvsxkxttrddr.supabase.co/auth/v1}
+          audiences: ${SUPABASE_JWT_AUDIENCE:authenticated}
 
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
-
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          issuer-uri: ${SUPABASE_JWT_ISSUER:https://[TU_PROYECTO].supabase.co/auth/v1}
-          audiences: ${SUPABASE_JWT_AUDIENCE:authenticated}

@@ -17,4 +17,9 @@ public class UsuarioController {
     public ResponseEntity<Usuario> getUsuario(@PathVariable Long id) {
         return ResponseEntity.ok(usuarioService.getUsuarioById(id));
     }
+
+    @GetMapping
+    public ResponseEntity<java.util.List<Usuario>> getAllUsuarios() {
+        return ResponseEntity.ok(usuarioService.getAllUsuarios());
+    }
 }

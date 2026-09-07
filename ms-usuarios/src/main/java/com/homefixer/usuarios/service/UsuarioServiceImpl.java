@@ -65,4 +65,9 @@ public class UsuarioServiceImpl implements UsuarioService {
     public List<Tecnico> getAllTecnicosValidados() {
         return tecnicoRepository.findByValidadoTrue();
     }
+
+    @Override
+    public List<Usuario> getAllUsuarios() {
+        return usuarioRepository.findAll();
+    }
 }

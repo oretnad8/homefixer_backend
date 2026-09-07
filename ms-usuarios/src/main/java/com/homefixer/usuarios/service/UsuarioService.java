@@ -14,4 +14,5 @@ public interface UsuarioService {
     Tecnico updateTecnico(Long id, Tecnico tecnico);
     void validateTecnico(Long id);
     List<Tecnico> getAllTecnicosValidados();
+    List<Usuario> getAllUsuarios();
 }
