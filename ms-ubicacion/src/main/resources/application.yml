@@ -1,0 +1,11 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: ms-ubicacion
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

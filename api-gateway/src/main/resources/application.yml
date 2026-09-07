@@ -1,0 +1,61 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: ms-usuarios
+          uri: lb://ms-usuarios
+          predicates:
+            - Path=/api/usuarios/**, /api/clientes/**, /api/tecnicos/**
+        - id: ms-solicitudes
+          uri: lb://ms-solicitudes
+          predicates:
+            - Path=/api/solicitudes/**
+        - id: ms-autenticacion
+          uri: lb://ms-autenticacion
+          predicates:
+            - Path=/api/auth/**
+        - id: ms-maestria
+          uri: lb://ms-maestria
+          predicates:
+            - Path=/api/maestria/**, /api/categorias/**
+        - id: ms-ubicacion
+          uri: lb://ms-ubicacion
+          predicates:
+            - Path=/api/ubicacion/**
+        - id: ms-notificacion
+          uri: lb://ms-notificacion
+          predicates:
+            - Path=/api/notificaciones/**
+        - id: ms-pagos
+          uri: lb://ms-pagos
+          predicates:
+            - Path=/api/pagos/**
+        - id: ms-valoraciones
+          uri: lb://ms-valoraciones
+          predicates:
+            - Path=/api/valoraciones/**
+        - id: ms-promociones
+          uri: lb://ms-promociones
+          predicates:
+            - Path=/api/promociones/**
+        - id: ms-reportes
+          uri: lb://ms-reportes
+          predicates:
+            - Path=/api/reportes/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${SUPABASE_JWT_ISSUER:https://[TU_PROYECTO].supabase.co/auth/v1}
+          audiences: ${SUPABASE_JWT_AUDIENCE:authenticated}

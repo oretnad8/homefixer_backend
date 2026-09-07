@@ -1,0 +1,20 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: ms-autenticacion
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+azure:
+  client-id: ${AZURE_CLIENT_ID:dummy-client-id}
+  tenant-id: ${AZURE_TENANT_ID:dummy-tenant-id}
+
+supabase:
+  jwt:
+    secret: ${SUPABASE_JWT_SECRET:tu_jwt_secret_largo_de_supabase_aqui}
+  expiration: 86400000 # 24 hours
