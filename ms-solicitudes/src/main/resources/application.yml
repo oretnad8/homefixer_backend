@@ -4,6 +4,11 @@ server:
 spring:
   application:
     name: ms-solicitudes
+  rabbitmq:
+    host: ${RABBITMQ_HOST:localhost}
+    port: ${RABBITMQ_PORT:5672}
+    username: ${RABBITMQ_USER:guest}
+    password: ${RABBITMQ_PASS:guest}
   datasource:
     url: ${SUPABASE_DB_URL:jdbc:postgresql://aws-0-us-east-1.pooler.supabase.com:6543/postgres}
     username: ${SUPABASE_DB_USER:postgres}

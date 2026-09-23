@@ -35,58 +35,37 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.4)
 
-2026-09-07T14:46:44.452-03:00  INFO 12892 --- [           main] c.h.eureka.EurekaServerApplication       : Starting EurekaServerApplication using Java 21.0.12 with PID 12892 (C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\eureka-server\target\classes started by drojas in C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\eureka-server)
-2026-09-07T14:46:44.454-03:00  INFO 12892 --- [           main] c.h.eureka.EurekaServerApplication       : No active profile set, falling back to 1 default profile: "default"
-2026-09-07T14:46:45.136-03:00  INFO 12892 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d8cd35ed-dbcb-31bb-9384-637c20981386
-2026-09-07T14:46:45.170-03:00  WARN 12892 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
-2026-09-07T14:46:45.170-03:00  WARN 12892 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2026-09-07T14:46:45.370-03:00  INFO 12892 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8761 (http)
-2026-09-07T14:46:45.386-03:00  INFO 12892 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-09-07T14:46:45.386-03:00  INFO 12892 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
-2026-09-07T14:46:45.435-03:00  INFO 12892 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-09-07T14:46:45.435-03:00  INFO 12892 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 952 ms
-2026-09-07T14:46:45.976-03:00  INFO 12892 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2026-09-07T14:46:45.991-03:00  INFO 12892 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2026-09-07T14:46:46.087-03:00  INFO 12892 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2026-09-07T14:46:46.087-03:00  INFO 12892 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2026-09-07T14:46:46.603-03:00  WARN 12892 --- [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2026-09-07T14:46:46.616-03:00  INFO 12892 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2026-09-07T14:46:46.632-03:00  INFO 12892 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2026-09-07T14:46:46.632-03:00  INFO 12892 --- [           main] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
-2026-09-07T14:46:46.632-03:00  INFO 12892 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1788803206632 with initial instances count: 0
-2026-09-07T14:46:46.659-03:00  INFO 12892 --- [           main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
-2026-09-07T14:46:46.661-03:00  WARN 12892 --- [           main] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
-2026-09-07T14:46:46.712-03:00  INFO 12892 --- [           main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
-2026-09-07T14:46:46.713-03:00  INFO 12892 --- [           main] c.n.eureka.DefaultEurekaServerContext    : Initialized
-2026-09-07T14:46:46.723-03:00  INFO 12892 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2026-09-07T14:46:46.755-03:00  INFO 12892 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application UNKNOWN with eureka with status UP
-2026-09-07T14:46:46.762-03:00  INFO 12892 --- [       Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
-2026-09-07T14:46:46.762-03:00  INFO 12892 --- [       Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
-2026-09-07T14:46:46.762-03:00  INFO 12892 --- [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
-2026-09-07T14:46:46.762-03:00  INFO 12892 --- [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
-2026-09-07T14:46:46.762-03:00  INFO 12892 --- [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
-2026-09-07T14:46:46.769-03:00  INFO 12892 --- [       Thread-9] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
-2026-09-07T14:46:46.774-03:00  INFO 12892 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8761 (http) with context path ''
-2026-09-07T14:46:46.775-03:00  INFO 12892 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
-2026-09-07T14:46:46.783-03:00  INFO 12892 --- [           main] c.h.eureka.EurekaServerApplication       : Started EurekaServerApplication in 2.65 seconds (process running for 2.915)
-2026-09-07T14:46:54.606-03:00  INFO 12892 --- [nio-8761-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-09-07T14:46:54.607-03:00  INFO 12892 --- [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-09-07T14:46:54.607-03:00  INFO 12892 --- [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2026-09-07T14:46:54.778-03:00  INFO 12892 --- [nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/DROJAS.localdomain:api-gateway:8080 with status UP (replication=false)
-2026-09-07T14:47:07.998-03:00  INFO 12892 --- [nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MS-USUARIOS/DROJAS.localdomain:ms-usuarios:8081 with status UP (replication=false)
-2026-09-07T14:47:13.483-03:00  INFO 12892 --- [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MS-AUTENTICACION/DROJAS.localdomain:ms-autenticacion:8083 with status UP (replication=false)
-2026-09-07T14:47:24.189-03:00  INFO 12892 --- [nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MS-SOLICITUDES/DROJAS.localdomain:ms-solicitudes:8082 with status UP (replication=false)
-2026-09-07T14:47:29.510-03:00  INFO 12892 --- [nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MS-UBICACION/DROJAS.localdomain:ms-ubicacion:8085 with status UP (replication=false)
-2026-09-07T14:47:39.982-03:00  INFO 12892 --- [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MS-PAGOS/DROJAS.localdomain:ms-pagos:8087 with status UP (replication=false)
-2026-09-07T14:47:46.766-03:00  INFO 12892 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2026-09-07T14:47:49.997-03:00  INFO 12892 --- [nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MS-VALORACIONES/DROJAS.localdomain:ms-valoraciones:8088 with status UP (replication=false)
-2026-09-07T14:48:00.530-03:00  INFO 12892 --- [nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MS-MAESTRIA/DROJAS.localdomain:ms-maestria:8084 with status UP (replication=false)
-2026-09-07T14:48:07.711-03:00  INFO 12892 --- [nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MS-NOTIFICACION/DROJAS.localdomain:ms-notificacion:8086 with status UP (replication=false)
-2026-09-07T14:48:13.835-03:00  INFO 12892 --- [nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MS-PROMOCIONES/DROJAS.localdomain:ms-promociones:8089 with status UP (replication=false)
-2026-09-07T14:48:19.771-03:00  INFO 12892 --- [nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MS-REPORTES/DROJAS.localdomain:ms-reportes:8090 with status UP (replication=false)
-2026-09-07T14:48:46.767-03:00  INFO 12892 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
-2026-09-07T14:49:46.767-03:00  INFO 12892 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2026-09-07T14:50:46.774-03:00  INFO 12892 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
-2026-09-07T14:51:46.786-03:00  INFO 12892 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 12ms
-2026-09-07T14:52:46.789-03:00  INFO 12892 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
-^C
+2026-09-23T20:30:28.331-03:00  INFO 28596 --- [           main] c.h.eureka.EurekaServerApplication       : Starting EurekaServerApplication using Java 21.0.12 with PID 28596 (C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\eureka-server\target\classes started by drojas in C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\eureka-server)
+2026-09-23T20:30:28.340-03:00  INFO 28596 --- [           main] c.h.eureka.EurekaServerApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-09-23T20:30:29.057-03:00  INFO 28596 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d8cd35ed-dbcb-31bb-9384-637c20981386
+2026-09-23T20:30:29.091-03:00  WARN 28596 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-09-23T20:30:29.099-03:00  WARN 28596 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-09-23T20:30:29.312-03:00  INFO 28596 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8761 (http)
+2026-09-23T20:30:29.325-03:00  INFO 28596 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-23T20:30:29.325-03:00  INFO 28596 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-09-23T20:30:29.377-03:00  INFO 28596 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-23T20:30:29.377-03:00  INFO 28596 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1004 ms
+2026-09-23T20:30:29.956-03:00  INFO 28596 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2026-09-23T20:30:29.956-03:00  INFO 28596 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2026-09-23T20:30:30.085-03:00  INFO 28596 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2026-09-23T20:30:30.085-03:00  INFO 28596 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2026-09-23T20:30:30.744-03:00  WARN 28596 --- [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-09-23T20:30:30.765-03:00  INFO 28596 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-09-23T20:30:30.781-03:00  INFO 28596 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-09-23T20:30:30.781-03:00  INFO 28596 --- [           main] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2026-09-23T20:30:30.790-03:00  INFO 28596 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1790206230786 with initial instances count: 0
+2026-09-23T20:30:30.809-03:00  INFO 28596 --- [           main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
+2026-09-23T20:30:30.818-03:00  WARN 28596 --- [           main] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2026-09-23T20:30:30.875-03:00  INFO 28596 --- [           main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
+2026-09-23T20:30:30.876-03:00  INFO 28596 --- [           main] c.n.eureka.DefaultEurekaServerContext    : Initialized
+2026-09-23T20:30:30.884-03:00  INFO 28596 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2026-09-23T20:30:30.917-03:00  INFO 28596 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application UNKNOWN with eureka with status UP
+2026-09-23T20:30:30.923-03:00  INFO 28596 --- [       Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
+2026-09-23T20:30:30.924-03:00  INFO 28596 --- [       Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
+2026-09-23T20:30:30.924-03:00  INFO 28596 --- [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
+2026-09-23T20:30:30.924-03:00  INFO 28596 --- [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
+2026-09-23T20:30:30.924-03:00  INFO 28596 --- [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
+2026-09-23T20:30:30.931-03:00  INFO 28596 --- [       Thread-9] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
+2026-09-23T20:30:30.936-03:00  INFO 28596 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8761 (http) with context path ''
+2026-09-23T20:30:30.937-03:00  INFO 28596 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
+2026-09-23T20:30:30.947-03:00  INFO 28596 --- [           main] c.h.eureka.EurekaServerApplication       : Started EurekaServerApplication in 2.95 seconds (process running for 3.24)
