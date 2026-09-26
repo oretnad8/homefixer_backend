@@ -35,52 +35,55 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.4)
 
-2026-09-26T09:17:28.845-03:00  INFO 15404 --- [ms-pagos] [           main] com.homefixer.pagos.MsPagosApplication   : Starting MsPagosApplication using Java 21.0.12 with PID 15404 (C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-pagos\target\classes started by drojas in C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-pagos)
-2026-09-26T09:17:28.847-03:00  INFO 15404 --- [ms-pagos] [           main] com.homefixer.pagos.MsPagosApplication   : No active profile set, falling back to 1 default profile: "default"
-2026-09-26T09:17:29.402-03:00  INFO 15404 --- [ms-pagos] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-09-26T09:17:29.495-03:00  INFO 15404 --- [ms-pagos] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 87 ms. Found 1 JPA repository interface.
-2026-09-26T09:17:29.638-03:00  INFO 15404 --- [ms-pagos] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4134ad65-b181-3a17-80de-065250eac316
-2026-09-26T09:17:29.724-03:00  WARN 15404 --- [ms-pagos] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
-2026-09-26T09:17:29.727-03:00  WARN 15404 --- [ms-pagos] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2026-09-26T09:17:29.915-03:00  INFO 15404 --- [ms-pagos] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8087 (http)
-2026-09-26T09:17:29.925-03:00  INFO 15404 --- [ms-pagos] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-09-26T09:17:29.925-03:00  INFO 15404 --- [ms-pagos] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
-2026-09-26T09:17:29.989-03:00  INFO 15404 --- [ms-pagos] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-09-26T09:17:29.990-03:00  INFO 15404 --- [ms-pagos] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1096 ms
-2026-09-26T09:17:30.102-03:00  INFO 15404 --- [ms-pagos] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-09-26T09:17:30.139-03:00  INFO 15404 --- [ms-pagos] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2026-09-26T09:17:30.163-03:00  INFO 15404 --- [ms-pagos] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-09-26T09:17:30.330-03:00  INFO 15404 --- [ms-pagos] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-09-26T09:17:30.352-03:00  INFO 15404 --- [ms-pagos] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-09-26T09:17:32.300-03:00  INFO 15404 --- [ms-pagos] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@b339a08
-2026-09-26T09:17:32.301-03:00  INFO 15404 --- [ms-pagos] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-09-26T09:17:32.494-03:00  WARN 15404 --- [ms-pagos] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-09-26T09:17:33.390-03:00  INFO 15404 --- [ms-pagos] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-09-26T09:17:34.119-03:00  INFO 15404 --- [ms-pagos] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-09-26T09:17:34.424-03:00  WARN 15404 --- [ms-pagos] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-09-26T09:17:34.806-03:00  INFO 15404 --- [ms-pagos] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2026-09-26T09:17:34.837-03:00  WARN 15404 --- [ms-pagos] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2026-09-26T09:17:34.858-03:00  INFO 15404 --- [ms-pagos] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2026-09-26T09:17:34.926-03:00  INFO 15404 --- [ms-pagos] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2026-09-26T09:17:34.930-03:00  INFO 15404 --- [ms-pagos] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-09-26T09:17:34.946-03:00  INFO 15404 --- [ms-pagos] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2026-09-26T09:17:34.946-03:00  INFO 15404 --- [ms-pagos] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2026-09-26T09:17:34.946-03:00  INFO 15404 --- [ms-pagos] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2026-09-26T09:17:34.946-03:00  INFO 15404 --- [ms-pagos] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2026-09-26T09:17:34.946-03:00  INFO 15404 --- [ms-pagos] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2026-09-26T09:17:34.946-03:00  INFO 15404 --- [ms-pagos] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2026-09-26T09:17:34.946-03:00  INFO 15404 --- [ms-pagos] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2026-09-26T09:17:35.162-03:00  INFO 15404 --- [ms-pagos] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2026-09-26T09:17:35.164-03:00  INFO 15404 --- [ms-pagos] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2026-09-26T09:17:35.165-03:00  INFO 15404 --- [ms-pagos] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2026-09-26T09:17:35.168-03:00  INFO 15404 --- [ms-pagos] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1790425055168 with initial instances count: 5
-2026-09-26T09:17:35.170-03:00  INFO 15404 --- [ms-pagos] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MS-PAGOS with eureka with status UP
-2026-09-26T09:17:35.170-03:00  INFO 15404 --- [ms-pagos] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1790425055170, current=UP, previous=STARTING]
-2026-09-26T09:17:35.172-03:00  INFO 15404 --- [ms-pagos] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-PAGOS/DROJAS.localdomain:ms-pagos:8087: registering service...
-2026-09-26T09:17:35.193-03:00  INFO 15404 --- [ms-pagos] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8087 (http) with context path ''
-2026-09-26T09:17:35.194-03:00  INFO 15404 --- [ms-pagos] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8087
-2026-09-26T09:17:35.203-03:00  INFO 15404 --- [ms-pagos] [           main] com.homefixer.pagos.MsPagosApplication   : Started MsPagosApplication in 6.689 seconds (process running for 6.97)
-2026-09-26T09:17:35.208-03:00  INFO 15404 --- [ms-pagos] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-PAGOS/DROJAS.localdomain:ms-pagos:8087 - registration status: 204
-2026-09-26T09:22:34.960-03:00  INFO 15404 --- [ms-pagos] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-09-26T09:27:34.967-03:00  INFO 15404 --- [ms-pagos] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-26T09:35:14.685-03:00  INFO 26168 --- [ms-pagos] [           main] com.homefixer.pagos.MsPagosApplication   : Starting MsPagosApplication using Java 21.0.12 with PID 26168 (C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-pagos\target\classes started by drojas in C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-pagos)
+2026-09-26T09:35:14.687-03:00  INFO 26168 --- [ms-pagos] [           main] com.homefixer.pagos.MsPagosApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-09-26T09:35:15.213-03:00  INFO 26168 --- [ms-pagos] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-26T09:35:15.314-03:00  INFO 26168 --- [ms-pagos] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 96 ms. Found 1 JPA repository interface.
+2026-09-26T09:35:15.495-03:00  INFO 26168 --- [ms-pagos] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4134ad65-b181-3a17-80de-065250eac316
+2026-09-26T09:35:15.582-03:00  WARN 26168 --- [ms-pagos] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-09-26T09:35:15.584-03:00  WARN 26168 --- [ms-pagos] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-09-26T09:35:15.786-03:00  INFO 26168 --- [ms-pagos] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8087 (http)
+2026-09-26T09:35:15.795-03:00  INFO 26168 --- [ms-pagos] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-26T09:35:15.796-03:00  INFO 26168 --- [ms-pagos] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-09-26T09:35:15.847-03:00  INFO 26168 --- [ms-pagos] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-26T09:35:15.848-03:00  INFO 26168 --- [ms-pagos] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1117 ms
+2026-09-26T09:35:15.969-03:00  INFO 26168 --- [ms-pagos] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-09-26T09:35:16.006-03:00  INFO 26168 --- [ms-pagos] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-09-26T09:35:16.029-03:00  INFO 26168 --- [ms-pagos] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-09-26T09:35:16.179-03:00  INFO 26168 --- [ms-pagos] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-26T09:35:16.198-03:00  INFO 26168 --- [ms-pagos] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-26T09:35:18.175-03:00  INFO 26168 --- [ms-pagos] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@27ec0d06
+2026-09-26T09:35:18.176-03:00  INFO 26168 --- [ms-pagos] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-26T09:35:18.383-03:00  WARN 26168 --- [ms-pagos] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-09-26T09:35:19.277-03:00  INFO 26168 --- [ms-pagos] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-26T09:35:20.019-03:00  INFO 26168 --- [ms-pagos] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-26T09:35:20.349-03:00  WARN 26168 --- [ms-pagos] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-26T09:35:20.762-03:00  INFO 26168 --- [ms-pagos] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-09-26T09:35:20.797-03:00  WARN 26168 --- [ms-pagos] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-09-26T09:35:20.817-03:00  INFO 26168 --- [ms-pagos] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-09-26T09:35:20.883-03:00  INFO 26168 --- [ms-pagos] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-09-26T09:35:20.886-03:00  INFO 26168 --- [ms-pagos] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-26T09:35:20.904-03:00  INFO 26168 --- [ms-pagos] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-09-26T09:35:20.904-03:00  INFO 26168 --- [ms-pagos] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-09-26T09:35:20.904-03:00  INFO 26168 --- [ms-pagos] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-09-26T09:35:20.904-03:00  INFO 26168 --- [ms-pagos] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-09-26T09:35:20.904-03:00  INFO 26168 --- [ms-pagos] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-09-26T09:35:20.904-03:00  INFO 26168 --- [ms-pagos] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-09-26T09:35:20.904-03:00  INFO 26168 --- [ms-pagos] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-09-26T09:35:21.125-03:00  INFO 26168 --- [ms-pagos] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-09-26T09:35:21.126-03:00  INFO 26168 --- [ms-pagos] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-09-26T09:35:21.129-03:00  INFO 26168 --- [ms-pagos] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-09-26T09:35:21.133-03:00  INFO 26168 --- [ms-pagos] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1790426121132 with initial instances count: 3
+2026-09-26T09:35:21.134-03:00  INFO 26168 --- [ms-pagos] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MS-PAGOS with eureka with status UP
+2026-09-26T09:35:21.135-03:00  INFO 26168 --- [ms-pagos] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1790426121135, current=UP, previous=STARTING]
+2026-09-26T09:35:21.135-03:00  INFO 26168 --- [ms-pagos] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-PAGOS/DROJAS.localdomain:ms-pagos:8087: registering service...
+2026-09-26T09:35:21.154-03:00  INFO 26168 --- [ms-pagos] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8087 (http) with context path ''
+2026-09-26T09:35:21.155-03:00  INFO 26168 --- [ms-pagos] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8087
+2026-09-26T09:35:21.165-03:00  INFO 26168 --- [ms-pagos] [           main] com.homefixer.pagos.MsPagosApplication   : Started MsPagosApplication in 6.801 seconds (process running for 7.079)
+2026-09-26T09:35:21.173-03:00  INFO 26168 --- [ms-pagos] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-PAGOS/DROJAS.localdomain:ms-pagos:8087 - registration status: 204
+2026-09-26T09:40:20.924-03:00  INFO 26168 --- [ms-pagos] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-26T09:45:20.936-03:00  INFO 26168 --- [ms-pagos] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-26T09:50:20.947-03:00  INFO 26168 --- [ms-pagos] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-26T09:55:20.961-03:00  INFO 26168 --- [ms-pagos] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-26T10:00:20.970-03:00  INFO 26168 --- [ms-pagos] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 ^C

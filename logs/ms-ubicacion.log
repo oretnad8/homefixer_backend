@@ -35,40 +35,102 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.4)
 
-2026-09-26T09:17:22.613-03:00  INFO 31388 --- [ms-ubicacion] [           main] c.h.ubicacion.MsUbicacionApplication     : Starting MsUbicacionApplication using Java 21.0.12 with PID 31388 (C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-ubicacion\target\classes started by drojas in C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-ubicacion)
-2026-09-26T09:17:22.615-03:00  INFO 31388 --- [ms-ubicacion] [           main] c.h.ubicacion.MsUbicacionApplication     : No active profile set, falling back to 1 default profile: "default"
-2026-09-26T09:17:23.166-03:00  INFO 31388 --- [ms-ubicacion] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=cf780ad6-158a-3c78-9ac9-5a8f4a811842
-2026-09-26T09:17:23.196-03:00  WARN 31388 --- [ms-ubicacion] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
-2026-09-26T09:17:23.200-03:00  WARN 31388 --- [ms-ubicacion] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2026-09-26T09:17:23.397-03:00  INFO 31388 --- [ms-ubicacion] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
-2026-09-26T09:17:23.406-03:00  INFO 31388 --- [ms-ubicacion] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-09-26T09:17:23.406-03:00  INFO 31388 --- [ms-ubicacion] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
-2026-09-26T09:17:23.456-03:00  INFO 31388 --- [ms-ubicacion] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-09-26T09:17:23.457-03:00  INFO 31388 --- [ms-ubicacion] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 798 ms
-2026-09-26T09:17:23.978-03:00  INFO 31388 --- [ms-ubicacion] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2026-09-26T09:17:24.009-03:00  WARN 31388 --- [ms-ubicacion] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2026-09-26T09:17:24.026-03:00  INFO 31388 --- [ms-ubicacion] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2026-09-26T09:17:24.093-03:00  INFO 31388 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2026-09-26T09:17:24.098-03:00  INFO 31388 --- [ms-ubicacion] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-09-26T09:17:24.112-03:00  INFO 31388 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2026-09-26T09:17:24.112-03:00  INFO 31388 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2026-09-26T09:17:24.112-03:00  INFO 31388 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2026-09-26T09:17:24.112-03:00  INFO 31388 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2026-09-26T09:17:24.112-03:00  INFO 31388 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2026-09-26T09:17:24.112-03:00  INFO 31388 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2026-09-26T09:17:24.112-03:00  INFO 31388 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2026-09-26T09:17:24.347-03:00  INFO 31388 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2026-09-26T09:17:24.349-03:00  INFO 31388 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2026-09-26T09:17:24.350-03:00  INFO 31388 --- [ms-ubicacion] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2026-09-26T09:17:24.354-03:00  INFO 31388 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1790425044353 with initial instances count: 1
-2026-09-26T09:17:24.355-03:00  INFO 31388 --- [ms-ubicacion] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MS-UBICACION with eureka with status UP
-2026-09-26T09:17:24.356-03:00  INFO 31388 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1790425044356, current=UP, previous=STARTING]
-2026-09-26T09:17:24.357-03:00  INFO 31388 --- [ms-ubicacion] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-UBICACION/DROJAS.localdomain:ms-ubicacion:8085: registering service...
-2026-09-26T09:17:24.374-03:00  INFO 31388 --- [ms-ubicacion] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path ''
-2026-09-26T09:17:24.375-03:00  INFO 31388 --- [ms-ubicacion] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8085
-2026-09-26T09:17:24.382-03:00  INFO 31388 --- [ms-ubicacion] [           main] c.h.ubicacion.MsUbicacionApplication     : Started MsUbicacionApplication in 2.088 seconds (process running for 2.348)
-2026-09-26T09:17:24.387-03:00  INFO 31388 --- [ms-ubicacion] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-UBICACION/DROJAS.localdomain:ms-ubicacion:8085 - registration status: 204
-2026-09-26T09:22:24.118-03:00  INFO 31388 --- [ms-ubicacion] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-09-26T09:27:24.131-03:00  INFO 31388 --- [ms-ubicacion] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-09-26T09:32:24.144-03:00  INFO 31388 --- [ms-ubicacion] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-26T09:35:08.627-03:00  INFO 38464 --- [ms-ubicacion] [           main] c.h.ubicacion.MsUbicacionApplication     : Starting MsUbicacionApplication using Java 21.0.12 with PID 38464 (C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-ubicacion\target\classes started by drojas in C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-ubicacion)
+2026-09-26T09:35:08.629-03:00  INFO 38464 --- [ms-ubicacion] [           main] c.h.ubicacion.MsUbicacionApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-09-26T09:35:09.189-03:00  INFO 38464 --- [ms-ubicacion] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=cf780ad6-158a-3c78-9ac9-5a8f4a811842
+2026-09-26T09:35:09.220-03:00  WARN 38464 --- [ms-ubicacion] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-09-26T09:35:09.224-03:00  WARN 38464 --- [ms-ubicacion] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-09-26T09:35:09.412-03:00  INFO 38464 --- [ms-ubicacion] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
+2026-09-26T09:35:09.421-03:00  INFO 38464 --- [ms-ubicacion] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-26T09:35:09.421-03:00  INFO 38464 --- [ms-ubicacion] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-09-26T09:35:09.470-03:00  INFO 38464 --- [ms-ubicacion] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-26T09:35:09.471-03:00  INFO 38464 --- [ms-ubicacion] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 793 ms
+2026-09-26T09:35:10.010-03:00  INFO 38464 --- [ms-ubicacion] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-09-26T09:35:10.044-03:00  WARN 38464 --- [ms-ubicacion] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-09-26T09:35:10.062-03:00  INFO 38464 --- [ms-ubicacion] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-09-26T09:35:10.141-03:00  INFO 38464 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-09-26T09:35:10.150-03:00  INFO 38464 --- [ms-ubicacion] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-26T09:35:10.164-03:00  INFO 38464 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-09-26T09:35:10.164-03:00  INFO 38464 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-09-26T09:35:10.164-03:00  INFO 38464 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-09-26T09:35:10.164-03:00  INFO 38464 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-09-26T09:35:10.164-03:00  INFO 38464 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-09-26T09:35:10.164-03:00  INFO 38464 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-09-26T09:35:10.164-03:00  INFO 38464 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-09-26T09:35:10.427-03:00  INFO 38464 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-09-26T09:35:10.430-03:00  INFO 38464 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-09-26T09:35:10.431-03:00  INFO 38464 --- [ms-ubicacion] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-09-26T09:35:10.435-03:00  INFO 38464 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1790426110434 with initial instances count: 3
+2026-09-26T09:35:10.436-03:00  INFO 38464 --- [ms-ubicacion] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MS-UBICACION with eureka with status UP
+2026-09-26T09:35:10.436-03:00  INFO 38464 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1790426110436, current=UP, previous=STARTING]
+2026-09-26T09:35:10.437-03:00  INFO 38464 --- [ms-ubicacion] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-UBICACION/DROJAS.localdomain:ms-ubicacion:8085: registering service...
+2026-09-26T09:35:10.452-03:00  INFO 38464 --- [ms-ubicacion] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path ''
+2026-09-26T09:35:10.452-03:00  INFO 38464 --- [ms-ubicacion] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8085
+2026-09-26T09:35:10.461-03:00  INFO 38464 --- [ms-ubicacion] [           main] c.h.ubicacion.MsUbicacionApplication     : Started MsUbicacionApplication in 2.148 seconds (process running for 2.411)
+2026-09-26T09:35:10.467-03:00  INFO 38464 --- [ms-ubicacion] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-UBICACION/DROJAS.localdomain:ms-ubicacion:8085 - registration status: 204
+2026-09-26T09:37:27.420-03:00  INFO 38464 --- [ms-ubicacion] [nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-26T09:37:27.421-03:00  INFO 38464 --- [ms-ubicacion] [nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-26T09:37:27.421-03:00  INFO 38464 --- [ms-ubicacion] [nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-09-26T09:37:27.438-03:00 ERROR 38464 --- [ms-ubicacion] [nio-8085-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException: Name for argument of type [java.lang.String] not specified, and parameter name information not available via reflection. Ensure that the compiler uses the '-parameters' flag.] with root cause
+
+java.lang.IllegalArgumentException: Name for argument of type [java.lang.String] not specified, and parameter name information not available via reflection. Ensure that the compiler uses the '-parameters' flag.
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.updateNamedValueInfo(AbstractNamedValueMethodArgumentResolver.java:186) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.getNamedValueInfo(AbstractNamedValueMethodArgumentResolver.java:161) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:107) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:178) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:925) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:830) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.19.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.19.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-09-26T09:40:10.168-03:00  INFO 38464 --- [ms-ubicacion] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-26T09:45:10.170-03:00  INFO 38464 --- [ms-ubicacion] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-26T09:50:10.186-03:00  INFO 38464 --- [ms-ubicacion] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-26T09:55:10.191-03:00  INFO 38464 --- [ms-ubicacion] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-26T10:00:10.196-03:00  INFO 38464 --- [ms-ubicacion] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 ^C

@@ -67,14 +67,46 @@ public class SolicitudServiceImpl implements SolicitudService {
         Solicitud solicitud = getSolicitudById(solicitudId);
         solicitud.setTecnicoId(tecnicoId);
         solicitud.setEstadoSolicitud(EstadoSolicitud.EN_PROCESO);
-        return solicitudRepository.save(solicitud);
+        Solicitud savedSolicitud = solicitudRepository.save(solicitud);
+        
+        List<Long> tecnicosList = new ArrayList<>();
+        tecnicosList.add(tecnicoId);
+        
+        NotificacionEventDTO evento = NotificacionEventDTO.builder()
+                .solicitudId(savedSolicitud.getId())
+                .clienteId(savedSolicitud.getClienteId())
+                .tecnicosIds(tecnicosList)
+                .tipoServicio("TECNICO_ASIGNADO")
+                .mensaje("Un técnico ha sido asignado a tu solicitud y está en camino.")
+                .build();
+                
+        eventoPublisherService.publicarNotificacion(evento);
+        
+        return savedSolicitud;
     }
 
     @Override
     public Solicitud updateEstado(Long solicitudId, EstadoSolicitud estado) {
         Solicitud solicitud = getSolicitudById(solicitudId);
         solicitud.setEstadoSolicitud(estado);
-        return solicitudRepository.save(solicitud);
+        Solicitud savedSolicitud = solicitudRepository.save(solicitud);
+        
+        List<Long> tecnicosList = new ArrayList<>();
+        if (savedSolicitud.getTecnicoId() != null) {
+            tecnicosList.add(savedSolicitud.getTecnicoId());
+        }
+        
+        NotificacionEventDTO evento = NotificacionEventDTO.builder()
+                .solicitudId(savedSolicitud.getId())
+                .clienteId(savedSolicitud.getClienteId())
+                .tecnicosIds(tecnicosList)
+                .tipoServicio("CAMBIO_ESTADO")
+                .mensaje("El estado de tu solicitud ha cambiado a: " + estado.name())
+                .build();
+                
+        eventoPublisherService.publicarNotificacion(evento);
+        
+        return savedSolicitud;
     }
 
     @Override
