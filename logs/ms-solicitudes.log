@@ -35,66 +35,118 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.4)
 
-2026-09-26T09:34:56.849-03:00  INFO 32952 --- [ms-solicitudes] [           main] c.h.s.MsSolicitudesApplication           : Starting MsSolicitudesApplication using Java 21.0.12 with PID 32952 (C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-solicitudes\target\classes started by drojas in C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-solicitudes)
-2026-09-26T09:34:56.849-03:00  INFO 32952 --- [ms-solicitudes] [           main] c.h.s.MsSolicitudesApplication           : No active profile set, falling back to 1 default profile: "default"
-2026-09-26T09:34:57.431-03:00  INFO 32952 --- [ms-solicitudes] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-09-26T09:34:57.531-03:00  INFO 32952 --- [ms-solicitudes] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 95 ms. Found 1 JPA repository interface.
-2026-09-26T09:34:57.712-03:00  INFO 32952 --- [ms-solicitudes] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=edbca672-804b-3918-aea7-df7f5cdab4b0
-2026-09-26T09:34:57.806-03:00  WARN 32952 --- [ms-solicitudes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
-2026-09-26T09:34:57.806-03:00  WARN 32952 --- [ms-solicitudes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2026-09-26T09:34:58.007-03:00  INFO 32952 --- [ms-solicitudes] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
-2026-09-26T09:34:58.017-03:00  INFO 32952 --- [ms-solicitudes] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-09-26T09:34:58.017-03:00  INFO 32952 --- [ms-solicitudes] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
-2026-09-26T09:34:58.074-03:00  INFO 32952 --- [ms-solicitudes] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-09-26T09:34:58.074-03:00  INFO 32952 --- [ms-solicitudes] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1181 ms
-2026-09-26T09:34:58.191-03:00  INFO 32952 --- [ms-solicitudes] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-09-26T09:34:58.231-03:00  INFO 32952 --- [ms-solicitudes] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2026-09-26T09:34:58.248-03:00  INFO 32952 --- [ms-solicitudes] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-09-26T09:34:58.394-03:00  INFO 32952 --- [ms-solicitudes] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-09-26T09:34:58.413-03:00  INFO 32952 --- [ms-solicitudes] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-09-26T09:35:00.386-03:00  INFO 32952 --- [ms-solicitudes] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@224d537d
-2026-09-26T09:35:00.389-03:00  INFO 32952 --- [ms-solicitudes] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-09-26T09:35:00.588-03:00  WARN 32952 --- [ms-solicitudes] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-09-26T09:35:01.493-03:00  INFO 32952 --- [ms-solicitudes] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-09-26T09:35:02.225-03:00  INFO 32952 --- [ms-solicitudes] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-09-26T09:35:02.569-03:00  WARN 32952 --- [ms-solicitudes] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-09-26T09:35:02.630-03:00  INFO 32952 --- [ms-solicitudes] [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'ms-ubicacion' URL not provided. Will try picking an instance via load-balancing.
-2026-09-26T09:35:03.127-03:00  INFO 32952 --- [ms-solicitudes] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2026-09-26T09:35:03.146-03:00  WARN 32952 --- [ms-solicitudes] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2026-09-26T09:35:03.169-03:00  INFO 32952 --- [ms-solicitudes] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2026-09-26T09:35:03.238-03:00  INFO 32952 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2026-09-26T09:35:03.242-03:00  INFO 32952 --- [ms-solicitudes] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-09-26T09:35:03.257-03:00  INFO 32952 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2026-09-26T09:35:03.257-03:00  INFO 32952 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2026-09-26T09:35:03.257-03:00  INFO 32952 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2026-09-26T09:35:03.257-03:00  INFO 32952 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2026-09-26T09:35:03.257-03:00  INFO 32952 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2026-09-26T09:35:03.257-03:00  INFO 32952 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2026-09-26T09:35:03.257-03:00  INFO 32952 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2026-09-26T09:35:03.452-03:00  INFO 32952 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2026-09-26T09:35:03.454-03:00  INFO 32952 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2026-09-26T09:35:03.456-03:00  INFO 32952 --- [ms-solicitudes] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2026-09-26T09:35:03.459-03:00  INFO 32952 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1790426103459 with initial instances count: 3
-2026-09-26T09:35:03.461-03:00  INFO 32952 --- [ms-solicitudes] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MS-SOLICITUDES with eureka with status UP
-2026-09-26T09:35:03.461-03:00  INFO 32952 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1790426103461, current=UP, previous=STARTING]
-2026-09-26T09:35:03.462-03:00  INFO 32952 --- [ms-solicitudes] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-SOLICITUDES/DROJAS.localdomain:ms-solicitudes:8082: registering service...
-2026-09-26T09:35:03.476-03:00  INFO 32952 --- [ms-solicitudes] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path ''
-2026-09-26T09:35:03.477-03:00  INFO 32952 --- [ms-solicitudes] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
-2026-09-26T09:35:03.486-03:00  INFO 32952 --- [ms-solicitudes] [           main] c.h.s.MsSolicitudesApplication           : Started MsSolicitudesApplication in 6.999 seconds (process running for 7.276)
-2026-09-26T09:35:03.492-03:00  INFO 32952 --- [ms-solicitudes] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-SOLICITUDES/DROJAS.localdomain:ms-solicitudes:8082 - registration status: 204
-2026-09-26T09:36:12.314-03:00  INFO 32952 --- [ms-solicitudes] [nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-09-26T09:36:12.314-03:00  INFO 32952 --- [ms-solicitudes] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-09-26T09:36:12.316-03:00  INFO 32952 --- [ms-solicitudes] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2026-09-26T09:36:12.484-03:00  INFO 32952 --- [ms-solicitudes] [nio-8082-exec-1] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 131 ms
+2026-09-26T10:07:03.717-03:00  INFO 29124 --- [ms-solicitudes] [           main] c.h.s.MsSolicitudesApplication           : Starting MsSolicitudesApplication using Java 21.0.12 with PID 29124 (C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-solicitudes\target\classes started by drojas in C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-solicitudes)
+2026-09-26T10:07:03.719-03:00  INFO 29124 --- [ms-solicitudes] [           main] c.h.s.MsSolicitudesApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-09-26T10:07:04.394-03:00  INFO 29124 --- [ms-solicitudes] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-26T10:07:04.489-03:00  INFO 29124 --- [ms-solicitudes] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 91 ms. Found 1 JPA repository interface.
+2026-09-26T10:07:04.665-03:00  INFO 29124 --- [ms-solicitudes] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=edbca672-804b-3918-aea7-df7f5cdab4b0
+2026-09-26T10:07:04.761-03:00  WARN 29124 --- [ms-solicitudes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-09-26T10:07:04.763-03:00  WARN 29124 --- [ms-solicitudes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-09-26T10:07:04.960-03:00  INFO 29124 --- [ms-solicitudes] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2026-09-26T10:07:04.969-03:00  INFO 29124 --- [ms-solicitudes] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-26T10:07:04.969-03:00  INFO 29124 --- [ms-solicitudes] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-09-26T10:07:05.028-03:00  INFO 29124 --- [ms-solicitudes] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-26T10:07:05.028-03:00  INFO 29124 --- [ms-solicitudes] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1265 ms
+2026-09-26T10:07:05.150-03:00  INFO 29124 --- [ms-solicitudes] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-09-26T10:07:05.186-03:00  INFO 29124 --- [ms-solicitudes] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-09-26T10:07:05.209-03:00  INFO 29124 --- [ms-solicitudes] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-09-26T10:07:05.366-03:00  INFO 29124 --- [ms-solicitudes] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-26T10:07:05.383-03:00  INFO 29124 --- [ms-solicitudes] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-26T10:07:07.346-03:00  INFO 29124 --- [ms-solicitudes] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@224d537d
+2026-09-26T10:07:07.347-03:00  INFO 29124 --- [ms-solicitudes] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-26T10:07:07.548-03:00  WARN 29124 --- [ms-solicitudes] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-09-26T10:07:08.496-03:00  INFO 29124 --- [ms-solicitudes] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-26T10:07:09.233-03:00  INFO 29124 --- [ms-solicitudes] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-26T10:07:09.584-03:00  WARN 29124 --- [ms-solicitudes] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-26T10:07:09.645-03:00  INFO 29124 --- [ms-solicitudes] [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'ms-ubicacion' URL not provided. Will try picking an instance via load-balancing.
+2026-09-26T10:07:10.147-03:00  INFO 29124 --- [ms-solicitudes] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-09-26T10:07:10.167-03:00  WARN 29124 --- [ms-solicitudes] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-09-26T10:07:10.190-03:00  INFO 29124 --- [ms-solicitudes] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-09-26T10:07:10.262-03:00  INFO 29124 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-09-26T10:07:10.265-03:00  INFO 29124 --- [ms-solicitudes] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-26T10:07:10.280-03:00  INFO 29124 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-09-26T10:07:10.280-03:00  INFO 29124 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-09-26T10:07:10.280-03:00  INFO 29124 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-09-26T10:07:10.280-03:00  INFO 29124 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-09-26T10:07:10.280-03:00  INFO 29124 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-09-26T10:07:10.280-03:00  INFO 29124 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-09-26T10:07:10.280-03:00  INFO 29124 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-09-26T10:07:10.475-03:00  INFO 29124 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-09-26T10:07:10.477-03:00  INFO 29124 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-09-26T10:07:10.478-03:00  INFO 29124 --- [ms-solicitudes] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-09-26T10:07:10.481-03:00  INFO 29124 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1790428030480 with initial instances count: 3
+2026-09-26T10:07:10.483-03:00  INFO 29124 --- [ms-solicitudes] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MS-SOLICITUDES with eureka with status UP
+2026-09-26T10:07:10.483-03:00  INFO 29124 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1790428030483, current=UP, previous=STARTING]
+2026-09-26T10:07:10.484-03:00  INFO 29124 --- [ms-solicitudes] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-SOLICITUDES/DROJAS.localdomain:ms-solicitudes:8082: registering service...
+2026-09-26T10:07:10.497-03:00  INFO 29124 --- [ms-solicitudes] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path ''
+2026-09-26T10:07:10.497-03:00  INFO 29124 --- [ms-solicitudes] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2026-09-26T10:07:10.508-03:00  INFO 29124 --- [ms-solicitudes] [           main] c.h.s.MsSolicitudesApplication           : Started MsSolicitudesApplication in 7.099 seconds (process running for 7.382)
+2026-09-26T10:07:10.513-03:00  INFO 29124 --- [ms-solicitudes] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-SOLICITUDES/DROJAS.localdomain:ms-solicitudes:8082 - registration status: 204
+2026-09-26T10:08:58.655-03:00  INFO 29124 --- [ms-solicitudes] [nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-26T10:08:58.656-03:00  INFO 29124 --- [ms-solicitudes] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-26T10:08:58.658-03:00  INFO 29124 --- [ms-solicitudes] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-09-26T10:08:58.837-03:00  INFO 29124 --- [ms-solicitudes] [nio-8082-exec-1] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 137 ms
 Hibernate: insert into solicitudes (cliente_id,coordenadas,descripcion,estado_solicitud,fecha,precio_estimado,tecnico_id) values (?,?,?,?,?,?,?)
-Error al buscar técnicos cercanos: [500] during [GET] to [http://ms-ubicacion/api/ubicacion/buscar?coordenadas=-33.4378%2C%20-70.6503] [UbicacionFeignClient#buscarTecnicosCercanos(String)]: [{"timestamp":"2026-09-26T12:37:27.438+00:00","status":500,"error":"Internal Server Error","path":"/api/ubicacion/buscar"}]
-2026-09-26T09:37:27.465-03:00  INFO 32952 --- [ms-solicitudes] [nio-8082-exec-4] c.h.s.service.EventoPublisherService     : Publicando evento de notificaciÃ³n para la solicitud ID: 2
-2026-09-26T09:37:27.471-03:00  INFO 32952 --- [ms-solicitudes] [nio-8082-exec-4] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
-2026-09-26T09:37:27.510-03:00  INFO 32952 --- [ms-solicitudes] [nio-8082-exec-4] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#4c7d19bf:0/SimpleConnection@554ec79 [delegate=amqp://guest@127.0.0.1:5672/, localPort=59805]
-2026-09-26T09:37:27.536-03:00  INFO 32952 --- [ms-solicitudes] [nio-8082-exec-4] c.h.s.service.EventoPublisherService     : Evento publicado con Ã©xito.
-2026-09-26T09:40:03.263-03:00  INFO 32952 --- [ms-solicitudes] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-09-26T09:45:03.265-03:00  INFO 32952 --- [ms-solicitudes] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-09-26T09:50:03.270-03:00  INFO 32952 --- [ms-solicitudes] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-09-26T09:55:03.277-03:00  INFO 32952 --- [ms-solicitudes] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-09-26T10:00:03.283-03:00  INFO 32952 --- [ms-solicitudes] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-^C¨Desea terminar el trabajo por lotes (S/N)? 
+Error al buscar técnicos cercanos: [500] during [GET] to [http://ms-ubicacion/api/ubicacion/buscar?coordenadas=41.40338%2C%202.17403] [UbicacionFeignClient#buscarTecnicosCercanos(String)]: [{"timestamp":"2026-09-26T13:10:30.746+00:00","status":500,"error":"Internal Server Error","path":"/api/ubicacion/buscar"}]
+2026-09-26T10:10:30.763-03:00  INFO 29124 --- [ms-solicitudes] [nio-8082-exec-3] c.h.s.service.EventoPublisherService     : Publicando evento de notificaciÃ³n para la solicitud ID: 3
+2026-09-26T10:10:30.771-03:00  INFO 29124 --- [ms-solicitudes] [nio-8082-exec-3] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-09-26T10:10:30.818-03:00  INFO 29124 --- [ms-solicitudes] [nio-8082-exec-3] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#4c7d19bf:0/SimpleConnection@3feb0714 [delegate=amqp://guest@127.0.0.1:5672/, localPort=61166]
+2026-09-26T10:10:30.860-03:00  INFO 29124 --- [ms-solicitudes] [nio-8082-exec-3] c.h.s.service.EventoPublisherService     : Evento publicado con Ã©xito.
+2026-09-26T10:11:39.181-03:00 ERROR 29124 --- [ms-solicitudes] [nio-8082-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException: Name for argument of type [java.lang.Long] not specified, and parameter name information not available via reflection. Ensure that the compiler uses the '-parameters' flag.] with root cause
+
+java.lang.IllegalArgumentException: Name for argument of type [java.lang.Long] not specified, and parameter name information not available via reflection. Ensure that the compiler uses the '-parameters' flag.
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.updateNamedValueInfo(AbstractNamedValueMethodArgumentResolver.java:186) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.getNamedValueInfo(AbstractNamedValueMethodArgumentResolver.java:161) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:107) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:178) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:925) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:830) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:888) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.19.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.ForwardedHeaderFilter.doFilterInternal(ForwardedHeaderFilter.java:173) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-09-26T10:12:10.287-03:00  INFO 29124 --- [ms-solicitudes] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+^C

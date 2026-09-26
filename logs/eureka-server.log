@@ -35,84 +35,58 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.4)
 
-2026-09-26T09:34:21.517-03:00  INFO 26292 --- [           main] c.h.eureka.EurekaServerApplication       : Starting EurekaServerApplication using Java 21.0.12 with PID 26292 (C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\eureka-server\target\classes started by drojas in C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\eureka-server)
-2026-09-26T09:34:21.517-03:00  INFO 26292 --- [           main] c.h.eureka.EurekaServerApplication       : No active profile set, falling back to 1 default profile: "default"
-2026-09-26T09:34:22.241-03:00  INFO 26292 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d8cd35ed-dbcb-31bb-9384-637c20981386
-2026-09-26T09:34:22.281-03:00  WARN 26292 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
-2026-09-26T09:34:22.284-03:00  WARN 26292 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2026-09-26T09:34:22.503-03:00  INFO 26292 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8761 (http)
-2026-09-26T09:34:22.514-03:00  INFO 26292 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-09-26T09:34:22.514-03:00  INFO 26292 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
-2026-09-26T09:34:22.566-03:00  INFO 26292 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-09-26T09:34:22.571-03:00  INFO 26292 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1014 ms
-2026-09-26T09:34:23.133-03:00  INFO 26292 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2026-09-26T09:34:23.133-03:00  INFO 26292 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2026-09-26T09:34:23.263-03:00  INFO 26292 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2026-09-26T09:34:23.263-03:00  INFO 26292 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2026-09-26T09:34:23.798-03:00  WARN 26292 --- [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2026-09-26T09:34:23.814-03:00  INFO 26292 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2026-09-26T09:34:23.830-03:00  INFO 26292 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2026-09-26T09:34:23.830-03:00  INFO 26292 --- [           main] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
-2026-09-26T09:34:23.830-03:00  INFO 26292 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1790426063830 with initial instances count: 0
-2026-09-26T09:34:23.862-03:00  INFO 26292 --- [           main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
-2026-09-26T09:34:23.862-03:00  WARN 26292 --- [           main] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
-2026-09-26T09:34:23.929-03:00  INFO 26292 --- [           main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
-2026-09-26T09:34:23.930-03:00  INFO 26292 --- [           main] c.n.eureka.DefaultEurekaServerContext    : Initialized
-2026-09-26T09:34:23.937-03:00  INFO 26292 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2026-09-26T09:34:23.967-03:00  INFO 26292 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application UNKNOWN with eureka with status UP
-2026-09-26T09:34:23.975-03:00  INFO 26292 --- [       Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
-2026-09-26T09:34:23.975-03:00  INFO 26292 --- [       Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
-2026-09-26T09:34:23.975-03:00  INFO 26292 --- [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
-2026-09-26T09:34:23.975-03:00  INFO 26292 --- [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
-2026-09-26T09:34:23.975-03:00  INFO 26292 --- [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
-2026-09-26T09:34:23.981-03:00  INFO 26292 --- [       Thread-9] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
-2026-09-26T09:34:23.986-03:00  INFO 26292 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8761 (http) with context path ''
-2026-09-26T09:34:23.987-03:00  INFO 26292 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
-2026-09-26T09:34:23.998-03:00  INFO 26292 --- [           main] c.h.eureka.EurekaServerApplication       : Started EurekaServerApplication in 2.824 seconds (process running for 3.107)
-2026-09-26T09:34:31.990-03:00  INFO 26292 --- [nio-8761-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-09-26T09:34:31.990-03:00  INFO 26292 --- [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-09-26T09:34:31.995-03:00  INFO 26292 --- [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
-2026-09-26T09:34:32.168-03:00  INFO 26292 --- [nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/DROJAS.localdomain:api-gateway:8080 with status UP (replication=false)
-2026-09-26T09:34:45.695-03:00  INFO 26292 --- [nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MS-USUARIOS/DROJAS.localdomain:ms-usuarios:8081 with status UP (replication=false)
-2026-09-26T09:34:52.423-03:00  INFO 26292 --- [nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MS-AUTENTICACION/DROJAS.localdomain:ms-autenticacion:8083 with status UP (replication=false)
-2026-09-26T09:35:03.491-03:00  INFO 26292 --- [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MS-SOLICITUDES/DROJAS.localdomain:ms-solicitudes:8082 with status UP (replication=false)
-2026-09-26T09:35:10.466-03:00  INFO 26292 --- [nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MS-UBICACION/DROJAS.localdomain:ms-ubicacion:8085 with status UP (replication=false)
-2026-09-26T09:35:21.171-03:00  INFO 26292 --- [nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MS-PAGOS/DROJAS.localdomain:ms-pagos:8087 with status UP (replication=false)
-2026-09-26T09:35:23.976-03:00  INFO 26292 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2026-09-26T09:35:31.348-03:00  INFO 26292 --- [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MS-VALORACIONES/DROJAS.localdomain:ms-valoraciones:8088 with status UP (replication=false)
-2026-09-26T09:35:43.409-03:00  INFO 26292 --- [nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MS-MAESTRIA/DROJAS.localdomain:ms-maestria:8084 with status UP (replication=false)
-2026-09-26T09:35:50.759-03:00  INFO 26292 --- [nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MS-NOTIFICACION/DROJAS.localdomain:ms-notificacion:8086 with status UP (replication=false)
-2026-09-26T09:35:56.541-03:00  INFO 26292 --- [nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MS-PROMOCIONES/DROJAS.localdomain:ms-promociones:8089 with status UP (replication=false)
-2026-09-26T09:36:02.610-03:00  INFO 26292 --- [nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MS-REPORTES/DROJAS.localdomain:ms-reportes:8090 with status UP (replication=false)
-2026-09-26T09:36:23.977-03:00  INFO 26292 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2026-09-26T09:37:23.977-03:00  INFO 26292 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2026-09-26T09:38:23.979-03:00  INFO 26292 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
-2026-09-26T09:39:23.987-03:00  INFO 26292 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
-2026-09-26T09:40:23.995-03:00  INFO 26292 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
-2026-09-26T09:41:23.999-03:00  INFO 26292 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
-2026-09-26T09:42:24.001-03:00  INFO 26292 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
-2026-09-26T09:43:24.015-03:00  INFO 26292 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
-2026-09-26T09:44:23.879-03:00  WARN 26292 --- [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
-2026-09-26T09:44:24.020-03:00  INFO 26292 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
-2026-09-26T09:45:24.022-03:00  INFO 26292 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
-2026-09-26T09:46:24.028-03:00  INFO 26292 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
-2026-09-26T09:47:24.029-03:00  INFO 26292 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
-2026-09-26T09:48:24.030-03:00  INFO 26292 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
-2026-09-26T09:49:23.930-03:00  INFO 26292 --- [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 20
-2026-09-26T09:49:24.037-03:00  INFO 26292 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
-2026-09-26T09:50:24.045-03:00  INFO 26292 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
-2026-09-26T09:51:24.054-03:00  INFO 26292 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
-2026-09-26T09:52:24.055-03:00  INFO 26292 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
-2026-09-26T09:53:24.063-03:00  INFO 26292 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
-2026-09-26T09:54:23.896-03:00  WARN 26292 --- [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
-2026-09-26T09:54:24.072-03:00  INFO 26292 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
-2026-09-26T09:55:24.074-03:00  INFO 26292 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
-2026-09-26T09:56:24.075-03:00  INFO 26292 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2026-09-26T09:57:24.088-03:00  INFO 26292 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 12ms
-2026-09-26T09:58:24.092-03:00  INFO 26292 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
-2026-09-26T09:59:24.095-03:00  INFO 26292 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
-2026-09-26T10:00:24.099-03:00  INFO 26292 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
-2026-09-26T10:01:24.108-03:00  INFO 26292 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
-2026-09-26T10:02:24.120-03:00  INFO 26292 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 11ms
-2026-09-26T10:03:24.124-03:00  INFO 26292 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
-^C¨Desea terminar el trabajo por lotes (S/N)? 
+2026-09-26T10:06:28.498-03:00  INFO 17852 --- [           main] c.h.eureka.EurekaServerApplication       : Starting EurekaServerApplication using Java 21.0.12 with PID 17852 (C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\eureka-server\target\classes started by drojas in C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\eureka-server)
+2026-09-26T10:06:28.503-03:00  INFO 17852 --- [           main] c.h.eureka.EurekaServerApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-09-26T10:06:29.206-03:00  INFO 17852 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d8cd35ed-dbcb-31bb-9384-637c20981386
+2026-09-26T10:06:29.239-03:00  WARN 17852 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-09-26T10:06:29.239-03:00  WARN 17852 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-09-26T10:06:29.447-03:00  INFO 17852 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8761 (http)
+2026-09-26T10:06:29.455-03:00  INFO 17852 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-26T10:06:29.455-03:00  INFO 17852 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-09-26T10:06:29.503-03:00  INFO 17852 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-26T10:06:29.503-03:00  INFO 17852 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 967 ms
+2026-09-26T10:06:30.068-03:00  INFO 17852 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2026-09-26T10:06:30.076-03:00  INFO 17852 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2026-09-26T10:06:30.199-03:00  INFO 17852 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2026-09-26T10:06:30.199-03:00  INFO 17852 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2026-09-26T10:06:30.717-03:00  WARN 17852 --- [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-09-26T10:06:30.735-03:00  INFO 17852 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-09-26T10:06:30.751-03:00  INFO 17852 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-09-26T10:06:30.751-03:00  INFO 17852 --- [           main] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2026-09-26T10:06:30.759-03:00  INFO 17852 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1790427990751 with initial instances count: 0
+2026-09-26T10:06:30.777-03:00  INFO 17852 --- [           main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
+2026-09-26T10:06:30.777-03:00  WARN 17852 --- [           main] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2026-09-26T10:06:30.831-03:00  INFO 17852 --- [           main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
+2026-09-26T10:06:30.832-03:00  INFO 17852 --- [           main] c.n.eureka.DefaultEurekaServerContext    : Initialized
+2026-09-26T10:06:30.838-03:00  INFO 17852 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2026-09-26T10:06:30.869-03:00  INFO 17852 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application UNKNOWN with eureka with status UP
+2026-09-26T10:06:30.877-03:00  INFO 17852 --- [       Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
+2026-09-26T10:06:30.878-03:00  INFO 17852 --- [       Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
+2026-09-26T10:06:30.878-03:00  INFO 17852 --- [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
+2026-09-26T10:06:30.878-03:00  INFO 17852 --- [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
+2026-09-26T10:06:30.878-03:00  INFO 17852 --- [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
+2026-09-26T10:06:30.886-03:00  INFO 17852 --- [       Thread-9] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
+2026-09-26T10:06:30.891-03:00  INFO 17852 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8761 (http) with context path ''
+2026-09-26T10:06:30.892-03:00  INFO 17852 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
+2026-09-26T10:06:30.903-03:00  INFO 17852 --- [           main] c.h.eureka.EurekaServerApplication       : Started EurekaServerApplication in 2.738 seconds (process running for 3.074)
+2026-09-26T10:06:38.666-03:00  INFO 17852 --- [nio-8761-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-26T10:06:38.667-03:00  INFO 17852 --- [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-26T10:06:38.667-03:00  INFO 17852 --- [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-09-26T10:06:38.847-03:00  INFO 17852 --- [nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/DROJAS.localdomain:api-gateway:8080 with status UP (replication=false)
+2026-09-26T10:06:52.337-03:00  INFO 17852 --- [nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MS-USUARIOS/DROJAS.localdomain:ms-usuarios:8081 with status UP (replication=false)
+2026-09-26T10:06:59.469-03:00  INFO 17852 --- [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MS-AUTENTICACION/DROJAS.localdomain:ms-autenticacion:8083 with status UP (replication=false)
+2026-09-26T10:07:10.511-03:00  INFO 17852 --- [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MS-SOLICITUDES/DROJAS.localdomain:ms-solicitudes:8082 with status UP (replication=false)
+2026-09-26T10:07:17.459-03:00  INFO 17852 --- [nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MS-UBICACION/DROJAS.localdomain:ms-ubicacion:8085 with status UP (replication=false)
+2026-09-26T10:07:28.302-03:00  INFO 17852 --- [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MS-PAGOS/DROJAS.localdomain:ms-pagos:8087 with status UP (replication=false)
+2026-09-26T10:07:30.880-03:00  INFO 17852 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-09-26T10:07:40.418-03:00  INFO 17852 --- [nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MS-VALORACIONES/DROJAS.localdomain:ms-valoraciones:8088 with status UP (replication=false)
+2026-09-26T10:07:52.499-03:00  INFO 17852 --- [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MS-MAESTRIA/DROJAS.localdomain:ms-maestria:8084 with status UP (replication=false)
+2026-09-26T10:07:59.739-03:00  INFO 17852 --- [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MS-NOTIFICACION/DROJAS.localdomain:ms-notificacion:8086 with status UP (replication=false)
+2026-09-26T10:08:05.533-03:00  INFO 17852 --- [nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MS-PROMOCIONES/DROJAS.localdomain:ms-promociones:8089 with status UP (replication=false)
+2026-09-26T10:08:11.674-03:00  INFO 17852 --- [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MS-REPORTES/DROJAS.localdomain:ms-reportes:8090 with status UP (replication=false)
+2026-09-26T10:08:30.880-03:00  INFO 17852 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-09-26T10:09:30.886-03:00  INFO 17852 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
+2026-09-26T10:10:30.889-03:00  INFO 17852 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+2026-09-26T10:11:30.901-03:00  INFO 17852 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 12ms
+2026-09-26T10:12:30.914-03:00  INFO 17852 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 12ms
+^C

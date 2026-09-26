@@ -23,32 +23,32 @@ public class SolicitudController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Solicitud> getSolicitud(@PathVariable Long id) {
+    public ResponseEntity<Solicitud> getSolicitud(@PathVariable("id") Long id) {
         return ResponseEntity.ok(solicitudService.getSolicitudById(id));
     }
 
     @GetMapping("/cliente/{clienteId}")
-    public ResponseEntity<List<Solicitud>> getByCliente(@PathVariable Long clienteId) {
+    public ResponseEntity<List<Solicitud>> getByCliente(@PathVariable("clienteId") Long clienteId) {
         return ResponseEntity.ok(solicitudService.getSolicitudesByCliente(clienteId));
     }
 
     @GetMapping("/tecnico/{tecnicoId}")
-    public ResponseEntity<List<Solicitud>> getByTecnico(@PathVariable Long tecnicoId) {
+    public ResponseEntity<List<Solicitud>> getByTecnico(@PathVariable("tecnicoId") Long tecnicoId) {
         return ResponseEntity.ok(solicitudService.getSolicitudesByTecnico(tecnicoId));
     }
 
     @PatchMapping("/{id}/asignar-tecnico/{tecnicoId}")
-    public ResponseEntity<Solicitud> assignTecnico(@PathVariable Long id, @PathVariable Long tecnicoId) {
+    public ResponseEntity<Solicitud> assignTecnico(@PathVariable("id") Long id, @PathVariable("tecnicoId") Long tecnicoId) {
         return ResponseEntity.ok(solicitudService.assignTecnico(id, tecnicoId));
     }
 
     @PatchMapping("/{id}/estado")
-    public ResponseEntity<Solicitud> updateEstado(@PathVariable Long id, @RequestParam EstadoSolicitud estado) {
+    public ResponseEntity<Solicitud> updateEstado(@PathVariable("id") Long id, @RequestParam("estado") EstadoSolicitud estado) {
         return ResponseEntity.ok(solicitudService.updateEstado(id, estado));
     }
 
     @GetMapping("/{id}/tecnicos-cercanos")
-    public ResponseEntity<List<Long>> getNearbyTecnicos(@PathVariable Long id) {
+    public ResponseEntity<List<Long>> getNearbyTecnicos(@PathVariable("id") Long id) {
         return ResponseEntity.ok(solicitudService.findNearbyTecnicos(id));
     }
 }
