@@ -1,5 +1,6 @@
 package com.homefixer.solicitudes.service;
 
+import com.homefixer.shared.dto.NotificacionEventDTO;
 import com.homefixer.solicitudes.client.UbicacionFeignClient;
 import com.homefixer.solicitudes.entity.Solicitud;
 import com.homefixer.shared.enums.EstadoSolicitud;
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.ArrayList;
 
 @Service
 @RequiredArgsConstructor
@@ -16,12 +18,32 @@ public class SolicitudServiceImpl implements SolicitudService {
 
     private final SolicitudRepository solicitudRepository;
     private final UbicacionFeignClient ubicacionFeignClient;
+    private final EventoPublisherService eventoPublisherService;
 
     @Override
     public Solicitud createSolicitud(Solicitud solicitud) {
         solicitud.setEstadoSolicitud(EstadoSolicitud.CREADA);
         solicitud.setFecha(LocalDateTime.now());
-        return solicitudRepository.save(solicitud);
+        Solicitud savedSolicitud = solicitudRepository.save(solicitud);
+        
+        List<Long> tecnicosIds = new ArrayList<>();
+        try {
+            tecnicosIds = ubicacionFeignClient.buscarTecnicosCercanos(savedSolicitud.getCoordenadas());
+        } catch (Exception e) {
+            System.err.println("Error al buscar técnicos cercanos: " + e.getMessage());
+        }
+
+        NotificacionEventDTO evento = NotificacionEventDTO.builder()
+                .solicitudId(savedSolicitud.getId())
+                .clienteId(savedSolicitud.getClienteId())
+                .tecnicosIds(tecnicosIds)
+                .tipoServicio("NUEVA_SOLICITUD")
+                .mensaje(savedSolicitud.getDescripcion())
+                .build();
+                
+        eventoPublisherService.publicarNotificacion(evento);
+        
+        return savedSolicitud;
     }
 
     @Override
