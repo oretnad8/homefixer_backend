@@ -78,6 +78,7 @@ public class NotificacionService {
         return switch (tipo) {
             case "NUEVA_SOLICITUD" -> "Nueva solicitud cerca de ti";
             case "TECNICO_ASIGNADO" -> "Técnico asignado";
+            case "TECNICO_LLEGO" -> "Tu técnico llegó";
             case "CAMBIO_ESTADO" -> switch (e.getEstado() != null ? e.getEstado() : "") {
                 case "EN_PROCESO" -> "Trabajo iniciado";
                 case "COMPLETADA" -> "Servicio completado";

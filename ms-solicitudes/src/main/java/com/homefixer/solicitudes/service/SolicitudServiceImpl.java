@@ -7,7 +7,9 @@ import com.homefixer.shared.messaging.MessagingConstants;
 import com.homefixer.solicitudes.client.UbicacionFeignClient;
 import com.homefixer.solicitudes.client.UsuariosFeignClient;
 import com.homefixer.solicitudes.entity.Solicitud;
+import com.homefixer.solicitudes.entity.SolicitudHito;
 import com.homefixer.solicitudes.entity.SolicitudRechazo;
+import com.homefixer.solicitudes.repository.SolicitudHitoRepository;
 import com.homefixer.solicitudes.repository.SolicitudRechazoRepository;
 import com.homefixer.solicitudes.repository.SolicitudRepository;
 import feign.FeignException;
@@ -37,10 +39,16 @@ public class SolicitudServiceImpl implements SolicitudService {
     private static final Set<EstadoSolicitud> ACTIVAS = EnumSet.of(EstadoSolicitud.ACEPTADA, EstadoSolicitud.EN_PROCESO);
     /** Trabajos terminados (pagados o a la espera del pago) */
     private static final Set<EstadoSolicitud> TERMINADAS = EnumSet.of(EstadoSolicitud.COMPLETADA, EstadoSolicitud.PAGADA);
+    /** Estados finales: la solicitud ya no se puede reprocesar */
+    private static final Set<EstadoSolicitud> CERRADAS =
+            EnumSet.of(EstadoSolicitud.COMPLETADA, EstadoSolicitud.PAGADA, EstadoSolicitud.CANCELADA);
+    /** Hito que no es un estado: el técnico llegó al domicilio */
+    static final String HITO_LLEGADA = "LLEGADA";
     private static final String[] DIAS = {"Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"};
 
     private final SolicitudRepository solicitudRepository;
     private final SolicitudRechazoRepository rechazoRepository;
+    private final SolicitudHitoRepository hitoRepository;
     private final UbicacionFeignClient ubicacionFeignClient;
     private final UsuariosFeignClient usuariosFeignClient;
     private final EventPublisher eventPublisher;
@@ -58,6 +66,7 @@ public class SolicitudServiceImpl implements SolicitudService {
         if (solicitud.getUrgencia() == null) solicitud.setUrgencia("normal");
         if (solicitud.getPrecioEstimado() == null) solicitud.setPrecioEstimado(0.0);
         Solicitud guardada = solicitudRepository.save(solicitud);
+        registrarHito(guardada.getId(), EstadoSolicitud.CREADA.name(), ahora, null);
 
         List<Long> tecnicosIds = new ArrayList<>();
         try {
@@ -174,6 +183,38 @@ public class SolicitudServiceImpl implements SolicitudService {
 
     @Override
     @Transactional
+    public Solicitud marcarLlegada(Long solicitudId) {
+        Solicitud solicitud = getSolicitudById(solicitudId);
+        if (hitoRepository.existsBySolicitudIdAndHito(solicitudId, HITO_LLEGADA)) return solicitud;
+        exigirEstado(solicitud, EstadoSolicitud.ACEPTADA, "Solo se puede marcar la llegada de un trabajo aceptado y aún no iniciado.");
+        LocalDateTime ahora = LocalDateTime.now();
+        registrarHito(solicitudId, HITO_LLEGADA, ahora, null);
+        solicitud.setFechaActualizacion(ahora);
+        Solicitud guardada = solicitudRepository.save(solicitud);
+        publicar(MessagingConstants.RK_SOLICITUD_ESTADO_ACTUALIZADO, guardada, List.of(guardada.getTecnicoId()), "TECNICO_LLEGO",
+                "El técnico " + guardada.getTecnicoNombre() + " llegó a tu domicilio.");
+        return guardada;
+    }
+
+    @Override
+    public List<SolicitudHito> getHitos(Long solicitudId) {
+        Solicitud s = getSolicitudById(solicitudId);
+        List<SolicitudHito> hitos = new ArrayList<>(hitoRepository.findBySolicitudIdOrderByFechaAsc(solicitudId));
+        // Solicitudes anteriores a la trazabilidad: se reconstruye lo que se sabe (creación y estado actual)
+        boolean sinCreada = hitos.stream().noneMatch(h -> EstadoSolicitud.CREADA.name().equals(h.getHito()));
+        if (sinCreada && s.getFecha() != null) {
+            hitos.add(0, new SolicitudHito(null, solicitudId, EstadoSolicitud.CREADA.name(), s.getFecha(), null));
+        }
+        String actual = s.getEstadoSolicitud().name();
+        if (hitos.stream().noneMatch(h -> actual.equals(h.getHito()))) {
+            hitos.add(new SolicitudHito(null, solicitudId, actual,
+                    s.getFechaActualizacion() != null ? s.getFechaActualizacion() : s.getFecha(), null));
+        }
+        return hitos;
+    }
+
+    @Override
+    @Transactional
     public Solicitud cancelar(Long solicitudId) {
         Solicitud solicitud = getSolicitudById(solicitudId);
         if (solicitud.getEstadoSolicitud() != EstadoSolicitud.CREADA
@@ -188,7 +229,11 @@ public class SolicitudServiceImpl implements SolicitudService {
     @Override
     @Transactional
     public Solicitud updateEstado(Long solicitudId, EstadoSolicitud estado) {
-        Solicitud guardada = cambiarEstado(getSolicitudById(solicitudId), estado);
+        Solicitud solicitud = getSolicitudById(solicitudId);
+        if (CERRADAS.contains(solicitud.getEstadoSolicitud())) {
+            throw new ResponseStatusException(HttpStatus.CONFLICT, "La solicitud ya está cerrada y no se puede modificar.");
+        }
+        Solicitud guardada = cambiarEstado(solicitud, estado);
         publicarCambioEstado(guardada, "El estado de tu solicitud cambió a: " + estado.name());
         return guardada;
     }
@@ -250,9 +295,16 @@ public class SolicitudServiceImpl implements SolicitudService {
     // ---------- helpers ----------
 
     private Solicitud cambiarEstado(Solicitud solicitud, EstadoSolicitud estado) {
+        LocalDateTime ahora = LocalDateTime.now();
         solicitud.setEstadoSolicitud(estado);
-        solicitud.setFechaActualizacion(LocalDateTime.now());
-        return solicitudRepository.save(solicitud);
+        solicitud.setFechaActualizacion(ahora);
+        Solicitud guardada = solicitudRepository.save(solicitud);
+        registrarHito(guardada.getId(), estado.name(), ahora, null);
+        return guardada;
+    }
+
+    private void registrarHito(Long solicitudId, String hito, LocalDateTime fecha, String detalle) {
+        hitoRepository.save(new SolicitudHito(null, solicitudId, hito, fecha, detalle));
     }
 
     private static void exigirEstado(Solicitud solicitud, EstadoSolicitud esperado, String mensaje) {

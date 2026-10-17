@@ -1,6 +1,7 @@
 package com.homefixer.solicitudes.service;
 
 import com.homefixer.solicitudes.entity.Solicitud;
+import com.homefixer.solicitudes.entity.SolicitudHito;
 import com.homefixer.shared.enums.EstadoSolicitud;
 
 import java.util.List;
@@ -23,9 +24,13 @@ public interface SolicitudService {
     Solicitud finalizar(Long solicitudId, String notas);
     /** COMPLETADA -> PAGADA, al recibir el evento pago.procesado. Idempotente. */
     void marcarPagada(Long solicitudId);
+    /** El técnico llegó al domicilio (hito LLEGADA, la solicitud sigue ACEPTADA). Idempotente. */
+    Solicitud marcarLlegada(Long solicitudId);
+    /** Línea de tiempo de la solicitud: cada hito con su fecha y hora. */
+    List<SolicitudHito> getHitos(Long solicitudId);
     /** CREADA | ACEPTADA -> CANCELADA */
     Solicitud cancelar(Long solicitudId);
-    /** Cambio de estado administrativo (sin validar la transición). */
+    /** Cambio de estado administrativo; no permite modificar solicitudes cerradas. */
     Solicitud updateEstado(Long solicitudId, EstadoSolicitud estado);
 
     Map<String, Object> estadisticasTecnico(Long tecnicoId);

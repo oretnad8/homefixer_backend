@@ -1,6 +1,7 @@
 package com.homefixer.solicitudes.controller;
 
 import com.homefixer.solicitudes.entity.Solicitud;
+import com.homefixer.solicitudes.entity.SolicitudHito;
 import com.homefixer.shared.enums.EstadoSolicitud;
 import com.homefixer.solicitudes.service.SolicitudService;
 import lombok.RequiredArgsConstructor;
@@ -64,6 +65,18 @@ public class SolicitudController {
     public ResponseEntity<Void> rechazar(@PathVariable("id") Long id, @RequestParam("tecnicoId") Long tecnicoId) {
         solicitudService.rechazar(id, tecnicoId);
         return ResponseEntity.noContent().build();
+    }
+
+    /** El técnico llegó al domicilio (queda en la línea de tiempo). */
+    @PostMapping("/{id}/llegada")
+    public ResponseEntity<Solicitud> llegada(@PathVariable("id") Long id) {
+        return ResponseEntity.ok(solicitudService.marcarLlegada(id));
+    }
+
+    /** Línea de tiempo: [{ hito, fecha, detalle }] en orden cronológico. */
+    @GetMapping("/{id}/hitos")
+    public ResponseEntity<List<SolicitudHito>> getHitos(@PathVariable("id") Long id) {
+        return ResponseEntity.ok(solicitudService.getHitos(id));
     }
 
     @PostMapping("/{id}/iniciar")

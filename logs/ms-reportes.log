@@ -82,51 +82,38 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.4)
 
-2026-10-17T09:56:32.795-03:00  INFO 11016 --- [ms-reportes] [           main] c.h.reportes.MsReportesApplication       : Starting MsReportesApplication using Java 21.0.12 with PID 11016 (C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-reportes\target\classes started by drojas in C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-reportes)
-2026-10-17T09:56:32.797-03:00  INFO 11016 --- [ms-reportes] [           main] c.h.reportes.MsReportesApplication       : No active profile set, falling back to 1 default profile: "default"
-2026-10-17T09:56:33.558-03:00  INFO 11016 --- [ms-reportes] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=167d9cf0-0516-34b1-93b1-435e0ac4572f
-2026-10-17T09:56:33.597-03:00  WARN 11016 --- [ms-reportes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
-2026-10-17T09:56:33.602-03:00  WARN 11016 --- [ms-reportes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2026-10-17T09:56:33.818-03:00  INFO 11016 --- [ms-reportes] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
-2026-10-17T09:56:33.826-03:00  INFO 11016 --- [ms-reportes] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-10-17T09:56:33.826-03:00  INFO 11016 --- [ms-reportes] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
-2026-10-17T09:56:33.878-03:00  INFO 11016 --- [ms-reportes] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-10-17T09:56:33.879-03:00  INFO 11016 --- [ms-reportes] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1032 ms
-2026-10-17T09:56:34.794-03:00  INFO 11016 --- [ms-reportes] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2026-10-17T09:56:34.831-03:00  WARN 11016 --- [ms-reportes] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2026-10-17T09:56:34.868-03:00  INFO 11016 --- [ms-reportes] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2026-10-17T09:56:34.934-03:00  INFO 11016 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2026-10-17T09:56:34.938-03:00  INFO 11016 --- [ms-reportes] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-10-17T09:56:34.954-03:00  INFO 11016 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2026-10-17T09:56:34.954-03:00  INFO 11016 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2026-10-17T09:56:34.954-03:00  INFO 11016 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2026-10-17T09:56:34.954-03:00  INFO 11016 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2026-10-17T09:56:34.954-03:00  INFO 11016 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2026-10-17T09:56:34.954-03:00  INFO 11016 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2026-10-17T09:56:34.954-03:00  INFO 11016 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2026-10-17T09:56:35.203-03:00  INFO 11016 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2026-10-17T09:56:35.206-03:00  INFO 11016 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2026-10-17T09:56:35.207-03:00  INFO 11016 --- [ms-reportes] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2026-10-17T09:56:35.210-03:00  INFO 11016 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1792241795210 with initial instances count: 9
-2026-10-17T09:56:35.211-03:00  INFO 11016 --- [ms-reportes] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MS-REPORTES with eureka with status UP
-2026-10-17T09:56:35.212-03:00  INFO 11016 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1792241795212, current=UP, previous=STARTING]
-2026-10-17T09:56:35.213-03:00  INFO 11016 --- [ms-reportes] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-REPORTES/DROJAS.localdomain:ms-reportes:8090: registering service...
-2026-10-17T09:56:35.227-03:00  INFO 11016 --- [ms-reportes] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path ''
-2026-10-17T09:56:35.228-03:00  INFO 11016 --- [ms-reportes] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8090
-2026-10-17T09:56:35.233-03:00  INFO 11016 --- [ms-reportes] [           main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
-2026-10-17T09:56:35.244-03:00  INFO 11016 --- [ms-reportes] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-REPORTES/DROJAS.localdomain:ms-reportes:8090 - registration status: 204
-2026-10-17T09:56:35.266-03:00  INFO 11016 --- [ms-reportes] [           main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#489bc8fd:0/SimpleConnection@5100c143 [delegate=amqp://guest@127.0.0.1:5672/, localPort=58992]
-2026-10-17T09:56:35.317-03:00  INFO 11016 --- [ms-reportes] [           main] c.h.reportes.MsReportesApplication       : Started MsReportesApplication in 2.879 seconds (process running for 3.154)
-2026-10-17T09:58:15.764-03:00  INFO 11016 --- [ms-reportes] [ntContainer#0-1] c.h.r.listener.SolicitudEventListener    : [ACK] Evento 4137d228-72a9-46ec-a015-278696360218 [solicitud.tecnico-asignado] registrado en métricas
-2026-10-17T09:59:41.757-03:00  INFO 11016 --- [ms-reportes] [ntContainer#0-1] c.h.r.listener.SolicitudEventListener    : [ACK] Evento c200e7ef-39bf-4713-aec0-6f32f94a7504 [solicitud.estado-actualizado] registrado en métricas
-2026-10-17T10:01:34.964-03:00  INFO 11016 --- [ms-reportes] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-10-17T10:01:36.295-03:00  INFO 11016 --- [ms-reportes] [ntContainer#0-1] c.h.r.listener.SolicitudEventListener    : [ACK] Evento 446f42bd-b8fd-4853-88ff-76de259e3131 [solicitud.estado-actualizado] registrado en métricas
-2026-10-17T10:06:34.976-03:00  INFO 11016 --- [ms-reportes] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-10-17T10:11:34.987-03:00  INFO 11016 --- [ms-reportes] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-10-17T10:16:34.995-03:00  INFO 11016 --- [ms-reportes] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-10-17T10:21:35.000-03:00  INFO 11016 --- [ms-reportes] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-10-17T10:26:35.017-03:00  INFO 11016 --- [ms-reportes] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-10-17T10:31:35.041-03:00  INFO 11016 --- [ms-reportes] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-10-17T10:36:35.087-03:00  INFO 11016 --- [ms-reportes] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-10-17T10:41:35.102-03:00  INFO 11016 --- [ms-reportes] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-^C
+2026-10-17T10:59:57.472-03:00  INFO 29280 --- [ms-reportes] [           main] c.h.reportes.MsReportesApplication       : Starting MsReportesApplication using Java 21.0.12 with PID 29280 (C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-reportes\target\classes started by drojas in C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-reportes)
+2026-10-17T10:59:57.475-03:00  INFO 29280 --- [ms-reportes] [           main] c.h.reportes.MsReportesApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-10-17T10:59:58.274-03:00  INFO 29280 --- [ms-reportes] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=167d9cf0-0516-34b1-93b1-435e0ac4572f
+2026-10-17T10:59:58.330-03:00  WARN 29280 --- [ms-reportes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-10-17T10:59:58.334-03:00  WARN 29280 --- [ms-reportes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-10-17T10:59:58.552-03:00  INFO 29280 --- [ms-reportes] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
+2026-10-17T10:59:58.560-03:00  INFO 29280 --- [ms-reportes] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-17T10:59:58.561-03:00  INFO 29280 --- [ms-reportes] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-10-17T10:59:58.611-03:00  INFO 29280 --- [ms-reportes] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-10-17T10:59:58.612-03:00  INFO 29280 --- [ms-reportes] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1085 ms
+2026-10-17T10:59:59.423-03:00  INFO 29280 --- [ms-reportes] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-10-17T10:59:59.459-03:00  WARN 29280 --- [ms-reportes] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-10-17T10:59:59.495-03:00  INFO 29280 --- [ms-reportes] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-10-17T10:59:59.566-03:00  INFO 29280 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-10-17T10:59:59.570-03:00  INFO 29280 --- [ms-reportes] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-10-17T10:59:59.587-03:00  INFO 29280 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-10-17T10:59:59.587-03:00  INFO 29280 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-10-17T10:59:59.587-03:00  INFO 29280 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-10-17T10:59:59.587-03:00  INFO 29280 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-10-17T10:59:59.587-03:00  INFO 29280 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-10-17T10:59:59.587-03:00  INFO 29280 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-10-17T10:59:59.587-03:00  INFO 29280 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-10-17T10:59:59.783-03:00  INFO 29280 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-10-17T10:59:59.785-03:00  INFO 29280 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-10-17T10:59:59.787-03:00  INFO 29280 --- [ms-reportes] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-10-17T10:59:59.790-03:00  INFO 29280 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1792245599790 with initial instances count: 7
+2026-10-17T10:59:59.791-03:00  INFO 29280 --- [ms-reportes] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MS-REPORTES with eureka with status UP
+2026-10-17T10:59:59.792-03:00  INFO 29280 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1792245599792, current=UP, previous=STARTING]
+2026-10-17T10:59:59.793-03:00  INFO 29280 --- [ms-reportes] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-REPORTES/DROJAS.localdomain:ms-reportes:8090: registering service...
+2026-10-17T10:59:59.808-03:00  INFO 29280 --- [ms-reportes] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path ''
+2026-10-17T10:59:59.809-03:00  INFO 29280 --- [ms-reportes] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8090
+2026-10-17T10:59:59.813-03:00  INFO 29280 --- [ms-reportes] [           main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-10-17T10:59:59.824-03:00  INFO 29280 --- [ms-reportes] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-REPORTES/DROJAS.localdomain:ms-reportes:8090 - registration status: 204
+2026-10-17T10:59:59.850-03:00  INFO 29280 --- [ms-reportes] [           main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#531ec978:0/SimpleConnection@2f3cd727 [delegate=amqp://guest@127.0.0.1:5672/, localPort=65491]
+2026-10-17T10:59:59.898-03:00  INFO 29280 --- [ms-reportes] [           main] c.h.reportes.MsReportesApplication       : Started MsReportesApplication in 2.769 seconds (process running for 3.056)
