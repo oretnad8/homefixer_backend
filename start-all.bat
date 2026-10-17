@@ -11,6 +11,16 @@ powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0stop-all.ps1"
 
 if not exist logs mkdir logs
 
+REM Cada servicio corre con "spring-boot:run -pl <modulo>" (sin -am): toma el modulo
+REM "shared" del repositorio local ~/.m2, asi que se reinstala para no usar una version vieja.
+echo Instalando el modulo shared actualizado...
+call .\mvnw.cmd -q -pl shared -am install -DskipTests
+if errorlevel 1 (
+    echo ERROR: no se pudo compilar el modulo shared. Revisa el error de arriba.
+    pause
+    exit /b 1
+)
+
 echo Levantando RabbitMQ (docker compose)...
 docker compose up -d --wait rabbitmq
 
