@@ -4,12 +4,15 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.cors.CorsConfiguration;
-import org.springframework.web.cors.reactive.CorsWebFilter;
+import org.springframework.web.cors.reactive.CorsConfigurationSource;
 import org.springframework.web.cors.reactive.UrlBasedCorsConfigurationSource;
 
-import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Única fuente de CORS del sistema (la usa Spring Security en el gateway).
+ * Los microservicios no deben agregar cabeceras CORS: se duplicarían.
+ */
 @Configuration
 public class CorsGlobalConfig {
 
@@ -17,24 +20,23 @@ public class CorsGlobalConfig {
     private String frontendUrl;
 
     @Bean
-    public CorsWebFilter corsWebFilter() {
+    public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration corsConfig = new CorsConfiguration();
-        
-        // Evitar el uso de "*" de forma global
-        corsConfig.setAllowedOrigins(List.of(frontendUrl));
-        
-        // Métodos estrictamente necesarios
-        corsConfig.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
-        
-        // Headers permitidos
-        corsConfig.setAllowedHeaders(Arrays.asList("Authorization", "Content-Type"));
-        
-        // Opcional, necesario si se envían cookies o tokens en sesiones
-        // corsConfig.setAllowCredentials(true);
+
+        // Evitar el uso de "*" de forma global, pero permitiendo el túnel
+        corsConfig.setAllowedOriginPatterns(List.of(frontendUrl, "https://homefixer.localfoto.cl", "https://*.localfoto.cl", "http://localhost:*"));
+
+        // PATCH es necesario: asignar técnico, disponibilidad, especialidad...
+        corsConfig.setAllowedMethods(List.of("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"));
+
+        corsConfig.setAllowedHeaders(List.of("*"));
+
+        // El navegador cachea el preflight 1 h (menos OPTIONS al compartir ubicación)
+        corsConfig.setMaxAge(3600L);
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", corsConfig);
 
-        return new CorsWebFilter(source);
+        return source;
     }
 }

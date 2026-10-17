@@ -1,0 +1,24 @@
+services:
+  rabbitmq:
+    image: rabbitmq:3.13-management
+    container_name: homefixer-rabbitmq
+    hostname: homefixer-rabbitmq   # nombre de nodo fijo: los datos del volumen se reutilizan entre reinicios
+    ports:
+      - "5672:5672"     # AMQP
+      - "15672:15672"   # Consola de administración (guest / guest)
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_USER:-guest}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASS:-guest}
+    volumes:
+      # Durabilidad: exchanges, colas durables y mensajes persistentes sobreviven a reinicios del contenedor
+      - rabbitmq-data:/var/lib/rabbitmq
+      - ./rabbitmq/rabbitmq.conf:/etc/rabbitmq/conf.d/20-homefixer.conf:ro
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+volumes:
+  rabbitmq-data:

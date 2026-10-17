@@ -4,6 +4,24 @@ server:
 spring:
   application:
     name: ms-ubicacion
+  datasource:
+    url: ${SUPABASE_DB_URL:jdbc:postgresql://aws-0-us-east-1.pooler.supabase.com:6543/postgres}
+    username: ${SUPABASE_DB_USER:postgres}
+    password: ${SUPABASE_DB_PASSWORD:password_local_o_nube}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+ubicacion:
+  # Un técnico está "en línea" si reportó su posición dentro de esta ventana
+  ttl-segundos: ${UBICACION_TTL_SEGUNDOS:120}
+  # Radio de búsqueda por defecto para técnicos cercanos
+  radio-km-defecto: ${UBICACION_RADIO_KM:30}
 
 eureka:
   client:

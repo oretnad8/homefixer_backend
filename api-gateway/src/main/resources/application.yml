@@ -30,6 +30,9 @@ spring:
     name: api-gateway
   cloud:
     gateway:
+      # CORS lo resuelve CorsGlobalConfig (Spring Security); un segundo origen de CORS duplica cabeceras
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Origin Access-Control-Allow-Credentials, RETAIN_FIRST
       routes:
         - id: ms-usuarios
           uri: lb://ms-usuarios
@@ -44,7 +47,7 @@ spring:
         - id: ms-solicitudes
           uri: lb://ms-solicitudes
           predicates:
-            - Path=/api/solicitudes/**
+            - Path=/api/solicitudes/**, /api/chat/**
         - id: ms-solicitudes-docs
           uri: lb://ms-solicitudes
           predicates:

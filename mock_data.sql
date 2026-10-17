@@ -16,23 +16,32 @@ VALUES (101)
 ON CONFLICT (id) DO NOTHING;
 
 
--- 2. Insertamos un Técnico (Ana Gómez - Gasfíter)
+-- 2. Insertamos un Técnico (Ana Gómez - Otros)
 INSERT INTO usuarios (id, nombre, email, telefono, password) 
 VALUES (102, 'Ana Gómez', 'ana.gomez@homefixer.cl', '+56933334444', 'hashed_pass_123')
 ON CONFLICT (id) DO NOTHING;
 
-INSERT INTO tecnicos (id, validado, calificacion_promedio, nivel_reputacion) 
-VALUES (102, true, 4.8, 'EXPERTO')
+INSERT INTO tecnicos (id, validado, calificacion_promedio, nivel_reputacion, especialidad, precio_base) 
+VALUES (102, true, 4.8, 'EXPERTO', 'otros', 25000)
 ON CONFLICT (id) DO NOTHING;
 
 
--- 3. Insertamos un Técnico Nuevo (Carlos Ruiz - Electricista)
+-- 3. Insertamos un Técnico Nuevo (Carlos Ruiz - Electricidad)
 INSERT INTO usuarios (id, nombre, email, telefono, password) 
 VALUES (103, 'Carlos Ruiz', 'carlos.ruiz@homefixer.cl', '+56955556666', 'hashed_pass_123')
 ON CONFLICT (id) DO NOTHING;
 
-INSERT INTO tecnicos (id, validado, calificacion_promedio, nivel_reputacion) 
-VALUES (103, false, 0.0, 'NUEVO')
+INSERT INTO tecnicos (id, validado, calificacion_promedio, nivel_reputacion, especialidad, precio_base) 
+VALUES (103, true, 4.2, 'BUENO', 'electricidad', 30000)
+ON CONFLICT (id) DO NOTHING;
+
+-- 5. Insertamos otro de Otros
+INSERT INTO usuarios (id, nombre, email, telefono, password) 
+VALUES (104, 'Pedro Soto', 'pedro.soto@homefixer.cl', '+56955558888', 'hashed_pass_123')
+ON CONFLICT (id) DO NOTHING;
+
+INSERT INTO tecnicos (id, validado, calificacion_promedio, nivel_reputacion, especialidad, precio_base) 
+VALUES (104, true, 5.0, 'EXPERTO', 'otros', 28000)
 ON CONFLICT (id) DO NOTHING;
 
 

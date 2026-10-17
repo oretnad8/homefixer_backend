@@ -4,6 +4,20 @@ server:
 spring:
   application:
     name: ms-reportes
+  rabbitmq:
+    host: ${RABBITMQ_HOST:localhost}
+    port: ${RABBITMQ_PORT:5672}
+    username: ${RABBITMQ_USER:guest}
+    password: ${RABBITMQ_PASS:guest}
+    # Tiempo máximo de espera de la respuesta RPC (mensajería síncrona)
+    template:
+      reply-timeout: 5000
+    listener:
+      simple:
+        # ACK manual en el consumidor de eventos
+        acknowledge-mode: manual
+        prefetch: 10
+        default-requeue-rejected: false
 
 eureka:
   client:

@@ -6,6 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
+
 @Entity
 @Table(name = "valoraciones")
 @Data
@@ -30,4 +32,9 @@ public class Valoracion {
     private Integer puntuacion;
 
     private String comentario;
+
+    /** Quién valora: "cliente" (al técnico) o "tecnico" (al cliente). null en filas antiguas = cliente. */
+    private String autorRol;
+
+    private LocalDateTime fecha;
 }

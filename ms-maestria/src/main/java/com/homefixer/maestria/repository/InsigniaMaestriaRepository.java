@@ -4,9 +4,12 @@ import com.homefixer.maestria.entity.InsigniaMaestria;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Collection;
 import java.util.List;
 
 @Repository
 public interface InsigniaMaestriaRepository extends JpaRepository<InsigniaMaestria, Long> {
-    List<InsigniaMaestria> findByTecnicoId(Long tecnicoId);
+    List<InsigniaMaestria> findByTecnicoIdOrderByFechaOtorgadaDesc(Long tecnicoId);
+    List<InsigniaMaestria> findByTecnicoIdIn(Collection<Long> tecnicoIds);
+    boolean existsByTecnicoIdAndCategoria(Long tecnicoId, String categoria);
 }

@@ -7,6 +7,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
+
 @Entity
 @Table(name = "pagos")
 @Data
@@ -28,8 +30,15 @@ public class Pago {
     @Column(nullable = false)
     private EstadoPago estadoPago;
 
+    /** tarjeta, efectivo, transferencia, paypal ("pendiente" mientras no se paga) */
     @Column(nullable = false)
     private String metodoPago;
 
     private String comprobanteUrl;
+
+    // Columnas nullable: los pagos antiguos no las tienen
+    private Long clienteId;
+    private Long tecnicoId;
+    private String descripcion;
+    private LocalDateTime fecha;
 }

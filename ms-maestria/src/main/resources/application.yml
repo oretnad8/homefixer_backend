@@ -17,6 +17,20 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
 
+  rabbitmq:
+    host: ${RABBITMQ_HOST:localhost}
+    port: ${RABBITMQ_PORT:5672}
+    username: ${RABBITMQ_USER:guest}
+    password: ${RABBITMQ_PASS:guest}
+    # ACK del broker al publicar certificacion.aprobada / certificacion.rechazada
+    publisher-confirm-type: correlated
+    publisher-returns: true
+
+homefixer:
+  maestria:
+    # Nivel de reputación mínimo para postular una certificación (NUEVO, BUENO, EXPERTO)
+    nivel-minimo: ${MAESTRIA_NIVEL_MINIMO:BUENO}
+
 eureka:
   client:
     service-url:

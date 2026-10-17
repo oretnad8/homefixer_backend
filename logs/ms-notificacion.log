@@ -1,4 +1,51 @@
 [INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.homefixer:shared:jar:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.homefixer:eureka-server:jar:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.homefixer:api-gateway:jar:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-usuarios:jar:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-autenticacion:jar:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-solicitudes:jar:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-ubicacion:jar:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-pagos:jar:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-valoraciones:jar:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-maestria:jar:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-notificacion:jar:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-promociones:jar:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-reportes:jar:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.homefixer:homefixer-parent:pom:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 87, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
 [INFO] 
 [INFO] -------------------< com.homefixer:ms-notificacion >--------------------
 [INFO] Building ms-notificacion 1.0.0-SNAPSHOT
@@ -35,42 +82,92 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.4)
 
-2026-09-26T10:07:57.683-03:00  INFO 12408 --- [ms-notificacion] [           main] c.h.n.MsNotificacionApplication          : Starting MsNotificacionApplication using Java 21.0.12 with PID 12408 (C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-notificacion\target\classes started by drojas in C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-notificacion)
-2026-09-26T10:07:57.685-03:00  INFO 12408 --- [ms-notificacion] [           main] c.h.n.MsNotificacionApplication          : No active profile set, falling back to 1 default profile: "default"
-2026-09-26T10:07:58.351-03:00  INFO 12408 --- [ms-notificacion] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=451a0100-fa3f-3889-bd98-c237c6dc4840
-2026-09-26T10:07:58.387-03:00  WARN 12408 --- [ms-notificacion] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
-2026-09-26T10:07:58.390-03:00  WARN 12408 --- [ms-notificacion] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2026-09-26T10:07:58.581-03:00  INFO 12408 --- [ms-notificacion] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8086 (http)
-2026-09-26T10:07:58.597-03:00  INFO 12408 --- [ms-notificacion] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-09-26T10:07:58.597-03:00  INFO 12408 --- [ms-notificacion] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
-2026-09-26T10:07:58.646-03:00  INFO 12408 --- [ms-notificacion] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-09-26T10:07:58.647-03:00  INFO 12408 --- [ms-notificacion] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 917 ms
-2026-09-26T10:07:59.363-03:00  INFO 12408 --- [ms-notificacion] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2026-09-26T10:07:59.395-03:00  WARN 12408 --- [ms-notificacion] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2026-09-26T10:07:59.427-03:00  INFO 12408 --- [ms-notificacion] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2026-09-26T10:07:59.493-03:00  INFO 12408 --- [ms-notificacion] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2026-09-26T10:07:59.496-03:00  INFO 12408 --- [ms-notificacion] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-09-26T10:07:59.512-03:00  INFO 12408 --- [ms-notificacion] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2026-09-26T10:07:59.512-03:00  INFO 12408 --- [ms-notificacion] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2026-09-26T10:07:59.512-03:00  INFO 12408 --- [ms-notificacion] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2026-09-26T10:07:59.512-03:00  INFO 12408 --- [ms-notificacion] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2026-09-26T10:07:59.512-03:00  INFO 12408 --- [ms-notificacion] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2026-09-26T10:07:59.512-03:00  INFO 12408 --- [ms-notificacion] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2026-09-26T10:07:59.512-03:00  INFO 12408 --- [ms-notificacion] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2026-09-26T10:07:59.703-03:00  INFO 12408 --- [ms-notificacion] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2026-09-26T10:07:59.704-03:00  INFO 12408 --- [ms-notificacion] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2026-09-26T10:07:59.707-03:00  INFO 12408 --- [ms-notificacion] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2026-09-26T10:07:59.710-03:00  INFO 12408 --- [ms-notificacion] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1790428079709 with initial instances count: 6
-2026-09-26T10:07:59.711-03:00  INFO 12408 --- [ms-notificacion] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MS-NOTIFICACION with eureka with status UP
-2026-09-26T10:07:59.711-03:00  INFO 12408 --- [ms-notificacion] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1790428079711, current=UP, previous=STARTING]
-2026-09-26T10:07:59.712-03:00  INFO 12408 --- [ms-notificacion] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-NOTIFICACION/DROJAS.localdomain:ms-notificacion:8086: registering service...
-2026-09-26T10:07:59.725-03:00  INFO 12408 --- [ms-notificacion] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8086 (http) with context path ''
-2026-09-26T10:07:59.726-03:00  INFO 12408 --- [ms-notificacion] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8086
-2026-09-26T10:07:59.730-03:00  INFO 12408 --- [ms-notificacion] [           main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
-2026-09-26T10:07:59.740-03:00  INFO 12408 --- [ms-notificacion] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-NOTIFICACION/DROJAS.localdomain:ms-notificacion:8086 - registration status: 204
-2026-09-26T10:07:59.764-03:00  INFO 12408 --- [ms-notificacion] [           main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#2b9aeedb:0/SimpleConnection@23e86863 [delegate=amqp://guest@127.0.0.1:5672/, localPort=59177]
-2026-09-26T10:07:59.809-03:00  INFO 12408 --- [ms-notificacion] [           main] c.h.n.MsNotificacionApplication          : Started MsNotificacionApplication in 2.434 seconds (process running for 2.691)
-2026-09-26T10:10:30.882-03:00  INFO 12408 --- [ms-notificacion] [ntContainer#0-1] c.h.n.l.NotificacionEventListener        : Mensaje recibido de RabbitMQ para la solicitud ID: 3
-2026-09-26T10:10:30.882-03:00  INFO 12408 --- [ms-notificacion] [ntContainer#0-1] c.h.n.l.NotificacionEventListener        : Procesando evento de tipo [NUEVA_SOLICITUD] - Mensaje: Sin sistema eléctrico, salió olor a quemado
-2026-09-26T10:10:31.888-03:00  INFO 12408 --- [ms-notificacion] [ntContainer#0-1] c.h.n.l.NotificacionEventListener        : Notificación procesada exitosamente para Cliente ID: 101
+2026-10-17T09:56:15.001-03:00  INFO 9884 --- [ms-notificacion] [           main] c.h.n.MsNotificacionApplication          : Starting MsNotificacionApplication using Java 21.0.12 with PID 9884 (C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-notificacion\target\classes started by drojas in C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-notificacion)
+2026-10-17T09:56:15.003-03:00  INFO 9884 --- [ms-notificacion] [           main] c.h.n.MsNotificacionApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-10-17T09:56:15.642-03:00  INFO 9884 --- [ms-notificacion] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-17T09:56:15.741-03:00  INFO 9884 --- [ms-notificacion] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 91 ms. Found 1 JPA repository interface.
+2026-10-17T09:56:15.910-03:00  INFO 9884 --- [ms-notificacion] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=13b019d3-1229-3a71-96c5-40ff36ba0d00
+2026-10-17T09:56:16.007-03:00  WARN 9884 --- [ms-notificacion] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-10-17T09:56:16.008-03:00  WARN 9884 --- [ms-notificacion] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-10-17T09:56:16.211-03:00  INFO 9884 --- [ms-notificacion] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8086 (http)
+2026-10-17T09:56:16.220-03:00  INFO 9884 --- [ms-notificacion] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-17T09:56:16.220-03:00  INFO 9884 --- [ms-notificacion] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-10-17T09:56:16.275-03:00  INFO 9884 --- [ms-notificacion] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-10-17T09:56:16.275-03:00  INFO 9884 --- [ms-notificacion] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1219 ms
+2026-10-17T09:56:16.401-03:00  INFO 9884 --- [ms-notificacion] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-10-17T09:56:16.440-03:00  INFO 9884 --- [ms-notificacion] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-10-17T09:56:16.471-03:00  INFO 9884 --- [ms-notificacion] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-10-17T09:56:16.656-03:00  INFO 9884 --- [ms-notificacion] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-17T09:56:16.674-03:00  INFO 9884 --- [ms-notificacion] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-17T09:56:18.747-03:00  INFO 9884 --- [ms-notificacion] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5cfa2ac5
+2026-10-17T09:56:18.750-03:00  INFO 9884 --- [ms-notificacion] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-17T09:56:18.968-03:00  WARN 9884 --- [ms-notificacion] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-10-17T09:56:19.928-03:00  INFO 9884 --- [ms-notificacion] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-17T09:56:20.930-03:00  INFO 9884 --- [ms-notificacion] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-17T09:56:21.248-03:00  INFO 9884 --- [ms-notificacion] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-17T09:56:21.691-03:00  WARN 9884 --- [ms-notificacion] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-17T09:56:22.045-03:00  INFO 9884 --- [ms-notificacion] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-10-17T09:56:22.089-03:00  WARN 9884 --- [ms-notificacion] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-10-17T09:56:22.120-03:00  INFO 9884 --- [ms-notificacion] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-10-17T09:56:22.183-03:00  INFO 9884 --- [ms-notificacion] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-10-17T09:56:22.187-03:00  INFO 9884 --- [ms-notificacion] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-10-17T09:56:22.201-03:00  INFO 9884 --- [ms-notificacion] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-10-17T09:56:22.201-03:00  INFO 9884 --- [ms-notificacion] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-10-17T09:56:22.201-03:00  INFO 9884 --- [ms-notificacion] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-10-17T09:56:22.201-03:00  INFO 9884 --- [ms-notificacion] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-10-17T09:56:22.201-03:00  INFO 9884 --- [ms-notificacion] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-10-17T09:56:22.201-03:00  INFO 9884 --- [ms-notificacion] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-10-17T09:56:22.201-03:00  INFO 9884 --- [ms-notificacion] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-10-17T09:56:22.393-03:00  INFO 9884 --- [ms-notificacion] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-10-17T09:56:22.394-03:00  INFO 9884 --- [ms-notificacion] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-10-17T09:56:22.397-03:00  INFO 9884 --- [ms-notificacion] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-10-17T09:56:22.401-03:00  INFO 9884 --- [ms-notificacion] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1792241782400 with initial instances count: 7
+2026-10-17T09:56:22.403-03:00  INFO 9884 --- [ms-notificacion] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MS-NOTIFICACION with eureka with status UP
+2026-10-17T09:56:22.404-03:00  INFO 9884 --- [ms-notificacion] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1792241782404, current=UP, previous=STARTING]
+2026-10-17T09:56:22.405-03:00  INFO 9884 --- [ms-notificacion] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-NOTIFICACION/DROJAS.localdomain:ms-notificacion:8086: registering service...
+2026-10-17T09:56:22.419-03:00  INFO 9884 --- [ms-notificacion] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8086 (http) with context path ''
+2026-10-17T09:56:22.420-03:00  INFO 9884 --- [ms-notificacion] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8086
+2026-10-17T09:56:22.426-03:00  INFO 9884 --- [ms-notificacion] [           main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-10-17T09:56:22.435-03:00  INFO 9884 --- [ms-notificacion] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-NOTIFICACION/DROJAS.localdomain:ms-notificacion:8086 - registration status: 204
+2026-10-17T09:56:22.461-03:00  INFO 9884 --- [ms-notificacion] [           main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#574413bd:0/SimpleConnection@510ee215 [delegate=amqp://guest@127.0.0.1:5672/, localPort=53571]
+2026-10-17T09:56:22.514-03:00  INFO 9884 --- [ms-notificacion] [           main] c.h.n.MsNotificacionApplication          : Started MsNotificacionApplication in 7.844 seconds (process running for 8.122)
+2026-10-17T09:57:22.375-03:00  INFO 9884 --- [ms-notificacion] [nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-17T09:57:22.375-03:00  INFO 9884 --- [ms-notificacion] [nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-17T09:57:22.377-03:00  INFO 9884 --- [ms-notificacion] [nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-10-17T09:58:15.764-03:00  INFO 9884 --- [ms-notificacion] [ntContainer#0-1] c.h.n.l.NotificacionEventListener        : Evento 4137d228-72a9-46ec-a015-278696360218 [solicitud.tecnico-asignado] recibido para la solicitud ID: 11
+2026-10-17T09:58:16.890-03:00  INFO 9884 --- [ms-notificacion] [ntContainer#0-1] c.h.n.l.NotificacionEventListener        : Notificación [TECNICO_ASIGNADO] guardada para 2 destinatario(s): Dante Rojas atenderá tu solicitud de electricidad.
+2026-10-17T09:58:16.892-03:00  INFO 9884 --- [ms-notificacion] [ntContainer#0-1] c.h.n.l.NotificacionEventListener        : [ACK] Evento 4137d228-72a9-46ec-a015-278696360218 procesado y confirmado (intento 1/3)
+2026-10-17T09:59:41.757-03:00  INFO 9884 --- [ms-notificacion] [ntContainer#0-1] c.h.n.l.NotificacionEventListener        : Evento c200e7ef-39bf-4713-aec0-6f32f94a7504 [solicitud.estado-actualizado] recibido para la solicitud ID: 11
+2026-10-17T09:59:42.806-03:00  INFO 9884 --- [ms-notificacion] [ntContainer#0-1] c.h.n.l.NotificacionEventListener        : Notificación [CAMBIO_ESTADO] guardada para 2 destinatario(s): El técnico Dante Rojas comenzó el trabajo.
+2026-10-17T09:59:42.807-03:00  INFO 9884 --- [ms-notificacion] [ntContainer#0-1] c.h.n.l.NotificacionEventListener        : [ACK] Evento c200e7ef-39bf-4713-aec0-6f32f94a7504 procesado y confirmado (intento 1/3)
+2026-10-17T10:00:05.895-03:00  INFO 9884 --- [ms-notificacion] [ntContainer#0-1] c.h.n.l.NotificacionEventListener        : Evento 06453182-ccd4-4c94-a31e-5236406bd8df [chat.mensaje] recibido para la solicitud ID: 11
+2026-10-17T10:00:06.593-03:00  INFO 9884 --- [ms-notificacion] [ntContainer#0-1] c.h.n.l.NotificacionEventListener        : Notificación [CHAT_MENSAJE] guardada para 1 destinatario(s): Dante Rojas: hola tecnico sabe me electrocute
+2026-10-17T10:00:06.593-03:00  INFO 9884 --- [ms-notificacion] [ntContainer#0-1] c.h.n.l.NotificacionEventListener        : [ACK] Evento 06453182-ccd4-4c94-a31e-5236406bd8df procesado y confirmado (intento 1/3)
+2026-10-17T10:00:28.655-03:00  INFO 9884 --- [ms-notificacion] [ntContainer#0-1] c.h.n.l.NotificacionEventListener        : Evento c7f21c7f-2c61-49fe-a07b-08e0e90fc6f6 [chat.mensaje] recibido para la solicitud ID: 11
+2026-10-17T10:00:29.524-03:00  INFO 9884 --- [ms-notificacion] [ntContainer#0-1] c.h.n.l.NotificacionEventListener        : Notificación [CHAT_MENSAJE] guardada para 1 destinatario(s): Dante Rojas: pero oiga como! andaba a pie pelao?
+2026-10-17T10:00:29.524-03:00  INFO 9884 --- [ms-notificacion] [ntContainer#0-1] c.h.n.l.NotificacionEventListener        : [ACK] Evento c7f21c7f-2c61-49fe-a07b-08e0e90fc6f6 procesado y confirmado (intento 1/3)
+2026-10-17T10:00:37.095-03:00  INFO 9884 --- [ms-notificacion] [ntContainer#0-1] c.h.n.l.NotificacionEventListener        : Evento 12e6bda5-8c4d-483a-ab61-38de60a78699 [chat.mensaje] recibido para la solicitud ID: 11
+2026-10-17T10:00:37.958-03:00  INFO 9884 --- [ms-notificacion] [ntContainer#0-1] c.h.n.l.NotificacionEventListener        : Notificación [CHAT_MENSAJE] guardada para 1 destinatario(s): Dante Rojas: algo asi..
+2026-10-17T10:00:37.958-03:00  INFO 9884 --- [ms-notificacion] [ntContainer#0-1] c.h.n.l.NotificacionEventListener        : [ACK] Evento 12e6bda5-8c4d-483a-ab61-38de60a78699 procesado y confirmado (intento 1/3)
+2026-10-17T10:01:22.209-03:00  INFO 9884 --- [ms-notificacion] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-10-17T10:01:36.294-03:00  INFO 9884 --- [ms-notificacion] [ntContainer#0-1] c.h.n.l.NotificacionEventListener        : Evento 446f42bd-b8fd-4853-88ff-76de259e3131 [solicitud.estado-actualizado] recibido para la solicitud ID: 11
+2026-10-17T10:01:37.676-03:00  INFO 9884 --- [ms-notificacion] [ntContainer#0-1] c.h.n.l.NotificacionEventListener        : Notificación [CAMBIO_ESTADO] guardada para 2 destinatario(s): Tu servicio fue completado. Ya puedes pagarlo y valorar al técnico.
+2026-10-17T10:01:37.676-03:00  INFO 9884 --- [ms-notificacion] [ntContainer#0-1] c.h.n.l.NotificacionEventListener        : [ACK] Evento 446f42bd-b8fd-4853-88ff-76de259e3131 procesado y confirmado (intento 1/3)
+2026-10-17T10:02:07.230-03:00  INFO 9884 --- [ms-notificacion] [ntContainer#0-1] c.h.n.l.NotificacionEventListener        : Evento 043d8fee-0960-4ece-8f63-2af51fb43695 [valoracion.registrada] recibido para la solicitud ID: 11
+2026-10-17T10:02:08.091-03:00  INFO 9884 --- [ms-notificacion] [ntContainer#0-1] c.h.n.l.NotificacionEventListener        : Notificación [VALORACION_CLIENTE] guardada para 1 destinatario(s): Recibiste una valoración de 4 estrella(s) por la solicitud #11.
+2026-10-17T10:02:08.092-03:00  INFO 9884 --- [ms-notificacion] [ntContainer#0-1] c.h.n.l.NotificacionEventListener        : [ACK] Evento 043d8fee-0960-4ece-8f63-2af51fb43695 procesado y confirmado (intento 1/3)
+2026-10-17T10:02:26.215-03:00  INFO 9884 --- [ms-notificacion] [ntContainer#0-1] c.h.n.l.NotificacionEventListener        : Evento 5246178f-02d0-4157-a98d-13b91a298ff8 [pago.procesado] recibido para la solicitud ID: 11
+2026-10-17T10:02:27.595-03:00  INFO 9884 --- [ms-notificacion] [ntContainer#0-1] c.h.n.l.NotificacionEventListener        : Notificación [PAGO_PROCESADO] guardada para 2 destinatario(s): Pago de $25000 recibido por la solicitud #11.
+2026-10-17T10:02:27.595-03:00  INFO 9884 --- [ms-notificacion] [ntContainer#0-1] c.h.n.l.NotificacionEventListener        : [ACK] Evento 5246178f-02d0-4157-a98d-13b91a298ff8 procesado y confirmado (intento 1/3)
+2026-10-17T10:02:39.640-03:00  INFO 9884 --- [ms-notificacion] [ntContainer#0-1] c.h.n.l.NotificacionEventListener        : Evento 71a295d8-b3c9-4aae-b431-11fe91748ea1 [valoracion.registrada] recibido para la solicitud ID: 11
+2026-10-17T10:02:40.506-03:00  INFO 9884 --- [ms-notificacion] [ntContainer#0-1] c.h.n.l.NotificacionEventListener        : Notificación [VALORACION_TECNICO] guardada para 1 destinatario(s): Recibiste una valoración de 5 estrella(s) por la solicitud #11.
+2026-10-17T10:02:40.508-03:00  INFO 9884 --- [ms-notificacion] [ntContainer#0-1] c.h.n.l.NotificacionEventListener        : [ACK] Evento 71a295d8-b3c9-4aae-b431-11fe91748ea1 procesado y confirmado (intento 1/3)
+2026-10-17T10:06:22.217-03:00  INFO 9884 --- [ms-notificacion] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-10-17T10:11:22.231-03:00  INFO 9884 --- [ms-notificacion] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-10-17T10:16:22.234-03:00  INFO 9884 --- [ms-notificacion] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-10-17T10:21:22.238-03:00  INFO 9884 --- [ms-notificacion] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-10-17T10:26:22.255-03:00  INFO 9884 --- [ms-notificacion] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-10-17T10:31:22.270-03:00  INFO 9884 --- [ms-notificacion] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-10-17T10:36:22.273-03:00  INFO 9884 --- [ms-notificacion] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-10-17T10:41:22.286-03:00  INFO 9884 --- [ms-notificacion] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 ^C

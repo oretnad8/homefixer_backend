@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/solicitudes")
@@ -37,9 +38,48 @@ public class SolicitudController {
         return ResponseEntity.ok(solicitudService.getSolicitudesByTecnico(tecnicoId));
     }
 
+    /** Solicitudes nuevas, sin técnico, que el técnico no ha descartado. */
+    @GetMapping("/disponibles")
+    public ResponseEntity<List<Solicitud>> getDisponibles(@RequestParam("tecnicoId") Long tecnicoId) {
+        return ResponseEntity.ok(solicitudService.getSolicitudesDisponibles(tecnicoId));
+    }
+
+    @GetMapping("/tecnico/{tecnicoId}/activas/count")
+    public ResponseEntity<Long> countActivasByTecnico(@PathVariable("tecnicoId") Long tecnicoId) {
+        return ResponseEntity.ok(solicitudService.countSolicitudesActivasByTecnico(tecnicoId));
+    }
+
+    @GetMapping("/tecnico/{tecnicoId}/estadisticas")
+    public ResponseEntity<Map<String, Object>> getEstadisticas(@PathVariable("tecnicoId") Long tecnicoId) {
+        return ResponseEntity.ok(solicitudService.estadisticasTecnico(tecnicoId));
+    }
+
+    /** El cliente elige técnico o el técnico acepta la solicitud. */
     @PatchMapping("/{id}/asignar-tecnico/{tecnicoId}")
     public ResponseEntity<Solicitud> assignTecnico(@PathVariable("id") Long id, @PathVariable("tecnicoId") Long tecnicoId) {
         return ResponseEntity.ok(solicitudService.assignTecnico(id, tecnicoId));
+    }
+
+    @PostMapping("/{id}/rechazar")
+    public ResponseEntity<Void> rechazar(@PathVariable("id") Long id, @RequestParam("tecnicoId") Long tecnicoId) {
+        solicitudService.rechazar(id, tecnicoId);
+        return ResponseEntity.noContent().build();
+    }
+
+    @PostMapping("/{id}/iniciar")
+    public ResponseEntity<Solicitud> iniciar(@PathVariable("id") Long id) {
+        return ResponseEntity.ok(solicitudService.iniciar(id));
+    }
+
+    @PostMapping("/{id}/finalizar")
+    public ResponseEntity<Solicitud> finalizar(@PathVariable("id") Long id,
+                                               @RequestBody(required = false) Map<String, String> body) {
+        return ResponseEntity.ok(solicitudService.finalizar(id, body != null ? body.get("notas") : null));
+    }
+
+    @PostMapping("/{id}/cancelar")
+    public ResponseEntity<Solicitud> cancelar(@PathVariable("id") Long id) {
+        return ResponseEntity.ok(solicitudService.cancelar(id));
     }
 
     @PatchMapping("/{id}/estado")

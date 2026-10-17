@@ -1,4 +1,51 @@
 [INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.homefixer:shared:jar:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.homefixer:eureka-server:jar:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.homefixer:api-gateway:jar:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-usuarios:jar:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-autenticacion:jar:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-solicitudes:jar:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-ubicacion:jar:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-pagos:jar:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-valoraciones:jar:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-maestria:jar:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-notificacion:jar:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-promociones:jar:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-reportes:jar:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.homefixer:homefixer-parent:pom:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 87, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
 [INFO] 
 [INFO] --------------------< com.homefixer:eureka-server >---------------------
 [INFO] Building eureka-server 1.0.0-SNAPSHOT
@@ -26,67 +73,3 @@
 [INFO] 
 [INFO] --- spring-boot:3.2.4:run (default-cli) @ eureka-server ---
 [INFO] Attaching agents: []
-
-  .   ____          _            __ _ _
- /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
-( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
- \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
-  '  |____| .__|_| |_|_| |_\__, | / / / /
- =========|_|==============|___/=/_/_/_/
- :: Spring Boot ::                (v3.2.4)
-
-2026-09-26T10:06:28.498-03:00  INFO 17852 --- [           main] c.h.eureka.EurekaServerApplication       : Starting EurekaServerApplication using Java 21.0.12 with PID 17852 (C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\eureka-server\target\classes started by drojas in C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\eureka-server)
-2026-09-26T10:06:28.503-03:00  INFO 17852 --- [           main] c.h.eureka.EurekaServerApplication       : No active profile set, falling back to 1 default profile: "default"
-2026-09-26T10:06:29.206-03:00  INFO 17852 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d8cd35ed-dbcb-31bb-9384-637c20981386
-2026-09-26T10:06:29.239-03:00  WARN 17852 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
-2026-09-26T10:06:29.239-03:00  WARN 17852 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2026-09-26T10:06:29.447-03:00  INFO 17852 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8761 (http)
-2026-09-26T10:06:29.455-03:00  INFO 17852 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-09-26T10:06:29.455-03:00  INFO 17852 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
-2026-09-26T10:06:29.503-03:00  INFO 17852 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-09-26T10:06:29.503-03:00  INFO 17852 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 967 ms
-2026-09-26T10:06:30.068-03:00  INFO 17852 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2026-09-26T10:06:30.076-03:00  INFO 17852 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2026-09-26T10:06:30.199-03:00  INFO 17852 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2026-09-26T10:06:30.199-03:00  INFO 17852 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2026-09-26T10:06:30.717-03:00  WARN 17852 --- [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2026-09-26T10:06:30.735-03:00  INFO 17852 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2026-09-26T10:06:30.751-03:00  INFO 17852 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2026-09-26T10:06:30.751-03:00  INFO 17852 --- [           main] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
-2026-09-26T10:06:30.759-03:00  INFO 17852 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1790427990751 with initial instances count: 0
-2026-09-26T10:06:30.777-03:00  INFO 17852 --- [           main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
-2026-09-26T10:06:30.777-03:00  WARN 17852 --- [           main] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
-2026-09-26T10:06:30.831-03:00  INFO 17852 --- [           main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
-2026-09-26T10:06:30.832-03:00  INFO 17852 --- [           main] c.n.eureka.DefaultEurekaServerContext    : Initialized
-2026-09-26T10:06:30.838-03:00  INFO 17852 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2026-09-26T10:06:30.869-03:00  INFO 17852 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application UNKNOWN with eureka with status UP
-2026-09-26T10:06:30.877-03:00  INFO 17852 --- [       Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
-2026-09-26T10:06:30.878-03:00  INFO 17852 --- [       Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
-2026-09-26T10:06:30.878-03:00  INFO 17852 --- [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
-2026-09-26T10:06:30.878-03:00  INFO 17852 --- [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
-2026-09-26T10:06:30.878-03:00  INFO 17852 --- [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
-2026-09-26T10:06:30.886-03:00  INFO 17852 --- [       Thread-9] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
-2026-09-26T10:06:30.891-03:00  INFO 17852 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8761 (http) with context path ''
-2026-09-26T10:06:30.892-03:00  INFO 17852 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
-2026-09-26T10:06:30.903-03:00  INFO 17852 --- [           main] c.h.eureka.EurekaServerApplication       : Started EurekaServerApplication in 2.738 seconds (process running for 3.074)
-2026-09-26T10:06:38.666-03:00  INFO 17852 --- [nio-8761-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-09-26T10:06:38.667-03:00  INFO 17852 --- [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-09-26T10:06:38.667-03:00  INFO 17852 --- [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2026-09-26T10:06:38.847-03:00  INFO 17852 --- [nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/DROJAS.localdomain:api-gateway:8080 with status UP (replication=false)
-2026-09-26T10:06:52.337-03:00  INFO 17852 --- [nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MS-USUARIOS/DROJAS.localdomain:ms-usuarios:8081 with status UP (replication=false)
-2026-09-26T10:06:59.469-03:00  INFO 17852 --- [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MS-AUTENTICACION/DROJAS.localdomain:ms-autenticacion:8083 with status UP (replication=false)
-2026-09-26T10:07:10.511-03:00  INFO 17852 --- [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MS-SOLICITUDES/DROJAS.localdomain:ms-solicitudes:8082 with status UP (replication=false)
-2026-09-26T10:07:17.459-03:00  INFO 17852 --- [nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MS-UBICACION/DROJAS.localdomain:ms-ubicacion:8085 with status UP (replication=false)
-2026-09-26T10:07:28.302-03:00  INFO 17852 --- [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MS-PAGOS/DROJAS.localdomain:ms-pagos:8087 with status UP (replication=false)
-2026-09-26T10:07:30.880-03:00  INFO 17852 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2026-09-26T10:07:40.418-03:00  INFO 17852 --- [nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MS-VALORACIONES/DROJAS.localdomain:ms-valoraciones:8088 with status UP (replication=false)
-2026-09-26T10:07:52.499-03:00  INFO 17852 --- [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MS-MAESTRIA/DROJAS.localdomain:ms-maestria:8084 with status UP (replication=false)
-2026-09-26T10:07:59.739-03:00  INFO 17852 --- [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MS-NOTIFICACION/DROJAS.localdomain:ms-notificacion:8086 with status UP (replication=false)
-2026-09-26T10:08:05.533-03:00  INFO 17852 --- [nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MS-PROMOCIONES/DROJAS.localdomain:ms-promociones:8089 with status UP (replication=false)
-2026-09-26T10:08:11.674-03:00  INFO 17852 --- [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MS-REPORTES/DROJAS.localdomain:ms-reportes:8090 with status UP (replication=false)
-2026-09-26T10:08:30.880-03:00  INFO 17852 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2026-09-26T10:09:30.886-03:00  INFO 17852 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
-2026-09-26T10:10:30.889-03:00  INFO 17852 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
-2026-09-26T10:11:30.901-03:00  INFO 17852 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 12ms
-2026-09-26T10:12:30.914-03:00  INFO 17852 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 12ms
-^C

@@ -6,6 +6,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
+
+/** Insignia "Maestro en <oficio>": se otorga al aprobarse una certificación (una por oficio). */
 @Entity
 @Table(name = "insignias_maestria")
 @Data
@@ -25,6 +28,14 @@ public class InsigniaMaestria {
 
     private String descripcion;
 
+    /** Identificador del emblema que dibuja el front ("categoria:electricidad"). */
     @Column(nullable = false)
     private String iconoUrl;
+
+    private String categoria;
+
+    /** Certificación aprobada que la originó. */
+    private Long certificacionId;
+
+    private LocalDateTime fechaOtorgada;
 }

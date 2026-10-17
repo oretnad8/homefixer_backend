@@ -39,4 +39,29 @@ public class Solicitud {
 
     @Column(nullable = false)
     private String coordenadas; // e.g. "lat,lon"
+
+    // ---- Datos del formulario del cliente (columnas nullable: filas antiguas no los tienen) ----
+
+    /** plomeria, electricidad, carpinteria, pintura, cerrajeria, limpieza, jardineria, refrigeracion, otros */
+    private String categoria;
+
+    /** normal, urgente, emergencia */
+    private String urgencia;
+
+    /** Dirección escrita por el cliente (coordenadas guarda la geocodificación). */
+    private String direccion;
+
+    private String clienteNombre;
+
+    // ---- Copia de los datos del técnico al momento de la asignación ----
+
+    private String tecnicoNombre;
+    private String tecnicoTelefono;
+    private String tecnicoEspecialidad;
+    private Double tecnicoCalificacion;
+
+    @Column(length = 1000)
+    private String notasCierre;
+
+    private LocalDateTime fechaActualizacion;
 }

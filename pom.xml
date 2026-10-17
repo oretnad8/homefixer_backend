@@ -82,6 +82,16 @@
                 </plugin>
             </plugins>
         </pluginManagement>
+        <plugins>
+            <!-- Conserva los nombres de parámetros (@PathVariable/@RequestParam sin nombre explícito) -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <parameters>true</parameters>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 
 </project>

@@ -1,8 +1,10 @@
 package com.homefixer.solicitudes.config;
 
-import org.springframework.amqp.core.Binding;
-import org.springframework.amqp.core.BindingBuilder;
-import org.springframework.amqp.core.Queue;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.homefixer.shared.messaging.EventPublisher;
+import com.homefixer.shared.messaging.EventQueues;
+import com.homefixer.shared.messaging.MessagingConstants;
+import org.springframework.amqp.core.Declarables;
 import org.springframework.amqp.core.TopicExchange;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -11,37 +13,46 @@ import org.springframework.amqp.support.converter.MessageConverter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * Productor de eventos (solicitud.*, chat.*), suscriptor de pago.procesado y servidor RPC
+ * (resumen y detalle de solicitudes). Las colas de los demás suscriptores las declara cada consumidor.
+ */
 @Configuration
 public class RabbitMQConfig {
 
-    public static final String EXCHANGE_NAME = "homefixer.exchange";
-    public static final String NOTIFICACION_QUEUE = "notificacion.queue";
-    public static final String NOTIFICACION_ROUTING_KEY = "notificacion.routing.key";
-
     @Bean
-    public TopicExchange exchange() {
-        return new TopicExchange(EXCHANGE_NAME);
+    public TopicExchange eventsExchange() {
+        return EventQueues.eventsExchange();
     }
 
     @Bean
-    public Queue notificacionQueue() {
-        return new Queue(NOTIFICACION_QUEUE, true);
+    public Declarables colaPagos() {
+        return EventQueues.suscriptor(MessagingConstants.SOLICITUDES_PAGOS_QUEUE, MessagingConstants.SOLICITUDES_PAGOS_DLQ,
+                MessagingConstants.RK_PAGO_PROCESADO);
     }
 
     @Bean
-    public Binding notificacionBinding(Queue notificacionQueue, TopicExchange exchange) {
-        return BindingBuilder.bind(notificacionQueue).to(exchange).with(NOTIFICACION_ROUTING_KEY);
+    public Declarables rpcResumen() {
+        return EventQueues.colaRpc(MessagingConstants.RPC_RESUMEN_SOLICITUDES_QUEUE, MessagingConstants.RK_RPC_RESUMEN_SOLICITUDES);
     }
 
     @Bean
-    public MessageConverter jsonMessageConverter() {
-        return new Jackson2JsonMessageConverter();
+    public Declarables rpcDetalle() {
+        return EventQueues.colaRpc(MessagingConstants.RPC_DETALLE_SOLICITUD_QUEUE, MessagingConstants.RK_RPC_DETALLE_SOLICITUD);
     }
 
     @Bean
-    public RabbitTemplate rabbitTemplate(ConnectionFactory connectionFactory, MessageConverter jsonMessageConverter) {
-        RabbitTemplate template = new RabbitTemplate(connectionFactory);
-        template.setMessageConverter(jsonMessageConverter);
-        return template;
+    public MessageConverter jsonMessageConverter(ObjectMapper objectMapper) {
+        return new Jackson2JsonMessageConverter(objectMapper);
+    }
+
+    @Bean
+    public RabbitTemplate rabbitTemplate(ConnectionFactory connectionFactory, ObjectMapper objectMapper) {
+        return EventPublisher.rabbitTemplate(connectionFactory, objectMapper);
+    }
+
+    @Bean
+    public EventPublisher eventPublisher(RabbitTemplate rabbitTemplate) {
+        return new EventPublisher(rabbitTemplate);
     }
 }

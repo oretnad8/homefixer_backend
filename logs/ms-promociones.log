@@ -1,4 +1,51 @@
 [INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.homefixer:shared:jar:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.homefixer:eureka-server:jar:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.homefixer:api-gateway:jar:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-usuarios:jar:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-autenticacion:jar:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-solicitudes:jar:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-ubicacion:jar:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-pagos:jar:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-valoraciones:jar:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-maestria:jar:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-notificacion:jar:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-promociones:jar:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-reportes:jar:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.homefixer:homefixer-parent:pom:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 87, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
 [INFO] 
 [INFO] --------------------< com.homefixer:ms-promociones >--------------------
 [INFO] Building ms-promociones 1.0.0-SNAPSHOT
@@ -35,37 +82,46 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.4)
 
-2026-09-26T10:08:03.727-03:00  INFO 14360 --- [ms-promociones] [           main] c.h.p.MsPromocionesApplication           : Starting MsPromocionesApplication using Java 21.0.12 with PID 14360 (C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-promociones\target\classes started by drojas in C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-promociones)
-2026-09-26T10:08:03.730-03:00  INFO 14360 --- [ms-promociones] [           main] c.h.p.MsPromocionesApplication           : No active profile set, falling back to 1 default profile: "default"
-2026-09-26T10:08:04.301-03:00  INFO 14360 --- [ms-promociones] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b479a15b-2da8-3487-81e3-37a98c17c093
-2026-09-26T10:08:04.332-03:00  WARN 14360 --- [ms-promociones] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
-2026-09-26T10:08:04.336-03:00  WARN 14360 --- [ms-promociones] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2026-09-26T10:08:04.524-03:00  INFO 14360 --- [ms-promociones] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8089 (http)
-2026-09-26T10:08:04.534-03:00  INFO 14360 --- [ms-promociones] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-09-26T10:08:04.534-03:00  INFO 14360 --- [ms-promociones] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
-2026-09-26T10:08:04.585-03:00  INFO 14360 --- [ms-promociones] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-09-26T10:08:04.586-03:00  INFO 14360 --- [ms-promociones] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 817 ms
-2026-09-26T10:08:05.116-03:00  INFO 14360 --- [ms-promociones] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2026-09-26T10:08:05.149-03:00  WARN 14360 --- [ms-promociones] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2026-09-26T10:08:05.166-03:00  INFO 14360 --- [ms-promociones] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2026-09-26T10:08:05.233-03:00  INFO 14360 --- [ms-promociones] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2026-09-26T10:08:05.240-03:00  INFO 14360 --- [ms-promociones] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-09-26T10:08:05.254-03:00  INFO 14360 --- [ms-promociones] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2026-09-26T10:08:05.254-03:00  INFO 14360 --- [ms-promociones] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2026-09-26T10:08:05.254-03:00  INFO 14360 --- [ms-promociones] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2026-09-26T10:08:05.254-03:00  INFO 14360 --- [ms-promociones] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2026-09-26T10:08:05.254-03:00  INFO 14360 --- [ms-promociones] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2026-09-26T10:08:05.254-03:00  INFO 14360 --- [ms-promociones] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2026-09-26T10:08:05.254-03:00  INFO 14360 --- [ms-promociones] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2026-09-26T10:08:05.497-03:00  INFO 14360 --- [ms-promociones] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2026-09-26T10:08:05.498-03:00  INFO 14360 --- [ms-promociones] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2026-09-26T10:08:05.500-03:00  INFO 14360 --- [ms-promociones] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2026-09-26T10:08:05.503-03:00  INFO 14360 --- [ms-promociones] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1790428085503 with initial instances count: 9
-2026-09-26T10:08:05.504-03:00  INFO 14360 --- [ms-promociones] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MS-PROMOCIONES with eureka with status UP
-2026-09-26T10:08:05.505-03:00  INFO 14360 --- [ms-promociones] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1790428085505, current=UP, previous=STARTING]
-2026-09-26T10:08:05.506-03:00  INFO 14360 --- [ms-promociones] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-PROMOCIONES/DROJAS.localdomain:ms-promociones:8089: registering service...
-2026-09-26T10:08:05.519-03:00  INFO 14360 --- [ms-promociones] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8089 (http) with context path ''
-2026-09-26T10:08:05.519-03:00  INFO 14360 --- [ms-promociones] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8089
-2026-09-26T10:08:05.528-03:00  INFO 14360 --- [ms-promociones] [           main] c.h.p.MsPromocionesApplication           : Started MsPromocionesApplication in 2.132 seconds (process running for 2.399)
-2026-09-26T10:08:05.534-03:00  INFO 14360 --- [ms-promociones] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-PROMOCIONES/DROJAS.localdomain:ms-promociones:8089 - registration status: 204
+2026-10-17T09:56:26.922-03:00  INFO 26548 --- [ms-promociones] [           main] c.h.p.MsPromocionesApplication           : Starting MsPromocionesApplication using Java 21.0.12 with PID 26548 (C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-promociones\target\classes started by drojas in C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-promociones)
+2026-10-17T09:56:26.924-03:00  INFO 26548 --- [ms-promociones] [           main] c.h.p.MsPromocionesApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-10-17T09:56:27.487-03:00  INFO 26548 --- [ms-promociones] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b479a15b-2da8-3487-81e3-37a98c17c093
+2026-10-17T09:56:27.515-03:00  WARN 26548 --- [ms-promociones] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-10-17T09:56:27.519-03:00  WARN 26548 --- [ms-promociones] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-10-17T09:56:27.714-03:00  INFO 26548 --- [ms-promociones] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8089 (http)
+2026-10-17T09:56:27.723-03:00  INFO 26548 --- [ms-promociones] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-17T09:56:27.723-03:00  INFO 26548 --- [ms-promociones] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-10-17T09:56:27.773-03:00  INFO 26548 --- [ms-promociones] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-10-17T09:56:27.774-03:00  INFO 26548 --- [ms-promociones] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 808 ms
+2026-10-17T09:56:28.322-03:00  INFO 26548 --- [ms-promociones] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-10-17T09:56:28.361-03:00  WARN 26548 --- [ms-promociones] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-10-17T09:56:28.381-03:00  INFO 26548 --- [ms-promociones] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-10-17T09:56:28.460-03:00  INFO 26548 --- [ms-promociones] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-10-17T09:56:28.463-03:00  INFO 26548 --- [ms-promociones] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-10-17T09:56:28.477-03:00  INFO 26548 --- [ms-promociones] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-10-17T09:56:28.478-03:00  INFO 26548 --- [ms-promociones] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-10-17T09:56:28.478-03:00  INFO 26548 --- [ms-promociones] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-10-17T09:56:28.478-03:00  INFO 26548 --- [ms-promociones] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-10-17T09:56:28.478-03:00  INFO 26548 --- [ms-promociones] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-10-17T09:56:28.478-03:00  INFO 26548 --- [ms-promociones] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-10-17T09:56:28.478-03:00  INFO 26548 --- [ms-promociones] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-10-17T09:56:28.715-03:00  INFO 26548 --- [ms-promociones] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-10-17T09:56:28.718-03:00  INFO 26548 --- [ms-promociones] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-10-17T09:56:28.719-03:00  INFO 26548 --- [ms-promociones] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-10-17T09:56:28.722-03:00  INFO 26548 --- [ms-promociones] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1792241788722 with initial instances count: 7
+2026-10-17T09:56:28.723-03:00  INFO 26548 --- [ms-promociones] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MS-PROMOCIONES with eureka with status UP
+2026-10-17T09:56:28.724-03:00  INFO 26548 --- [ms-promociones] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1792241788724, current=UP, previous=STARTING]
+2026-10-17T09:56:28.725-03:00  INFO 26548 --- [ms-promociones] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-PROMOCIONES/DROJAS.localdomain:ms-promociones:8089: registering service...
+2026-10-17T09:56:28.739-03:00  INFO 26548 --- [ms-promociones] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8089 (http) with context path ''
+2026-10-17T09:56:28.739-03:00  INFO 26548 --- [ms-promociones] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8089
+2026-10-17T09:56:28.748-03:00  INFO 26548 --- [ms-promociones] [           main] c.h.p.MsPromocionesApplication           : Started MsPromocionesApplication in 2.139 seconds (process running for 2.398)
+2026-10-17T09:56:28.753-03:00  INFO 26548 --- [ms-promociones] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-PROMOCIONES/DROJAS.localdomain:ms-promociones:8089 - registration status: 204
+2026-10-17T10:01:28.494-03:00  INFO 26548 --- [ms-promociones] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-10-17T10:06:28.496-03:00  INFO 26548 --- [ms-promociones] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-10-17T10:11:28.512-03:00  INFO 26548 --- [ms-promociones] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-10-17T10:16:28.516-03:00  INFO 26548 --- [ms-promociones] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-10-17T10:21:28.524-03:00  INFO 26548 --- [ms-promociones] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-10-17T10:26:28.541-03:00  INFO 26548 --- [ms-promociones] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-10-17T10:31:28.544-03:00  INFO 26548 --- [ms-promociones] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-10-17T10:36:28.549-03:00  INFO 26548 --- [ms-promociones] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-10-17T10:41:28.559-03:00  INFO 26548 --- [ms-promociones] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 ^C¨Desea terminar el trabajo por lotes (S/N)? 

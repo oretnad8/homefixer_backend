@@ -22,4 +22,13 @@ public class Tecnico extends Usuario {
 
     @Column(nullable = false)
     private String nivelReputacion = "NUEVO";
+
+    @Column(nullable = false)
+    private String especialidad = "otros"; // plomeria, electricidad, etc.
+
+    @Column(nullable = false)
+    private Double precioBase = 25000.0;
+
+    /** Interruptor "Disponible" del técnico; null (filas antiguas) se considera disponible. */
+    private Boolean disponible = true;
 }

@@ -6,7 +6,13 @@ for /f "delims=" %%i in ('powershell -NoProfile -Command "Get-Content .env | Whe
     set "%%i"
 )
 
+echo Cerrando instancias previas de HomeFixer...
+powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0stop-all.ps1"
+
 if not exist logs mkdir logs
+
+echo Levantando RabbitMQ (docker compose)...
+docker compose up -d --wait rabbitmq
 
 set MODULES=eureka-server api-gateway ms-usuarios ms-autenticacion ms-solicitudes ms-ubicacion ms-pagos ms-valoraciones ms-maestria ms-notificacion ms-promociones ms-reportes
 
@@ -26,6 +32,11 @@ for %%m in (%MODULES%) do (
     
     call :wait_for_startup %%m
 )
+
+echo [fronend-home] Iniciando...
+if exist logs\frontend.log del logs\frontend.log
+start /b cmd /c "cd fronend-home && npm run dev > ..\logs\frontend.log 2>&1"
+
 goto :end
 
 :wait_for_startup

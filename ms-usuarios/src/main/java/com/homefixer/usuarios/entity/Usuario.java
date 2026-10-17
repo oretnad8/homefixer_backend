@@ -1,5 +1,6 @@
 package com.homefixer.usuarios.entity;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -25,6 +26,8 @@ public abstract class Usuario {
     @Column(nullable = false)
     private String telefono;
 
+    /** Se acepta al crear usuarios pero nunca se devuelve en las respuestas JSON. */
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @Column(nullable = false)
     private String password;
 }

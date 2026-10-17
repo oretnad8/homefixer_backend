@@ -48,12 +48,16 @@ public class SecurityConfig {
             .csrf(ServerHttpSecurity.CsrfSpec::disable)
             .cors(Customizer.withDefaults())
             .authorizeExchange(exchanges -> exchanges
-                // Rutas públicas
+                // Rutas públicas y Preflights CORS
+                .pathMatchers(org.springframework.http.HttpMethod.OPTIONS, "/**").permitAll()
                 .pathMatchers("/eureka/**", "/api/auth/**", "/webjars/**", "/swagger-ui/**", "/v3/api-docs/**").permitAll()
                 
                 // Ejemplo de RUTAS PROTEGIDAS POR ROL para cumplir el 100% de la rúbrica
-                .pathMatchers("/api/maestria/**").hasAnyRole("TECNICO", "ADMIN")
+                // Los roles de HomeFixer viven en ms-usuarios (no en el JWT de Supabase):
+                // ms-maestria verifica admin / técnico consultando GET /api/usuarios/me
+                .pathMatchers("/api/maestria/**").authenticated()
                 .pathMatchers("/api/reportes/**").hasRole("ADMIN")
+                .pathMatchers("/api/usuarios/supabase/**").hasRole("ADMIN")
                 
                 // Cualquier otra ruta /api/** requiere solo estar autenticado
                 .pathMatchers("/api/**").authenticated()

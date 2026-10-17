@@ -4,11 +4,41 @@ server:
 spring:
   application:
     name: ms-notificacion
+  datasource:
+    url: ${SUPABASE_DB_URL:jdbc:postgresql://aws-0-us-east-1.pooler.supabase.com:6543/postgres}
+    username: ${SUPABASE_DB_USER:postgres}
+    password: ${SUPABASE_DB_PASSWORD:password_local_o_nube}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
   rabbitmq:
     host: ${RABBITMQ_HOST:localhost}
     port: ${RABBITMQ_PORT:5672}
     username: ${RABBITMQ_USER:guest}
     password: ${RABBITMQ_PASS:guest}
+    listener:
+      simple:
+        # ACK manual: el consumidor confirma (basicAck) o rechaza (basicNack) cada mensaje
+        acknowledge-mode: manual
+        prefetch: 10
+        # Un mensaje rechazado nunca vuelve a la cola principal: se va al DLX
+        default-requeue-rejected: false
+
+homefixer:
+  messaging:
+    # Reintentos en el consumidor antes de enviar el mensaje a la DLQ
+    max-intentos: 3
+    alertas:
+      # Cada cuánto se revisa el tamaño de las colas
+      intervalo-ms: 60000
+      # Alerta si la DLQ supera este número de mensajes
+      umbral-dlq: 1
+      # Alerta si la cola principal acumula más de este número de mensajes (consumidores lentos/caídos)
+      umbral-cola-principal: 1000
 
 eureka:
   client:

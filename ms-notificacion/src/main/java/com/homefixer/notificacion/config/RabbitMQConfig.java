@@ -1,38 +1,31 @@
 package com.homefixer.notificacion.config;
 
-import org.springframework.amqp.core.Binding;
-import org.springframework.amqp.core.BindingBuilder;
-import org.springframework.amqp.core.Queue;
-import org.springframework.amqp.core.TopicExchange;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.homefixer.shared.messaging.EventQueues;
+import com.homefixer.shared.messaging.MessagingConstants;
+import org.springframework.amqp.core.Declarables;
 import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import org.springframework.amqp.support.converter.MessageConverter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * Suscriptor de todos los eventos de dominio (Publish/Subscribe) con su propia cola durable,
+ * Dead Letter Exchange y políticas de retención (ver EventQueues).
+ */
 @Configuration
 public class RabbitMQConfig {
 
-    public static final String EXCHANGE_NAME = "homefixer.exchange";
-    public static final String NOTIFICACION_QUEUE = "notificacion.queue";
-    public static final String NOTIFICACION_ROUTING_KEY = "notificacion.routing.key";
-
     @Bean
-    public TopicExchange exchange() {
-        return new TopicExchange(EXCHANGE_NAME);
+    public Declarables colaNotificaciones() {
+        return EventQueues.suscriptor(MessagingConstants.NOTIFICACION_QUEUE, MessagingConstants.NOTIFICACION_DLQ,
+                MessagingConstants.RK_SOLICITUD_ALL, MessagingConstants.RK_PAGO_ALL,
+                MessagingConstants.RK_VALORACION_ALL, MessagingConstants.RK_CHAT_ALL,
+                MessagingConstants.RK_CERTIFICACION_ALL);
     }
 
     @Bean
-    public Queue notificacionQueue() {
-        return new Queue(NOTIFICACION_QUEUE, true);
-    }
-
-    @Bean
-    public Binding notificacionBinding(Queue notificacionQueue, TopicExchange exchange) {
-        return BindingBuilder.bind(notificacionQueue).to(exchange).with(NOTIFICACION_ROUTING_KEY);
-    }
-
-    @Bean
-    public MessageConverter jsonMessageConverter() {
-        return new Jackson2JsonMessageConverter();
+    public MessageConverter jsonMessageConverter(ObjectMapper objectMapper) {
+        return new Jackson2JsonMessageConverter(objectMapper);
     }
 }
