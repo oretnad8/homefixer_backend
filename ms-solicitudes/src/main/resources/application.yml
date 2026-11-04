@@ -4,6 +4,25 @@ server:
 spring:
   application:
     name: ms-solicitudes
+  # Kafka: stream de eventos de negocio (RabbitMQ sigue a cargo del workflow transaccional)
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP:localhost:9092,localhost:9093,localhost:9094}
+    client-id: ${spring.application.name}
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      acks: all                       # espera a las réplicas en sincronía (min.insync.replicas=2)
+      retries: 10
+      batch-size: 32768
+      compression-type: lz4
+      properties:
+        enable.idempotence: true      # sin duplicados por reintentos del productor
+        max.in.flight.requests.per.connection: 5
+        linger.ms: 10                 # micro-batching
+        request.timeout.ms: 10000
+        delivery.timeout.ms: 30000
+        max.block.ms: 3000            # si Kafka no responde, no bloquear la petición HTTP más de 3 s
+        spring.json.type.mapping: solicitudEvento:com.homefixer.shared.kafka.SolicitudEventoKafka,ubicacionEvento:com.homefixer.shared.kafka.UbicacionTecnicoEvento
   rabbitmq:
     host: ${RABBITMQ_HOST:localhost}
     port: ${RABBITMQ_PORT:5672}
@@ -33,3 +52,8 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
+
+homefixer:
+  kafka:
+    # KAFKA_ENABLED=false desactiva la publicación en Kafka sin afectar RabbitMQ
+    enabled: ${KAFKA_ENABLED:true}

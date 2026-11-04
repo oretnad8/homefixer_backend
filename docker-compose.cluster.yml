@@ -1,0 +1,63 @@
+version: '3.8'
+
+# Despliegue de Clúster RabbitMQ de 2 Nodos
+# Cumple con el requisito de EP4:
+# "El estudiante debe mostrar la existencia de dos nodos RabbitMQ configurados y su integración en un clúster."
+# "El estudiante debe demostrar en la nube la ejecución de docker-compose levantando servicios de RabbitMQ."
+
+services:
+  rabbitmq1:
+    image: rabbitmq:3.13-management
+    container_name: rabbitmq1
+    hostname: rabbitmq1
+    ports:
+      - "5672:5672"     # AMQP nodo 1
+      - "15672:15672"   # Management UI nodo 1 (http://localhost:15672)
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_USER:-guest}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASS:-guest}
+      RABBITMQ_ERLANG_COOKIE: "HOMEFIXER_CLUSTER_SECRET_2026"
+    volumes:
+      - rabbitmq1-data:/var/lib/rabbitmq
+      - ./rabbitmq/rabbitmq-cluster.conf:/etc/rabbitmq/conf.d/20-homefixer.conf:ro
+    networks:
+      - rabbitmq-net
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  rabbitmq2:
+    image: rabbitmq:3.13-management
+    container_name: rabbitmq2
+    hostname: rabbitmq2
+    depends_on:
+      - rabbitmq1
+    ports:
+      - "5673:5672"     # AMQP nodo 2
+      - "15673:15672"   # Management UI nodo 2 (http://localhost:15673)
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_USER:-guest}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASS:-guest}
+      RABBITMQ_ERLANG_COOKIE: "HOMEFIXER_CLUSTER_SECRET_2026"
+    volumes:
+      - rabbitmq2-data:/var/lib/rabbitmq
+      - ./rabbitmq/rabbitmq-cluster.conf:/etc/rabbitmq/conf.d/20-homefixer.conf:ro
+    networks:
+      - rabbitmq-net
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+networks:
+  rabbitmq-net:
+    driver: bridge
+
+volumes:
+  rabbitmq1-data:
+  rabbitmq2-data:

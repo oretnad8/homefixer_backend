@@ -1,0 +1,51 @@
+server:
+  port: 8091
+
+spring:
+  application:
+    name: ms-kafka-admin
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP:localhost:9092,localhost:9093,localhost:9094}
+    client-id: ${spring.application.name}
+    admin:
+      # El servicio arranca aunque Kafka no esté disponible; los endpoints responden 503 hasta que vuelva
+      fail-fast: false
+      modify-topic-configs: false   # los beans NewTopic solo crean lo que falta; los cambios se hacen por la API
+      properties:
+        request.timeout.ms: 10000
+        default.api.timeout.ms: 15000
+    # Productor del generador de carga (POST /api/kafka/admin/simular)
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      acks: all
+      retries: 10
+      compression-type: lz4
+      properties:
+        enable.idempotence: true
+        linger.ms: 20
+        max.block.ms: 3000
+        spring.json.type.mapping: solicitudEvento:com.homefixer.shared.kafka.SolicitudEventoKafka,ubicacionEvento:com.homefixer.shared.kafka.UbicacionTecnicoEvento
+    # Consumidor de los Dead Letter Topics: se leen como texto, sin deserializar (pueden ser JSON corrupto)
+    consumer:
+      group-id: dlt-auditoria
+      auto-offset-reset: earliest
+      enable-auto-commit: false
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    listener:
+      ack-mode: record
+      missing-topics-fatal: false
+
+homefixer:
+  kafka:
+    enabled: true
+    admin:
+      # Tópicos del caso: no se pueden borrar sin ?forzar=true
+      topicos-protegidos: homefixer.solicitudes.eventos,homefixer.tecnicos.ubicacion,homefixer.solicitudes.eventos.DLT,homefixer.tecnicos.ubicacion.DLT
+      max-eventos-simulacion: 20000
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

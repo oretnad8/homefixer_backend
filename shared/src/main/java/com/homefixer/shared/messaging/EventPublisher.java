@@ -55,7 +55,7 @@ public class EventPublisher {
         if (evento.getFechaEvento() == null) {
             evento.setFechaEvento(LocalDateTime.now());
         }
-        log.info("Publicando evento {} [{}] solicitud={}", evento.getEventoId(), routingKey, evento.getSolicitudId());
+        log.info("[PUBLISH] Publicando evento {} [{}] solicitud={}", evento.getEventoId(), routingKey, evento.getSolicitudId());
         try {
             rabbitTemplate.convertAndSend(MessagingConstants.EVENTS_EXCHANGE, routingKey, evento,
                     message -> {

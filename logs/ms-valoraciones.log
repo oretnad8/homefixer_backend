@@ -1,46 +1,49 @@
 [INFO] Scanning for projects...
 [WARNING] 
 [WARNING] Some problems were encountered while building the effective model for com.homefixer:shared:jar:1.0.0-SNAPSHOT
-[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 88, column 21
 [WARNING] 
 [WARNING] Some problems were encountered while building the effective model for com.homefixer:eureka-server:jar:1.0.0-SNAPSHOT
-[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 88, column 21
 [WARNING] 
 [WARNING] Some problems were encountered while building the effective model for com.homefixer:api-gateway:jar:1.0.0-SNAPSHOT
-[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 88, column 21
 [WARNING] 
 [WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-usuarios:jar:1.0.0-SNAPSHOT
-[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 88, column 21
 [WARNING] 
 [WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-autenticacion:jar:1.0.0-SNAPSHOT
-[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 88, column 21
 [WARNING] 
 [WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-solicitudes:jar:1.0.0-SNAPSHOT
-[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 88, column 21
 [WARNING] 
 [WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-ubicacion:jar:1.0.0-SNAPSHOT
-[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 88, column 21
 [WARNING] 
 [WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-pagos:jar:1.0.0-SNAPSHOT
-[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 88, column 21
 [WARNING] 
 [WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-valoraciones:jar:1.0.0-SNAPSHOT
-[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 88, column 21
 [WARNING] 
 [WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-maestria:jar:1.0.0-SNAPSHOT
-[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 88, column 21
 [WARNING] 
 [WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-notificacion:jar:1.0.0-SNAPSHOT
-[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 88, column 21
 [WARNING] 
 [WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-promociones:jar:1.0.0-SNAPSHOT
-[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 88, column 21
 [WARNING] 
 [WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-reportes:jar:1.0.0-SNAPSHOT
-[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 88, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-kafka-admin:jar:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 88, column 21
 [WARNING] 
 [WARNING] Some problems were encountered while building the effective model for com.homefixer:homefixer-parent:pom:1.0.0-SNAPSHOT
-[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 87, column 21
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 88, column 21
 [WARNING] 
 [WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
 [WARNING] 
@@ -82,50 +85,50 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.4)
 
-2026-10-17T10:59:09.103-03:00  INFO 23344 --- [ms-valoraciones] [           main] c.h.v.MsValoracionesApplication          : Starting MsValoracionesApplication using Java 21.0.12 with PID 23344 (C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-valoraciones\target\classes started by drojas in C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-valoraciones)
-2026-10-17T10:59:09.106-03:00  INFO 23344 --- [ms-valoraciones] [           main] c.h.v.MsValoracionesApplication          : No active profile set, falling back to 1 default profile: "default"
-2026-10-17T10:59:09.723-03:00  INFO 23344 --- [ms-valoraciones] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-10-17T10:59:09.823-03:00  INFO 23344 --- [ms-valoraciones] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 95 ms. Found 1 JPA repository interface.
-2026-10-17T10:59:10.016-03:00  INFO 23344 --- [ms-valoraciones] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=57f98f5e-05b7-3a86-847c-a5de4aef106d
-2026-10-17T10:59:10.123-03:00  WARN 23344 --- [ms-valoraciones] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
-2026-10-17T10:59:10.124-03:00  WARN 23344 --- [ms-valoraciones] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2026-10-17T10:59:10.353-03:00  INFO 23344 --- [ms-valoraciones] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8088 (http)
-2026-10-17T10:59:10.362-03:00  INFO 23344 --- [ms-valoraciones] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-10-17T10:59:10.363-03:00  INFO 23344 --- [ms-valoraciones] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
-2026-10-17T10:59:10.424-03:00  INFO 23344 --- [ms-valoraciones] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-10-17T10:59:10.425-03:00  INFO 23344 --- [ms-valoraciones] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1274 ms
-2026-10-17T10:59:10.553-03:00  INFO 23344 --- [ms-valoraciones] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-10-17T10:59:10.595-03:00  INFO 23344 --- [ms-valoraciones] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2026-10-17T10:59:10.619-03:00  INFO 23344 --- [ms-valoraciones] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-10-17T10:59:10.774-03:00  INFO 23344 --- [ms-valoraciones] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-10-17T10:59:10.793-03:00  INFO 23344 --- [ms-valoraciones] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-10-17T10:59:13.829-03:00  INFO 23344 --- [ms-valoraciones] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@611a2d82
-2026-10-17T10:59:13.830-03:00  INFO 23344 --- [ms-valoraciones] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-10-17T10:59:14.056-03:00  WARN 23344 --- [ms-valoraciones] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-10-17T10:59:15.061-03:00  INFO 23344 --- [ms-valoraciones] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-10-17T10:59:15.883-03:00  INFO 23344 --- [ms-valoraciones] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-10-17T10:59:16.063-03:00  INFO 23344 --- [ms-valoraciones] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-10-17T10:59:16.746-03:00  WARN 23344 --- [ms-valoraciones] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-10-17T10:59:17.143-03:00  INFO 23344 --- [ms-valoraciones] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2026-10-17T10:59:17.184-03:00  WARN 23344 --- [ms-valoraciones] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2026-10-17T10:59:17.225-03:00  INFO 23344 --- [ms-valoraciones] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2026-10-17T10:59:17.295-03:00  INFO 23344 --- [ms-valoraciones] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2026-10-17T10:59:17.298-03:00  INFO 23344 --- [ms-valoraciones] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-10-17T10:59:17.313-03:00  INFO 23344 --- [ms-valoraciones] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2026-10-17T10:59:17.314-03:00  INFO 23344 --- [ms-valoraciones] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2026-10-17T10:59:17.314-03:00  INFO 23344 --- [ms-valoraciones] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2026-10-17T10:59:17.314-03:00  INFO 23344 --- [ms-valoraciones] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2026-10-17T10:59:17.314-03:00  INFO 23344 --- [ms-valoraciones] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2026-10-17T10:59:17.314-03:00  INFO 23344 --- [ms-valoraciones] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2026-10-17T10:59:17.314-03:00  INFO 23344 --- [ms-valoraciones] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2026-10-17T10:59:17.528-03:00  INFO 23344 --- [ms-valoraciones] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2026-10-17T10:59:17.530-03:00  INFO 23344 --- [ms-valoraciones] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2026-10-17T10:59:17.533-03:00  INFO 23344 --- [ms-valoraciones] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2026-10-17T10:59:17.536-03:00  INFO 23344 --- [ms-valoraciones] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1792245557535 with initial instances count: 5
-2026-10-17T10:59:17.539-03:00  INFO 23344 --- [ms-valoraciones] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MS-VALORACIONES with eureka with status UP
-2026-10-17T10:59:17.540-03:00  INFO 23344 --- [ms-valoraciones] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1792245557540, current=UP, previous=STARTING]
-2026-10-17T10:59:17.542-03:00  INFO 23344 --- [ms-valoraciones] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-VALORACIONES/DROJAS.localdomain:ms-valoraciones:8088: registering service...
-2026-10-17T10:59:17.559-03:00  INFO 23344 --- [ms-valoraciones] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8088 (http) with context path ''
-2026-10-17T10:59:17.560-03:00  INFO 23344 --- [ms-valoraciones] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8088
-2026-10-17T10:59:17.570-03:00  INFO 23344 --- [ms-valoraciones] [           main] c.h.v.MsValoracionesApplication          : Started MsValoracionesApplication in 8.826 seconds (process running for 9.126)
-2026-10-17T10:59:17.575-03:00  INFO 23344 --- [ms-valoraciones] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-VALORACIONES/DROJAS.localdomain:ms-valoraciones:8088 - registration status: 204
+2026-11-04T19:33:25.274-03:00  INFO 16720 --- [ms-valoraciones] [           main] c.h.v.MsValoracionesApplication          : Starting MsValoracionesApplication using Java 21.0.12 with PID 16720 (C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-valoraciones\target\classes started by drojas in C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-valoraciones)
+2026-11-04T19:33:25.276-03:00  INFO 16720 --- [ms-valoraciones] [           main] c.h.v.MsValoracionesApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-11-04T19:33:25.823-03:00  INFO 16720 --- [ms-valoraciones] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-04T19:33:25.931-03:00  INFO 16720 --- [ms-valoraciones] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 100 ms. Found 1 JPA repository interface.
+2026-11-04T19:33:26.116-03:00  INFO 16720 --- [ms-valoraciones] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=fb19ab8a-d321-3d10-bba1-4f102d0b2bee
+2026-11-04T19:33:26.208-03:00  WARN 16720 --- [ms-valoraciones] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-11-04T19:33:26.208-03:00  WARN 16720 --- [ms-valoraciones] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-11-04T19:33:26.405-03:00  INFO 16720 --- [ms-valoraciones] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8088 (http)
+2026-11-04T19:33:26.414-03:00  INFO 16720 --- [ms-valoraciones] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-04T19:33:26.414-03:00  INFO 16720 --- [ms-valoraciones] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-11-04T19:33:26.479-03:00  INFO 16720 --- [ms-valoraciones] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-04T19:33:26.479-03:00  INFO 16720 --- [ms-valoraciones] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1160 ms
+2026-11-04T19:33:26.589-03:00  INFO 16720 --- [ms-valoraciones] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-04T19:33:26.619-03:00  INFO 16720 --- [ms-valoraciones] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-11-04T19:33:26.643-03:00  INFO 16720 --- [ms-valoraciones] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-04T19:33:26.809-03:00  INFO 16720 --- [ms-valoraciones] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-04T19:33:26.838-03:00  INFO 16720 --- [ms-valoraciones] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-04T19:33:29.014-03:00  INFO 16720 --- [ms-valoraciones] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@540212be
+2026-11-04T19:33:29.017-03:00  INFO 16720 --- [ms-valoraciones] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-04T19:33:29.212-03:00  WARN 16720 --- [ms-valoraciones] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-04T19:33:30.084-03:00  INFO 16720 --- [ms-valoraciones] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-04T19:33:30.839-03:00  INFO 16720 --- [ms-valoraciones] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-04T19:33:31.002-03:00  INFO 16720 --- [ms-valoraciones] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-11-04T19:33:31.679-03:00  WARN 16720 --- [ms-valoraciones] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-11-04T19:33:32.083-03:00  INFO 16720 --- [ms-valoraciones] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-11-04T19:33:32.117-03:00  WARN 16720 --- [ms-valoraciones] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-11-04T19:33:32.151-03:00  INFO 16720 --- [ms-valoraciones] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-11-04T19:33:32.215-03:00  INFO 16720 --- [ms-valoraciones] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-11-04T19:33:32.218-03:00  INFO 16720 --- [ms-valoraciones] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-04T19:33:32.233-03:00  INFO 16720 --- [ms-valoraciones] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-11-04T19:33:32.234-03:00  INFO 16720 --- [ms-valoraciones] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-11-04T19:33:32.234-03:00  INFO 16720 --- [ms-valoraciones] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-11-04T19:33:32.234-03:00  INFO 16720 --- [ms-valoraciones] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-11-04T19:33:32.234-03:00  INFO 16720 --- [ms-valoraciones] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-11-04T19:33:32.234-03:00  INFO 16720 --- [ms-valoraciones] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-11-04T19:33:32.234-03:00  INFO 16720 --- [ms-valoraciones] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-11-04T19:33:32.422-03:00  INFO 16720 --- [ms-valoraciones] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-11-04T19:33:32.424-03:00  INFO 16720 --- [ms-valoraciones] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-11-04T19:33:32.426-03:00  INFO 16720 --- [ms-valoraciones] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-11-04T19:33:32.429-03:00  INFO 16720 --- [ms-valoraciones] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1793831612428 with initial instances count: 6
+2026-11-04T19:33:32.431-03:00  INFO 16720 --- [ms-valoraciones] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MS-VALORACIONES with eureka with status UP
+2026-11-04T19:33:32.431-03:00  INFO 16720 --- [ms-valoraciones] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1793831612431, current=UP, previous=STARTING]
+2026-11-04T19:33:32.432-03:00  INFO 16720 --- [ms-valoraciones] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-VALORACIONES/DROJAS.localdomain:ms-valoraciones:8088: registering service...
+2026-11-04T19:33:32.447-03:00  INFO 16720 --- [ms-valoraciones] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8088 (http) with context path ''
+2026-11-04T19:33:32.447-03:00  INFO 16720 --- [ms-valoraciones] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8088
+2026-11-04T19:33:32.459-03:00  INFO 16720 --- [ms-valoraciones] [           main] c.h.v.MsValoracionesApplication          : Started MsValoracionesApplication in 7.508 seconds (process running for 7.873)
+2026-11-04T19:33:32.463-03:00  INFO 16720 --- [ms-valoraciones] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-VALORACIONES/DROJAS.localdomain:ms-valoraciones:8088 - registration status: 204

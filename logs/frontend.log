@@ -1,4 +1,67 @@
 
-> homefixer@0.1.0 dev
-> next dev
+> homefixer@0.1.0 build
+> next build
 
+▲ Next.js 16.3.7 (Turbopack)
+- Environments: .env.local
+✓ Running next.config.ts took 105ms
+
+  Creating an optimized production build ...
+(node:17892) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/Pc%20Tester/Desktop/6to/cloud.native/homefixer/fronend-home/tailwind.config.ts?id=1793831811207 is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\fronend-home\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✓ Compiled successfully in 4.1s
+  Running TypeScript ...
+  Finished TypeScript in 5.0s ...
+  Collecting page data using 7 workers ...
+  Generating static pages using 7 workers (0/24) ...
+  Generating static pages using 7 workers (6/24) 
+  Generating static pages using 7 workers (12/24) 
+  Generating static pages using 7 workers (18/24) 
+✓ Generating static pages using 7 workers (24/24) in 617ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /admin/certificaciones
+├ ○ /admin/streaming
+├ ○ /auth/callback
+├ ƒ /cliente/chat/[id]
+├ ○ /cliente/configuracion
+├ ○ /cliente/historial
+├ ○ /cliente/home
+├ ○ /cliente/mis-servicios
+├ ○ /cliente/nueva-solicitud
+├ ƒ /cliente/pago/[id]
+├ ○ /cliente/pagos
+├ ○ /cliente/perfil
+├ ƒ /cliente/servicio-en-progreso/[id]
+├ ○ /cliente/tecnicos-disponibles
+├ ƒ /cliente/valoracion/[id]
+├ ○ /login-admin
+├ ○ /login-cliente
+├ ○ /login-tecnico
+├ ƒ /tecnico/chat/[id]
+├ ○ /tecnico/configuracion
+├ ○ /tecnico/estadisticas
+├ ○ /tecnico/home
+├ ○ /tecnico/mis-trabajos
+├ ○ /tecnico/perfil
+├ ƒ /tecnico/servicio-completado/[id]
+├ ƒ /tecnico/servicio-en-progreso/[id]
+├ ○ /tecnico/solicitudes
+└ ƒ /tecnico/valoracion/[id]
+
+
+ƒ Proxy (Middleware)
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+npm notice
+npm notice New major version of npm available! 11.13.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice

@@ -8,8 +8,10 @@ import com.homefixer.shared.dto.SolicitudDetalleDTO;
 import com.homefixer.shared.enums.EstadoPago;
 import com.homefixer.shared.messaging.EventPublisher;
 import com.homefixer.shared.messaging.MessagingConstants;
+import com.homefixer.shared.kafka.KafkaEventPublisher;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -31,6 +33,8 @@ public class PagoService {
     private final PagoRepository pagoRepository;
     private final SolicitudesRpcClient solicitudesRpcClient;
     private final EventPublisher eventPublisher;
+    /** Kafka: el mismo hecho de negocio al stream analítico (ausente si homefixer.kafka.enabled=false). */
+    private final ObjectProvider<KafkaEventPublisher> kafkaPublisher;
 
     /** Endpoint original: registra un pago ya procesado. */
     public Pago procesarPago(Pago pago) {
@@ -94,7 +98,7 @@ public class PagoService {
         List<Long> destinatarios = new ArrayList<>();
         if (guardado.getTecnicoId() != null) destinatarios.add(guardado.getTecnicoId());
         if (guardado.getClienteId() != null) destinatarios.add(guardado.getClienteId());
-        eventPublisher.publicar(MessagingConstants.RK_PAGO_PROCESADO, NotificacionEventDTO.builder()
+        NotificacionEventDTO evento = NotificacionEventDTO.builder()
                 .solicitudId(guardado.getSolicitudId())
                 .clienteId(guardado.getClienteId())
                 .tecnicosIds(guardado.getTecnicoId() != null ? List.of(guardado.getTecnicoId()) : List.of())
@@ -102,7 +106,9 @@ public class PagoService {
                 .tipoServicio("PAGO_PROCESADO")
                 .monto(guardado.getMonto())
                 .mensaje("Pago de $" + Math.round(guardado.getMonto()) + " recibido por la solicitud #" + guardado.getSolicitudId() + ".")
-                .build());
+                .build();
+        eventPublisher.publicar(MessagingConstants.RK_PAGO_PROCESADO, evento);
+        kafkaPublisher.ifAvailable(k -> k.publicarDesdeRabbit(MessagingConstants.RK_PAGO_PROCESADO, evento));
         return guardado;
     }
 

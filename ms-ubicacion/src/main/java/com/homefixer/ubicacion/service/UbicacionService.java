@@ -9,8 +9,11 @@ import com.homefixer.ubicacion.dto.TecnicoInfo;
 import com.homefixer.ubicacion.dto.UbicacionDTO;
 import com.homefixer.ubicacion.entity.UbicacionTecnico;
 import com.homefixer.ubicacion.repository.UbicacionTecnicoRepository;
+import com.homefixer.shared.kafka.KafkaEventPublisher;
+import com.homefixer.shared.kafka.UbicacionTecnicoEvento;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -22,6 +25,7 @@ import java.time.Instant;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -35,6 +39,8 @@ public class UbicacionService {
     private final UbicacionTecnicoRepository repository;
     private final UsuariosFeignClient usuariosFeignClient;
     private final MaestriaFeignClient maestriaFeignClient;
+    /** Kafka: cada reporte GPS va al stream homefixer.tecnicos.ubicacion (ausente si homefixer.kafka.enabled=false). */
+    private final ObjectProvider<KafkaEventPublisher> kafkaPublisher;
 
     @Value("${ubicacion.ttl-segundos:120}")
     private long ttlSegundos;
@@ -44,14 +50,23 @@ public class UbicacionService {
 
     @Transactional
     public void reportar(Long tecnicoId, ReporteUbicacion reporte) {
+        Instant ahora = Instant.now();
         repository.save(new UbicacionTecnico(tecnicoId, reporte.latitud(), reporte.longitud(),
-                reporte.precision(), Instant.now()));
+                reporte.precision(), ahora));
+        publicarUbicacion(new UbicacionTecnicoEvento(UUID.randomUUID().toString(), tecnicoId,
+                reporte.latitud(), reporte.longitud(), true, null, ahora, "ms-ubicacion"));
     }
 
     /** El técnico se desconecta: deja de aparecer en las búsquedas. */
     @Transactional
     public void desconectar(Long tecnicoId) {
         if (repository.existsById(tecnicoId)) repository.deleteById(tecnicoId);
+        publicarUbicacion(new UbicacionTecnicoEvento(UUID.randomUUID().toString(), tecnicoId,
+                null, null, false, null, Instant.now(), "ms-ubicacion"));
+    }
+
+    private void publicarUbicacion(UbicacionTecnicoEvento evento) {
+        kafkaPublisher.ifAvailable(k -> k.publicarUbicacion(evento));
     }
 
     public UbicacionDTO obtener(Long tecnicoId) {

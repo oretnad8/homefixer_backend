@@ -4,6 +4,38 @@ server:
 spring:
   application:
     name: ms-notificacion
+  # Kafka: consumidor del stream de eventos (el productor solo se usa para reenviar fallidos al DLT)
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP:localhost:9092,localhost:9093,localhost:9094}
+    client-id: ${spring.application.name}
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      acks: all
+      properties:
+        enable.idempotence: true
+        max.block.ms: 3000
+        spring.json.type.mapping: solicitudEvento:com.homefixer.shared.kafka.SolicitudEventoKafka,ubicacionEvento:com.homefixer.shared.kafka.UbicacionTecnicoEvento
+    consumer:
+      group-id: notificacion-auditoria   # otro grupo sobre el mismo tópico: offsets propios, independiente de reportes
+      auto-offset-reset: earliest
+      enable-auto-commit: false
+      max-poll-records: 100
+      isolation-level: read-committed
+      key-deserializer: org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
+      properties:
+        spring.deserializer.key.delegate.class: org.apache.kafka.common.serialization.StringDeserializer
+        spring.deserializer.value.delegate.class: org.springframework.kafka.support.serializer.JsonDeserializer
+        spring.json.trusted.packages: com.homefixer.shared.kafka
+        spring.json.type.mapping: solicitudEvento:com.homefixer.shared.kafka.SolicitudEventoKafka,ubicacionEvento:com.homefixer.shared.kafka.UbicacionTecnicoEvento
+        partition.assignment.strategy: org.apache.kafka.clients.consumer.CooperativeStickyAssignor
+        session.timeout.ms: 15000
+        heartbeat.interval.ms: 3000
+    listener:
+      ack-mode: record
+      concurrency: 3
+      missing-topics-fatal: false
   datasource:
     url: ${SUPABASE_DB_URL:jdbc:postgresql://aws-0-us-east-1.pooler.supabase.com:6543/postgres}
     username: ${SUPABASE_DB_USER:postgres}
@@ -29,6 +61,8 @@ spring:
         default-requeue-rejected: false
 
 homefixer:
+  kafka:
+    enabled: ${KAFKA_ENABLED:true}
   messaging:
     # Reintentos en el consumidor antes de enviar el mensaje a la DLQ
     max-intentos: 3

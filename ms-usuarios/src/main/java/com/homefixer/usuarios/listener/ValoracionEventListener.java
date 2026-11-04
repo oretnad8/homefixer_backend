@@ -35,6 +35,7 @@ public class ValoracionEventListener {
                 log.info("Calificación del técnico {} actualizada a {}", tecnicoId, evento.getCalificacion());
             }
             channel.basicAck(deliveryTag, false);
+            log.info("[ACK] Evento {} confirmado por ms-usuarios", evento.getEventoId());
         } catch (Exception e) {
             channel.basicNack(deliveryTag, false, false);
             log.error("[NACK] Evento {} enviado a la DLQ {}: {}", evento.getEventoId(),

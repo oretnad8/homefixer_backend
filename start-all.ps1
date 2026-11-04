@@ -17,7 +17,8 @@ $modules = @(
     "ms-maestria",
     "ms-notificacion",
     "ms-promociones",
-    "ms-reportes"
+    "ms-reportes",
+    "ms-kafka-admin"
 )
 
 Write-Host "Iniciando todos los microservicios en ventanas separadas..." -ForegroundColor Cyan

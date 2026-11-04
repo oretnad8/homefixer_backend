@@ -28,6 +28,12 @@
             <artifactId>spring-rabbit</artifactId>
             <optional>true</optional>
         </dependency>
+        <!-- Solo para homefixer.shared.kafka; cada servicio que use Kafka declara spring-kafka -->
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
+            <optional>true</optional>
+        </dependency>
     </dependencies>
 
 </project>

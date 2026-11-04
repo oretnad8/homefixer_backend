@@ -19,6 +19,7 @@ Este repositorio contiene todo el ecosistema backend, diseñado para ser altamen
 - **Persistencia:** Spring Data JPA / Hibernate
 - **Base de Datos:** PostgreSQL / MySQL (Soporte multibase según configuración)
 - **Seguridad:** JWT (JSON Web Tokens) en API Gateway y soporte preparado para Azure AD (MSAL)
+- **Mensajería:** RabbitMQ (workflow, RPC, DLQ; ver `MENSAJERIA.md`) y Apache Kafka (streaming de eventos y métricas en tiempo real; ver `KAFKA.md`)
 - **Documentación API:** SpringDoc OpenAPI 3 (Swagger UI)
 - **Herramientas Adicionales:** Lombok, Maven (Multi-módulo)
 
@@ -115,7 +116,8 @@ graph TD
 | **`ms-pagos`** | `8087` | Procesamiento de transacciones, integración con pasarelas, generación de recibos. | Sí |
 | **`ms-valoraciones`** | `8088` | Gestión de reseñas, comentarios y actualización del rating de técnicos y clientes. | Sí |
 | **`ms-promociones`** | `8089` | Motor de descuentos, cupones y membresías premium para técnicos. | Sí |
-| **`ms-reportes`** | `8090` | Consolidación de métricas, analíticas del sistema y tableros administrativos. | No |
+| **`ms-reportes`** | `8090` | Consolidación de métricas, analíticas del sistema y tableros administrativos. Métricas en tiempo real desde Kafka (SSE). | No |
+| **`ms-kafka-admin`** | `8091` | Administración de Kafka: tópicos, configuraciones, particiones, consumer groups, lag, reset de offsets y DLT. | No |
 | **`shared`** | `N/A` | Módulo común empaquetado como dependencia (Librería). Contiene DTOs compartidos, Enums globales y utilidades. | No |
 
 ---
@@ -230,7 +232,11 @@ Por ejemplo:
 
 Debido a la naturaleza distribuida de la plataforma, el orden de inicio es importante. Puedes usar los scripts proporcionados (`start-all.bat` o `start-all.ps1`), o seguir los pasos manualmente:
 
-1. **Infraestructura Base:** Asegúrate de tener tu motor de base de datos MySQL/PostgreSQL ejecutándose en el puerto por defecto.
+1. **Infraestructura Base:** Asegúrate de tener tu motor de base de datos MySQL/PostgreSQL ejecutándose en el puerto por defecto, RabbitMQ (`docker compose up -d`) y Kafka:
+   ```bash
+   docker compose -f docker-compose.kafka.yml up -d     # 3 Zookeeper + 3 brokers + tópicos
+   docker compose -f docker-compose.kafka-ui.yml up -d  # Kafka UI en http://localhost:8095
+   ```
 2. **Construir el Proyecto Multimódulo:**
    En la raíz del proyecto, instala todos los módulos. Esto compilará el módulo `shared` y lo hará disponible.
    ```bash

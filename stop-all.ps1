@@ -16,6 +16,7 @@ $puertos = @(
     8088, # ms-valoraciones
     8089, # ms-promociones
     8090, # ms-reportes
+    8091, # ms-kafka-admin
     3000  # fronend-home (next dev)
 )
 

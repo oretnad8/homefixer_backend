@@ -24,6 +24,8 @@ springdoc:
         url: /v3/api-docs/ms-promociones
       - name: Reportes
         url: /v3/api-docs/ms-reportes
+      - name: Kafka Admin
+        url: /v3/api-docs/ms-kafka-admin
 
 spring:
   application:
@@ -87,7 +89,7 @@ spring:
         - id: ms-notificacion
           uri: lb://ms-notificacion
           predicates:
-            - Path=/api/notificaciones/**
+            - Path=/api/notificaciones/**, /api/admin/**
         - id: ms-notificacion-docs
           uri: lb://ms-notificacion
           predicates:
@@ -134,6 +136,16 @@ spring:
             - Path=/v3/api-docs/ms-reportes
           filters:
             - RewritePath=/v3/api-docs/ms-reportes, /v3/api-docs
+        - id: ms-kafka-admin
+          uri: lb://ms-kafka-admin
+          predicates:
+            - Path=/api/kafka/**
+        - id: ms-kafka-admin-docs
+          uri: lb://ms-kafka-admin
+          predicates:
+            - Path=/v3/api-docs/ms-kafka-admin
+          filters:
+            - RewritePath=/v3/api-docs/ms-kafka-admin, /v3/api-docs
   security:
     oauth2:
       resourceserver:

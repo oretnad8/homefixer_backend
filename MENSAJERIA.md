@@ -236,7 +236,51 @@ Los umbrales se configuran en `ms-notificacion/src/main/resources/application.ym
 
 ---
 
-## 10. Cómo verificarlo en vivo
+---
+
+## 10. Microservicio Administrador y API REST de RabbitMQ
+
+Para cumplir con los indicadores de la rúbrica sobre administración dinámica de colas, exchanges y bindings, se implementó una API REST completa en `ms-notificacion`:
+
+### 10.1 Servicio Encapsulado (`RabbitAdminService`)
+Toda la lógica de infraestructura con `AmqpAdmin` está aislada en `ms-notificacion/.../service/RabbitAdminService.java`. Los controladores solo llaman a métodos de alto nivel y no manipulan objetos internos de RabbitMQ:
+- `crearCola(CrearColaDTO dto)`
+- `eliminarCola(String nombreCola)`
+- `obtenerInfoCola(String nombreCola)`
+- `crearExchange(CrearExchangeDTO dto)`
+- `eliminarExchange(String nombreExchange)`
+- `crearBinding(CrearBindingDTO dto)`
+- `eliminarBinding(CrearBindingDTO dto)`
+
+### 10.2 Endpoints REST y Validación de Entradas
+Expuestos en `RabbitAdminController.java` (`/api/admin` y `/api/notificaciones/admin`):
+
+| Método | Endpoint | DTO / Parámetro | Validaciones |
+|---|---|---|---|
+| `POST` | `/api/admin/queues` | `CrearColaDTO` | `@NotBlank`, patrón alfanumérico, `@Positive` para TTL/maxLength, modo de overflow válido |
+| `DELETE` | `/api/admin/queues/{nombre}` | `@PathVariable String nombre` | Elimina la cola indicada y devuelve confirmación booleana |
+| `GET` | `/api/admin/queues/{nombre}` | `@PathVariable String nombre` | Consulta existencia, cantidad de mensajes y consumidores |
+| `POST` | `/api/admin/exchanges` | `CrearExchangeDTO` | `@NotBlank`, tipo restringido a `direct`, `topic`, `fanout`, `headers` |
+| `DELETE` | `/api/admin/exchanges/{nombre}` | `@PathVariable String nombre` | Elimina el exchange |
+| `POST` | `/api/admin/bindings` | `CrearBindingDTO` | Cola, exchange y routingKey obligatorios |
+| `DELETE` | `/api/admin/bindings` | `CrearBindingDTO` | Desvincula la cola del exchange |
+
+Si se envía un nombre vacío o parámetros incorrectos, `ApiExceptionHandler` captura la excepción y retorna **HTTP 400 Bad Request** con el detalle exacto del error.
+
+---
+
+## 11. Clúster de 2 Nodos de RabbitMQ
+
+Para cumplir con la presentación formal de 2 nodos en clúster (`EP4`), se diseñó `docker-compose.cluster.yml` y `rabbitmq/rabbitmq-cluster.conf`:
+- **Nodos:** `rabbitmq1` (puertos 5672 y 15672) y `rabbitmq2` (puertos 5673 y 15673).
+- **Erlang Cookie compartida:** `RABBITMQ_ERLANG_COOKIE: HOMEFIXER_CLUSTER_SECRET_2026`.
+- **Classic Peer Discovery:** Se descubren mutuamente de forma declarativa con `rabbit@rabbitmq1` y `rabbit@rabbitmq2`.
+- **Comando:** `docker compose -f docker-compose.cluster.yml up -d`
+- **Visualización:** En la consola `http://localhost:15672`, la pestaña *Overview* muestra ambos nodos activos integrados en el mismo clúster.
+
+---
+
+## 12. Cómo verificarlo en vivo
 
 1. `start-all.bat`: cierra procesos previos, instala `shared`, levanta RabbitMQ (con healthcheck) y los microservicios.
 2. Abre la consola de RabbitMQ en `http://localhost:15672` (guest / guest).
@@ -245,13 +289,25 @@ Los umbrales se configuran en `ms-notificacion/src/main/resources/application.ym
 3. Recorre un flujo completo: crear solicitud → asignar técnico → llegada → iniciar → finalizar → pagar → valorar. En el log de cada servicio aparecen las líneas `[CONFIRM]` y `[ACK]` de cada paso.
 4. Prueba la DLQ con `FORZAR_ERROR` (sección 7) y las alertas deteniendo un consumidor (sección 9).
 5. Prueba el RPC con `GET /api/reportes/solicitudes/resumen` (ms-reportes ↔ ms-solicitudes).
+6. Prueba la API de administración de colas:
+   ```bash
+   curl -X POST http://localhost:8080/api/admin/queues -H "Content-Type: application/json" -d "{\"nombre\":\"cola.test\",\"durable\":true}"
+   curl -X GET http://localhost:8080/api/admin/queues/cola.test
+   curl -X DELETE http://localhost:8080/api/admin/queues/cola.test
+   ```
 
 ---
 
-## 11. Alcance y limitaciones conocidas
+## 13. Alcance y consideraciones de producción
 
 - **Publicación sin outbox:** el evento se publica dentro de la transacción de negocio. Si el broker está caído, el evento se pierde (queda la alerta en el log).
-- **Reintentos solo en ms-notificacion:** los demás consumidores envían el mensaje a la DLQ al primer fallo.
-- **Reprocesamiento manual de la DLQ:** se hace desde la consola de RabbitMQ (*Move messages*). No hay un endpoint automático.
-- **Alertas solo en log y endpoint:** no se integró correo ni Slack.
-- **Un solo nodo:** RabbitMQ corre en un nodo con colas clásicas. Para producción se usarían colas *quorum* en un clúster.
+- **Reintentos en consumidor:** ms-notificacion implementa 3 reintentos con backoff antes del NACK; otros consumidores enrutan a DLQ en fallo directo.
+- **Reprocesamiento de la DLQ:** inspección de mensajes y shovel/move desde la consola de RabbitMQ.
+- **Alta disponibilidad:** arquitectura lista para desplegarse en nodo individual o clúster de 2 nodos con `docker-compose.cluster.yml`.
+
+---
+
+## 14. Streaming con Apache Kafka
+
+Además de RabbitMQ, los mismos hechos de negocio se publican en Kafka (mismo `eventoId`) para métricas en tiempo real, auditoría, tracking GPS y replay. RabbitMQ sigue a cargo del workflow transaccional. Arquitectura, tópicos, consumer groups, manejo de errores y el microservicio `ms-kafka-admin` están en [`KAFKA.md`](KAFKA.md).
+

@@ -35,6 +35,7 @@
         <module>ms-notificacion</module>
         <module>ms-promociones</module>
         <module>ms-reportes</module>
+        <module>ms-kafka-admin</module>
     </modules>
 
     <dependencyManagement>

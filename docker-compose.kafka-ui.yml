@@ -1,0 +1,20 @@
+# Kafka UI: administración de brokers, tópicos, particiones, mensajes y consumer groups (offsets / lag).
+# Requiere el clúster levantado antes: docker compose -f docker-compose.kafka.yml up -d
+# http://localhost:8095  (8080 lo usa el api-gateway)
+
+services:
+  kafka-ui:
+    image: provectuslabs/kafka-ui:v0.7.2
+    container_name: kafka-ui
+    ports:
+      - "8095:8080"
+    environment:
+      KAFKA_CLUSTERS_0_NAME: homefixer
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: "kafka1:29092,kafka2:29092,kafka3:29092"
+      DYNAMIC_CONFIG_ENABLED: "true"
+    networks: [homefixer-kafka-net]
+    restart: unless-stopped
+
+networks:
+  homefixer-kafka-net:
+    external: true

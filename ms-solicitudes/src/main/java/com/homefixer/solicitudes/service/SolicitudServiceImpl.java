@@ -4,6 +4,7 @@ import com.homefixer.shared.dto.NotificacionEventDTO;
 import com.homefixer.shared.enums.EstadoSolicitud;
 import com.homefixer.shared.messaging.EventPublisher;
 import com.homefixer.shared.messaging.MessagingConstants;
+import com.homefixer.shared.kafka.KafkaEventPublisher;
 import com.homefixer.solicitudes.client.UbicacionFeignClient;
 import com.homefixer.solicitudes.client.UsuariosFeignClient;
 import com.homefixer.solicitudes.entity.Solicitud;
@@ -15,6 +16,7 @@ import com.homefixer.solicitudes.repository.SolicitudRepository;
 import feign.FeignException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -52,6 +54,8 @@ public class SolicitudServiceImpl implements SolicitudService {
     private final UbicacionFeignClient ubicacionFeignClient;
     private final UsuariosFeignClient usuariosFeignClient;
     private final EventPublisher eventPublisher;
+    /** Kafka: el mismo hecho de negocio al stream analítico (ausente si homefixer.kafka.enabled=false). */
+    private final ObjectProvider<KafkaEventPublisher> kafkaPublisher;
 
     @Override
     @Transactional
@@ -338,7 +342,7 @@ public class SolicitudServiceImpl implements SolicitudService {
         if (!MessagingConstants.RK_SOLICITUD_CREADA.equals(routingKey)) {
             destinatarios.add(s.getClienteId());
         }
-        eventPublisher.publicar(routingKey, NotificacionEventDTO.builder()
+        NotificacionEventDTO evento = NotificacionEventDTO.builder()
                 .solicitudId(s.getId())
                 .clienteId(s.getClienteId())
                 .tecnicosIds(tecnicosIds)
@@ -348,7 +352,9 @@ public class SolicitudServiceImpl implements SolicitudService {
                 .categoria(s.getCategoria())
                 .monto(s.getPrecioEstimado())
                 .mensaje(mensaje)
-                .build());
+                .build();
+        eventPublisher.publicar(routingKey, evento);                         // RabbitMQ: workflow y notificaciones
+        kafkaPublisher.ifAvailable(k -> k.publicarDesdeRabbit(routingKey, evento)); // Kafka: stream de métricas
     }
 
     /** La especialidad del técnico debe coincidir con la categoría de la solicitud. */

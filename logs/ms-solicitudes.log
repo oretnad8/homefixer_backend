@@ -1,46 +1,49 @@
 [INFO] Scanning for projects...
 [WARNING] 
 [WARNING] Some problems were encountered while building the effective model for com.homefixer:shared:jar:1.0.0-SNAPSHOT
-[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 88, column 21
 [WARNING] 
 [WARNING] Some problems were encountered while building the effective model for com.homefixer:eureka-server:jar:1.0.0-SNAPSHOT
-[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 88, column 21
 [WARNING] 
 [WARNING] Some problems were encountered while building the effective model for com.homefixer:api-gateway:jar:1.0.0-SNAPSHOT
-[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 88, column 21
 [WARNING] 
 [WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-usuarios:jar:1.0.0-SNAPSHOT
-[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 88, column 21
 [WARNING] 
 [WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-autenticacion:jar:1.0.0-SNAPSHOT
-[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 88, column 21
 [WARNING] 
 [WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-solicitudes:jar:1.0.0-SNAPSHOT
-[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 88, column 21
 [WARNING] 
 [WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-ubicacion:jar:1.0.0-SNAPSHOT
-[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 88, column 21
 [WARNING] 
 [WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-pagos:jar:1.0.0-SNAPSHOT
-[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 88, column 21
 [WARNING] 
 [WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-valoraciones:jar:1.0.0-SNAPSHOT
-[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 88, column 21
 [WARNING] 
 [WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-maestria:jar:1.0.0-SNAPSHOT
-[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 88, column 21
 [WARNING] 
 [WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-notificacion:jar:1.0.0-SNAPSHOT
-[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 88, column 21
 [WARNING] 
 [WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-promociones:jar:1.0.0-SNAPSHOT
-[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 88, column 21
 [WARNING] 
 [WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-reportes:jar:1.0.0-SNAPSHOT
-[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 87, column 21
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 88, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.homefixer:ms-kafka-admin:jar:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.homefixer:homefixer-parent:1.0.0-SNAPSHOT, C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\pom.xml, line 88, column 21
 [WARNING] 
 [WARNING] Some problems were encountered while building the effective model for com.homefixer:homefixer-parent:pom:1.0.0-SNAPSHOT
-[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 87, column 21
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 88, column 21
 [WARNING] 
 [WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
 [WARNING] 
@@ -82,56 +85,54 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.4)
 
-2026-10-17T10:58:07.140-03:00  INFO 1756 --- [ms-solicitudes] [           main] c.h.s.MsSolicitudesApplication           : Starting MsSolicitudesApplication using Java 21.0.12 with PID 1756 (C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-solicitudes\target\classes started by drojas in C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-solicitudes)
-2026-10-17T10:58:07.143-03:00  INFO 1756 --- [ms-solicitudes] [           main] c.h.s.MsSolicitudesApplication           : No active profile set, falling back to 1 default profile: "default"
-2026-10-17T10:58:07.740-03:00  INFO 1756 --- [ms-solicitudes] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-10-17T10:58:07.871-03:00  INFO 1756 --- [ms-solicitudes] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 127 ms. Found 4 JPA repository interfaces.
-2026-10-17T10:58:08.085-03:00  INFO 1756 --- [ms-solicitudes] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=01d7337a-68ca-3ab5-b385-805a61bd5036
-2026-10-17T10:58:08.220-03:00  WARN 1756 --- [ms-solicitudes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
-2026-10-17T10:58:08.221-03:00  WARN 1756 --- [ms-solicitudes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2026-10-17T10:58:08.421-03:00  INFO 1756 --- [ms-solicitudes] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
-2026-10-17T10:58:08.429-03:00  INFO 1756 --- [ms-solicitudes] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-10-17T10:58:08.430-03:00  INFO 1756 --- [ms-solicitudes] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
-2026-10-17T10:58:08.488-03:00  INFO 1756 --- [ms-solicitudes] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-10-17T10:58:08.489-03:00  INFO 1756 --- [ms-solicitudes] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1303 ms
-2026-10-17T10:58:08.621-03:00  INFO 1756 --- [ms-solicitudes] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-10-17T10:58:08.659-03:00  INFO 1756 --- [ms-solicitudes] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2026-10-17T10:58:08.680-03:00  INFO 1756 --- [ms-solicitudes] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-10-17T10:58:08.887-03:00  INFO 1756 --- [ms-solicitudes] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-10-17T10:58:08.910-03:00  INFO 1756 --- [ms-solicitudes] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-10-17T10:58:10.924-03:00  INFO 1756 --- [ms-solicitudes] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@21698e5a
-2026-10-17T10:58:10.925-03:00  INFO 1756 --- [ms-solicitudes] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-10-17T10:58:11.140-03:00  WARN 1756 --- [ms-solicitudes] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-10-17T10:58:12.321-03:00  INFO 1756 --- [ms-solicitudes] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-Hibernate: create table solicitud_hitos (id bigserial not null, detalle varchar(255), fecha timestamp(6) not null, hito varchar(255) not null, solicitud_id bigint not null, primary key (id))
-Hibernate: create index IDXbhnl0xlm6ja4r93p2r4oi63ri on solicitud_hitos (solicitud_id)
-2026-10-17T10:58:13.878-03:00  INFO 1756 --- [ms-solicitudes] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-10-17T10:58:14.145-03:00  INFO 1756 --- [ms-solicitudes] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-10-17T10:58:14.714-03:00  WARN 1756 --- [ms-solicitudes] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-10-17T10:58:14.787-03:00  INFO 1756 --- [ms-solicitudes] [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'ms-ubicacion' URL not provided. Will try picking an instance via load-balancing.
-2026-10-17T10:58:14.840-03:00  INFO 1756 --- [ms-solicitudes] [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'ms-usuarios' URL not provided. Will try picking an instance via load-balancing.
-2026-10-17T10:58:15.400-03:00  INFO 1756 --- [ms-solicitudes] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2026-10-17T10:58:15.424-03:00  WARN 1756 --- [ms-solicitudes] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2026-10-17T10:58:15.467-03:00  INFO 1756 --- [ms-solicitudes] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2026-10-17T10:58:15.548-03:00  INFO 1756 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2026-10-17T10:58:15.552-03:00  INFO 1756 --- [ms-solicitudes] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-10-17T10:58:15.570-03:00  INFO 1756 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2026-10-17T10:58:15.570-03:00  INFO 1756 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2026-10-17T10:58:15.570-03:00  INFO 1756 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2026-10-17T10:58:15.570-03:00  INFO 1756 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2026-10-17T10:58:15.570-03:00  INFO 1756 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2026-10-17T10:58:15.570-03:00  INFO 1756 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2026-10-17T10:58:15.570-03:00  INFO 1756 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2026-10-17T10:58:15.781-03:00  INFO 1756 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2026-10-17T10:58:15.784-03:00  INFO 1756 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2026-10-17T10:58:15.785-03:00  INFO 1756 --- [ms-solicitudes] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2026-10-17T10:58:15.789-03:00  INFO 1756 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1792245495788 with initial instances count: 2
-2026-10-17T10:58:15.791-03:00  INFO 1756 --- [ms-solicitudes] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MS-SOLICITUDES with eureka with status UP
-2026-10-17T10:58:15.791-03:00  INFO 1756 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1792245495791, current=UP, previous=STARTING]
-2026-10-17T10:58:15.792-03:00  INFO 1756 --- [ms-solicitudes] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-SOLICITUDES/DROJAS.localdomain:ms-solicitudes:8082: registering service...
-2026-10-17T10:58:15.808-03:00  INFO 1756 --- [ms-solicitudes] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path ''
-2026-10-17T10:58:15.809-03:00  INFO 1756 --- [ms-solicitudes] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
-2026-10-17T10:58:15.814-03:00  INFO 1756 --- [ms-solicitudes] [           main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
-2026-10-17T10:58:15.825-03:00  INFO 1756 --- [ms-solicitudes] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-SOLICITUDES/DROJAS.localdomain:ms-solicitudes:8082 - registration status: 204
-2026-10-17T10:58:15.857-03:00  INFO 1756 --- [ms-solicitudes] [           main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#7005b6e:0/SimpleConnection@2d6dbcec [delegate=amqp://guest@127.0.0.1:5672/, localPort=60806]
-2026-10-17T10:58:15.936-03:00  INFO 1756 --- [ms-solicitudes] [           main] c.h.s.MsSolicitudesApplication           : Started MsSolicitudesApplication in 9.123 seconds (process running for 9.408)
+2026-11-04T19:32:43.194-03:00  INFO 17340 --- [ms-solicitudes] [           main] c.h.s.MsSolicitudesApplication           : Starting MsSolicitudesApplication using Java 21.0.12 with PID 17340 (C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-solicitudes\target\classes started by drojas in C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-solicitudes)
+2026-11-04T19:32:43.197-03:00  INFO 17340 --- [ms-solicitudes] [           main] c.h.s.MsSolicitudesApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-11-04T19:32:43.770-03:00  INFO 17340 --- [ms-solicitudes] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-04T19:32:43.889-03:00  INFO 17340 --- [ms-solicitudes] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 115 ms. Found 4 JPA repository interfaces.
+2026-11-04T19:32:44.101-03:00  INFO 17340 --- [ms-solicitudes] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b71162c8-647b-352f-8395-4debcf85c8ce
+2026-11-04T19:32:44.202-03:00  WARN 17340 --- [ms-solicitudes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-11-04T19:32:44.203-03:00  WARN 17340 --- [ms-solicitudes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-11-04T19:32:44.396-03:00  INFO 17340 --- [ms-solicitudes] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2026-11-04T19:32:44.405-03:00  INFO 17340 --- [ms-solicitudes] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-04T19:32:44.406-03:00  INFO 17340 --- [ms-solicitudes] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-11-04T19:32:44.470-03:00  INFO 17340 --- [ms-solicitudes] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-04T19:32:44.471-03:00  INFO 17340 --- [ms-solicitudes] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1228 ms
+2026-11-04T19:32:44.581-03:00  INFO 17340 --- [ms-solicitudes] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-04T19:32:44.613-03:00  INFO 17340 --- [ms-solicitudes] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-11-04T19:32:44.633-03:00  INFO 17340 --- [ms-solicitudes] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-04T19:32:44.805-03:00  INFO 17340 --- [ms-solicitudes] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-04T19:32:44.829-03:00  INFO 17340 --- [ms-solicitudes] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-04T19:32:49.964-03:00  INFO 17340 --- [ms-solicitudes] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@c83ed77
+2026-11-04T19:32:49.965-03:00  INFO 17340 --- [ms-solicitudes] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-04T19:32:50.376-03:00  WARN 17340 --- [ms-solicitudes] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-04T19:32:51.327-03:00  INFO 17340 --- [ms-solicitudes] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-04T19:32:52.804-03:00  INFO 17340 --- [ms-solicitudes] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-04T19:32:53.040-03:00  INFO 17340 --- [ms-solicitudes] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-11-04T19:32:53.561-03:00  WARN 17340 --- [ms-solicitudes] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-11-04T19:32:53.622-03:00  INFO 17340 --- [ms-solicitudes] [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'ms-ubicacion' URL not provided. Will try picking an instance via load-balancing.
+2026-11-04T19:32:53.672-03:00  INFO 17340 --- [ms-solicitudes] [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'ms-usuarios' URL not provided. Will try picking an instance via load-balancing.
+2026-11-04T19:32:54.213-03:00  INFO 17340 --- [ms-solicitudes] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-11-04T19:32:54.231-03:00  WARN 17340 --- [ms-solicitudes] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-11-04T19:32:54.277-03:00  INFO 17340 --- [ms-solicitudes] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-11-04T19:32:54.338-03:00  INFO 17340 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-11-04T19:32:54.341-03:00  INFO 17340 --- [ms-solicitudes] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-04T19:32:54.356-03:00  INFO 17340 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-11-04T19:32:54.356-03:00  INFO 17340 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-11-04T19:32:54.356-03:00  INFO 17340 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-11-04T19:32:54.356-03:00  INFO 17340 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-11-04T19:32:54.356-03:00  INFO 17340 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-11-04T19:32:54.356-03:00  INFO 17340 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-11-04T19:32:54.356-03:00  INFO 17340 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-11-04T19:32:54.540-03:00  INFO 17340 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-11-04T19:32:54.543-03:00  INFO 17340 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-11-04T19:32:54.544-03:00  INFO 17340 --- [ms-solicitudes] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-11-04T19:32:54.547-03:00  INFO 17340 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1793831574547 with initial instances count: 1
+2026-11-04T19:32:54.549-03:00  INFO 17340 --- [ms-solicitudes] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MS-SOLICITUDES with eureka with status UP
+2026-11-04T19:32:54.550-03:00  INFO 17340 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1793831574550, current=UP, previous=STARTING]
+2026-11-04T19:32:54.551-03:00  INFO 17340 --- [ms-solicitudes] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-SOLICITUDES/DROJAS.localdomain:ms-solicitudes:8082: registering service...
+2026-11-04T19:32:54.567-03:00  INFO 17340 --- [ms-solicitudes] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path ''
+2026-11-04T19:32:54.567-03:00  INFO 17340 --- [ms-solicitudes] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2026-11-04T19:32:54.572-03:00  INFO 17340 --- [ms-solicitudes] [           main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-11-04T19:32:54.583-03:00  INFO 17340 --- [ms-solicitudes] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-SOLICITUDES/DROJAS.localdomain:ms-solicitudes:8082 - registration status: 204
+2026-11-04T19:32:54.610-03:00  INFO 17340 --- [ms-solicitudes] [           main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#5d798a2c:0/SimpleConnection@d2aa65d [delegate=amqp://guest@127.0.0.1:5672/, localPort=57382]
+2026-11-04T19:32:54.682-03:00  INFO 17340 --- [ms-solicitudes] [           main] c.h.s.MsSolicitudesApplication           : Started MsSolicitudesApplication in 11.827 seconds (process running for 12.277)

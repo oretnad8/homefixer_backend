@@ -42,7 +42,7 @@ public class NotificacionEventListener {
                                      @Header(AmqpHeaders.RECEIVED_ROUTING_KEY) String routingKey,
                                      @Header(AmqpHeaders.DELIVERY_TAG) long deliveryTag,
                                      Channel channel) throws IOException {
-        log.info("Evento {} [{}] recibido para la solicitud ID: {}",
+        log.info("[CONSUME] Evento {} [{}] recibido para la solicitud ID: {}",
                 evento.getEventoId(), routingKey, evento.getSolicitudId());
 
         for (int intento = 1; intento <= maxIntentos; intento++) {
@@ -52,7 +52,7 @@ public class NotificacionEventListener {
                 log.info("[ACK] Evento {} procesado y confirmado (intento {}/{})", evento.getEventoId(), intento, maxIntentos);
                 return;
             } catch (Exception e) {
-                log.warn("Intento {}/{} fallido para el evento {}: {}", intento, maxIntentos, evento.getEventoId(), e.getMessage());
+                log.warn("[RETRY] Intento {}/{} fallido para el evento {}: {}", intento, maxIntentos, evento.getEventoId(), e.getMessage());
                 esperarAntesDeReintentar(intento);
             }
         }

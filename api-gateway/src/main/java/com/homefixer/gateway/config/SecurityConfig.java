@@ -57,6 +57,8 @@ public class SecurityConfig {
                 // ms-maestria verifica admin / técnico consultando GET /api/usuarios/me
                 .pathMatchers("/api/maestria/**").authenticated()
                 .pathMatchers("/api/reportes/**").hasRole("ADMIN")
+                // Administración de la plataforma Kafka (tópicos, consumer groups, offsets)
+                .pathMatchers("/api/kafka/**").hasRole("ADMIN")
                 .pathMatchers("/api/usuarios/supabase/**").hasRole("ADMIN")
                 
                 // Cualquier otra ruta /api/** requiere solo estar autenticado

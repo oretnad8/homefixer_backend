@@ -34,6 +34,7 @@ public class CobroSolicitudListener {
                         evento.getMonto(), evento.getCategoria());
             }
             channel.basicAck(deliveryTag, false);
+            log.info("[ACK] Evento {} [estado {}] confirmado por ms-pagos", evento.getEventoId(), evento.getEstado());
         } catch (Exception e) {
             channel.basicNack(deliveryTag, false, false);
             log.error("[NACK] Evento {} enviado a la DLQ {}: {}", evento.getEventoId(), MessagingConstants.PAGOS_DLQ, e.getMessage());

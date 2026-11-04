@@ -4,11 +4,13 @@ import com.homefixer.shared.dto.NotificacionEventDTO;
 import com.homefixer.shared.dto.SolicitudDetalleDTO;
 import com.homefixer.shared.messaging.EventPublisher;
 import com.homefixer.shared.messaging.MessagingConstants;
+import com.homefixer.shared.kafka.KafkaEventPublisher;
 import com.homefixer.valoraciones.entity.Valoracion;
 import com.homefixer.valoraciones.repository.ValoracionRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -26,6 +28,8 @@ public class ValoracionService {
     private final ValoracionRepository valoracionRepository;
     private final RabbitTemplate rabbitTemplate;
     private final EventPublisher eventPublisher;
+    /** Kafka: el mismo hecho de negocio al stream analítico (ausente si homefixer.kafka.enabled=false). */
+    private final ObjectProvider<KafkaEventPublisher> kafkaPublisher;
 
     /**
      * Registra la valoración de una solicitud ya pagada (PAGADA). Los datos de la solicitud se
@@ -65,7 +69,7 @@ public class ValoracionService {
         List<Valoracion> delTecnico = alTecnico ? valoracionRepository.findDeClientesAlTecnico(solicitud.getTecnicoId()) : List.of();
         Double promedio = alTecnico ? delTecnico.stream().mapToInt(Valoracion::getPuntuacion).average().orElse(0.0) : null;
         Long valorado = alTecnico ? solicitud.getTecnicoId() : solicitud.getClienteId();
-        eventPublisher.publicar(MessagingConstants.RK_VALORACION_REGISTRADA, NotificacionEventDTO.builder()
+        NotificacionEventDTO evento = NotificacionEventDTO.builder()
                 .solicitudId(solicitudId)
                 .clienteId(solicitud.getClienteId())
                 .tecnicosIds(List.of(solicitud.getTecnicoId()))
@@ -74,7 +78,9 @@ public class ValoracionService {
                 .calificacion(promedio)
                 .totalValoraciones(alTecnico ? delTecnico.size() : null)
                 .mensaje("Recibiste una valoración de " + calificacion + " estrella(s) por la solicitud #" + solicitudId + ".")
-                .build());
+                .build();
+        eventPublisher.publicar(MessagingConstants.RK_VALORACION_REGISTRADA, evento);
+        kafkaPublisher.ifAvailable(k -> k.publicarDesdeRabbit(MessagingConstants.RK_VALORACION_REGISTRADA, evento));
         return guardada;
     }
 
