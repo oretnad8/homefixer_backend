@@ -85,54 +85,54 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.4)
 
-2026-11-04T19:32:59.334-03:00  INFO 10932 --- [ms-ubicacion] [           main] c.h.ubicacion.MsUbicacionApplication     : Starting MsUbicacionApplication using Java 21.0.12 with PID 10932 (C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-ubicacion\target\classes started by drojas in C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-ubicacion)
-2026-11-04T19:32:59.337-03:00  INFO 10932 --- [ms-ubicacion] [           main] c.h.ubicacion.MsUbicacionApplication     : No active profile set, falling back to 1 default profile: "default"
-2026-11-04T19:32:59.932-03:00  INFO 10932 --- [ms-ubicacion] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-11-04T19:33:00.029-03:00  INFO 10932 --- [ms-ubicacion] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 95 ms. Found 1 JPA repository interface.
-2026-11-04T19:33:00.222-03:00  INFO 10932 --- [ms-ubicacion] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=bec37f5f-068a-3e8f-a762-1aae63885193
-2026-11-04T19:33:00.325-03:00  WARN 10932 --- [ms-ubicacion] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
-2026-11-04T19:33:00.325-03:00  WARN 10932 --- [ms-ubicacion] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2026-11-04T19:33:00.522-03:00  INFO 10932 --- [ms-ubicacion] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
-2026-11-04T19:33:00.534-03:00  INFO 10932 --- [ms-ubicacion] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-11-04T19:33:00.534-03:00  INFO 10932 --- [ms-ubicacion] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
-2026-11-04T19:33:00.588-03:00  INFO 10932 --- [ms-ubicacion] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-11-04T19:33:00.588-03:00  INFO 10932 --- [ms-ubicacion] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1186 ms
-2026-11-04T19:33:00.703-03:00  INFO 10932 --- [ms-ubicacion] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-11-04T19:33:00.754-03:00  INFO 10932 --- [ms-ubicacion] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2026-11-04T19:33:00.777-03:00  INFO 10932 --- [ms-ubicacion] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-11-04T19:33:00.925-03:00  INFO 10932 --- [ms-ubicacion] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-11-04T19:33:00.940-03:00  INFO 10932 --- [ms-ubicacion] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-11-04T19:33:03.918-03:00  INFO 10932 --- [ms-ubicacion] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5358c8fa
-2026-11-04T19:33:03.918-03:00  INFO 10932 --- [ms-ubicacion] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-11-04T19:33:04.114-03:00  WARN 10932 --- [ms-ubicacion] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-11-04T19:33:05.027-03:00  INFO 10932 --- [ms-ubicacion] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-11-04T19:33:05.766-03:00  INFO 10932 --- [ms-ubicacion] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-11-04T19:33:06.191-03:00  WARN 10932 --- [ms-ubicacion] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-11-04T19:33:06.266-03:00  INFO 10932 --- [ms-ubicacion] [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'ms-usuarios' URL not provided. Will try picking an instance via load-balancing.
-2026-11-04T19:33:06.325-03:00  INFO 10932 --- [ms-ubicacion] [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'ms-maestria' URL not provided. Will try picking an instance via load-balancing.
-2026-11-04T19:33:06.796-03:00  INFO 10932 --- [ms-ubicacion] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2026-11-04T19:33:06.812-03:00  WARN 10932 --- [ms-ubicacion] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2026-11-04T19:33:06.853-03:00  INFO 10932 --- [ms-ubicacion] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2026-11-04T19:33:06.928-03:00  INFO 10932 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2026-11-04T19:33:06.929-03:00  INFO 10932 --- [ms-ubicacion] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-11-04T19:33:06.944-03:00  INFO 10932 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2026-11-04T19:33:06.944-03:00  INFO 10932 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2026-11-04T19:33:06.944-03:00  INFO 10932 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2026-11-04T19:33:06.944-03:00  INFO 10932 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2026-11-04T19:33:06.944-03:00  INFO 10932 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2026-11-04T19:33:06.944-03:00  INFO 10932 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2026-11-04T19:33:06.944-03:00  INFO 10932 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2026-11-04T19:33:07.151-03:00  INFO 10932 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2026-11-04T19:33:07.151-03:00  INFO 10932 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2026-11-04T19:33:07.159-03:00  INFO 10932 --- [ms-ubicacion] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2026-11-04T19:33:07.161-03:00  INFO 10932 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1793831587161 with initial instances count: 4
-2026-11-04T19:33:07.161-03:00  INFO 10932 --- [ms-ubicacion] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MS-UBICACION with eureka with status UP
-2026-11-04T19:33:07.161-03:00  INFO 10932 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1793831587161, current=UP, previous=STARTING]
-2026-11-04T19:33:07.161-03:00  INFO 10932 --- [ms-ubicacion] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-UBICACION/DROJAS.localdomain:ms-ubicacion:8085: registering service...
-2026-11-04T19:33:07.175-03:00  INFO 10932 --- [ms-ubicacion] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path ''
-2026-11-04T19:33:07.175-03:00  INFO 10932 --- [ms-ubicacion] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8085
-2026-11-04T19:33:07.190-03:00  INFO 10932 --- [ms-ubicacion] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-UBICACION/DROJAS.localdomain:ms-ubicacion:8085 - registration status: 204
-2026-11-04T19:33:07.217-03:00  INFO 10932 --- [ms-ubicacion] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+2026-11-07T10:16:15.941-03:00  INFO 18268 --- [ms-ubicacion] [           main] c.h.ubicacion.MsUbicacionApplication     : Starting MsUbicacionApplication using Java 21.0.12 with PID 18268 (C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-ubicacion\target\classes started by drojas in C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-ubicacion)
+2026-11-07T10:16:15.944-03:00  INFO 18268 --- [ms-ubicacion] [           main] c.h.ubicacion.MsUbicacionApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-11-07T10:16:16.598-03:00  INFO 18268 --- [ms-ubicacion] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-07T10:16:16.700-03:00  INFO 18268 --- [ms-ubicacion] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97 ms. Found 1 JPA repository interface.
+2026-11-07T10:16:16.876-03:00  INFO 18268 --- [ms-ubicacion] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=bec37f5f-068a-3e8f-a762-1aae63885193
+2026-11-07T10:16:16.981-03:00  WARN 18268 --- [ms-ubicacion] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-11-07T10:16:16.983-03:00  WARN 18268 --- [ms-ubicacion] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-11-07T10:16:17.186-03:00  INFO 18268 --- [ms-ubicacion] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
+2026-11-07T10:16:17.196-03:00  INFO 18268 --- [ms-ubicacion] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-07T10:16:17.196-03:00  INFO 18268 --- [ms-ubicacion] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-11-07T10:16:17.257-03:00  INFO 18268 --- [ms-ubicacion] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-07T10:16:17.258-03:00  INFO 18268 --- [ms-ubicacion] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1263 ms
+2026-11-07T10:16:17.388-03:00  INFO 18268 --- [ms-ubicacion] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-07T10:16:17.436-03:00  INFO 18268 --- [ms-ubicacion] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-11-07T10:16:17.464-03:00  INFO 18268 --- [ms-ubicacion] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-07T10:16:17.635-03:00  INFO 18268 --- [ms-ubicacion] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-07T10:16:17.653-03:00  INFO 18268 --- [ms-ubicacion] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-07T10:16:19.996-03:00  INFO 18268 --- [ms-ubicacion] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@78743dd8
+2026-11-07T10:16:19.997-03:00  INFO 18268 --- [ms-ubicacion] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-07T10:16:20.235-03:00  WARN 18268 --- [ms-ubicacion] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-07T10:16:21.255-03:00  INFO 18268 --- [ms-ubicacion] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-07T10:16:22.123-03:00  INFO 18268 --- [ms-ubicacion] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-07T10:16:22.581-03:00  WARN 18268 --- [ms-ubicacion] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-11-07T10:16:22.646-03:00  INFO 18268 --- [ms-ubicacion] [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'ms-usuarios' URL not provided. Will try picking an instance via load-balancing.
+2026-11-07T10:16:22.692-03:00  INFO 18268 --- [ms-ubicacion] [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'ms-maestria' URL not provided. Will try picking an instance via load-balancing.
+2026-11-07T10:16:23.166-03:00  INFO 18268 --- [ms-ubicacion] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-11-07T10:16:23.184-03:00  WARN 18268 --- [ms-ubicacion] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-11-07T10:16:23.226-03:00  INFO 18268 --- [ms-ubicacion] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-11-07T10:16:23.296-03:00  INFO 18268 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-11-07T10:16:23.300-03:00  INFO 18268 --- [ms-ubicacion] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-07T10:16:23.318-03:00  INFO 18268 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-11-07T10:16:23.318-03:00  INFO 18268 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-11-07T10:16:23.318-03:00  INFO 18268 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-11-07T10:16:23.318-03:00  INFO 18268 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-11-07T10:16:23.318-03:00  INFO 18268 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-11-07T10:16:23.318-03:00  INFO 18268 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-11-07T10:16:23.319-03:00  INFO 18268 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-11-07T10:16:23.608-03:00  INFO 18268 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-11-07T10:16:23.611-03:00  INFO 18268 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-11-07T10:16:23.613-03:00  INFO 18268 --- [ms-ubicacion] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-11-07T10:16:23.619-03:00  INFO 18268 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1794057383618 with initial instances count: 3
+2026-11-07T10:16:23.621-03:00  INFO 18268 --- [ms-ubicacion] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MS-UBICACION with eureka with status UP
+2026-11-07T10:16:23.622-03:00  INFO 18268 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1794057383622, current=UP, previous=STARTING]
+2026-11-07T10:16:23.623-03:00  INFO 18268 --- [ms-ubicacion] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-UBICACION/DROJAS.localdomain:ms-ubicacion:8085: registering service...
+2026-11-07T10:16:23.642-03:00  INFO 18268 --- [ms-ubicacion] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path ''
+2026-11-07T10:16:23.643-03:00  INFO 18268 --- [ms-ubicacion] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8085
+2026-11-07T10:16:23.664-03:00  INFO 18268 --- [ms-ubicacion] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-UBICACION/DROJAS.localdomain:ms-ubicacion:8085 - registration status: 204
+2026-11-07T10:16:23.706-03:00  INFO 18268 --- [ms-ubicacion] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
 	allow.auto.create.topics = true
 	auto.commit.interval.ms = 5000
 	auto.include.jmx.reporter = true
@@ -226,11 +226,11 @@
 	ssl.truststore.type = JKS
 	value.deserializer = class org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
 
-2026-11-04T19:33:07.300-03:00  INFO 10932 --- [ms-ubicacion] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
-2026-11-04T19:33:07.300-03:00  INFO 10932 --- [ms-ubicacion] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
-2026-11-04T19:33:07.300-03:00  INFO 10932 --- [ms-ubicacion] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1793831587299
-2026-11-04T19:33:07.301-03:00  INFO 10932 --- [ms-ubicacion] [           main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Subscribed to topic(s): homefixer.tecnicos.ubicacion
-2026-11-04T19:33:07.301-03:00  INFO 10932 --- [ms-ubicacion] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+2026-11-07T10:16:23.819-03:00  INFO 18268 --- [ms-ubicacion] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
+2026-11-07T10:16:23.819-03:00  INFO 18268 --- [ms-ubicacion] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
+2026-11-07T10:16:23.819-03:00  INFO 18268 --- [ms-ubicacion] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1794057383817
+2026-11-07T10:16:23.822-03:00  INFO 18268 --- [ms-ubicacion] [           main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Subscribed to topic(s): homefixer.tecnicos.ubicacion
+2026-11-07T10:16:23.826-03:00  INFO 18268 --- [ms-ubicacion] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
 	allow.auto.create.topics = true
 	auto.commit.interval.ms = 5000
 	auto.include.jmx.reporter = true
@@ -324,11 +324,11 @@
 	ssl.truststore.type = JKS
 	value.deserializer = class org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
 
-2026-11-04T19:33:07.311-03:00  INFO 10932 --- [ms-ubicacion] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
-2026-11-04T19:33:07.311-03:00  INFO 10932 --- [ms-ubicacion] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
-2026-11-04T19:33:07.311-03:00  INFO 10932 --- [ms-ubicacion] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1793831587311
-2026-11-04T19:33:07.311-03:00  INFO 10932 --- [ms-ubicacion] [           main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Subscribed to topic(s): homefixer.tecnicos.ubicacion
-2026-11-04T19:33:07.313-03:00  INFO 10932 --- [ms-ubicacion] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+2026-11-07T10:16:23.833-03:00  INFO 18268 --- [ms-ubicacion] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
+2026-11-07T10:16:23.833-03:00  INFO 18268 --- [ms-ubicacion] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
+2026-11-07T10:16:23.833-03:00  INFO 18268 --- [ms-ubicacion] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1794057383833
+2026-11-07T10:16:23.833-03:00  INFO 18268 --- [ms-ubicacion] [           main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Subscribed to topic(s): homefixer.tecnicos.ubicacion
+2026-11-07T10:16:23.835-03:00  INFO 18268 --- [ms-ubicacion] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
 	allow.auto.create.topics = true
 	auto.commit.interval.ms = 5000
 	auto.include.jmx.reporter = true
@@ -422,143 +422,202 @@
 	ssl.truststore.type = JKS
 	value.deserializer = class org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
 
-2026-11-04T19:33:07.313-03:00  INFO 10932 --- [ms-ubicacion] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
-2026-11-04T19:33:07.313-03:00  INFO 10932 --- [ms-ubicacion] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
-2026-11-04T19:33:07.313-03:00  INFO 10932 --- [ms-ubicacion] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1793831587313
-2026-11-04T19:33:07.313-03:00  INFO 10932 --- [ms-ubicacion] [           main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Subscribed to topic(s): homefixer.tecnicos.ubicacion
-2026-11-04T19:33:07.322-03:00  INFO 10932 --- [ms-ubicacion] [           main] c.h.ubicacion.MsUbicacionApplication     : Started MsUbicacionApplication in 8.303 seconds (process running for 8.639)
-2026-11-04T19:33:07.525-03:00  INFO 10932 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Node -1 disconnected.
-2026-11-04T19:33:07.525-03:00  INFO 10932 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Node -3 disconnected.
-2026-11-04T19:33:07.525-03:00  INFO 10932 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Node -2 disconnected.
-2026-11-04T19:33:07.527-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Connection to node -3 (localhost/127.0.0.1:9094) could not be established. Broker may not be available.
-2026-11-04T19:33:07.527-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2026-11-04T19:33:07.527-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Connection to node -2 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
-2026-11-04T19:33:07.527-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Bootstrap broker localhost:9094 (id: -3 rack: null) disconnected
-2026-11-04T19:33:07.527-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2026-11-04T19:33:07.527-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Bootstrap broker localhost:9093 (id: -2 rack: null) disconnected
-2026-11-04T19:33:07.641-03:00  INFO 10932 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Node -3 disconnected.
-2026-11-04T19:33:07.641-03:00  INFO 10932 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Node -1 disconnected.
-2026-11-04T19:33:07.641-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Connection to node -3 (localhost/127.0.0.1:9094) could not be established. Broker may not be available.
-2026-11-04T19:33:07.641-03:00  INFO 10932 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Node -1 disconnected.
-2026-11-04T19:33:07.641-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Bootstrap broker localhost:9094 (id: -3 rack: null) disconnected
-2026-11-04T19:33:07.641-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2026-11-04T19:33:07.641-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2026-11-04T19:33:07.643-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2026-11-04T19:33:07.643-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2026-11-04T19:33:07.762-03:00  INFO 10932 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Node -2 disconnected.
-2026-11-04T19:33:07.763-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Connection to node -2 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
-2026-11-04T19:33:07.763-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Bootstrap broker localhost:9093 (id: -2 rack: null) disconnected
-2026-11-04T19:33:07.763-03:00  INFO 10932 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Node -2 disconnected.
-2026-11-04T19:33:07.764-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Connection to node -2 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
-2026-11-04T19:33:07.764-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Bootstrap broker localhost:9093 (id: -2 rack: null) disconnected
-2026-11-04T19:33:07.764-03:00  INFO 10932 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Node -3 disconnected.
-2026-11-04T19:33:07.765-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Connection to node -3 (localhost/127.0.0.1:9094) could not be established. Broker may not be available.
-2026-11-04T19:33:07.765-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Bootstrap broker localhost:9094 (id: -3 rack: null) disconnected
-2026-11-04T19:33:07.864-03:00  INFO 10932 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Node -3 disconnected.
-2026-11-04T19:33:07.864-03:00  INFO 10932 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Node -2 disconnected.
-2026-11-04T19:33:07.864-03:00  INFO 10932 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Node -1 disconnected.
-2026-11-04T19:33:07.864-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Connection to node -2 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
-2026-11-04T19:33:07.864-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Connection to node -3 (localhost/127.0.0.1:9094) could not be established. Broker may not be available.
-2026-11-04T19:33:07.864-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Bootstrap broker localhost:9093 (id: -2 rack: null) disconnected
-2026-11-04T19:33:07.864-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2026-11-04T19:33:07.864-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2026-11-04T19:33:07.864-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Bootstrap broker localhost:9094 (id: -3 rack: null) disconnected
-2026-11-04T19:33:07.970-03:00  INFO 10932 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Node -1 disconnected.
-2026-11-04T19:33:07.970-03:00  INFO 10932 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Node -1 disconnected.
-2026-11-04T19:33:07.970-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2026-11-04T19:33:07.970-03:00  INFO 10932 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Node -3 disconnected.
-2026-11-04T19:33:07.970-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2026-11-04T19:33:07.970-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2026-11-04T19:33:07.970-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Connection to node -3 (localhost/127.0.0.1:9094) could not be established. Broker may not be available.
-2026-11-04T19:33:07.970-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2026-11-04T19:33:07.970-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Bootstrap broker localhost:9094 (id: -3 rack: null) disconnected
-2026-11-04T19:33:08.072-03:00  INFO 10932 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Node -3 disconnected.
-2026-11-04T19:33:08.072-03:00  INFO 10932 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Node -2 disconnected.
-2026-11-04T19:33:08.072-03:00  INFO 10932 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Node -2 disconnected.
-2026-11-04T19:33:08.072-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Connection to node -3 (localhost/127.0.0.1:9094) could not be established. Broker may not be available.
-2026-11-04T19:33:08.072-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Connection to node -2 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
-2026-11-04T19:33:08.072-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Connection to node -2 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
-2026-11-04T19:33:08.072-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Bootstrap broker localhost:9093 (id: -2 rack: null) disconnected
-2026-11-04T19:33:08.072-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Bootstrap broker localhost:9093 (id: -2 rack: null) disconnected
-2026-11-04T19:33:08.072-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Bootstrap broker localhost:9094 (id: -3 rack: null) disconnected
-2026-11-04T19:33:08.175-03:00  INFO 10932 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Node -3 disconnected.
-2026-11-04T19:33:08.175-03:00  INFO 10932 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Node -2 disconnected.
-2026-11-04T19:33:08.176-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Connection to node -3 (localhost/127.0.0.1:9094) could not be established. Broker may not be available.
-2026-11-04T19:33:08.176-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Bootstrap broker localhost:9094 (id: -3 rack: null) disconnected
-2026-11-04T19:33:08.176-03:00  INFO 10932 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Node -1 disconnected.
-2026-11-04T19:33:08.176-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Connection to node -2 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
-2026-11-04T19:33:08.176-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2026-11-04T19:33:08.176-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Bootstrap broker localhost:9093 (id: -2 rack: null) disconnected
-2026-11-04T19:33:08.176-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2026-11-04T19:33:08.283-03:00  INFO 10932 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Node -3 disconnected.
-2026-11-04T19:33:08.283-03:00  INFO 10932 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Node -1 disconnected.
-2026-11-04T19:33:08.283-03:00  INFO 10932 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Node -1 disconnected.
-2026-11-04T19:33:08.283-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Connection to node -3 (localhost/127.0.0.1:9094) could not be established. Broker may not be available.
-2026-11-04T19:33:08.283-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2026-11-04T19:33:08.283-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Bootstrap broker localhost:9094 (id: -3 rack: null) disconnected
-2026-11-04T19:33:08.283-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2026-11-04T19:33:08.283-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2026-11-04T19:33:08.283-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2026-11-04T19:33:08.390-03:00  INFO 10932 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Node -3 disconnected.
-2026-11-04T19:33:08.390-03:00  INFO 10932 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Node -2 disconnected.
-2026-11-04T19:33:08.390-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Connection to node -3 (localhost/127.0.0.1:9094) could not be established. Broker may not be available.
-2026-11-04T19:33:08.390-03:00  INFO 10932 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Node -2 disconnected.
-2026-11-04T19:33:08.390-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Connection to node -2 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
-2026-11-04T19:33:08.390-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Bootstrap broker localhost:9094 (id: -3 rack: null) disconnected
-2026-11-04T19:33:08.390-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Connection to node -2 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
-2026-11-04T19:33:08.390-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Bootstrap broker localhost:9093 (id: -2 rack: null) disconnected
-2026-11-04T19:33:08.390-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Bootstrap broker localhost:9093 (id: -2 rack: null) disconnected
-2026-11-04T19:33:08.500-03:00  INFO 10932 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Node -1 disconnected.
-2026-11-04T19:33:08.500-03:00  INFO 10932 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Node -2 disconnected.
-2026-11-04T19:33:08.500-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2026-11-04T19:33:08.500-03:00  INFO 10932 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Node -3 disconnected.
-2026-11-04T19:33:08.500-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Connection to node -2 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
-2026-11-04T19:33:08.500-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2026-11-04T19:33:08.500-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Bootstrap broker localhost:9093 (id: -2 rack: null) disconnected
-2026-11-04T19:33:08.500-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Connection to node -3 (localhost/127.0.0.1:9094) could not be established. Broker may not be available.
-2026-11-04T19:33:08.500-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Bootstrap broker localhost:9094 (id: -3 rack: null) disconnected
-2026-11-04T19:33:08.605-03:00  INFO 10932 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Node -3 disconnected.
-2026-11-04T19:33:08.605-03:00  INFO 10932 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Node -1 disconnected.
-2026-11-04T19:33:08.605-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Connection to node -3 (localhost/127.0.0.1:9094) could not be established. Broker may not be available.
-2026-11-04T19:33:08.605-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2026-11-04T19:33:08.605-03:00  INFO 10932 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Node -1 disconnected.
-2026-11-04T19:33:08.605-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2026-11-04T19:33:08.605-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Bootstrap broker localhost:9094 (id: -3 rack: null) disconnected
-2026-11-04T19:33:08.605-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2026-11-04T19:33:08.605-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2026-11-04T19:33:08.714-03:00  INFO 10932 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Node -3 disconnected.
-2026-11-04T19:33:08.714-03:00  INFO 10932 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Node -2 disconnected.
-2026-11-04T19:33:08.714-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Connection to node -3 (localhost/127.0.0.1:9094) could not be established. Broker may not be available.
-2026-11-04T19:33:08.714-03:00  INFO 10932 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Node -2 disconnected.
-2026-11-04T19:33:08.714-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Connection to node -2 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
-2026-11-04T19:33:08.714-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Bootstrap broker localhost:9094 (id: -3 rack: null) disconnected
-2026-11-04T19:33:08.714-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Bootstrap broker localhost:9093 (id: -2 rack: null) disconnected
-2026-11-04T19:33:08.714-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Connection to node -2 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
-2026-11-04T19:33:08.714-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Bootstrap broker localhost:9093 (id: -2 rack: null) disconnected
-2026-11-04T19:33:08.882-03:00  INFO 10932 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Node -3 disconnected.
-2026-11-04T19:33:08.882-03:00  INFO 10932 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Node -1 disconnected.
-2026-11-04T19:33:08.882-03:00  INFO 10932 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Node -2 disconnected.
-2026-11-04T19:33:08.882-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Connection to node -3 (localhost/127.0.0.1:9094) could not be established. Broker may not be available.
-2026-11-04T19:33:08.882-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Bootstrap broker localhost:9094 (id: -3 rack: null) disconnected
-2026-11-04T19:33:08.882-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2026-11-04T19:33:08.882-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2026-11-04T19:33:08.882-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Connection to node -2 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
-2026-11-04T19:33:08.882-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Bootstrap broker localhost:9093 (id: -2 rack: null) disconnected
-2026-11-04T19:33:08.997-03:00  INFO 10932 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Node -3 disconnected.
-2026-11-04T19:33:08.997-03:00  INFO 10932 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Node -1 disconnected.
-2026-11-04T19:33:08.997-03:00  INFO 10932 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Node -1 disconnected.
-2026-11-04T19:33:08.997-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Connection to node -3 (localhost/127.0.0.1:9094) could not be established. Broker may not be available.
-2026-11-04T19:33:08.997-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2026-11-04T19:33:08.997-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2026-11-04T19:33:08.997-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Bootstrap broker localhost:9094 (id: -3 rack: null) disconnected
-2026-11-04T19:33:08.997-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2026-11-04T19:33:08.997-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2026-11-04T19:33:09.101-03:00  INFO 10932 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Node -2 disconnected.
-2026-11-04T19:33:09.101-03:00  INFO 10932 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Node -3 disconnected.
-2026-11-04T19:33:09.101-03:00  INFO 10932 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Node -2 disconnected.
-2026-11-04T19:33:09.101-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Connection to node -2 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
-2026-11-04T19:33:09.101-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Connection to node -3 (localhost/127.0.0.1:9094) could not be established. Broker may not be available.
-2026-11-04T19:33:09.101-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Connection to node -2 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
-2026-11-04T19:33:09.101-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Bootstrap broker localhost:9093 (id: -2 rack: null) disconnected
-2026-11-04T19:33:09.101-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Bootstrap broker localhost:9094 (id: -3 rack: null) disconnected
-2026-11-04T19:33:09.101-03:00  WARN 10932 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Bootstrap broker localhost:9093 (id: -2 rack: null) disconnected
+2026-11-07T10:16:23.841-03:00  INFO 18268 --- [ms-ubicacion] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
+2026-11-07T10:16:23.841-03:00  INFO 18268 --- [ms-ubicacion] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
+2026-11-07T10:16:23.841-03:00  INFO 18268 --- [ms-ubicacion] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1794057383841
+2026-11-07T10:16:23.842-03:00  INFO 18268 --- [ms-ubicacion] [           main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Subscribed to topic(s): homefixer.tecnicos.ubicacion
+2026-11-07T10:16:23.853-03:00  INFO 18268 --- [ms-ubicacion] [           main] c.h.ubicacion.MsUbicacionApplication     : Started MsUbicacionApplication in 8.263 seconds (process running for 8.584)
+2026-11-07T10:16:24.269-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Cluster ID: VWi1Ej-hR5-sBUuujyKUoA
+2026-11-07T10:16:24.269-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Cluster ID: VWi1Ej-hR5-sBUuujyKUoA
+2026-11-07T10:16:24.269-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Cluster ID: VWi1Ej-hR5-sBUuujyKUoA
+2026-11-07T10:16:24.271-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Discovered group coordinator localhost:9094 (id: 2147483644 rack: null)
+2026-11-07T10:16:24.271-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Discovered group coordinator localhost:9094 (id: 2147483644 rack: null)
+2026-11-07T10:16:24.271-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Discovered group coordinator localhost:9094 (id: 2147483644 rack: null)
+2026-11-07T10:16:24.273-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] (Re-)joining group
+2026-11-07T10:16:24.273-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] (Re-)joining group
+2026-11-07T10:16:24.273-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] (Re-)joining group
+2026-11-07T10:16:24.289-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Request joining group due to: need to re-join with the given member-id: ms-ubicacion-1-e337f9cc-2387-4687-9274-8bff4572b5a3
+2026-11-07T10:16:24.289-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Request joining group due to: need to re-join with the given member-id: ms-ubicacion-0-4d64b6f6-9d3b-4d9d-88ef-40f0ce6c55d5
+2026-11-07T10:16:24.289-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Request joining group due to: need to re-join with the given member-id: ms-ubicacion-2-9aa77278-c4e0-4304-af3b-4e846d0e9bc3
+2026-11-07T10:16:24.289-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2026-11-07T10:16:24.289-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2026-11-07T10:16:24.289-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2026-11-07T10:16:24.289-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] (Re-)joining group
+2026-11-07T10:16:24.289-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] (Re-)joining group
+2026-11-07T10:16:24.289-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] (Re-)joining group
+2026-11-07T10:16:27.292-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Successfully joined group with generation Generation{generationId=5, memberId='ms-ubicacion-1-e337f9cc-2387-4687-9274-8bff4572b5a3', protocol='cooperative-sticky'}
+2026-11-07T10:16:27.292-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Successfully joined group with generation Generation{generationId=5, memberId='ms-ubicacion-0-4d64b6f6-9d3b-4d9d-88ef-40f0ce6c55d5', protocol='cooperative-sticky'}
+2026-11-07T10:16:27.292-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Successfully joined group with generation Generation{generationId=5, memberId='ms-ubicacion-2-9aa77278-c4e0-4304-af3b-4e846d0e9bc3', protocol='cooperative-sticky'}
+2026-11-07T10:16:27.297-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-1-C-1] o.a.k.c.c.i.AbstractStickyAssignor       : Final assignment of partitions to consumers: 
+{ms-ubicacion-0-4d64b6f6-9d3b-4d9d-88ef-40f0ce6c55d5=[homefixer.tecnicos.ubicacion-0], ms-ubicacion-1-e337f9cc-2387-4687-9274-8bff4572b5a3=[homefixer.tecnicos.ubicacion-1], ms-ubicacion-2-9aa77278-c4e0-4304-af3b-4e846d0e9bc3=[homefixer.tecnicos.ubicacion-2]}
+2026-11-07T10:16:27.299-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Finished assignment for group at generation 5: {ms-ubicacion-0-4d64b6f6-9d3b-4d9d-88ef-40f0ce6c55d5=Assignment(partitions=[homefixer.tecnicos.ubicacion-0]), ms-ubicacion-1-e337f9cc-2387-4687-9274-8bff4572b5a3=Assignment(partitions=[homefixer.tecnicos.ubicacion-1]), ms-ubicacion-2-9aa77278-c4e0-4304-af3b-4e846d0e9bc3=Assignment(partitions=[homefixer.tecnicos.ubicacion-2])}
+2026-11-07T10:16:27.306-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Successfully synced group in generation Generation{generationId=5, memberId='ms-ubicacion-2-9aa77278-c4e0-4304-af3b-4e846d0e9bc3', protocol='cooperative-sticky'}
+2026-11-07T10:16:27.306-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Successfully synced group in generation Generation{generationId=5, memberId='ms-ubicacion-0-4d64b6f6-9d3b-4d9d-88ef-40f0ce6c55d5', protocol='cooperative-sticky'}
+2026-11-07T10:16:27.306-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Successfully synced group in generation Generation{generationId=5, memberId='ms-ubicacion-1-e337f9cc-2387-4687-9274-8bff4572b5a3', protocol='cooperative-sticky'}
+2026-11-07T10:16:27.306-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Updating assignment with
+	Assigned partitions:                       [homefixer.tecnicos.ubicacion-1]
+	Current owned partitions:                  []
+	Added partitions (assigned - owned):       [homefixer.tecnicos.ubicacion-1]
+	Revoked partitions (owned - assigned):     []
+
+2026-11-07T10:16:27.306-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Updating assignment with
+	Assigned partitions:                       [homefixer.tecnicos.ubicacion-0]
+	Current owned partitions:                  []
+	Added partitions (assigned - owned):       [homefixer.tecnicos.ubicacion-0]
+	Revoked partitions (owned - assigned):     []
+
+2026-11-07T10:16:27.306-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Notifying assignor about the new Assignment(partitions=[homefixer.tecnicos.ubicacion-1])
+2026-11-07T10:16:27.306-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Updating assignment with
+	Assigned partitions:                       [homefixer.tecnicos.ubicacion-2]
+	Current owned partitions:                  []
+	Added partitions (assigned - owned):       [homefixer.tecnicos.ubicacion-2]
+	Revoked partitions (owned - assigned):     []
+
+2026-11-07T10:16:27.306-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Notifying assignor about the new Assignment(partitions=[homefixer.tecnicos.ubicacion-0])
+2026-11-07T10:16:27.306-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Notifying assignor about the new Assignment(partitions=[homefixer.tecnicos.ubicacion-2])
+2026-11-07T10:16:27.309-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Adding newly assigned partitions: homefixer.tecnicos.ubicacion-1
+2026-11-07T10:16:27.309-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Adding newly assigned partitions: homefixer.tecnicos.ubicacion-2
+2026-11-07T10:16:27.309-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Adding newly assigned partitions: homefixer.tecnicos.ubicacion-0
+2026-11-07T10:16:27.317-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Found no committed offset for partition homefixer.tecnicos.ubicacion-2
+2026-11-07T10:16:27.317-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Found no committed offset for partition homefixer.tecnicos.ubicacion-0
+2026-11-07T10:16:27.317-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Found no committed offset for partition homefixer.tecnicos.ubicacion-1
+2026-11-07T10:16:27.330-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-0-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Resetting offset for partition homefixer.tecnicos.ubicacion-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9094 (id: 3 rack: null)], epoch=5}}.
+2026-11-07T10:16:27.330-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-2-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Resetting offset for partition homefixer.tecnicos.ubicacion-2 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9093 (id: 2 rack: null)], epoch=5}}.
+2026-11-07T10:16:27.330-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-1-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Resetting offset for partition homefixer.tecnicos.ubicacion-1 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=4}}.
+2026-11-07T10:16:27.331-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-2-C-1] o.s.k.l.KafkaMessageListenerContainer    : ubicacion-tracking: partitions assigned: [homefixer.tecnicos.ubicacion-2]
+2026-11-07T10:16:27.331-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : ubicacion-tracking: partitions assigned: [homefixer.tecnicos.ubicacion-0]
+2026-11-07T10:16:27.331-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-1-C-1] o.s.k.l.KafkaMessageListenerContainer    : ubicacion-tracking: partitions assigned: [homefixer.tecnicos.ubicacion-1]
+2026-11-07T10:18:56.976-03:00  INFO 18268 --- [ms-ubicacion] [nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-07T10:18:56.976-03:00  INFO 18268 --- [ms-ubicacion] [nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-07T10:18:56.984-03:00  INFO 18268 --- [ms-ubicacion] [nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2026-11-07T10:18:57.585-03:00  INFO 18268 --- [ms-ubicacion] [nio-8085-exec-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 32768
+	bootstrap.servers = [localhost:9092, localhost:9093, localhost:9094]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = ms-ubicacion-1
+	compression.type = lz4
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 30000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 10
+	max.block.ms = 3000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 10000
+	retries = 10
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+2026-11-07T10:18:57.594-03:00  INFO 18268 --- [ms-ubicacion] [nio-8085-exec-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=ms-ubicacion-1] Instantiated an idempotent producer.
+2026-11-07T10:18:57.604-03:00  INFO 18268 --- [ms-ubicacion] [nio-8085-exec-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
+2026-11-07T10:18:57.604-03:00  INFO 18268 --- [ms-ubicacion] [nio-8085-exec-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
+2026-11-07T10:18:57.604-03:00  INFO 18268 --- [ms-ubicacion] [nio-8085-exec-1] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1794057537603
+2026-11-07T10:18:57.609-03:00  INFO 18268 --- [ms-ubicacion] [ ms-ubicacion-1] org.apache.kafka.clients.Metadata        : [Producer clientId=ms-ubicacion-1] Cluster ID: VWi1Ej-hR5-sBUuujyKUoA
+2026-11-07T10:18:57.726-03:00  INFO 18268 --- [ms-ubicacion] [ ms-ubicacion-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=ms-ubicacion-1] ProducerId set to 4001 with epoch 0
+2026-11-07T10:18:57.793-03:00  INFO 18268 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=0
+2026-11-07T10:19:26.977-03:00  INFO 18268 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=1
+2026-11-07T10:19:56.971-03:00  INFO 18268 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=2
+2026-11-07T10:20:26.985-03:00  INFO 18268 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=3
+2026-11-07T10:20:56.974-03:00  INFO 18268 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=4
+2026-11-07T10:21:23.321-03:00  INFO 18268 --- [ms-ubicacion] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-07T10:21:27.001-03:00  INFO 18268 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=5
+2026-11-07T10:21:56.960-03:00  INFO 18268 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=6
+2026-11-07T10:22:26.972-03:00  INFO 18268 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=7
+2026-11-07T10:22:56.964-03:00  INFO 18268 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=8
+2026-11-07T10:23:27.409-03:00  INFO 18268 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=9
+2026-11-07T10:23:57.418-03:00  INFO 18268 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=10
+2026-11-07T10:24:26.955-03:00  INFO 18268 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=11
+2026-11-07T10:24:56.961-03:00  INFO 18268 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=12
+2026-11-07T10:25:24.500-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Node -2 disconnected.
+2026-11-07T10:25:24.500-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Node -1 disconnected.
+2026-11-07T10:25:24.652-03:00  INFO 18268 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Node -1 disconnected.
+2026-11-07T10:25:26.976-03:00  INFO 18268 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=13
+2026-11-07T10:25:56.964-03:00  INFO 18268 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=14
+2026-11-07T10:26:23.335-03:00  INFO 18268 --- [ms-ubicacion] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-07T10:26:27.427-03:00  INFO 18268 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=15
+2026-11-07T10:26:57.433-03:00  INFO 18268 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=16
+2026-11-07T10:27:46.426-03:00  INFO 18268 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=17
+2026-11-07T10:28:06.440-03:00  INFO 18268 --- [ms-ubicacion] [ ms-ubicacion-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=ms-ubicacion-1] Node -1 disconnected.
+2026-11-07T10:28:06.441-03:00  INFO 18268 --- [ms-ubicacion] [ ms-ubicacion-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=ms-ubicacion-1] Node -3 disconnected.
+2026-11-07T10:28:06.442-03:00  INFO 18268 --- [ms-ubicacion] [ ms-ubicacion-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=ms-ubicacion-1] Node 1 disconnected.
+2026-11-07T10:28:46.423-03:00  INFO 18268 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=18
+2026-11-07T10:29:46.475-03:00  INFO 18268 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=19
+2026-11-07T10:30:46.419-03:00  INFO 18268 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=20
+2026-11-07T10:31:23.345-03:00  INFO 18268 --- [ms-ubicacion] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-07T10:31:46.413-03:00  INFO 18268 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=21
+2026-11-07T10:32:46.421-03:00  INFO 18268 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=22
+2026-11-07T10:33:46.417-03:00  INFO 18268 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=23
+2026-11-07T10:34:46.429-03:00  INFO 18268 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=24
+^C¿Desea terminar el trabajo por lotes (S/N)? 

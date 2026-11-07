@@ -1,5 +1,6 @@
 package com.homefixer.solicitudes.entity;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.homefixer.shared.enums.EstadoSolicitud;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -64,4 +65,13 @@ public class Solicitud {
     private String notasCierre;
 
     private LocalDateTime fechaActualizacion;
+
+    /**
+     * Clave de idempotencia generada por el formulario del cliente (una por envío).
+     * Si el cliente pulsa "Buscar técnicos" varias veces, o la red reintenta el POST,
+     * las peticiones repetidas devuelven la misma solicitud en vez de crear otra.
+     */
+    @Column(unique = true, length = 64)
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    private String claveIdempotencia;
 }

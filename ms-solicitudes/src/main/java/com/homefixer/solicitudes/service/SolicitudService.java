@@ -16,7 +16,11 @@ public interface SolicitudService {
     long countSolicitudesActivasByTecnico(Long tecnicoId);
 
     /** Cliente elige técnico o técnico acepta una disponible: CREADA -> ACEPTADA. */
-    Solicitud assignTecnico(Long solicitudId, Long tecnicoId);
+    /** Solo el propio técnico (dueño del token) puede aceptar la solicitud. */
+    Solicitud assignTecnico(Long solicitudId, Long tecnicoId, String authorization);
+
+    /** Solicitud ya creada con esa clave de idempotencia (reintento / doble clic). */
+    java.util.Optional<Solicitud> findByClaveIdempotencia(String clave);
     void rechazar(Long solicitudId, Long tecnicoId);
     /** ACEPTADA -> EN_PROCESO */
     Solicitud iniciar(Long solicitudId);

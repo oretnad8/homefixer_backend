@@ -85,316 +85,461 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.4)
 
-2026-11-04T19:34:38.858-03:00  INFO 23048 --- [ms-reportes] [           main] c.h.reportes.MsReportesApplication       : Starting MsReportesApplication using Java 21.0.12 with PID 23048 (C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-reportes\target\classes started by drojas in C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-reportes)
-2026-11-04T19:34:38.859-03:00  INFO 23048 --- [ms-reportes] [           main] c.h.reportes.MsReportesApplication       : No active profile set, falling back to 1 default profile: "default"
-2026-11-04T19:34:39.492-03:00  INFO 23048 --- [ms-reportes] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=91c290eb-1126-3559-81f8-adb8d2fbcbde
-2026-11-04T19:34:39.538-03:00  WARN 23048 --- [ms-reportes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
-2026-11-04T19:34:39.540-03:00  WARN 23048 --- [ms-reportes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2026-11-04T19:34:39.735-03:00  INFO 23048 --- [ms-reportes] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
-2026-11-04T19:34:39.743-03:00  INFO 23048 --- [ms-reportes] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-11-04T19:34:39.744-03:00  INFO 23048 --- [ms-reportes] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
-2026-11-04T19:34:39.792-03:00  INFO 23048 --- [ms-reportes] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-11-04T19:34:39.793-03:00  INFO 23048 --- [ms-reportes] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 890 ms
-2026-11-04T19:34:40.669-03:00  INFO 23048 --- [ms-reportes] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2026-11-04T19:34:40.713-03:00  WARN 23048 --- [ms-reportes] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2026-11-04T19:34:40.774-03:00  INFO 23048 --- [ms-reportes] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2026-11-04T19:34:40.848-03:00  INFO 23048 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2026-11-04T19:34:40.852-03:00  INFO 23048 --- [ms-reportes] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-11-04T19:34:40.864-03:00  INFO 23048 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2026-11-04T19:34:40.864-03:00  INFO 23048 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2026-11-04T19:34:40.864-03:00  INFO 23048 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2026-11-04T19:34:40.864-03:00  INFO 23048 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2026-11-04T19:34:40.864-03:00  INFO 23048 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2026-11-04T19:34:40.864-03:00  INFO 23048 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2026-11-04T19:34:40.864-03:00  INFO 23048 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2026-11-04T19:34:41.055-03:00  INFO 23048 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2026-11-04T19:34:41.057-03:00  INFO 23048 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2026-11-04T19:34:41.058-03:00  INFO 23048 --- [ms-reportes] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2026-11-04T19:34:41.061-03:00  INFO 23048 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1793831681061 with initial instances count: 10
-2026-11-04T19:34:41.063-03:00  INFO 23048 --- [ms-reportes] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MS-REPORTES with eureka with status UP
-2026-11-04T19:34:41.063-03:00  INFO 23048 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1793831681063, current=UP, previous=STARTING]
-2026-11-04T19:34:41.064-03:00  INFO 23048 --- [ms-reportes] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-REPORTES/DROJAS.localdomain:ms-reportes:8090: registering service...
-2026-11-04T19:34:41.067-03:00  INFO 23048 --- [ms-reportes] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application MS-REPORTES with eureka with status DOWN
-2026-11-04T19:34:41.067-03:00  INFO 23048 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1793831681067, current=DOWN, previous=UP]
-2026-11-04T19:34:41.068-03:00  WARN 23048 --- [ms-reportes] [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
-2026-11-04T19:34:41.072-03:00  INFO 23048 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2026-11-04T19:34:41.087-03:00  INFO 23048 --- [ms-reportes] [nfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=Connection pool shut down stacktrace=java.lang.IllegalStateException: Connection pool shut down
-	at org.apache.hc.core5.util.Asserts.check(Asserts.java:38)
-	at org.apache.hc.core5.pool.StrictConnPool.lease(StrictConnPool.java:176)
-	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.lease(PoolingHttpClientConnectionManager.java:298)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.acquireEndpoint(InternalExecRuntime.java:103)
-	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:125)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
-	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
-	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:95)
-	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
-	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$0(RestTemplateTransportClientFactory.java:143)
-	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
-	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
-	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
-	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
-	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:672)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:77)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
-	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
-	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
-	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:820)
-	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
-	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-11-07T10:17:26.009-03:00  INFO 26800 --- [ms-reportes] [           main] c.h.reportes.MsReportesApplication       : Starting MsReportesApplication using Java 21.0.12 with PID 26800 (C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-reportes\target\classes started by drojas in C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-reportes)
+2026-11-07T10:17:26.015-03:00  INFO 26800 --- [ms-reportes] [           main] c.h.reportes.MsReportesApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-11-07T10:17:26.933-03:00  INFO 26800 --- [ms-reportes] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=91c290eb-1126-3559-81f8-adb8d2fbcbde
+2026-11-07T10:17:26.984-03:00  WARN 26800 --- [ms-reportes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-11-07T10:17:26.986-03:00  WARN 26800 --- [ms-reportes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-11-07T10:17:27.188-03:00  INFO 26800 --- [ms-reportes] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
+2026-11-07T10:17:27.199-03:00  INFO 26800 --- [ms-reportes] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-07T10:17:27.199-03:00  INFO 26800 --- [ms-reportes] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-11-07T10:17:27.251-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-07T10:17:27.252-03:00  INFO 26800 --- [ms-reportes] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1161 ms
+2026-11-07T10:17:28.077-03:00  INFO 26800 --- [ms-reportes] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-11-07T10:17:28.110-03:00  WARN 26800 --- [ms-reportes] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-11-07T10:17:28.160-03:00  INFO 26800 --- [ms-reportes] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-11-07T10:17:28.227-03:00  INFO 26800 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-11-07T10:17:28.230-03:00  INFO 26800 --- [ms-reportes] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-07T10:17:28.243-03:00  INFO 26800 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-11-07T10:17:28.243-03:00  INFO 26800 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-11-07T10:17:28.243-03:00  INFO 26800 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-11-07T10:17:28.243-03:00  INFO 26800 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-11-07T10:17:28.243-03:00  INFO 26800 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-11-07T10:17:28.243-03:00  INFO 26800 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-11-07T10:17:28.243-03:00  INFO 26800 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-11-07T10:17:28.452-03:00  INFO 26800 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-11-07T10:17:28.456-03:00  INFO 26800 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-11-07T10:17:28.458-03:00  INFO 26800 --- [ms-reportes] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-11-07T10:17:28.463-03:00  INFO 26800 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1794057448462 with initial instances count: 7
+2026-11-07T10:17:28.465-03:00  INFO 26800 --- [ms-reportes] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MS-REPORTES with eureka with status UP
+2026-11-07T10:17:28.465-03:00  INFO 26800 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1794057448465, current=UP, previous=STARTING]
+2026-11-07T10:17:28.467-03:00  INFO 26800 --- [ms-reportes] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-REPORTES/DROJAS.localdomain:ms-reportes:8090: registering service...
+2026-11-07T10:17:28.482-03:00  INFO 26800 --- [ms-reportes] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path ''
+2026-11-07T10:17:28.483-03:00  INFO 26800 --- [ms-reportes] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8090
+2026-11-07T10:17:28.499-03:00  INFO 26800 --- [ms-reportes] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-REPORTES/DROJAS.localdomain:ms-reportes:8090 - registration status: 204
+2026-11-07T10:17:28.524-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092, localhost:9093, localhost:9094]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = ms-reportes-0
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = reportes-metricas
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_committed
+	key.deserializer = class org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 100
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 15000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
 
-2026-11-04T19:34:41.087-03:00  WARN 23048 --- [ms-reportes] [nfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: Connection pool shut down
-2026-11-04T19:34:41.087-03:00  WARN 23048 --- [ms-reportes] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-REPORTES/DROJAS.localdomain:ms-reportes:8090 - registration failed Cannot execute request on any known server
+2026-11-07T10:17:28.593-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
+2026-11-07T10:17:28.593-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
+2026-11-07T10:17:28.593-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1794057448592
+2026-11-07T10:17:28.595-03:00  INFO 26800 --- [ms-reportes] [           main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Subscribed to topic(s): homefixer.solicitudes.eventos
+2026-11-07T10:17:28.598-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092, localhost:9093, localhost:9094]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = ms-reportes-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = reportes-metricas
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_committed
+	key.deserializer = class org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 100
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 15000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
 
-com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:820) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) ~[eureka-client-2.0.2.jar:2.0.2]
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+2026-11-07T10:17:28.607-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
+2026-11-07T10:17:28.607-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
+2026-11-07T10:17:28.607-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1794057448607
+2026-11-07T10:17:28.607-03:00  INFO 26800 --- [ms-reportes] [           main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Subscribed to topic(s): homefixer.solicitudes.eventos
+2026-11-07T10:17:28.608-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092, localhost:9093, localhost:9094]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = ms-reportes-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = reportes-metricas
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_committed
+	key.deserializer = class org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 100
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 15000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
 
-2026-11-04T19:34:41.089-03:00  WARN 23048 --- [ms-reportes] [nfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+2026-11-07T10:17:28.614-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
+2026-11-07T10:17:28.614-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
+2026-11-07T10:17:28.614-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1794057448614
+2026-11-07T10:17:28.614-03:00  INFO 26800 --- [ms-reportes] [           main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Subscribed to topic(s): homefixer.solicitudes.eventos
+2026-11-07T10:17:28.615-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092, localhost:9093, localhost:9094]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = ms-reportes-0
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = reportes-metricas
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_committed
+	key.deserializer = class org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 100
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 15000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
 
-com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:820) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) ~[eureka-client-2.0.2.jar:2.0.2]
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+2026-11-07T10:17:28.619-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
+2026-11-07T10:17:28.619-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
+2026-11-07T10:17:28.619-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1794057448619
+2026-11-07T10:17:28.620-03:00  WARN 26800 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Error registering AppInfo mbean
 
-2026-11-04T19:34:41.089-03:00  INFO 23048 --- [ms-reportes] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-REPORTES/DROJAS.localdomain:ms-reportes:8090: registering service...
-2026-11-04T19:34:41.095-03:00  INFO 23048 --- [ms-reportes] [nfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=Connection pool shut down stacktrace=java.lang.IllegalStateException: Connection pool shut down
-	at org.apache.hc.core5.util.Asserts.check(Asserts.java:38)
-	at org.apache.hc.core5.pool.StrictConnPool.lease(StrictConnPool.java:176)
-	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.lease(PoolingHttpClientConnectionManager.java:298)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.acquireEndpoint(InternalExecRuntime.java:103)
-	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:125)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
-	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
-	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:95)
-	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
-	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$0(RestTemplateTransportClientFactory.java:143)
-	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
-	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
-	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
-	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
-	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:672)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:77)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
-	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
-	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
-	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:820)
-	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
-	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-
-2026-11-04T19:34:41.095-03:00  WARN 23048 --- [ms-reportes] [nfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: Connection pool shut down
-2026-11-04T19:34:41.095-03:00  WARN 23048 --- [ms-reportes] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-REPORTES/DROJAS.localdomain:ms-reportes:8090 - registration failed Cannot execute request on any known server
-
-com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:820) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) ~[eureka-client-2.0.2.jar:2.0.2]
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
-
-2026-11-04T19:34:41.095-03:00  WARN 23048 --- [ms-reportes] [nfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
-
-com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:820) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) ~[eureka-client-2.0.2.jar:2.0.2]
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
-
-2026-11-04T19:34:41.096-03:00  INFO 23048 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2026-11-04T19:34:41.099-03:00  INFO 23048 --- [ms-reportes] [           main] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=Connection pool shut down stacktrace=java.lang.IllegalStateException: Connection pool shut down
-	at org.apache.hc.core5.util.Asserts.check(Asserts.java:38)
-	at org.apache.hc.core5.pool.StrictConnPool.lease(StrictConnPool.java:176)
-	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.lease(PoolingHttpClientConnectionManager.java:298)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.acquireEndpoint(InternalExecRuntime.java:103)
-	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:125)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
-	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
-	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:95)
-	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
-	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$0(RestTemplateTransportClientFactory.java:143)
-	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
-	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
-	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
-	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
-	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:672)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:87)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
-	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
-	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
-	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:916)
-	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:892)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415)
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239)
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:202)
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:195)
-	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389)
-	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1202)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1195)
-	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1186)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:637)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
-	at com.homefixer.reportes.MsReportesApplication.main(MsReportesApplication.java:19)
-
-2026-11-04T19:34:41.099-03:00  WARN 23048 --- [ms-reportes] [           main] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: Connection pool shut down
-2026-11-04T19:34:41.099-03:00 ERROR 23048 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-REPORTES/DROJAS.localdomain:ms-reportes:8090 - de-registration failedCannot execute request on any known server
-
-com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:916) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:892) ~[eureka-client-2.0.2.jar:2.0.2]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457) ~[spring-beans-6.1.5.jar:6.1.5]
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415) ~[spring-beans-6.1.5.jar:6.1.5]
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239) ~[spring-beans-6.1.5.jar:6.1.5]
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:202) ~[spring-beans-6.1.5.jar:6.1.5]
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:195) ~[spring-beans-6.1.5.jar:6.1.5]
-	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389) ~[spring-cloud-context-4.1.2.jar:4.1.2]
-	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136) ~[spring-cloud-context-4.1.2.jar:4.1.2]
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211) ~[spring-beans-6.1.5.jar:6.1.5]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587) ~[spring-beans-6.1.5.jar:6.1.5]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559) ~[spring-beans-6.1.5.jar:6.1.5]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1202) ~[spring-beans-6.1.5.jar:6.1.5]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520) ~[spring-beans-6.1.5.jar:6.1.5]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1195) ~[spring-beans-6.1.5.jar:6.1.5]
-	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1186) ~[spring-context-6.1.5.jar:6.1.5]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:637) ~[spring-context-6.1.5.jar:6.1.5]
+javax.management.InstanceAlreadyExistsException: kafka.consumer:type=app-info,id=ms-reportes-0
+	at java.management/com.sun.jmx.mbeanserver.Repository.addMBean(Repository.java:322) ~[na:na]
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerWithRepository(DefaultMBeanServerInterceptor.java:1848) ~[na:na]
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerDynamicMBean(DefaultMBeanServerInterceptor.java:945) ~[na:na]
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerObject(DefaultMBeanServerInterceptor.java:880) ~[na:na]
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:315) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:523) ~[na:na]
+	at org.apache.kafka.common.utils.AppInfoParser.registerAppInfo(AppInfoParser.java:64) ~[kafka-clients-3.6.1.jar:na]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:772) ~[kafka-clients-3.6.1.jar:na]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:671) ~[kafka-clients-3.6.1.jar:na]
+	at org.springframework.kafka.core.DefaultKafkaConsumerFactory$ExtendedKafkaConsumer.<init>(DefaultKafkaConsumerFactory.java:477) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at org.springframework.kafka.core.DefaultKafkaConsumerFactory.createRawConsumer(DefaultKafkaConsumerFactory.java:461) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at org.springframework.kafka.core.DefaultKafkaConsumerFactory.createKafkaConsumer(DefaultKafkaConsumerFactory.java:438) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at org.springframework.kafka.core.DefaultKafkaConsumerFactory.createConsumerWithAdjustedProperties(DefaultKafkaConsumerFactory.java:415) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at org.springframework.kafka.core.DefaultKafkaConsumerFactory.createKafkaConsumer(DefaultKafkaConsumerFactory.java:382) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at org.springframework.kafka.core.DefaultKafkaConsumerFactory.createConsumer(DefaultKafkaConsumerFactory.java:359) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.<init>(KafkaMessageListenerContainer.java:888) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer.doStart(KafkaMessageListenerContainer.java:391) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at org.springframework.kafka.listener.AbstractMessageListenerContainer.start(AbstractMessageListenerContainer.java:510) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at org.springframework.kafka.listener.ConcurrentMessageListenerContainer.doStart(ConcurrentMessageListenerContainer.java:254) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at org.springframework.kafka.listener.AbstractMessageListenerContainer.start(AbstractMessageListenerContainer.java:510) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at org.springframework.kafka.config.KafkaListenerEndpointRegistry.startIfNecessary(KafkaListenerEndpointRegistry.java:390) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at org.springframework.kafka.config.KafkaListenerEndpointRegistry.start(KafkaListenerEndpointRegistry.java:335) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:288) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:471) ~[spring-context-6.1.5.jar:6.1.5]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:260) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:205) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:981) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.1.5.jar:6.1.5]
 	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.4.jar:3.2.4]
 	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.4.jar:3.2.4]
 	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.4.jar:3.2.4]
@@ -403,34 +548,414 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.4.jar:3.2.4]
 	at com.homefixer.reportes.MsReportesApplication.main(MsReportesApplication.java:19) ~[classes/:na]
 
-2026-11-04T19:34:41.102-03:00  INFO 23048 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
-2026-11-04T19:34:41.110-03:00  INFO 23048 --- [ms-reportes] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2026-11-07T10:17:28.628-03:00  INFO 26800 --- [ms-reportes] [           main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Subscribed to topic(s): homefixer.tecnicos.ubicacion
+2026-11-07T10:17:28.629-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092, localhost:9093, localhost:9094]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = ms-reportes-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = reportes-metricas
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_committed
+	key.deserializer = class org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 100
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 15000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
 
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-11-04T19:34:41.120-03:00 ERROR 23048 --- [ms-reportes] [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+2026-11-07T10:17:28.634-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
+2026-11-07T10:17:28.634-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
+2026-11-07T10:17:28.634-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1794057448634
+2026-11-07T10:17:28.634-03:00  WARN 26800 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Error registering AppInfo mbean
 
-***************************
-APPLICATION FAILED TO START
-***************************
+javax.management.InstanceAlreadyExistsException: kafka.consumer:type=app-info,id=ms-reportes-1
+	at java.management/com.sun.jmx.mbeanserver.Repository.addMBean(Repository.java:322) ~[na:na]
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerWithRepository(DefaultMBeanServerInterceptor.java:1848) ~[na:na]
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerDynamicMBean(DefaultMBeanServerInterceptor.java:945) ~[na:na]
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerObject(DefaultMBeanServerInterceptor.java:880) ~[na:na]
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:315) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:523) ~[na:na]
+	at org.apache.kafka.common.utils.AppInfoParser.registerAppInfo(AppInfoParser.java:64) ~[kafka-clients-3.6.1.jar:na]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:772) ~[kafka-clients-3.6.1.jar:na]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:671) ~[kafka-clients-3.6.1.jar:na]
+	at org.springframework.kafka.core.DefaultKafkaConsumerFactory$ExtendedKafkaConsumer.<init>(DefaultKafkaConsumerFactory.java:477) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at org.springframework.kafka.core.DefaultKafkaConsumerFactory.createRawConsumer(DefaultKafkaConsumerFactory.java:461) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at org.springframework.kafka.core.DefaultKafkaConsumerFactory.createKafkaConsumer(DefaultKafkaConsumerFactory.java:438) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at org.springframework.kafka.core.DefaultKafkaConsumerFactory.createConsumerWithAdjustedProperties(DefaultKafkaConsumerFactory.java:415) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at org.springframework.kafka.core.DefaultKafkaConsumerFactory.createKafkaConsumer(DefaultKafkaConsumerFactory.java:382) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at org.springframework.kafka.core.DefaultKafkaConsumerFactory.createConsumer(DefaultKafkaConsumerFactory.java:359) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.<init>(KafkaMessageListenerContainer.java:888) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer.doStart(KafkaMessageListenerContainer.java:391) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at org.springframework.kafka.listener.AbstractMessageListenerContainer.start(AbstractMessageListenerContainer.java:510) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at org.springframework.kafka.listener.ConcurrentMessageListenerContainer.doStart(ConcurrentMessageListenerContainer.java:254) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at org.springframework.kafka.listener.AbstractMessageListenerContainer.start(AbstractMessageListenerContainer.java:510) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at org.springframework.kafka.config.KafkaListenerEndpointRegistry.startIfNecessary(KafkaListenerEndpointRegistry.java:390) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at org.springframework.kafka.config.KafkaListenerEndpointRegistry.start(KafkaListenerEndpointRegistry.java:335) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:288) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:471) ~[spring-context-6.1.5.jar:6.1.5]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:260) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:205) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:981) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.4.jar:3.2.4]
+	at com.homefixer.reportes.MsReportesApplication.main(MsReportesApplication.java:19) ~[classes/:na]
 
-Description:
+2026-11-07T10:17:28.635-03:00  INFO 26800 --- [ms-reportes] [           main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Subscribed to topic(s): homefixer.tecnicos.ubicacion
+2026-11-07T10:17:28.636-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092, localhost:9093, localhost:9094]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = ms-reportes-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = reportes-metricas
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_committed
+	key.deserializer = class org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 100
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 15000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
 
-Web server failed to start. Port 8090 was already in use.
+2026-11-07T10:17:28.639-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
+2026-11-07T10:17:28.639-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
+2026-11-07T10:17:28.639-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1794057448639
+2026-11-07T10:17:28.639-03:00  WARN 26800 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Error registering AppInfo mbean
 
-Action:
+javax.management.InstanceAlreadyExistsException: kafka.consumer:type=app-info,id=ms-reportes-2
+	at java.management/com.sun.jmx.mbeanserver.Repository.addMBean(Repository.java:322) ~[na:na]
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerWithRepository(DefaultMBeanServerInterceptor.java:1848) ~[na:na]
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerDynamicMBean(DefaultMBeanServerInterceptor.java:945) ~[na:na]
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerObject(DefaultMBeanServerInterceptor.java:880) ~[na:na]
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:315) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:523) ~[na:na]
+	at org.apache.kafka.common.utils.AppInfoParser.registerAppInfo(AppInfoParser.java:64) ~[kafka-clients-3.6.1.jar:na]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:772) ~[kafka-clients-3.6.1.jar:na]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:671) ~[kafka-clients-3.6.1.jar:na]
+	at org.springframework.kafka.core.DefaultKafkaConsumerFactory$ExtendedKafkaConsumer.<init>(DefaultKafkaConsumerFactory.java:477) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at org.springframework.kafka.core.DefaultKafkaConsumerFactory.createRawConsumer(DefaultKafkaConsumerFactory.java:461) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at org.springframework.kafka.core.DefaultKafkaConsumerFactory.createKafkaConsumer(DefaultKafkaConsumerFactory.java:438) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at org.springframework.kafka.core.DefaultKafkaConsumerFactory.createConsumerWithAdjustedProperties(DefaultKafkaConsumerFactory.java:415) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at org.springframework.kafka.core.DefaultKafkaConsumerFactory.createKafkaConsumer(DefaultKafkaConsumerFactory.java:382) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at org.springframework.kafka.core.DefaultKafkaConsumerFactory.createConsumer(DefaultKafkaConsumerFactory.java:359) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.<init>(KafkaMessageListenerContainer.java:888) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer.doStart(KafkaMessageListenerContainer.java:391) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at org.springframework.kafka.listener.AbstractMessageListenerContainer.start(AbstractMessageListenerContainer.java:510) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at org.springframework.kafka.listener.ConcurrentMessageListenerContainer.doStart(ConcurrentMessageListenerContainer.java:254) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at org.springframework.kafka.listener.AbstractMessageListenerContainer.start(AbstractMessageListenerContainer.java:510) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at org.springframework.kafka.config.KafkaListenerEndpointRegistry.startIfNecessary(KafkaListenerEndpointRegistry.java:390) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at org.springframework.kafka.config.KafkaListenerEndpointRegistry.start(KafkaListenerEndpointRegistry.java:335) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:288) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:471) ~[spring-context-6.1.5.jar:6.1.5]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:260) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:205) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:981) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.4.jar:3.2.4]
+	at com.homefixer.reportes.MsReportesApplication.main(MsReportesApplication.java:19) ~[classes/:na]
 
-Identify and stop the process that's listening on port 8090 or configure this application to listen on another port.
+2026-11-07T10:17:28.640-03:00  INFO 26800 --- [ms-reportes] [           main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Subscribed to topic(s): homefixer.tecnicos.ubicacion
+2026-11-07T10:17:28.646-03:00  INFO 26800 --- [ms-reportes] [           main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-11-07T10:17:28.687-03:00  INFO 26800 --- [ms-reportes] [           main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#2fc49538:0/SimpleConnection@acb1c9c [delegate=amqp://guest@127.0.0.1:5672/, localPort=58043]
+2026-11-07T10:17:28.739-03:00  INFO 26800 --- [ms-reportes] [           main] c.h.reportes.MsReportesApplication       : Started MsReportesApplication in 3.27 seconds (process running for 3.596)
+2026-11-07T10:17:28.852-03:00  INFO 26800 --- [ms-reportes] [s-eventos-1-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Cluster ID: VWi1Ej-hR5-sBUuujyKUoA
+2026-11-07T10:17:28.852-03:00  INFO 26800 --- [ms-reportes] [ubicacion-2-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Cluster ID: VWi1Ej-hR5-sBUuujyKUoA
+2026-11-07T10:17:28.852-03:00  INFO 26800 --- [ms-reportes] [ubicacion-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Cluster ID: VWi1Ej-hR5-sBUuujyKUoA
+2026-11-07T10:17:28.852-03:00  INFO 26800 --- [ms-reportes] [s-eventos-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Cluster ID: VWi1Ej-hR5-sBUuujyKUoA
+2026-11-07T10:17:28.852-03:00  INFO 26800 --- [ms-reportes] [s-eventos-2-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Cluster ID: VWi1Ej-hR5-sBUuujyKUoA
+2026-11-07T10:17:28.852-03:00  INFO 26800 --- [ms-reportes] [ubicacion-1-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Cluster ID: VWi1Ej-hR5-sBUuujyKUoA
+2026-11-07T10:17:28.853-03:00  INFO 26800 --- [ms-reportes] [ubicacion-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2026-11-07T10:17:28.853-03:00  INFO 26800 --- [ms-reportes] [ubicacion-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2026-11-07T10:17:28.853-03:00  INFO 26800 --- [ms-reportes] [ubicacion-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2026-11-07T10:17:28.853-03:00  INFO 26800 --- [ms-reportes] [s-eventos-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2026-11-07T10:17:28.853-03:00  INFO 26800 --- [ms-reportes] [s-eventos-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2026-11-07T10:17:28.853-03:00  INFO 26800 --- [ms-reportes] [s-eventos-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2026-11-07T10:17:28.856-03:00  INFO 26800 --- [ms-reportes] [s-eventos-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] (Re-)joining group
+2026-11-07T10:17:28.856-03:00  INFO 26800 --- [ms-reportes] [s-eventos-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] (Re-)joining group
+2026-11-07T10:17:28.856-03:00  INFO 26800 --- [ms-reportes] [ubicacion-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] (Re-)joining group
+2026-11-07T10:17:28.856-03:00  INFO 26800 --- [ms-reportes] [ubicacion-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] (Re-)joining group
+2026-11-07T10:17:28.856-03:00  INFO 26800 --- [ms-reportes] [ubicacion-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] (Re-)joining group
+2026-11-07T10:17:28.856-03:00  INFO 26800 --- [ms-reportes] [s-eventos-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] (Re-)joining group
+2026-11-07T10:17:28.870-03:00  INFO 26800 --- [ms-reportes] [ubicacion-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Request joining group due to: need to re-join with the given member-id: ms-reportes-0-9e2605e2-2fd8-44db-857f-3cde93d678bf
+2026-11-07T10:17:28.870-03:00  INFO 26800 --- [ms-reportes] [s-eventos-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Request joining group due to: need to re-join with the given member-id: ms-reportes-0-c475957e-9b53-4af6-8aaf-b144106820cf
+2026-11-07T10:17:28.870-03:00  INFO 26800 --- [ms-reportes] [s-eventos-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Request joining group due to: need to re-join with the given member-id: ms-reportes-1-d7625740-9b03-49ed-8188-a416b5114ef0
+2026-11-07T10:17:28.870-03:00  INFO 26800 --- [ms-reportes] [ubicacion-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Request joining group due to: need to re-join with the given member-id: ms-reportes-2-a4a0a840-1d3e-4272-ab2b-ed422db328da
+2026-11-07T10:17:28.870-03:00  INFO 26800 --- [ms-reportes] [s-eventos-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Request joining group due to: need to re-join with the given member-id: ms-reportes-2-dfc16a7a-9cab-4de0-8630-13d579f34c9c
+2026-11-07T10:17:28.870-03:00  INFO 26800 --- [ms-reportes] [ubicacion-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Request joining group due to: need to re-join with the given member-id: ms-reportes-1-188b2bfd-c32f-4520-a1d0-49b913f6deb1
+2026-11-07T10:17:28.870-03:00  INFO 26800 --- [ms-reportes] [ubicacion-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2026-11-07T10:17:28.870-03:00  INFO 26800 --- [ms-reportes] [s-eventos-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2026-11-07T10:17:28.870-03:00  INFO 26800 --- [ms-reportes] [ubicacion-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2026-11-07T10:17:28.870-03:00  INFO 26800 --- [ms-reportes] [s-eventos-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2026-11-07T10:17:28.871-03:00  INFO 26800 --- [ms-reportes] [ubicacion-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2026-11-07T10:17:28.871-03:00  INFO 26800 --- [ms-reportes] [s-eventos-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] (Re-)joining group
+2026-11-07T10:17:28.871-03:00  INFO 26800 --- [ms-reportes] [ubicacion-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] (Re-)joining group
+2026-11-07T10:17:28.870-03:00  INFO 26800 --- [ms-reportes] [s-eventos-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2026-11-07T10:17:28.870-03:00  INFO 26800 --- [ms-reportes] [ubicacion-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] (Re-)joining group
+2026-11-07T10:17:28.871-03:00  INFO 26800 --- [ms-reportes] [s-eventos-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] (Re-)joining group
+2026-11-07T10:17:28.871-03:00  INFO 26800 --- [ms-reportes] [s-eventos-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] (Re-)joining group
+2026-11-07T10:17:28.871-03:00  INFO 26800 --- [ms-reportes] [ubicacion-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] (Re-)joining group
+2026-11-07T10:17:31.876-03:00  INFO 26800 --- [ms-reportes] [ubicacion-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Successfully joined group with generation Generation{generationId=7, memberId='ms-reportes-0-9e2605e2-2fd8-44db-857f-3cde93d678bf', protocol='cooperative-sticky'}
+2026-11-07T10:17:31.876-03:00  INFO 26800 --- [ms-reportes] [s-eventos-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Successfully joined group with generation Generation{generationId=7, memberId='ms-reportes-1-d7625740-9b03-49ed-8188-a416b5114ef0', protocol='cooperative-sticky'}
+2026-11-07T10:17:31.876-03:00  INFO 26800 --- [ms-reportes] [ubicacion-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Successfully joined group with generation Generation{generationId=7, memberId='ms-reportes-2-a4a0a840-1d3e-4272-ab2b-ed422db328da', protocol='cooperative-sticky'}
+2026-11-07T10:17:31.878-03:00  INFO 26800 --- [ms-reportes] [s-eventos-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Successfully joined group with generation Generation{generationId=7, memberId='ms-reportes-0-c475957e-9b53-4af6-8aaf-b144106820cf', protocol='cooperative-sticky'}
+2026-11-07T10:17:31.878-03:00  INFO 26800 --- [ms-reportes] [ubicacion-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Successfully joined group with generation Generation{generationId=7, memberId='ms-reportes-1-188b2bfd-c32f-4520-a1d0-49b913f6deb1', protocol='cooperative-sticky'}
+2026-11-07T10:17:31.878-03:00  INFO 26800 --- [ms-reportes] [s-eventos-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Successfully joined group with generation Generation{generationId=7, memberId='ms-reportes-2-dfc16a7a-9cab-4de0-8630-13d579f34c9c', protocol='cooperative-sticky'}
+2026-11-07T10:17:31.891-03:00  INFO 26800 --- [ms-reportes] [ubicacion-2-C-1] o.a.k.c.c.i.AbstractStickyAssignor       : Final assignment of partitions to consumers: 
+{ms-reportes-0-9e2605e2-2fd8-44db-857f-3cde93d678bf=[homefixer.tecnicos.ubicacion-0], ms-reportes-1-188b2bfd-c32f-4520-a1d0-49b913f6deb1=[homefixer.tecnicos.ubicacion-1], ms-reportes-1-d7625740-9b03-49ed-8188-a416b5114ef0=[homefixer.solicitudes.eventos-1], ms-reportes-2-a4a0a840-1d3e-4272-ab2b-ed422db328da=[homefixer.tecnicos.ubicacion-2], ms-reportes-2-dfc16a7a-9cab-4de0-8630-13d579f34c9c=[homefixer.solicitudes.eventos-2], ms-reportes-0-c475957e-9b53-4af6-8aaf-b144106820cf=[homefixer.solicitudes.eventos-0]}
+2026-11-07T10:17:31.892-03:00  INFO 26800 --- [ms-reportes] [ubicacion-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Finished assignment for group at generation 7: {ms-reportes-0-9e2605e2-2fd8-44db-857f-3cde93d678bf=Assignment(partitions=[homefixer.tecnicos.ubicacion-0]), ms-reportes-1-188b2bfd-c32f-4520-a1d0-49b913f6deb1=Assignment(partitions=[homefixer.tecnicos.ubicacion-1]), ms-reportes-1-d7625740-9b03-49ed-8188-a416b5114ef0=Assignment(partitions=[homefixer.solicitudes.eventos-1]), ms-reportes-2-a4a0a840-1d3e-4272-ab2b-ed422db328da=Assignment(partitions=[homefixer.tecnicos.ubicacion-2]), ms-reportes-2-dfc16a7a-9cab-4de0-8630-13d579f34c9c=Assignment(partitions=[homefixer.solicitudes.eventos-2]), ms-reportes-0-c475957e-9b53-4af6-8aaf-b144106820cf=Assignment(partitions=[homefixer.solicitudes.eventos-0])}
+2026-11-07T10:17:31.903-03:00  INFO 26800 --- [ms-reportes] [s-eventos-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Successfully synced group in generation Generation{generationId=7, memberId='ms-reportes-0-c475957e-9b53-4af6-8aaf-b144106820cf', protocol='cooperative-sticky'}
+2026-11-07T10:17:31.903-03:00  INFO 26800 --- [ms-reportes] [s-eventos-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Successfully synced group in generation Generation{generationId=7, memberId='ms-reportes-2-dfc16a7a-9cab-4de0-8630-13d579f34c9c', protocol='cooperative-sticky'}
+2026-11-07T10:17:31.903-03:00  INFO 26800 --- [ms-reportes] [ubicacion-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Successfully synced group in generation Generation{generationId=7, memberId='ms-reportes-2-a4a0a840-1d3e-4272-ab2b-ed422db328da', protocol='cooperative-sticky'}
+2026-11-07T10:17:31.903-03:00  INFO 26800 --- [ms-reportes] [ubicacion-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Successfully synced group in generation Generation{generationId=7, memberId='ms-reportes-1-188b2bfd-c32f-4520-a1d0-49b913f6deb1', protocol='cooperative-sticky'}
+2026-11-07T10:17:31.903-03:00  INFO 26800 --- [ms-reportes] [ubicacion-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Successfully synced group in generation Generation{generationId=7, memberId='ms-reportes-0-9e2605e2-2fd8-44db-857f-3cde93d678bf', protocol='cooperative-sticky'}
+2026-11-07T10:17:31.903-03:00  INFO 26800 --- [ms-reportes] [ubicacion-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Updating assignment with
+	Assigned partitions:                       [homefixer.tecnicos.ubicacion-2]
+	Current owned partitions:                  []
+	Added partitions (assigned - owned):       [homefixer.tecnicos.ubicacion-2]
+	Revoked partitions (owned - assigned):     []
 
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time:  4.569 s
-[INFO] Finished at: 2026-11-04T19:34:41-03:00
-[INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.2.4:run (default-cli) on project ms-reportes: Process terminated with exit code: 1 -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+2026-11-07T10:17:31.903-03:00  INFO 26800 --- [ms-reportes] [s-eventos-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Successfully synced group in generation Generation{generationId=7, memberId='ms-reportes-1-d7625740-9b03-49ed-8188-a416b5114ef0', protocol='cooperative-sticky'}
+2026-11-07T10:17:31.903-03:00  INFO 26800 --- [ms-reportes] [s-eventos-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Updating assignment with
+	Assigned partitions:                       [homefixer.solicitudes.eventos-2]
+	Current owned partitions:                  []
+	Added partitions (assigned - owned):       [homefixer.solicitudes.eventos-2]
+	Revoked partitions (owned - assigned):     []
+
+2026-11-07T10:17:31.903-03:00  INFO 26800 --- [ms-reportes] [ubicacion-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Updating assignment with
+	Assigned partitions:                       [homefixer.tecnicos.ubicacion-0]
+	Current owned partitions:                  []
+	Added partitions (assigned - owned):       [homefixer.tecnicos.ubicacion-0]
+	Revoked partitions (owned - assigned):     []
+
+2026-11-07T10:17:31.903-03:00  INFO 26800 --- [ms-reportes] [s-eventos-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Notifying assignor about the new Assignment(partitions=[homefixer.solicitudes.eventos-2])
+2026-11-07T10:17:31.903-03:00  INFO 26800 --- [ms-reportes] [s-eventos-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Updating assignment with
+	Assigned partitions:                       [homefixer.solicitudes.eventos-1]
+	Current owned partitions:                  []
+	Added partitions (assigned - owned):       [homefixer.solicitudes.eventos-1]
+	Revoked partitions (owned - assigned):     []
+
+2026-11-07T10:17:31.903-03:00  INFO 26800 --- [ms-reportes] [s-eventos-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Updating assignment with
+	Assigned partitions:                       [homefixer.solicitudes.eventos-0]
+	Current owned partitions:                  []
+	Added partitions (assigned - owned):       [homefixer.solicitudes.eventos-0]
+	Revoked partitions (owned - assigned):     []
+
+2026-11-07T10:17:31.903-03:00  INFO 26800 --- [ms-reportes] [ubicacion-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Notifying assignor about the new Assignment(partitions=[homefixer.tecnicos.ubicacion-2])
+2026-11-07T10:17:31.904-03:00  INFO 26800 --- [ms-reportes] [s-eventos-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Notifying assignor about the new Assignment(partitions=[homefixer.solicitudes.eventos-0])
+2026-11-07T10:17:31.903-03:00  INFO 26800 --- [ms-reportes] [ubicacion-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Updating assignment with
+	Assigned partitions:                       [homefixer.tecnicos.ubicacion-1]
+	Current owned partitions:                  []
+	Added partitions (assigned - owned):       [homefixer.tecnicos.ubicacion-1]
+	Revoked partitions (owned - assigned):     []
+
+2026-11-07T10:17:31.903-03:00  INFO 26800 --- [ms-reportes] [ubicacion-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Notifying assignor about the new Assignment(partitions=[homefixer.tecnicos.ubicacion-0])
+2026-11-07T10:17:31.904-03:00  INFO 26800 --- [ms-reportes] [s-eventos-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Notifying assignor about the new Assignment(partitions=[homefixer.solicitudes.eventos-1])
+2026-11-07T10:17:31.904-03:00  INFO 26800 --- [ms-reportes] [ubicacion-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Notifying assignor about the new Assignment(partitions=[homefixer.tecnicos.ubicacion-1])
+2026-11-07T10:17:31.906-03:00  INFO 26800 --- [ms-reportes] [s-eventos-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Adding newly assigned partitions: homefixer.solicitudes.eventos-0
+2026-11-07T10:17:31.906-03:00  INFO 26800 --- [ms-reportes] [ubicacion-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Adding newly assigned partitions: homefixer.tecnicos.ubicacion-2
+2026-11-07T10:17:31.906-03:00  INFO 26800 --- [ms-reportes] [s-eventos-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Adding newly assigned partitions: homefixer.solicitudes.eventos-1
+2026-11-07T10:17:31.906-03:00  INFO 26800 --- [ms-reportes] [ubicacion-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Adding newly assigned partitions: homefixer.tecnicos.ubicacion-0
+2026-11-07T10:17:31.906-03:00  INFO 26800 --- [ms-reportes] [s-eventos-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Adding newly assigned partitions: homefixer.solicitudes.eventos-2
+2026-11-07T10:17:31.906-03:00  INFO 26800 --- [ms-reportes] [ubicacion-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Adding newly assigned partitions: homefixer.tecnicos.ubicacion-1
+2026-11-07T10:17:31.916-03:00  INFO 26800 --- [ms-reportes] [ubicacion-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Found no committed offset for partition homefixer.tecnicos.ubicacion-1
+2026-11-07T10:17:31.916-03:00  INFO 26800 --- [ms-reportes] [ubicacion-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Found no committed offset for partition homefixer.tecnicos.ubicacion-2
+2026-11-07T10:17:31.916-03:00  INFO 26800 --- [ms-reportes] [ubicacion-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Found no committed offset for partition homefixer.tecnicos.ubicacion-0
+2026-11-07T10:17:31.918-03:00  INFO 26800 --- [ms-reportes] [s-eventos-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Setting offset for partition homefixer.solicitudes.eventos-2 to the committed offset FetchPosition{offset=184, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9094 (id: 3 rack: null)], epoch=5}}
+2026-11-07T10:17:31.918-03:00  INFO 26800 --- [ms-reportes] [s-eventos-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Setting offset for partition homefixer.solicitudes.eventos-1 to the committed offset FetchPosition{offset=204, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9093 (id: 2 rack: null)], epoch=5}}
+2026-11-07T10:17:31.918-03:00  INFO 26800 --- [ms-reportes] [s-eventos-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Setting offset for partition homefixer.solicitudes.eventos-0 to the committed offset FetchPosition{offset=217, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=4}}
+2026-11-07T10:17:31.919-03:00  INFO 26800 --- [ms-reportes] [s-eventos-1-C-1] o.s.k.l.KafkaMessageListenerContainer    : reportes-metricas: partitions assigned: [homefixer.solicitudes.eventos-1]
+2026-11-07T10:17:31.919-03:00  INFO 26800 --- [ms-reportes] [s-eventos-2-C-1] o.s.k.l.KafkaMessageListenerContainer    : reportes-metricas: partitions assigned: [homefixer.solicitudes.eventos-2]
+2026-11-07T10:17:31.919-03:00  INFO 26800 --- [ms-reportes] [s-eventos-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : reportes-metricas: partitions assigned: [homefixer.solicitudes.eventos-0]
+2026-11-07T10:17:31.929-03:00  INFO 26800 --- [ms-reportes] [ubicacion-2-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Resetting offset for partition homefixer.tecnicos.ubicacion-2 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9093 (id: 2 rack: null)], epoch=5}}.
+2026-11-07T10:17:31.929-03:00  INFO 26800 --- [ms-reportes] [ubicacion-0-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Resetting offset for partition homefixer.tecnicos.ubicacion-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9094 (id: 3 rack: null)], epoch=5}}.
+2026-11-07T10:17:31.930-03:00  INFO 26800 --- [ms-reportes] [ubicacion-1-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Resetting offset for partition homefixer.tecnicos.ubicacion-1 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=4}}.
+2026-11-07T10:17:31.930-03:00  INFO 26800 --- [ms-reportes] [ubicacion-2-C-1] o.s.k.l.KafkaMessageListenerContainer    : reportes-metricas: partitions assigned: [homefixer.tecnicos.ubicacion-2]
+2026-11-07T10:17:31.930-03:00  INFO 26800 --- [ms-reportes] [ubicacion-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : reportes-metricas: partitions assigned: [homefixer.tecnicos.ubicacion-0]
+2026-11-07T10:17:31.931-03:00  INFO 26800 --- [ms-reportes] [ubicacion-1-C-1] o.s.k.l.KafkaMessageListenerContainer    : reportes-metricas: partitions assigned: [homefixer.tecnicos.ubicacion-1]
+2026-11-07T10:22:28.251-03:00  INFO 26800 --- [ms-reportes] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-07T10:23:46.963-03:00  INFO 26800 --- [ms-reportes] [ntContainer#0-1] c.h.r.listener.SolicitudEventListener    : [ACK] Evento fd0f6e90-126f-43ad-ae06-7089e926138e [solicitud.creada] registrado en métricas
+2026-11-07T10:23:47.369-03:00  INFO 26800 --- [ms-reportes] [s-eventos-1-C-1] c.h.r.k.SolicitudEventosKafkaListener    : [KAFKA][CONSUME] SOLICITUD_CREADA solicitud=13 estado=CREADA partition=1 offset=204
+2026-11-07T10:23:54.634-03:00  INFO 26800 --- [ms-reportes] [ntContainer#0-1] c.h.r.listener.SolicitudEventListener    : [ACK] Evento 36bdf885-d8de-4918-a8f6-f8c5bc6614fc [solicitud.creada] registrado en métricas
+2026-11-07T10:23:54.664-03:00  INFO 26800 --- [ms-reportes] [s-eventos-1-C-1] c.h.r.k.SolicitudEventosKafkaListener    : [KAFKA][CONSUME] SOLICITUD_CREADA solicitud=14 estado=CREADA partition=1 offset=205
+2026-11-07T10:25:30.595-03:00  INFO 26800 --- [ms-reportes] [ntContainer#0-1] c.h.r.listener.SolicitudEventListener    : [ACK] Evento 005336aa-3ed2-4d71-8a97-5586df0b36fd [solicitud.tecnico-asignado] registrado en métricas
+2026-11-07T10:25:30.619-03:00  INFO 26800 --- [ms-reportes] [s-eventos-1-C-1] c.h.r.k.SolicitudEventosKafkaListener    : [KAFKA][CONSUME] TECNICO_ASIGNADO solicitud=14 estado=ACEPTADA partition=1 offset=206
+2026-11-07T10:25:54.869-03:00  INFO 26800 --- [ms-reportes] [ntContainer#0-1] c.h.r.listener.SolicitudEventListener    : [ACK] Evento 3ccbccc4-d2b2-4255-a452-8b15f6c78d34 [solicitud.tecnico-asignado] registrado en métricas
+2026-11-07T10:25:54.889-03:00  INFO 26800 --- [ms-reportes] [s-eventos-1-C-1] c.h.r.k.SolicitudEventosKafkaListener    : [KAFKA][CONSUME] TECNICO_ASIGNADO solicitud=13 estado=ACEPTADA partition=1 offset=207
+2026-11-07T10:26:28.936-03:00  INFO 26800 --- [ms-reportes] [ubicacion-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Node -2 disconnected.
+2026-11-07T10:26:29.122-03:00  INFO 26800 --- [ms-reportes] [s-eventos-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Node -2 disconnected.
+2026-11-07T10:26:29.123-03:00  INFO 26800 --- [ms-reportes] [ubicacion-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Node -2 disconnected.
+2026-11-07T10:26:29.133-03:00  INFO 26800 --- [ms-reportes] [ubicacion-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Node -1 disconnected.
+2026-11-07T10:26:29.133-03:00  INFO 26800 --- [ms-reportes] [s-eventos-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Node -1 disconnected.
+2026-11-07T10:26:29.137-03:00  INFO 26800 --- [ms-reportes] [s-eventos-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Node -1 disconnected.
+2026-11-07T10:27:28.257-03:00  INFO 26800 --- [ms-reportes] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-07T10:32:28.259-03:00  INFO 26800 --- [ms-reportes] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

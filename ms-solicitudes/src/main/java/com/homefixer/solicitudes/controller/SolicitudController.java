@@ -5,6 +5,7 @@ import com.homefixer.solicitudes.entity.SolicitudHito;
 import com.homefixer.shared.enums.EstadoSolicitud;
 import com.homefixer.solicitudes.service.SolicitudService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -21,7 +22,14 @@ public class SolicitudController {
 
     @PostMapping
     public ResponseEntity<Solicitud> createSolicitud(@RequestBody Solicitud solicitud) {
-        return new ResponseEntity<>(solicitudService.createSolicitud(solicitud), HttpStatus.CREATED);
+        try {
+            return new ResponseEntity<>(solicitudService.createSolicitud(solicitud), HttpStatus.CREATED);
+        } catch (DataIntegrityViolationException e) {
+            // Dos envíos simultáneos con la misma clave: uno ganó, se devuelve ese
+            return solicitudService.findByClaveIdempotencia(solicitud.getClaveIdempotencia())
+                    .map(ResponseEntity::ok)
+                    .orElseThrow(() -> e);
+        }
     }
 
     @GetMapping("/{id}")
@@ -55,10 +63,11 @@ public class SolicitudController {
         return ResponseEntity.ok(solicitudService.estadisticasTecnico(tecnicoId));
     }
 
-    /** El cliente elige técnico o el técnico acepta la solicitud. */
+    /** El técnico acepta la solicitud (solo él: se valida con su token contra ms-usuarios). */
     @PatchMapping("/{id}/asignar-tecnico/{tecnicoId}")
-    public ResponseEntity<Solicitud> assignTecnico(@PathVariable("id") Long id, @PathVariable("tecnicoId") Long tecnicoId) {
-        return ResponseEntity.ok(solicitudService.assignTecnico(id, tecnicoId));
+    public ResponseEntity<Solicitud> assignTecnico(@PathVariable("id") Long id, @PathVariable("tecnicoId") Long tecnicoId,
+                                                   @RequestHeader(value = "Authorization", required = false) String authorization) {
+        return ResponseEntity.ok(solicitudService.assignTecnico(id, tecnicoId, authorization));
     }
 
     @PostMapping("/{id}/rechazar")

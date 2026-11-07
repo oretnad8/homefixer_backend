@@ -22,13 +22,17 @@ $puertos = @(
 
 $procesos = @()
 
-# Procesos escuchando en los puertos del proyecto
-$procesos += Get-NetTCPConnection -State Listen -LocalPort $puertos -ErrorAction SilentlyContinue |
+# Procesos que ocupan los puertos del proyecto, en CUALQUIER estado (no solo Listen):
+# un servicio colgado a mitad de arranque deja el socket en estado "Bound" y, si no se
+# mata, el siguiente intento falla con "Port XXXX was already in use".
+$procesos += Get-NetTCPConnection -LocalPort $puertos -ErrorAction SilentlyContinue |
     Select-Object -ExpandProperty OwningProcess
 
-# Maven (spring-boot:run) y Next.js que pudieran quedar sin puerto (p. ej. aún arrancando)
+# Maven (spring-boot:run), servicios lanzados a mano / desde el IDE (java con las clases
+# compiladas de este proyecto en el classpath) y Next.js que pudieran quedar sin puerto
 $procesos += Get-CimInstance Win32_Process | Where-Object {
     ($_.Name -eq 'java.exe' -and $_.CommandLine -like '*spring-boot:run*') -or
+    ($_.Name -eq 'java.exe' -and $_.CommandLine -like '*cloud.native\homefixer\*\target\classes*') -or
     ($_.Name -eq 'node.exe' -and $_.CommandLine -like '*fronend-home*')
 } | Select-Object -ExpandProperty ProcessId
 

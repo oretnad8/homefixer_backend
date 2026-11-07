@@ -1,0 +1,103 @@
+========================================================
+        INICIANDO ECOSISTEMA HOMEFIXER (CLOUD NATIVE)
+========================================================
+Cargando variables de entorno desde .env de forma segura...
+Cerrando instancias previas de HomeFixer...
+No habia procesos previos de HomeFixer.
+Instalando el modulo shared actualizado...
+
+Levantando RabbitMQ en MODO CLUSTER (2 nodos: rabbitmq1 + rabbitmq2)...
+Requisito EP4: 2 nodos integrados en cluster. Para 1 nodo usa: start-all.bat simple
+time="2026-11-07T10:04:34-03:00" level=warning msg="C:\\Users\\Pc Tester\\Desktop\\6to\\cloud.native\\homefixer\\docker-compose.cluster.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+time="2026-11-07T10:04:34-03:00" level=warning msg="Found orphan containers (kafka-ui, kafka-init, kafka3, kafka2, kafka1, zookeeper3, zookeeper1, zookeeper2, homefixer-rabbitmq) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up."
+ Container rabbitmq1 Running 
+ Container rabbitmq2 Running 
+ Container rabbitmq1 Waiting 
+ Container rabbitmq2 Waiting 
+ Container rabbitmq1 Healthy 
+ Container rabbitmq2 Healthy 
+
+Levantando Kafka (3 Zookeeper + 3 brokers)...
+Kafka saludable: kafka1, kafka2, kafka3.
+Creando/verificando topicos de Kafka (kafka-init)...
+Levantando Kafka UI (http://localhost:8095)...
+time="2026-11-07T10:04:43-03:00" level=warning msg="Found orphan containers (kafka-init, kafka3, kafka2, kafka1, zookeeper3, zookeeper1, zookeeper2, rabbitmq2, rabbitmq1, homefixer-rabbitmq) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up."
+ Container kafka-ui Running 
+
+========================================================
+INICIANDO MICROSERVICIOS EN SEGUNDO PLANO
+(Los logs detallados de cada uno se guardan en \logs)
+========================================================
+
+[eureka-server] Iniciando...
+[eureka-server] INICIADO CORRECTAMENTE
+
+[api-gateway] Iniciando...
+[api-gateway] INICIADO CORRECTAMENTE
+
+[ms-usuarios] Iniciando...
+[ms-usuarios] INICIADO CORRECTAMENTE
+
+[ms-autenticacion] Iniciando...
+[ms-autenticacion] INICIADO CORRECTAMENTE
+
+[ms-solicitudes] Iniciando...
+[ms-solicitudes] INICIADO CORRECTAMENTE
+
+[ms-ubicacion] Iniciando...
+[ms-ubicacion] INICIADO CORRECTAMENTE
+
+[ms-pagos] Iniciando...
+[ms-pagos] INICIADO CORRECTAMENTE
+
+[ms-valoraciones] Iniciando...
+[ms-valoraciones] INICIADO CORRECTAMENTE
+
+[ms-maestria] Iniciando...
+[ms-maestria] INICIADO CORRECTAMENTE
+
+[ms-notificacion] Iniciando...
+[ms-notificacion] INICIADO CORRECTAMENTE
+
+[ms-promociones] Iniciando...
+[ms-promociones] INICIADO CORRECTAMENTE
+
+[ms-reportes] Iniciando...
+[ms-reportes] INICIADO CORRECTAMENTE
+
+[ms-kafka-admin] Iniciando...
+[ms-kafka-admin] INICIADO CORRECTAMENTE
+
+[fronend-home] Compilando (npm run build)...
+[fronend-home] Iniciando (npm run start)...
+========================================================
+        TODOS LOS SERVICIOS ESTAN ACTIVOS
+========================================================
+
+Accesos Principales:
+ - Frontend Web:        http://localhost:3000
+ - API Gateway:         http://localhost:8080
+ - Eureka Discovery:    http://localhost:8761
+ - RabbitMQ Management: http://localhost:15672 (nodo 1) / http://localhost:15673 (nodo 2) (guest / guest)
+ - Kafka UI:            http://localhost:8095
+
+Endpoints Clave para la Evaluacion de Mensajeria (Rubrica 100%):
+ - Monitor de Colas:    GET  http://localhost:8080/api/notificaciones/mensajeria/colas
+ - Admin de Colas:      POST http://localhost:8080/api/admin/queues
+ - RPC Resumen Sol.:    GET  http://localhost:8080/api/reportes/solicitudes/resumen
+
+Para exponer tu API Gateway a Internet con Cloudflare:
+ cloudflared tunnel --url http://localhost:8080
+========================================================
+Por favor NO CIERRES esta ventana (Solo minimizala).
+Para apagar todos los servicios, presiona Ctrl+C varias veces.
+========================================================
+
+========================================================
+   RABBITMQ EN VIVO  (Ctrl+C para salir)
+========================================================
+  [ALERTA]    [NACK]      [RETRY]     [PUBLISH]   [CONFIRM]   [CONSUME]   [ACK]       [RPC]       [ADMIN]   
+
+10:15:04.338 ms-notificacion  [ALERTA] La cola reportes.solicitudes.queue no tiene consumidores conectados (0 mensajes pendientes)
+10:15:04.339 ms-notificacion  [ALERTA] La cola pagos.solicitudes.queue no tiene consumidores conectados (0 mensajes pendientes)
+10:15:04.341 ms-notificacion  [ALERTA] La cola usuarios.valoraciones.queue no tiene consumidores conectados (0 mensajes pendientes)

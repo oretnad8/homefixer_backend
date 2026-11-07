@@ -31,6 +31,7 @@ import java.util.EnumSet;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.Set;
 
 @Slf4j
@@ -60,6 +61,17 @@ public class SolicitudServiceImpl implements SolicitudService {
     @Override
     @Transactional
     public Solicitud createSolicitud(Solicitud solicitud) {
+        // Idempotencia: el mismo envío del formulario (doble clic, reintento de red) no crea otra solicitud
+        String clave = solicitud.getClaveIdempotencia();
+        if (clave != null && clave.isBlank()) solicitud.setClaveIdempotencia(clave = null);
+        if (clave != null) {
+            var existente = solicitudRepository.findByClaveIdempotencia(clave);
+            if (existente.isPresent()) {
+                log.info("Solicitud repetida (clave {}): se devuelve la #{}", clave, existente.get().getId());
+                return existente.get();
+            }
+        }
+
         LocalDateTime ahora = LocalDateTime.now();
         solicitud.setId(null);
         solicitud.setTecnicoId(null);
@@ -69,7 +81,9 @@ public class SolicitudServiceImpl implements SolicitudService {
         if (solicitud.getCategoria() == null) solicitud.setCategoria("otros");
         if (solicitud.getUrgencia() == null) solicitud.setUrgencia("normal");
         if (solicitud.getPrecioEstimado() == null) solicitud.setPrecioEstimado(0.0);
-        Solicitud guardada = solicitudRepository.save(solicitud);
+        // saveAndFlush: si dos envíos con la misma clave llegan a la vez, la restricción UNIQUE
+        // falla aquí (antes de publicar eventos) y el controlador devuelve la que ganó
+        Solicitud guardada = solicitudRepository.saveAndFlush(solicitud);
         registrarHito(guardada.getId(), EstadoSolicitud.CREADA.name(), ahora, null);
 
         List<Long> tecnicosIds = new ArrayList<>();
@@ -116,9 +130,20 @@ public class SolicitudServiceImpl implements SolicitudService {
 
     @Override
     @Transactional
-    public Solicitud assignTecnico(Long solicitudId, Long tecnicoId) {
-        Solicitud solicitud = getSolicitudById(solicitudId);
-        exigirEstado(solicitud, EstadoSolicitud.CREADA, "Esta solicitud ya tiene un técnico asignado.");
+    public Optional<Solicitud> findByClaveIdempotencia(String clave) {
+        return clave == null || clave.isBlank() ? Optional.empty() : solicitudRepository.findByClaveIdempotencia(clave);
+    }
+
+    @Override
+    @Transactional
+    public Solicitud assignTecnico(Long solicitudId, Long tecnicoId, String authorization) {
+        // La solicitud se publica a los especialistas cercanos: SOLO el técnico puede aceptarla.
+        // El cliente no puede "asignarse" un técnico por su cuenta.
+        exigirQueSeaElTecnico(tecnicoId, authorization);
+
+        Solicitud solicitud = solicitudRepository.findByIdParaActualizar(solicitudId)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Solicitud no encontrada."));
+        exigirEstado(solicitud, EstadoSolicitud.CREADA, "Esta solicitud ya fue aceptada por otro especialista.");
         if (tecnicoId.equals(solicitud.getClienteId())) {
             throw new ResponseStatusException(HttpStatus.CONFLICT, "No puedes tomar tu propia solicitud.");
         }
@@ -325,6 +350,29 @@ public class SolicitudServiceImpl implements SolicitudService {
         } catch (Exception e) {
             log.error("No se pudo consultar ms-usuarios para el técnico {}: {}", tecnicoId, e.getMessage());
             throw new ResponseStatusException(HttpStatus.SERVICE_UNAVAILABLE, "No se pudo validar al técnico. Intenta más tarde.");
+        }
+    }
+
+    /** Quien llama (dueño del token) debe ser el mismo técnico que acepta la solicitud. */
+    private void exigirQueSeaElTecnico(Long tecnicoId, String authorization) {
+        if (authorization == null || authorization.isBlank()) {
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Inicia sesión como técnico para aceptar solicitudes.");
+        }
+        Map<String, Object> usuario;
+        try {
+            usuario = usuariosFeignClient.usuarioActual(authorization);
+        } catch (FeignException.Unauthorized | FeignException.NotFound e) {
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Tu sesión no es válida. Vuelve a iniciar sesión.");
+        } catch (Exception e) {
+            log.error("No se pudo identificar al usuario en ms-usuarios: {}", e.getMessage());
+            throw new ResponseStatusException(HttpStatus.SERVICE_UNAVAILABLE, "No se pudo validar tu sesión. Intenta más tarde.");
+        }
+        Object id = usuario.get("id");
+        boolean esElTecnico = Boolean.TRUE.equals(usuario.get("esTecnico"))
+                && id instanceof Number n && n.longValue() == tecnicoId;
+        if (!esElTecnico) {
+            throw new ResponseStatusException(HttpStatus.FORBIDDEN,
+                    "Solo el especialista puede aceptar la solicitud. Espera a que un técnico la acepte.");
         }
     }
 
