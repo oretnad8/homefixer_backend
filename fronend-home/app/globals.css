@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+/*
+ * Tailwind v4 no lee tailwind.config.ts automáticamente: @config lo carga
+ * para que los tokens (primary, success, warning, danger, gold, ink, subtle,
+ * border, surface, bg-gradient-brand, rounded-card, shadow-card…) existan.
+ */
+@config "../tailwind.config.ts";
+
+@theme {
+  --font-sans: var(--font-inter), "Inter", system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-surface-muted text-ink font-sans antialiased;
+  }
+
+  /* Focus visible accesible en toda la app */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary-500;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: theme(colors.border) transparent;
+  }
+
+  /* Skeleton loader con brillo animado */
+  @keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+
+  .skeleton {
+    background: linear-gradient(
+      90deg,
+      theme(colors.border) 25%,
+      theme(colors.surface.muted) 50%,
+      theme(colors.border) 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite linear;
+  }
+
+  /* Cuadrícula decorativa para el mapa simulado */
+  .map-grid {
+    background-color: theme(colors.primary.50);
+    background-image:
+      linear-gradient(theme(colors.primary.100) 2px, transparent 2px),
+      linear-gradient(90deg, theme(colors.primary.100) 2px, transparent 2px);
+    background-size: 48px 48px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .skeleton { animation: none; }
+  }
+}
