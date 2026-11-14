@@ -85,48 +85,46 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.4)
 
-2026-11-07T10:15:54.476-03:00  INFO 26176 --- [ms-autenticacion] [           main] c.h.auth.MsAutenticacionApplication      : Starting MsAutenticacionApplication using Java 21.0.12 with PID 26176 (C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-autenticacion\target\classes started by drojas in C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-autenticacion)
-2026-11-07T10:15:54.478-03:00  INFO 26176 --- [ms-autenticacion] [           main] c.h.auth.MsAutenticacionApplication      : No active profile set, falling back to 1 default profile: "default"
-2026-11-07T10:15:55.216-03:00  INFO 26176 --- [ms-autenticacion] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=de616d2d-12ec-3c2c-967c-c9cbe8df7132
-2026-11-07T10:15:55.266-03:00  WARN 26176 --- [ms-autenticacion] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
-2026-11-07T10:15:55.272-03:00  WARN 26176 --- [ms-autenticacion] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2026-11-07T10:15:55.515-03:00  INFO 26176 --- [ms-autenticacion] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
-2026-11-07T10:15:55.526-03:00  INFO 26176 --- [ms-autenticacion] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-11-07T10:15:55.527-03:00  INFO 26176 --- [ms-autenticacion] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
-2026-11-07T10:15:55.589-03:00  INFO 26176 --- [ms-autenticacion] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-11-07T10:15:55.589-03:00  INFO 26176 --- [ms-autenticacion] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1041 ms
-2026-11-07T10:15:56.120-03:00  INFO 26176 --- [ms-autenticacion] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2026-11-07T10:15:56.155-03:00  WARN 26176 --- [ms-autenticacion] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2026-11-07T10:15:56.170-03:00  INFO 26176 --- [ms-autenticacion] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2026-11-07T10:15:56.235-03:00  INFO 26176 --- [ms-autenticacion] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2026-11-07T10:15:56.240-03:00  INFO 26176 --- [ms-autenticacion] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-11-07T10:15:56.254-03:00  INFO 26176 --- [ms-autenticacion] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2026-11-07T10:15:56.254-03:00  INFO 26176 --- [ms-autenticacion] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2026-11-07T10:15:56.254-03:00  INFO 26176 --- [ms-autenticacion] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2026-11-07T10:15:56.254-03:00  INFO 26176 --- [ms-autenticacion] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2026-11-07T10:15:56.254-03:00  INFO 26176 --- [ms-autenticacion] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2026-11-07T10:15:56.254-03:00  INFO 26176 --- [ms-autenticacion] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2026-11-07T10:15:56.254-03:00  INFO 26176 --- [ms-autenticacion] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2026-11-07T10:15:56.486-03:00  INFO 26176 --- [ms-autenticacion] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2026-11-07T10:15:56.488-03:00  INFO 26176 --- [ms-autenticacion] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2026-11-07T10:15:56.490-03:00  INFO 26176 --- [ms-autenticacion] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2026-11-07T10:15:56.493-03:00  INFO 26176 --- [ms-autenticacion] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1794057356493 with initial instances count: 0
-2026-11-07T10:15:56.494-03:00  INFO 26176 --- [ms-autenticacion] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MS-AUTENTICACION with eureka with status UP
-2026-11-07T10:15:56.495-03:00  INFO 26176 --- [ms-autenticacion] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1794057356495, current=UP, previous=STARTING]
-2026-11-07T10:15:56.496-03:00  INFO 26176 --- [ms-autenticacion] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-AUTENTICACION/DROJAS.localdomain:ms-autenticacion:8083: registering service...
-2026-11-07T10:15:56.508-03:00  INFO 26176 --- [ms-autenticacion] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8083 (http) with context path ''
-2026-11-07T10:15:56.508-03:00  INFO 26176 --- [ms-autenticacion] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8083
-2026-11-07T10:15:56.517-03:00  INFO 26176 --- [ms-autenticacion] [           main] c.h.auth.MsAutenticacionApplication      : Started MsAutenticacionApplication in 2.357 seconds (process running for 2.614)
-2026-11-07T10:15:56.526-03:00  INFO 26176 --- [ms-autenticacion] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-AUTENTICACION/DROJAS.localdomain:ms-autenticacion:8083 - registration status: 204
-2026-11-07T10:16:26.492-03:00  INFO 26176 --- [ms-autenticacion] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2026-11-07T10:16:26.492-03:00  INFO 26176 --- [ms-autenticacion] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2026-11-07T10:16:26.492-03:00  INFO 26176 --- [ms-autenticacion] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2026-11-07T10:16:26.492-03:00  INFO 26176 --- [ms-autenticacion] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2026-11-07T10:16:26.492-03:00  INFO 26176 --- [ms-autenticacion] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2026-11-07T10:16:26.492-03:00  INFO 26176 --- [ms-autenticacion] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
-2026-11-07T10:16:26.492-03:00  INFO 26176 --- [ms-autenticacion] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2026-11-07T10:16:26.521-03:00  INFO 26176 --- [ms-autenticacion] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2026-11-07T10:20:56.258-03:00  INFO 26176 --- [ms-autenticacion] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-11-07T10:25:56.272-03:00  INFO 26176 --- [ms-autenticacion] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-11-07T10:30:56.276-03:00  INFO 26176 --- [ms-autenticacion] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-^C¿Desea terminar el trabajo por lotes (S/N)? 
+2026-11-14T09:36:24.735-03:00  INFO 16912 --- [ms-autenticacion] [           main] c.h.auth.MsAutenticacionApplication      : Starting MsAutenticacionApplication using Java 21.0.12 with PID 16912 (C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-autenticacion\target\classes started by drojas in C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-autenticacion)
+2026-11-14T09:36:24.740-03:00  INFO 16912 --- [ms-autenticacion] [           main] c.h.auth.MsAutenticacionApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-11-14T09:36:25.501-03:00  INFO 16912 --- [ms-autenticacion] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=de616d2d-12ec-3c2c-967c-c9cbe8df7132
+2026-11-14T09:36:25.534-03:00  WARN 16912 --- [ms-autenticacion] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-11-14T09:36:25.538-03:00  WARN 16912 --- [ms-autenticacion] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-11-14T09:36:25.741-03:00  INFO 16912 --- [ms-autenticacion] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2026-11-14T09:36:25.761-03:00  INFO 16912 --- [ms-autenticacion] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-14T09:36:25.762-03:00  INFO 16912 --- [ms-autenticacion] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-11-14T09:36:25.812-03:00  INFO 16912 --- [ms-autenticacion] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-14T09:36:25.813-03:00  INFO 16912 --- [ms-autenticacion] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1004 ms
+2026-11-14T09:36:26.395-03:00  INFO 16912 --- [ms-autenticacion] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-11-14T09:36:26.436-03:00  WARN 16912 --- [ms-autenticacion] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-11-14T09:36:26.461-03:00  INFO 16912 --- [ms-autenticacion] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-11-14T09:36:26.538-03:00  INFO 16912 --- [ms-autenticacion] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-11-14T09:36:26.544-03:00  INFO 16912 --- [ms-autenticacion] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-14T09:36:26.560-03:00  INFO 16912 --- [ms-autenticacion] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-11-14T09:36:26.560-03:00  INFO 16912 --- [ms-autenticacion] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-11-14T09:36:26.560-03:00  INFO 16912 --- [ms-autenticacion] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-11-14T09:36:26.560-03:00  INFO 16912 --- [ms-autenticacion] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-11-14T09:36:26.560-03:00  INFO 16912 --- [ms-autenticacion] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-11-14T09:36:26.560-03:00  INFO 16912 --- [ms-autenticacion] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-11-14T09:36:26.560-03:00  INFO 16912 --- [ms-autenticacion] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-11-14T09:36:26.820-03:00  INFO 16912 --- [ms-autenticacion] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-11-14T09:36:26.826-03:00  INFO 16912 --- [ms-autenticacion] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-11-14T09:36:26.828-03:00  INFO 16912 --- [ms-autenticacion] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-11-14T09:36:26.828-03:00  INFO 16912 --- [ms-autenticacion] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1794659786828 with initial instances count: 0
+2026-11-14T09:36:26.828-03:00  INFO 16912 --- [ms-autenticacion] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MS-AUTENTICACION with eureka with status UP
+2026-11-14T09:36:26.828-03:00  INFO 16912 --- [ms-autenticacion] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1794659786828, current=UP, previous=STARTING]
+2026-11-14T09:36:26.834-03:00  INFO 16912 --- [ms-autenticacion] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-AUTENTICACION/DROJAS.localdomain:ms-autenticacion:8083: registering service...
+2026-11-14T09:36:26.853-03:00  INFO 16912 --- [ms-autenticacion] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8083 (http) with context path ''
+2026-11-14T09:36:26.853-03:00  INFO 16912 --- [ms-autenticacion] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8083
+2026-11-14T09:36:26.861-03:00  INFO 16912 --- [ms-autenticacion] [           main] c.h.auth.MsAutenticacionApplication      : Started MsAutenticacionApplication in 2.73 seconds (process running for 3.408)
+2026-11-14T09:36:26.870-03:00  INFO 16912 --- [ms-autenticacion] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-AUTENTICACION/DROJAS.localdomain:ms-autenticacion:8083 - registration status: 204
+2026-11-14T09:36:56.840-03:00  INFO 16912 --- [ms-autenticacion] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-11-14T09:36:56.840-03:00  INFO 16912 --- [ms-autenticacion] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-11-14T09:36:56.841-03:00  INFO 16912 --- [ms-autenticacion] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-11-14T09:36:56.841-03:00  INFO 16912 --- [ms-autenticacion] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-11-14T09:36:56.841-03:00  INFO 16912 --- [ms-autenticacion] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-11-14T09:36:56.841-03:00  INFO 16912 --- [ms-autenticacion] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2026-11-14T09:36:56.841-03:00  INFO 16912 --- [ms-autenticacion] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-11-14T09:36:56.868-03:00  INFO 16912 --- [ms-autenticacion] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-11-14T09:41:26.603-03:00  INFO 16912 --- [ms-autenticacion] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-14T09:46:26.609-03:00  INFO 16912 --- [ms-autenticacion] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

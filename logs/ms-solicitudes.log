@@ -85,450 +85,60 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.4)
 
-2026-11-07T10:36:38.186-03:00  INFO 27552 --- [ms-solicitudes] [           main] c.h.s.MsSolicitudesApplication           : Starting MsSolicitudesApplication using Java 21.0.12 with PID 27552 (C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-solicitudes\target\classes started by drojas in C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-solicitudes)
-2026-11-07T10:36:38.188-03:00  INFO 27552 --- [ms-solicitudes] [           main] c.h.s.MsSolicitudesApplication           : No active profile set, falling back to 1 default profile: "default"
-2026-11-07T10:36:38.905-03:00  INFO 27552 --- [ms-solicitudes] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-11-07T10:36:39.017-03:00  INFO 27552 --- [ms-solicitudes] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 106 ms. Found 4 JPA repository interfaces.
-2026-11-07T10:36:39.225-03:00  INFO 27552 --- [ms-solicitudes] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b71162c8-647b-352f-8395-4debcf85c8ce
-2026-11-07T10:36:39.336-03:00  WARN 27552 --- [ms-solicitudes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
-2026-11-07T10:36:39.338-03:00  WARN 27552 --- [ms-solicitudes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2026-11-07T10:36:39.595-03:00  INFO 27552 --- [ms-solicitudes] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
-2026-11-07T10:36:39.611-03:00  INFO 27552 --- [ms-solicitudes] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-11-07T10:36:39.611-03:00  INFO 27552 --- [ms-solicitudes] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
-2026-11-07T10:36:39.692-03:00  INFO 27552 --- [ms-solicitudes] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-11-07T10:36:39.692-03:00  INFO 27552 --- [ms-solicitudes] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1449 ms
-2026-11-07T10:36:39.848-03:00  INFO 27552 --- [ms-solicitudes] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-11-07T10:36:39.892-03:00  INFO 27552 --- [ms-solicitudes] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2026-11-07T10:36:39.923-03:00  INFO 27552 --- [ms-solicitudes] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-11-07T10:36:40.121-03:00  INFO 27552 --- [ms-solicitudes] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-11-07T10:36:40.147-03:00  INFO 27552 --- [ms-solicitudes] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-11-07T10:36:42.632-03:00  INFO 27552 --- [ms-solicitudes] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@521c67f0
-2026-11-07T10:36:42.634-03:00  INFO 27552 --- [ms-solicitudes] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-11-07T10:36:42.877-03:00  WARN 27552 --- [ms-solicitudes] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-11-07T10:36:44.108-03:00  INFO 27552 --- [ms-solicitudes] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-Hibernate: alter table if exists solicitudes add column clave_idempotencia varchar(64)
-Hibernate: alter table if exists solicitudes drop constraint if exists UK_gnd336alfl0lqvs1m7m8psqep
-2026-11-07T10:36:46.352-03:00  WARN 27552 --- [ms-solicitudes] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2026-11-07T10:36:46.353-03:00  WARN 27552 --- [ms-solicitudes] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : constraint "uk_gnd336alfl0lqvs1m7m8psqep" of relation "solicitudes" does not exist, skipping
-Hibernate: alter table if exists solicitudes add constraint UK_gnd336alfl0lqvs1m7m8psqep unique (clave_idempotencia)
-2026-11-07T10:36:46.579-03:00  INFO 27552 --- [ms-solicitudes] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-11-07T10:36:46.833-03:00  INFO 27552 --- [ms-solicitudes] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-11-07T10:36:47.391-03:00  WARN 27552 --- [ms-solicitudes] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-11-07T10:36:47.505-03:00  INFO 27552 --- [ms-solicitudes] [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'ms-ubicacion' URL not provided. Will try picking an instance via load-balancing.
-2026-11-07T10:36:47.588-03:00  INFO 27552 --- [ms-solicitudes] [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'ms-usuarios' URL not provided. Will try picking an instance via load-balancing.
-2026-11-07T10:36:48.650-03:00  INFO 27552 --- [ms-solicitudes] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2026-11-07T10:36:48.685-03:00  WARN 27552 --- [ms-solicitudes] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2026-11-07T10:36:48.766-03:00  INFO 27552 --- [ms-solicitudes] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2026-11-07T10:36:48.881-03:00  INFO 27552 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2026-11-07T10:36:48.889-03:00  INFO 27552 --- [ms-solicitudes] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-11-07T10:36:48.912-03:00  INFO 27552 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2026-11-07T10:36:48.912-03:00  INFO 27552 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2026-11-07T10:36:48.912-03:00  INFO 27552 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2026-11-07T10:36:48.912-03:00  INFO 27552 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2026-11-07T10:36:48.912-03:00  INFO 27552 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2026-11-07T10:36:48.912-03:00  INFO 27552 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2026-11-07T10:36:48.912-03:00  INFO 27552 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2026-11-07T10:36:49.101-03:00  INFO 27552 --- [ms-solicitudes] [           main] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on GET request for "http://localhost:8761/eureka/apps/": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8761/eureka/apps/": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
-	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
-	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:672)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getApplicationsInternal(RestTemplateEurekaHttpClient.java:145)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getApplications(RestTemplateEurekaHttpClient.java:135)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
-	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
-	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
-	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1045)
-	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:958)
-	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:396)
-	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:247)
-	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:242)
-	at org.springframework.cloud.netflix.eureka.CloudEurekaClient.<init>(CloudEurekaClient.java:68)
-	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration.eurekaClient(EurekaClientAutoConfiguration.java:321)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:140)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$1(AbstractBeanFactory.java:365)
-	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.getBean(GenericScope.java:375)
-	at org.springframework.cloud.context.scope.GenericScope.get(GenericScope.java:179)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:362)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
-	at org.springframework.aop.target.SimpleBeanTargetSource.getTarget(SimpleBeanTargetSource.java:35)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getTargetObject(EurekaRegistration.java:128)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getEurekaClient(EurekaRegistration.java:116)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:281)
-	at org.springframework.cloud.context.scope.GenericScope$LockedScopedProxyFactoryBean.invoke(GenericScope.java:482)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765)
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:717)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration$$SpringCGLIB$$0.getEurekaClient(<generated>)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.maybeInitializeClient(EurekaServiceRegistry.java:83)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.register(EurekaServiceRegistry.java:66)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.start(EurekaAutoServiceRegistration.java:89)
-	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:288)
-	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:471)
-	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
-	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:260)
-	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:205)
-	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:981)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
-	at com.homefixer.solicitudes.MsSolicitudesApplication.main(MsSolicitudesApplication.java:21)
-Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:690)
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
-	at java.base/java.net.Socket.connect(Socket.java:751)
-	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:91)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
-	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:90)
-	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:123)
-	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:184)
-	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:447)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
-	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
-	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
-	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:95)
-	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
-	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$0(RestTemplateTransportClientFactory.java:143)
-	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
-	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
-	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
-	... 63 more
-
-2026-11-07T10:36:49.101-03:00  WARN 27552 --- [ms-solicitudes] [           main] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on GET request for "http://localhost:8761/eureka/apps/": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-2026-11-07T10:36:49.102-03:00  INFO 27552 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-SOLICITUDES/DROJAS.localdomain:ms-solicitudes:8082 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
-	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1045)
-	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:958)
-	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:396)
-	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:247)
-	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:242)
-	at org.springframework.cloud.netflix.eureka.CloudEurekaClient.<init>(CloudEurekaClient.java:68)
-	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration.eurekaClient(EurekaClientAutoConfiguration.java:321)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:140)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$1(AbstractBeanFactory.java:365)
-	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.getBean(GenericScope.java:375)
-	at org.springframework.cloud.context.scope.GenericScope.get(GenericScope.java:179)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:362)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
-	at org.springframework.aop.target.SimpleBeanTargetSource.getTarget(SimpleBeanTargetSource.java:35)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getTargetObject(EurekaRegistration.java:128)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getEurekaClient(EurekaRegistration.java:116)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:281)
-	at org.springframework.cloud.context.scope.GenericScope$LockedScopedProxyFactoryBean.invoke(GenericScope.java:482)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765)
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:717)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration$$SpringCGLIB$$0.getEurekaClient(<generated>)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.maybeInitializeClient(EurekaServiceRegistry.java:83)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.register(EurekaServiceRegistry.java:66)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.start(EurekaAutoServiceRegistration.java:89)
-	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:288)
-	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:471)
-	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
-	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:260)
-	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:205)
-	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:981)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
-	at com.homefixer.solicitudes.MsSolicitudesApplication.main(MsSolicitudesApplication.java:21)
-
-2026-11-07T10:36:49.102-03:00  INFO 27552 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from primary servers failed
-2026-11-07T10:36:49.102-03:00  WARN 27552 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Using default backup registry implementation which does not do anything.
-2026-11-07T10:36:49.102-03:00  INFO 27552 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from backup servers failed
-2026-11-07T10:36:49.103-03:00  INFO 27552 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2026-11-07T10:36:49.104-03:00  INFO 27552 --- [ms-solicitudes] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2026-11-07T10:36:49.108-03:00  INFO 27552 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1794058609107 with initial instances count: 0
-2026-11-07T10:36:49.109-03:00  INFO 27552 --- [ms-solicitudes] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MS-SOLICITUDES with eureka with status UP
-2026-11-07T10:36:49.109-03:00  INFO 27552 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1794058609109, current=UP, previous=STARTING]
-2026-11-07T10:36:49.111-03:00  INFO 27552 --- [ms-solicitudes] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-SOLICITUDES/DROJAS.localdomain:ms-solicitudes:8082: registering service...
-2026-11-07T10:36:49.128-03:00  INFO 27552 --- [ms-solicitudes] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path ''
-2026-11-07T10:36:49.129-03:00  INFO 27552 --- [ms-solicitudes] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
-2026-11-07T10:36:49.134-03:00  INFO 27552 --- [ms-solicitudes] [           main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
-2026-11-07T10:36:49.144-03:00  INFO 27552 --- [ms-solicitudes] [nfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on POST request for "http://localhost:8761/eureka/apps/MS-SOLICITUDES": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/MS-SOLICITUDES": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
-	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
-	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:672)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:77)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
-	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
-	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
-	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:820)
-	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
-	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:690)
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
-	at java.base/java.net.Socket.connect(Socket.java:751)
-	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:91)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
-	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:90)
-	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:123)
-	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:184)
-	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:447)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
-	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
-	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
-	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:95)
-	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
-	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$0(RestTemplateTransportClientFactory.java:143)
-	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
-	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
-	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
-	... 22 more
-
-2026-11-07T10:36:49.144-03:00  WARN 27552 --- [ms-solicitudes] [nfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/MS-SOLICITUDES": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-2026-11-07T10:36:49.144-03:00  WARN 27552 --- [ms-solicitudes] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-SOLICITUDES/DROJAS.localdomain:ms-solicitudes:8082 - registration failed Cannot execute request on any known server
-
-com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:820) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) ~[eureka-client-2.0.2.jar:2.0.2]
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
-
-2026-11-07T10:36:49.147-03:00  WARN 27552 --- [ms-solicitudes] [nfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
-
-com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:820) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) ~[eureka-client-2.0.2.jar:2.0.2]
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
-
-2026-11-07T10:36:49.174-03:00  INFO 27552 --- [ms-solicitudes] [           main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#5981b51:0/SimpleConnection@1c6912db [delegate=amqp://guest@127.0.0.1:5672/, localPort=63697]
-2026-11-07T10:36:49.243-03:00  INFO 27552 --- [ms-solicitudes] [           main] c.h.s.MsSolicitudesApplication           : Started MsSolicitudesApplication in 11.386 seconds (process running for 11.706)
-2026-11-07T10:36:51.086-03:00  INFO 27552 --- [ms-solicitudes] [nio-8082-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-11-07T10:36:51.086-03:00  INFO 27552 --- [ms-solicitudes] [nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-11-07T10:36:51.087-03:00  INFO 27552 --- [ms-solicitudes] [nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-Hibernate: select s1_0.id,s1_0.categoria,s1_0.clave_idempotencia,s1_0.cliente_id,s1_0.cliente_nombre,s1_0.coordenadas,s1_0.descripcion,s1_0.direccion,s1_0.estado_solicitud,s1_0.fecha,s1_0.fecha_actualizacion,s1_0.notas_cierre,s1_0.precio_estimado,s1_0.tecnico_calificacion,s1_0.tecnico_especialidad,s1_0.tecnico_id,s1_0.tecnico_nombre,s1_0.tecnico_telefono,s1_0.urgencia from solicitudes s1_0 where s1_0.clave_idempotencia=?
-Hibernate: insert into solicitudes (categoria,clave_idempotencia,cliente_id,cliente_nombre,coordenadas,descripcion,direccion,estado_solicitud,fecha,fecha_actualizacion,notas_cierre,precio_estimado,tecnico_calificacion,tecnico_especialidad,tecnico_id,tecnico_nombre,tecnico_telefono,urgencia) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
-Hibernate: insert into solicitud_hitos (detalle,fecha,hito,solicitud_id) values (?,?,?,?)
-2026-11-07T10:36:52.121-03:00  WARN 27552 --- [ms-solicitudes] [nio-8082-exec-2] o.s.c.l.core.RoundRobinLoadBalancer      : No servers available for service: ms-ubicacion
-2026-11-07T10:36:52.124-03:00  WARN 27552 --- [ms-solicitudes] [nio-8082-exec-2] RetryableFeignBlockingLoadBalancerClient : Service instance was not resolved, executing the original request
-2026-11-07T10:36:54.855-03:00  WARN 27552 --- [ms-solicitudes] [nio-8082-exec-2] o.s.c.l.core.RoundRobinLoadBalancer      : No servers available for service: ms-ubicacion
-2026-11-07T10:36:54.856-03:00  WARN 27552 --- [ms-solicitudes] [nio-8082-exec-2] RetryableFeignBlockingLoadBalancerClient : Service instance was not resolved, executing the original request
-2026-11-07T10:36:54.863-03:00  WARN 27552 --- [ms-solicitudes] [nio-8082-exec-2] c.h.s.service.SolicitudServiceImpl       : No se pudieron buscar técnicos cercanos: ms-ubicacion executing GET http://ms-ubicacion/api/ubicacion/buscar?coordenadas=-33.45%2C-70.66&categoria=plomeria
-2026-11-07T10:36:54.864-03:00  INFO 27552 --- [ms-solicitudes] [nio-8082-exec-2] c.h.shared.messaging.EventPublisher      : [PUBLISH] Publicando evento 3e3a1a7c-da7b-47f9-885d-eff24db5d90b [solicitud.creada] solicitud=15
-2026-11-07T10:36:54.884-03:00  INFO 27552 --- [ms-solicitudes] [nectionFactory2] c.h.shared.messaging.EventPublisher      : [CONFIRM] Broker confirmó (ACK) el evento 3e3a1a7c-da7b-47f9-885d-eff24db5d90b
-2026-11-07T10:36:54.906-03:00  INFO 27552 --- [ms-solicitudes] [nio-8082-exec-2] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
-	acks = -1
-	auto.include.jmx.reporter = true
-	batch.size = 32768
-	bootstrap.servers = [localhost:9092, localhost:9093, localhost:9094]
-	buffer.memory = 33554432
-	client.dns.lookup = use_all_dns_ips
-	client.id = ms-solicitudes-1
-	compression.type = lz4
-	connections.max.idle.ms = 540000
-	delivery.timeout.ms = 30000
-	enable.idempotence = true
-	interceptor.classes = []
-	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
-	linger.ms = 10
-	max.block.ms = 3000
-	max.in.flight.requests.per.connection = 5
-	max.request.size = 1048576
-	metadata.max.age.ms = 300000
-	metadata.max.idle.ms = 300000
-	metric.reporters = []
-	metrics.num.samples = 2
-	metrics.recording.level = INFO
-	metrics.sample.window.ms = 30000
-	partitioner.adaptive.partitioning.enable = true
-	partitioner.availability.timeout.ms = 0
-	partitioner.class = null
-	partitioner.ignore.keys = false
-	receive.buffer.bytes = 32768
-	reconnect.backoff.max.ms = 1000
-	reconnect.backoff.ms = 50
-	request.timeout.ms = 10000
-	retries = 10
-	retry.backoff.ms = 100
-	sasl.client.callback.handler.class = null
-	sasl.jaas.config = null
-	sasl.kerberos.kinit.cmd = /usr/bin/kinit
-	sasl.kerberos.min.time.before.relogin = 60000
-	sasl.kerberos.service.name = null
-	sasl.kerberos.ticket.renew.jitter = 0.05
-	sasl.kerberos.ticket.renew.window.factor = 0.8
-	sasl.login.callback.handler.class = null
-	sasl.login.class = null
-	sasl.login.connect.timeout.ms = null
-	sasl.login.read.timeout.ms = null
-	sasl.login.refresh.buffer.seconds = 300
-	sasl.login.refresh.min.period.seconds = 60
-	sasl.login.refresh.window.factor = 0.8
-	sasl.login.refresh.window.jitter = 0.05
-	sasl.login.retry.backoff.max.ms = 10000
-	sasl.login.retry.backoff.ms = 100
-	sasl.mechanism = GSSAPI
-	sasl.oauthbearer.clock.skew.seconds = 30
-	sasl.oauthbearer.expected.audience = null
-	sasl.oauthbearer.expected.issuer = null
-	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
-	sasl.oauthbearer.jwks.endpoint.url = null
-	sasl.oauthbearer.scope.claim.name = scope
-	sasl.oauthbearer.sub.claim.name = sub
-	sasl.oauthbearer.token.endpoint.url = null
-	security.protocol = PLAINTEXT
-	security.providers = null
-	send.buffer.bytes = 131072
-	socket.connection.setup.timeout.max.ms = 30000
-	socket.connection.setup.timeout.ms = 10000
-	ssl.cipher.suites = null
-	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
-	ssl.endpoint.identification.algorithm = https
-	ssl.engine.factory.class = null
-	ssl.key.password = null
-	ssl.keymanager.algorithm = SunX509
-	ssl.keystore.certificate.chain = null
-	ssl.keystore.key = null
-	ssl.keystore.location = null
-	ssl.keystore.password = null
-	ssl.keystore.type = JKS
-	ssl.protocol = TLSv1.3
-	ssl.provider = null
-	ssl.secure.random.implementation = null
-	ssl.trustmanager.algorithm = PKIX
-	ssl.truststore.certificates = null
-	ssl.truststore.location = null
-	ssl.truststore.password = null
-	ssl.truststore.type = JKS
-	transaction.timeout.ms = 60000
-	transactional.id = null
-	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
-
-2026-11-07T10:36:54.932-03:00  INFO 27552 --- [ms-solicitudes] [nio-8082-exec-2] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=ms-solicitudes-1] Instantiated an idempotent producer.
-2026-11-07T10:36:54.969-03:00  INFO 27552 --- [ms-solicitudes] [nio-8082-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
-2026-11-07T10:36:54.969-03:00  INFO 27552 --- [ms-solicitudes] [nio-8082-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
-2026-11-07T10:36:54.969-03:00  INFO 27552 --- [ms-solicitudes] [nio-8082-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1794058614966
-2026-11-07T10:36:55.262-03:00  INFO 27552 --- [ms-solicitudes] [s-solicitudes-1] org.apache.kafka.clients.Metadata        : [Producer clientId=ms-solicitudes-1] Cluster ID: VWi1Ej-hR5-sBUuujyKUoA
-2026-11-07T10:36:55.263-03:00  INFO 27552 --- [ms-solicitudes] [s-solicitudes-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=ms-solicitudes-1] ProducerId set to 5000 with epoch 0
-2026-11-07T10:36:55.374-03:00  INFO 27552 --- [ms-solicitudes] [s-solicitudes-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.solicitudes.eventos SOLICITUD_CREADA key=15 -> partition=0 offset=217
-Hibernate: select s1_0.id,s1_0.categoria,s1_0.clave_idempotencia,s1_0.cliente_id,s1_0.cliente_nombre,s1_0.coordenadas,s1_0.descripcion,s1_0.direccion,s1_0.estado_solicitud,s1_0.fecha,s1_0.fecha_actualizacion,s1_0.notas_cierre,s1_0.precio_estimado,s1_0.tecnico_calificacion,s1_0.tecnico_especialidad,s1_0.tecnico_id,s1_0.tecnico_nombre,s1_0.tecnico_telefono,s1_0.urgencia from solicitudes s1_0 where s1_0.clave_idempotencia=?
-2026-11-07T10:36:55.755-03:00  INFO 27552 --- [ms-solicitudes] [nio-8082-exec-3] c.h.s.service.SolicitudServiceImpl       : Solicitud repetida (clave test-doble-clic-001): se devuelve la #15
-Hibernate: select s1_0.id,s1_0.categoria,s1_0.clave_idempotencia,s1_0.cliente_id,s1_0.cliente_nombre,s1_0.coordenadas,s1_0.descripcion,s1_0.direccion,s1_0.estado_solicitud,s1_0.fecha,s1_0.fecha_actualizacion,s1_0.notas_cierre,s1_0.precio_estimado,s1_0.tecnico_calificacion,s1_0.tecnico_especialidad,s1_0.tecnico_id,s1_0.tecnico_nombre,s1_0.tecnico_telefono,s1_0.urgencia from solicitudes s1_0 where s1_0.clave_idempotencia=?
-2026-11-07T10:36:56.165-03:00  INFO 27552 --- [ms-solicitudes] [nio-8082-exec-1] c.h.s.service.SolicitudServiceImpl       : Solicitud repetida (clave test-doble-clic-001): se devuelve la #15
+2026-11-14T09:36:34.221-03:00  INFO 27840 --- [ms-solicitudes] [           main] c.h.s.MsSolicitudesApplication           : Starting MsSolicitudesApplication using Java 21.0.12 with PID 27840 (C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-solicitudes\target\classes started by drojas in C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-solicitudes)
+2026-11-14T09:36:34.224-03:00  INFO 27840 --- [ms-solicitudes] [           main] c.h.s.MsSolicitudesApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-11-14T09:36:35.026-03:00  INFO 27840 --- [ms-solicitudes] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-14T09:36:35.156-03:00  INFO 27840 --- [ms-solicitudes] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 123 ms. Found 4 JPA repository interfaces.
+2026-11-14T09:36:35.443-03:00  INFO 27840 --- [ms-solicitudes] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b71162c8-647b-352f-8395-4debcf85c8ce
+2026-11-14T09:36:35.632-03:00  WARN 27840 --- [ms-solicitudes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-11-14T09:36:35.634-03:00  WARN 27840 --- [ms-solicitudes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-11-14T09:36:35.931-03:00  INFO 27840 --- [ms-solicitudes] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2026-11-14T09:36:35.945-03:00  INFO 27840 --- [ms-solicitudes] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-14T09:36:35.946-03:00  INFO 27840 --- [ms-solicitudes] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-11-14T09:36:36.039-03:00  INFO 27840 --- [ms-solicitudes] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-14T09:36:36.039-03:00  INFO 27840 --- [ms-solicitudes] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1754 ms
+2026-11-14T09:36:36.172-03:00  INFO 27840 --- [ms-solicitudes] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-14T09:36:36.213-03:00  INFO 27840 --- [ms-solicitudes] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-11-14T09:36:36.234-03:00  INFO 27840 --- [ms-solicitudes] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-14T09:36:36.388-03:00  INFO 27840 --- [ms-solicitudes] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-14T09:36:36.406-03:00  INFO 27840 --- [ms-solicitudes] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-14T09:36:38.582-03:00  INFO 27840 --- [ms-solicitudes] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6614289a
+2026-11-14T09:36:38.584-03:00  INFO 27840 --- [ms-solicitudes] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-14T09:36:38.808-03:00  WARN 27840 --- [ms-solicitudes] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-14T09:36:39.954-03:00  INFO 27840 --- [ms-solicitudes] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-14T09:36:41.364-03:00  INFO 27840 --- [ms-solicitudes] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-14T09:36:41.602-03:00  INFO 27840 --- [ms-solicitudes] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-11-14T09:36:42.129-03:00  WARN 27840 --- [ms-solicitudes] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-11-14T09:36:42.190-03:00  INFO 27840 --- [ms-solicitudes] [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'ms-ubicacion' URL not provided. Will try picking an instance via load-balancing.
+2026-11-14T09:36:42.240-03:00  INFO 27840 --- [ms-solicitudes] [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'ms-usuarios' URL not provided. Will try picking an instance via load-balancing.
+2026-11-14T09:36:42.842-03:00  INFO 27840 --- [ms-solicitudes] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-11-14T09:36:42.862-03:00  WARN 27840 --- [ms-solicitudes] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-11-14T09:36:42.910-03:00  INFO 27840 --- [ms-solicitudes] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-11-14T09:36:42.979-03:00  INFO 27840 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-11-14T09:36:42.982-03:00  INFO 27840 --- [ms-solicitudes] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-14T09:36:42.997-03:00  INFO 27840 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-11-14T09:36:42.997-03:00  INFO 27840 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-11-14T09:36:42.997-03:00  INFO 27840 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-11-14T09:36:42.997-03:00  INFO 27840 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-11-14T09:36:42.997-03:00  INFO 27840 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-11-14T09:36:42.997-03:00  INFO 27840 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-11-14T09:36:42.997-03:00  INFO 27840 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-11-14T09:36:43.201-03:00  INFO 27840 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-11-14T09:36:43.204-03:00  INFO 27840 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-11-14T09:36:43.205-03:00  INFO 27840 --- [ms-solicitudes] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-11-14T09:36:43.209-03:00  INFO 27840 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1794659803208 with initial instances count: 3
+2026-11-14T09:36:43.211-03:00  INFO 27840 --- [ms-solicitudes] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MS-SOLICITUDES with eureka with status UP
+2026-11-14T09:36:43.211-03:00  INFO 27840 --- [ms-solicitudes] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1794659803211, current=UP, previous=STARTING]
+2026-11-14T09:36:43.212-03:00  INFO 27840 --- [ms-solicitudes] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-SOLICITUDES/DROJAS.localdomain:ms-solicitudes:8082: registering service...
+2026-11-14T09:36:43.226-03:00  INFO 27840 --- [ms-solicitudes] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path ''
+2026-11-14T09:36:43.228-03:00  INFO 27840 --- [ms-solicitudes] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2026-11-14T09:36:43.234-03:00  INFO 27840 --- [ms-solicitudes] [           main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-11-14T09:36:43.245-03:00  INFO 27840 --- [ms-solicitudes] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-SOLICITUDES/DROJAS.localdomain:ms-solicitudes:8082 - registration status: 204
+2026-11-14T09:36:43.273-03:00  INFO 27840 --- [ms-solicitudes] [           main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#5308c994:0/SimpleConnection@27c2b83a [delegate=amqp://guest@127.0.0.1:5672/, localPort=53031]
+2026-11-14T09:36:43.348-03:00  INFO 27840 --- [ms-solicitudes] [           main] c.h.s.MsSolicitudesApplication           : Started MsSolicitudesApplication in 9.465 seconds (process running for 9.802)
+2026-11-14T09:41:43.004-03:00  INFO 27840 --- [ms-solicitudes] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-14T09:42:57.203-03:00  INFO 27840 --- [ms-solicitudes] [nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-14T09:42:57.204-03:00  INFO 27840 --- [ms-solicitudes] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-14T09:42:57.207-03:00  INFO 27840 --- [ms-solicitudes] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
 Hibernate: select s1_0.id,s1_0.categoria,s1_0.clave_idempotencia,s1_0.cliente_id,s1_0.cliente_nombre,s1_0.coordenadas,s1_0.descripcion,s1_0.direccion,s1_0.estado_solicitud,s1_0.fecha,s1_0.fecha_actualizacion,s1_0.notas_cierre,s1_0.precio_estimado,s1_0.tecnico_calificacion,s1_0.tecnico_especialidad,s1_0.tecnico_id,s1_0.tecnico_nombre,s1_0.tecnico_telefono,s1_0.urgencia from solicitudes s1_0 where s1_0.cliente_id=? order by s1_0.fecha desc
-Hibernate: select s1_0.id,s1_0.categoria,s1_0.clave_idempotencia,s1_0.cliente_id,s1_0.cliente_nombre,s1_0.coordenadas,s1_0.descripcion,s1_0.direccion,s1_0.estado_solicitud,s1_0.fecha,s1_0.fecha_actualizacion,s1_0.notas_cierre,s1_0.precio_estimado,s1_0.tecnico_calificacion,s1_0.tecnico_especialidad,s1_0.tecnico_id,s1_0.tecnico_nombre,s1_0.tecnico_telefono,s1_0.urgencia from solicitudes s1_0 where s1_0.cliente_id=? order by s1_0.fecha desc
-Hibernate: select s1_0.id,s1_0.categoria,s1_0.clave_idempotencia,s1_0.cliente_id,s1_0.cliente_nombre,s1_0.coordenadas,s1_0.descripcion,s1_0.direccion,s1_0.estado_solicitud,s1_0.fecha,s1_0.fecha_actualizacion,s1_0.notas_cierre,s1_0.precio_estimado,s1_0.tecnico_calificacion,s1_0.tecnico_especialidad,s1_0.tecnico_id,s1_0.tecnico_nombre,s1_0.tecnico_telefono,s1_0.urgencia from solicitudes s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.categoria,s1_0.clave_idempotencia,s1_0.cliente_id,s1_0.cliente_nombre,s1_0.coordenadas,s1_0.descripcion,s1_0.direccion,s1_0.estado_solicitud,s1_0.fecha,s1_0.fecha_actualizacion,s1_0.notas_cierre,s1_0.precio_estimado,s1_0.tecnico_calificacion,s1_0.tecnico_especialidad,s1_0.tecnico_id,s1_0.tecnico_nombre,s1_0.tecnico_telefono,s1_0.urgencia from solicitudes s1_0 where s1_0.id=?
-Hibernate: insert into solicitud_hitos (detalle,fecha,hito,solicitud_id) values (?,?,?,?)
-2026-11-07T10:37:05.275-03:00  INFO 27552 --- [ms-solicitudes] [nio-8082-exec-4] c.h.shared.messaging.EventPublisher      : [PUBLISH] Publicando evento 803cdcd5-320e-40e4-9925-48cc853a658b [solicitud.estado-actualizado] solicitud=15
-2026-11-07T10:37:05.291-03:00  INFO 27552 --- [ms-solicitudes] [nectionFactory1] c.h.shared.messaging.EventPublisher      : [CONFIRM] Broker confirmó (ACK) el evento 803cdcd5-320e-40e4-9925-48cc853a658b
-Hibernate: update solicitudes set categoria=?,clave_idempotencia=?,cliente_id=?,cliente_nombre=?,coordenadas=?,descripcion=?,direccion=?,estado_solicitud=?,fecha=?,fecha_actualizacion=?,notas_cierre=?,precio_estimado=?,tecnico_calificacion=?,tecnico_especialidad=?,tecnico_id=?,tecnico_nombre=?,tecnico_telefono=?,urgencia=? where id=?
-2026-11-07T10:37:05.303-03:00  INFO 27552 --- [ms-solicitudes] [s-solicitudes-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.solicitudes.eventos ESTADO_ACTUALIZADO key=15 -> partition=0 offset=218
+2026-11-14T09:46:43.012-03:00  INFO 27840 --- [ms-solicitudes] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

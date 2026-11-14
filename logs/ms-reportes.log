@@ -85,39 +85,39 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.4)
 
-2026-11-07T10:17:26.009-03:00  INFO 26800 --- [ms-reportes] [           main] c.h.reportes.MsReportesApplication       : Starting MsReportesApplication using Java 21.0.12 with PID 26800 (C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-reportes\target\classes started by drojas in C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-reportes)
-2026-11-07T10:17:26.015-03:00  INFO 26800 --- [ms-reportes] [           main] c.h.reportes.MsReportesApplication       : No active profile set, falling back to 1 default profile: "default"
-2026-11-07T10:17:26.933-03:00  INFO 26800 --- [ms-reportes] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=91c290eb-1126-3559-81f8-adb8d2fbcbde
-2026-11-07T10:17:26.984-03:00  WARN 26800 --- [ms-reportes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
-2026-11-07T10:17:26.986-03:00  WARN 26800 --- [ms-reportes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2026-11-07T10:17:27.188-03:00  INFO 26800 --- [ms-reportes] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
-2026-11-07T10:17:27.199-03:00  INFO 26800 --- [ms-reportes] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-11-07T10:17:27.199-03:00  INFO 26800 --- [ms-reportes] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
-2026-11-07T10:17:27.251-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-11-07T10:17:27.252-03:00  INFO 26800 --- [ms-reportes] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1161 ms
-2026-11-07T10:17:28.077-03:00  INFO 26800 --- [ms-reportes] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2026-11-07T10:17:28.110-03:00  WARN 26800 --- [ms-reportes] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2026-11-07T10:17:28.160-03:00  INFO 26800 --- [ms-reportes] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2026-11-07T10:17:28.227-03:00  INFO 26800 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2026-11-07T10:17:28.230-03:00  INFO 26800 --- [ms-reportes] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-11-07T10:17:28.243-03:00  INFO 26800 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2026-11-07T10:17:28.243-03:00  INFO 26800 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2026-11-07T10:17:28.243-03:00  INFO 26800 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2026-11-07T10:17:28.243-03:00  INFO 26800 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2026-11-07T10:17:28.243-03:00  INFO 26800 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2026-11-07T10:17:28.243-03:00  INFO 26800 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2026-11-07T10:17:28.243-03:00  INFO 26800 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2026-11-07T10:17:28.452-03:00  INFO 26800 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2026-11-07T10:17:28.456-03:00  INFO 26800 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2026-11-07T10:17:28.458-03:00  INFO 26800 --- [ms-reportes] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2026-11-07T10:17:28.463-03:00  INFO 26800 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1794057448462 with initial instances count: 7
-2026-11-07T10:17:28.465-03:00  INFO 26800 --- [ms-reportes] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MS-REPORTES with eureka with status UP
-2026-11-07T10:17:28.465-03:00  INFO 26800 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1794057448465, current=UP, previous=STARTING]
-2026-11-07T10:17:28.467-03:00  INFO 26800 --- [ms-reportes] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-REPORTES/DROJAS.localdomain:ms-reportes:8090: registering service...
-2026-11-07T10:17:28.482-03:00  INFO 26800 --- [ms-reportes] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path ''
-2026-11-07T10:17:28.483-03:00  INFO 26800 --- [ms-reportes] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8090
-2026-11-07T10:17:28.499-03:00  INFO 26800 --- [ms-reportes] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-REPORTES/DROJAS.localdomain:ms-reportes:8090 - registration status: 204
-2026-11-07T10:17:28.524-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+2026-11-14T09:38:08.279-03:00  INFO 25852 --- [ms-reportes] [           main] c.h.reportes.MsReportesApplication       : Starting MsReportesApplication using Java 21.0.12 with PID 25852 (C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-reportes\target\classes started by drojas in C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-reportes)
+2026-11-14T09:38:08.282-03:00  INFO 25852 --- [ms-reportes] [           main] c.h.reportes.MsReportesApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-11-14T09:38:09.088-03:00  INFO 25852 --- [ms-reportes] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=91c290eb-1126-3559-81f8-adb8d2fbcbde
+2026-11-14T09:38:09.166-03:00  WARN 25852 --- [ms-reportes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-11-14T09:38:09.168-03:00  WARN 25852 --- [ms-reportes] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-11-14T09:38:09.551-03:00  INFO 25852 --- [ms-reportes] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
+2026-11-14T09:38:09.566-03:00  INFO 25852 --- [ms-reportes] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-14T09:38:09.566-03:00  INFO 25852 --- [ms-reportes] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-11-14T09:38:09.657-03:00  INFO 25852 --- [ms-reportes] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-14T09:38:09.658-03:00  INFO 25852 --- [ms-reportes] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1321 ms
+2026-11-14T09:38:10.715-03:00  INFO 25852 --- [ms-reportes] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-11-14T09:38:10.758-03:00  WARN 25852 --- [ms-reportes] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-11-14T09:38:10.814-03:00  INFO 25852 --- [ms-reportes] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-11-14T09:38:10.900-03:00  INFO 25852 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-11-14T09:38:10.904-03:00  INFO 25852 --- [ms-reportes] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-14T09:38:10.923-03:00  INFO 25852 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-11-14T09:38:10.923-03:00  INFO 25852 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-11-14T09:38:10.923-03:00  INFO 25852 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-11-14T09:38:10.923-03:00  INFO 25852 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-11-14T09:38:10.923-03:00  INFO 25852 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-11-14T09:38:10.923-03:00  INFO 25852 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-11-14T09:38:10.923-03:00  INFO 25852 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-11-14T09:38:11.135-03:00  INFO 25852 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-11-14T09:38:11.138-03:00  INFO 25852 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-11-14T09:38:11.140-03:00  INFO 25852 --- [ms-reportes] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-11-14T09:38:11.145-03:00  INFO 25852 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1794659891144 with initial instances count: 9
+2026-11-14T09:38:11.147-03:00  INFO 25852 --- [ms-reportes] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MS-REPORTES with eureka with status UP
+2026-11-14T09:38:11.148-03:00  INFO 25852 --- [ms-reportes] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1794659891148, current=UP, previous=STARTING]
+2026-11-14T09:38:11.150-03:00  INFO 25852 --- [ms-reportes] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-REPORTES/DROJAS.localdomain:ms-reportes:8090: registering service...
+2026-11-14T09:38:11.169-03:00  INFO 25852 --- [ms-reportes] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path ''
+2026-11-14T09:38:11.170-03:00  INFO 25852 --- [ms-reportes] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8090
+2026-11-14T09:38:11.182-03:00  INFO 25852 --- [ms-reportes] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-REPORTES/DROJAS.localdomain:ms-reportes:8090 - registration status: 204
+2026-11-14T09:38:11.219-03:00  INFO 25852 --- [ms-reportes] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
 	allow.auto.create.topics = true
 	auto.commit.interval.ms = 5000
 	auto.include.jmx.reporter = true
@@ -211,11 +211,11 @@
 	ssl.truststore.type = JKS
 	value.deserializer = class org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
 
-2026-11-07T10:17:28.593-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
-2026-11-07T10:17:28.593-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
-2026-11-07T10:17:28.593-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1794057448592
-2026-11-07T10:17:28.595-03:00  INFO 26800 --- [ms-reportes] [           main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Subscribed to topic(s): homefixer.solicitudes.eventos
-2026-11-07T10:17:28.598-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+2026-11-14T09:38:11.325-03:00  INFO 25852 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
+2026-11-14T09:38:11.325-03:00  INFO 25852 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
+2026-11-14T09:38:11.325-03:00  INFO 25852 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1794659891323
+2026-11-14T09:38:11.328-03:00  INFO 25852 --- [ms-reportes] [           main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Subscribed to topic(s): homefixer.solicitudes.eventos
+2026-11-14T09:38:11.331-03:00  INFO 25852 --- [ms-reportes] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
 	allow.auto.create.topics = true
 	auto.commit.interval.ms = 5000
 	auto.include.jmx.reporter = true
@@ -309,11 +309,11 @@
 	ssl.truststore.type = JKS
 	value.deserializer = class org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
 
-2026-11-07T10:17:28.607-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
-2026-11-07T10:17:28.607-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
-2026-11-07T10:17:28.607-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1794057448607
-2026-11-07T10:17:28.607-03:00  INFO 26800 --- [ms-reportes] [           main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Subscribed to topic(s): homefixer.solicitudes.eventos
-2026-11-07T10:17:28.608-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+2026-11-14T09:38:11.338-03:00  INFO 25852 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
+2026-11-14T09:38:11.338-03:00  INFO 25852 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
+2026-11-14T09:38:11.338-03:00  INFO 25852 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1794659891338
+2026-11-14T09:38:11.339-03:00  INFO 25852 --- [ms-reportes] [           main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Subscribed to topic(s): homefixer.solicitudes.eventos
+2026-11-14T09:38:11.340-03:00  INFO 25852 --- [ms-reportes] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
 	allow.auto.create.topics = true
 	auto.commit.interval.ms = 5000
 	auto.include.jmx.reporter = true
@@ -407,11 +407,11 @@
 	ssl.truststore.type = JKS
 	value.deserializer = class org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
 
-2026-11-07T10:17:28.614-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
-2026-11-07T10:17:28.614-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
-2026-11-07T10:17:28.614-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1794057448614
-2026-11-07T10:17:28.614-03:00  INFO 26800 --- [ms-reportes] [           main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Subscribed to topic(s): homefixer.solicitudes.eventos
-2026-11-07T10:17:28.615-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+2026-11-14T09:38:11.344-03:00  INFO 25852 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
+2026-11-14T09:38:11.344-03:00  INFO 25852 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
+2026-11-14T09:38:11.344-03:00  INFO 25852 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1794659891344
+2026-11-14T09:38:11.344-03:00  INFO 25852 --- [ms-reportes] [           main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Subscribed to topic(s): homefixer.solicitudes.eventos
+2026-11-14T09:38:11.346-03:00  INFO 25852 --- [ms-reportes] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
 	allow.auto.create.topics = true
 	auto.commit.interval.ms = 5000
 	auto.include.jmx.reporter = true
@@ -505,10 +505,10 @@
 	ssl.truststore.type = JKS
 	value.deserializer = class org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
 
-2026-11-07T10:17:28.619-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
-2026-11-07T10:17:28.619-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
-2026-11-07T10:17:28.619-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1794057448619
-2026-11-07T10:17:28.620-03:00  WARN 26800 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Error registering AppInfo mbean
+2026-11-14T09:38:11.351-03:00  INFO 25852 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
+2026-11-14T09:38:11.351-03:00  INFO 25852 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
+2026-11-14T09:38:11.351-03:00  INFO 25852 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1794659891351
+2026-11-14T09:38:11.351-03:00  WARN 25852 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Error registering AppInfo mbean
 
 javax.management.InstanceAlreadyExistsException: kafka.consumer:type=app-info,id=ms-reportes-0
 	at java.management/com.sun.jmx.mbeanserver.Repository.addMBean(Repository.java:322) ~[na:na]
@@ -548,8 +548,8 @@ javax.management.InstanceAlreadyExistsException: kafka.consumer:type=app-info,id
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.4.jar:3.2.4]
 	at com.homefixer.reportes.MsReportesApplication.main(MsReportesApplication.java:19) ~[classes/:na]
 
-2026-11-07T10:17:28.628-03:00  INFO 26800 --- [ms-reportes] [           main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Subscribed to topic(s): homefixer.tecnicos.ubicacion
-2026-11-07T10:17:28.629-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+2026-11-14T09:38:11.355-03:00  INFO 25852 --- [ms-reportes] [           main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Subscribed to topic(s): homefixer.tecnicos.ubicacion
+2026-11-14T09:38:11.356-03:00  INFO 25852 --- [ms-reportes] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
 	allow.auto.create.topics = true
 	auto.commit.interval.ms = 5000
 	auto.include.jmx.reporter = true
@@ -643,10 +643,10 @@ javax.management.InstanceAlreadyExistsException: kafka.consumer:type=app-info,id
 	ssl.truststore.type = JKS
 	value.deserializer = class org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
 
-2026-11-07T10:17:28.634-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
-2026-11-07T10:17:28.634-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
-2026-11-07T10:17:28.634-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1794057448634
-2026-11-07T10:17:28.634-03:00  WARN 26800 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Error registering AppInfo mbean
+2026-11-14T09:38:11.360-03:00  INFO 25852 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
+2026-11-14T09:38:11.360-03:00  INFO 25852 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
+2026-11-14T09:38:11.360-03:00  INFO 25852 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1794659891360
+2026-11-14T09:38:11.360-03:00  WARN 25852 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Error registering AppInfo mbean
 
 javax.management.InstanceAlreadyExistsException: kafka.consumer:type=app-info,id=ms-reportes-1
 	at java.management/com.sun.jmx.mbeanserver.Repository.addMBean(Repository.java:322) ~[na:na]
@@ -686,8 +686,8 @@ javax.management.InstanceAlreadyExistsException: kafka.consumer:type=app-info,id
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.4.jar:3.2.4]
 	at com.homefixer.reportes.MsReportesApplication.main(MsReportesApplication.java:19) ~[classes/:na]
 
-2026-11-07T10:17:28.635-03:00  INFO 26800 --- [ms-reportes] [           main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Subscribed to topic(s): homefixer.tecnicos.ubicacion
-2026-11-07T10:17:28.636-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+2026-11-14T09:38:11.361-03:00  INFO 25852 --- [ms-reportes] [           main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Subscribed to topic(s): homefixer.tecnicos.ubicacion
+2026-11-14T09:38:11.362-03:00  INFO 25852 --- [ms-reportes] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
 	allow.auto.create.topics = true
 	auto.commit.interval.ms = 5000
 	auto.include.jmx.reporter = true
@@ -781,10 +781,10 @@ javax.management.InstanceAlreadyExistsException: kafka.consumer:type=app-info,id
 	ssl.truststore.type = JKS
 	value.deserializer = class org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
 
-2026-11-07T10:17:28.639-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
-2026-11-07T10:17:28.639-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
-2026-11-07T10:17:28.639-03:00  INFO 26800 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1794057448639
-2026-11-07T10:17:28.639-03:00  WARN 26800 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Error registering AppInfo mbean
+2026-11-14T09:38:11.366-03:00  INFO 25852 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
+2026-11-14T09:38:11.366-03:00  INFO 25852 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
+2026-11-14T09:38:11.366-03:00  INFO 25852 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1794659891366
+2026-11-14T09:38:11.366-03:00  WARN 25852 --- [ms-reportes] [           main] o.a.kafka.common.utils.AppInfoParser     : Error registering AppInfo mbean
 
 javax.management.InstanceAlreadyExistsException: kafka.consumer:type=app-info,id=ms-reportes-2
 	at java.management/com.sun.jmx.mbeanserver.Repository.addMBean(Repository.java:322) ~[na:na]
@@ -824,138 +824,123 @@ javax.management.InstanceAlreadyExistsException: kafka.consumer:type=app-info,id
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.4.jar:3.2.4]
 	at com.homefixer.reportes.MsReportesApplication.main(MsReportesApplication.java:19) ~[classes/:na]
 
-2026-11-07T10:17:28.640-03:00  INFO 26800 --- [ms-reportes] [           main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Subscribed to topic(s): homefixer.tecnicos.ubicacion
-2026-11-07T10:17:28.646-03:00  INFO 26800 --- [ms-reportes] [           main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
-2026-11-07T10:17:28.687-03:00  INFO 26800 --- [ms-reportes] [           main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#2fc49538:0/SimpleConnection@acb1c9c [delegate=amqp://guest@127.0.0.1:5672/, localPort=58043]
-2026-11-07T10:17:28.739-03:00  INFO 26800 --- [ms-reportes] [           main] c.h.reportes.MsReportesApplication       : Started MsReportesApplication in 3.27 seconds (process running for 3.596)
-2026-11-07T10:17:28.852-03:00  INFO 26800 --- [ms-reportes] [s-eventos-1-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Cluster ID: VWi1Ej-hR5-sBUuujyKUoA
-2026-11-07T10:17:28.852-03:00  INFO 26800 --- [ms-reportes] [ubicacion-2-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Cluster ID: VWi1Ej-hR5-sBUuujyKUoA
-2026-11-07T10:17:28.852-03:00  INFO 26800 --- [ms-reportes] [ubicacion-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Cluster ID: VWi1Ej-hR5-sBUuujyKUoA
-2026-11-07T10:17:28.852-03:00  INFO 26800 --- [ms-reportes] [s-eventos-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Cluster ID: VWi1Ej-hR5-sBUuujyKUoA
-2026-11-07T10:17:28.852-03:00  INFO 26800 --- [ms-reportes] [s-eventos-2-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Cluster ID: VWi1Ej-hR5-sBUuujyKUoA
-2026-11-07T10:17:28.852-03:00  INFO 26800 --- [ms-reportes] [ubicacion-1-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Cluster ID: VWi1Ej-hR5-sBUuujyKUoA
-2026-11-07T10:17:28.853-03:00  INFO 26800 --- [ms-reportes] [ubicacion-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
-2026-11-07T10:17:28.853-03:00  INFO 26800 --- [ms-reportes] [ubicacion-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
-2026-11-07T10:17:28.853-03:00  INFO 26800 --- [ms-reportes] [ubicacion-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
-2026-11-07T10:17:28.853-03:00  INFO 26800 --- [ms-reportes] [s-eventos-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
-2026-11-07T10:17:28.853-03:00  INFO 26800 --- [ms-reportes] [s-eventos-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
-2026-11-07T10:17:28.853-03:00  INFO 26800 --- [ms-reportes] [s-eventos-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
-2026-11-07T10:17:28.856-03:00  INFO 26800 --- [ms-reportes] [s-eventos-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] (Re-)joining group
-2026-11-07T10:17:28.856-03:00  INFO 26800 --- [ms-reportes] [s-eventos-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] (Re-)joining group
-2026-11-07T10:17:28.856-03:00  INFO 26800 --- [ms-reportes] [ubicacion-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] (Re-)joining group
-2026-11-07T10:17:28.856-03:00  INFO 26800 --- [ms-reportes] [ubicacion-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] (Re-)joining group
-2026-11-07T10:17:28.856-03:00  INFO 26800 --- [ms-reportes] [ubicacion-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] (Re-)joining group
-2026-11-07T10:17:28.856-03:00  INFO 26800 --- [ms-reportes] [s-eventos-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] (Re-)joining group
-2026-11-07T10:17:28.870-03:00  INFO 26800 --- [ms-reportes] [ubicacion-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Request joining group due to: need to re-join with the given member-id: ms-reportes-0-9e2605e2-2fd8-44db-857f-3cde93d678bf
-2026-11-07T10:17:28.870-03:00  INFO 26800 --- [ms-reportes] [s-eventos-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Request joining group due to: need to re-join with the given member-id: ms-reportes-0-c475957e-9b53-4af6-8aaf-b144106820cf
-2026-11-07T10:17:28.870-03:00  INFO 26800 --- [ms-reportes] [s-eventos-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Request joining group due to: need to re-join with the given member-id: ms-reportes-1-d7625740-9b03-49ed-8188-a416b5114ef0
-2026-11-07T10:17:28.870-03:00  INFO 26800 --- [ms-reportes] [ubicacion-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Request joining group due to: need to re-join with the given member-id: ms-reportes-2-a4a0a840-1d3e-4272-ab2b-ed422db328da
-2026-11-07T10:17:28.870-03:00  INFO 26800 --- [ms-reportes] [s-eventos-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Request joining group due to: need to re-join with the given member-id: ms-reportes-2-dfc16a7a-9cab-4de0-8630-13d579f34c9c
-2026-11-07T10:17:28.870-03:00  INFO 26800 --- [ms-reportes] [ubicacion-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Request joining group due to: need to re-join with the given member-id: ms-reportes-1-188b2bfd-c32f-4520-a1d0-49b913f6deb1
-2026-11-07T10:17:28.870-03:00  INFO 26800 --- [ms-reportes] [ubicacion-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
-2026-11-07T10:17:28.870-03:00  INFO 26800 --- [ms-reportes] [s-eventos-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
-2026-11-07T10:17:28.870-03:00  INFO 26800 --- [ms-reportes] [ubicacion-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
-2026-11-07T10:17:28.870-03:00  INFO 26800 --- [ms-reportes] [s-eventos-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
-2026-11-07T10:17:28.871-03:00  INFO 26800 --- [ms-reportes] [ubicacion-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
-2026-11-07T10:17:28.871-03:00  INFO 26800 --- [ms-reportes] [s-eventos-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] (Re-)joining group
-2026-11-07T10:17:28.871-03:00  INFO 26800 --- [ms-reportes] [ubicacion-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] (Re-)joining group
-2026-11-07T10:17:28.870-03:00  INFO 26800 --- [ms-reportes] [s-eventos-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
-2026-11-07T10:17:28.870-03:00  INFO 26800 --- [ms-reportes] [ubicacion-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] (Re-)joining group
-2026-11-07T10:17:28.871-03:00  INFO 26800 --- [ms-reportes] [s-eventos-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] (Re-)joining group
-2026-11-07T10:17:28.871-03:00  INFO 26800 --- [ms-reportes] [s-eventos-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] (Re-)joining group
-2026-11-07T10:17:28.871-03:00  INFO 26800 --- [ms-reportes] [ubicacion-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] (Re-)joining group
-2026-11-07T10:17:31.876-03:00  INFO 26800 --- [ms-reportes] [ubicacion-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Successfully joined group with generation Generation{generationId=7, memberId='ms-reportes-0-9e2605e2-2fd8-44db-857f-3cde93d678bf', protocol='cooperative-sticky'}
-2026-11-07T10:17:31.876-03:00  INFO 26800 --- [ms-reportes] [s-eventos-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Successfully joined group with generation Generation{generationId=7, memberId='ms-reportes-1-d7625740-9b03-49ed-8188-a416b5114ef0', protocol='cooperative-sticky'}
-2026-11-07T10:17:31.876-03:00  INFO 26800 --- [ms-reportes] [ubicacion-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Successfully joined group with generation Generation{generationId=7, memberId='ms-reportes-2-a4a0a840-1d3e-4272-ab2b-ed422db328da', protocol='cooperative-sticky'}
-2026-11-07T10:17:31.878-03:00  INFO 26800 --- [ms-reportes] [s-eventos-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Successfully joined group with generation Generation{generationId=7, memberId='ms-reportes-0-c475957e-9b53-4af6-8aaf-b144106820cf', protocol='cooperative-sticky'}
-2026-11-07T10:17:31.878-03:00  INFO 26800 --- [ms-reportes] [ubicacion-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Successfully joined group with generation Generation{generationId=7, memberId='ms-reportes-1-188b2bfd-c32f-4520-a1d0-49b913f6deb1', protocol='cooperative-sticky'}
-2026-11-07T10:17:31.878-03:00  INFO 26800 --- [ms-reportes] [s-eventos-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Successfully joined group with generation Generation{generationId=7, memberId='ms-reportes-2-dfc16a7a-9cab-4de0-8630-13d579f34c9c', protocol='cooperative-sticky'}
-2026-11-07T10:17:31.891-03:00  INFO 26800 --- [ms-reportes] [ubicacion-2-C-1] o.a.k.c.c.i.AbstractStickyAssignor       : Final assignment of partitions to consumers: 
-{ms-reportes-0-9e2605e2-2fd8-44db-857f-3cde93d678bf=[homefixer.tecnicos.ubicacion-0], ms-reportes-1-188b2bfd-c32f-4520-a1d0-49b913f6deb1=[homefixer.tecnicos.ubicacion-1], ms-reportes-1-d7625740-9b03-49ed-8188-a416b5114ef0=[homefixer.solicitudes.eventos-1], ms-reportes-2-a4a0a840-1d3e-4272-ab2b-ed422db328da=[homefixer.tecnicos.ubicacion-2], ms-reportes-2-dfc16a7a-9cab-4de0-8630-13d579f34c9c=[homefixer.solicitudes.eventos-2], ms-reportes-0-c475957e-9b53-4af6-8aaf-b144106820cf=[homefixer.solicitudes.eventos-0]}
-2026-11-07T10:17:31.892-03:00  INFO 26800 --- [ms-reportes] [ubicacion-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Finished assignment for group at generation 7: {ms-reportes-0-9e2605e2-2fd8-44db-857f-3cde93d678bf=Assignment(partitions=[homefixer.tecnicos.ubicacion-0]), ms-reportes-1-188b2bfd-c32f-4520-a1d0-49b913f6deb1=Assignment(partitions=[homefixer.tecnicos.ubicacion-1]), ms-reportes-1-d7625740-9b03-49ed-8188-a416b5114ef0=Assignment(partitions=[homefixer.solicitudes.eventos-1]), ms-reportes-2-a4a0a840-1d3e-4272-ab2b-ed422db328da=Assignment(partitions=[homefixer.tecnicos.ubicacion-2]), ms-reportes-2-dfc16a7a-9cab-4de0-8630-13d579f34c9c=Assignment(partitions=[homefixer.solicitudes.eventos-2]), ms-reportes-0-c475957e-9b53-4af6-8aaf-b144106820cf=Assignment(partitions=[homefixer.solicitudes.eventos-0])}
-2026-11-07T10:17:31.903-03:00  INFO 26800 --- [ms-reportes] [s-eventos-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Successfully synced group in generation Generation{generationId=7, memberId='ms-reportes-0-c475957e-9b53-4af6-8aaf-b144106820cf', protocol='cooperative-sticky'}
-2026-11-07T10:17:31.903-03:00  INFO 26800 --- [ms-reportes] [s-eventos-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Successfully synced group in generation Generation{generationId=7, memberId='ms-reportes-2-dfc16a7a-9cab-4de0-8630-13d579f34c9c', protocol='cooperative-sticky'}
-2026-11-07T10:17:31.903-03:00  INFO 26800 --- [ms-reportes] [ubicacion-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Successfully synced group in generation Generation{generationId=7, memberId='ms-reportes-2-a4a0a840-1d3e-4272-ab2b-ed422db328da', protocol='cooperative-sticky'}
-2026-11-07T10:17:31.903-03:00  INFO 26800 --- [ms-reportes] [ubicacion-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Successfully synced group in generation Generation{generationId=7, memberId='ms-reportes-1-188b2bfd-c32f-4520-a1d0-49b913f6deb1', protocol='cooperative-sticky'}
-2026-11-07T10:17:31.903-03:00  INFO 26800 --- [ms-reportes] [ubicacion-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Successfully synced group in generation Generation{generationId=7, memberId='ms-reportes-0-9e2605e2-2fd8-44db-857f-3cde93d678bf', protocol='cooperative-sticky'}
-2026-11-07T10:17:31.903-03:00  INFO 26800 --- [ms-reportes] [ubicacion-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Updating assignment with
-	Assigned partitions:                       [homefixer.tecnicos.ubicacion-2]
-	Current owned partitions:                  []
-	Added partitions (assigned - owned):       [homefixer.tecnicos.ubicacion-2]
-	Revoked partitions (owned - assigned):     []
-
-2026-11-07T10:17:31.903-03:00  INFO 26800 --- [ms-reportes] [s-eventos-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Successfully synced group in generation Generation{generationId=7, memberId='ms-reportes-1-d7625740-9b03-49ed-8188-a416b5114ef0', protocol='cooperative-sticky'}
-2026-11-07T10:17:31.903-03:00  INFO 26800 --- [ms-reportes] [s-eventos-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Updating assignment with
-	Assigned partitions:                       [homefixer.solicitudes.eventos-2]
-	Current owned partitions:                  []
-	Added partitions (assigned - owned):       [homefixer.solicitudes.eventos-2]
-	Revoked partitions (owned - assigned):     []
-
-2026-11-07T10:17:31.903-03:00  INFO 26800 --- [ms-reportes] [ubicacion-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Updating assignment with
-	Assigned partitions:                       [homefixer.tecnicos.ubicacion-0]
-	Current owned partitions:                  []
-	Added partitions (assigned - owned):       [homefixer.tecnicos.ubicacion-0]
-	Revoked partitions (owned - assigned):     []
-
-2026-11-07T10:17:31.903-03:00  INFO 26800 --- [ms-reportes] [s-eventos-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Notifying assignor about the new Assignment(partitions=[homefixer.solicitudes.eventos-2])
-2026-11-07T10:17:31.903-03:00  INFO 26800 --- [ms-reportes] [s-eventos-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Updating assignment with
-	Assigned partitions:                       [homefixer.solicitudes.eventos-1]
-	Current owned partitions:                  []
-	Added partitions (assigned - owned):       [homefixer.solicitudes.eventos-1]
-	Revoked partitions (owned - assigned):     []
-
-2026-11-07T10:17:31.903-03:00  INFO 26800 --- [ms-reportes] [s-eventos-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Updating assignment with
+2026-11-14T09:38:11.366-03:00  INFO 25852 --- [ms-reportes] [           main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Subscribed to topic(s): homefixer.tecnicos.ubicacion
+2026-11-14T09:38:11.369-03:00  INFO 25852 --- [ms-reportes] [           main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-11-14T09:38:11.412-03:00  INFO 25852 --- [ms-reportes] [           main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#61037caf:0/SimpleConnection@32fd5bc [delegate=amqp://guest@127.0.0.1:5672/, localPort=55105]
+2026-11-14T09:38:11.468-03:00  INFO 25852 --- [ms-reportes] [           main] c.h.reportes.MsReportesApplication       : Started MsReportesApplication in 3.546 seconds (process running for 3.984)
+2026-11-14T09:38:11.651-03:00  INFO 25852 --- [ms-reportes] [s-eventos-2-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Cluster ID: VWi1Ej-hR5-sBUuujyKUoA
+2026-11-14T09:38:11.651-03:00  INFO 25852 --- [ms-reportes] [s-eventos-1-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Cluster ID: VWi1Ej-hR5-sBUuujyKUoA
+2026-11-14T09:38:11.651-03:00  INFO 25852 --- [ms-reportes] [ubicacion-1-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Cluster ID: VWi1Ej-hR5-sBUuujyKUoA
+2026-11-14T09:38:11.651-03:00  INFO 25852 --- [ms-reportes] [ubicacion-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Cluster ID: VWi1Ej-hR5-sBUuujyKUoA
+2026-11-14T09:38:11.651-03:00  INFO 25852 --- [ms-reportes] [s-eventos-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Cluster ID: VWi1Ej-hR5-sBUuujyKUoA
+2026-11-14T09:38:11.651-03:00  INFO 25852 --- [ms-reportes] [ubicacion-2-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Cluster ID: VWi1Ej-hR5-sBUuujyKUoA
+2026-11-14T09:38:11.652-03:00  INFO 25852 --- [ms-reportes] [ubicacion-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2026-11-14T09:38:11.652-03:00  INFO 25852 --- [ms-reportes] [s-eventos-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2026-11-14T09:38:11.652-03:00  INFO 25852 --- [ms-reportes] [ubicacion-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2026-11-14T09:38:11.652-03:00  INFO 25852 --- [ms-reportes] [ubicacion-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2026-11-14T09:38:11.652-03:00  INFO 25852 --- [ms-reportes] [s-eventos-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2026-11-14T09:38:11.652-03:00  INFO 25852 --- [ms-reportes] [s-eventos-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2026-11-14T09:38:11.655-03:00  INFO 25852 --- [ms-reportes] [ubicacion-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] (Re-)joining group
+2026-11-14T09:38:11.655-03:00  INFO 25852 --- [ms-reportes] [ubicacion-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] (Re-)joining group
+2026-11-14T09:38:11.655-03:00  INFO 25852 --- [ms-reportes] [s-eventos-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] (Re-)joining group
+2026-11-14T09:38:11.655-03:00  INFO 25852 --- [ms-reportes] [ubicacion-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] (Re-)joining group
+2026-11-14T09:38:11.655-03:00  INFO 25852 --- [ms-reportes] [s-eventos-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] (Re-)joining group
+2026-11-14T09:38:11.655-03:00  INFO 25852 --- [ms-reportes] [s-eventos-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] (Re-)joining group
+2026-11-14T09:38:11.678-03:00  INFO 25852 --- [ms-reportes] [s-eventos-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Request joining group due to: need to re-join with the given member-id: ms-reportes-1-b85cc666-937d-4e76-98e2-f09768ce8a47
+2026-11-14T09:38:11.678-03:00  INFO 25852 --- [ms-reportes] [ubicacion-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Request joining group due to: need to re-join with the given member-id: ms-reportes-0-47313d5e-e553-49d3-88e2-dea82cec8fbe
+2026-11-14T09:38:11.678-03:00  INFO 25852 --- [ms-reportes] [s-eventos-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Request joining group due to: need to re-join with the given member-id: ms-reportes-0-cb3aa92a-7c82-44b9-b702-dc1546933ad1
+2026-11-14T09:38:11.678-03:00  INFO 25852 --- [ms-reportes] [s-eventos-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Request joining group due to: need to re-join with the given member-id: ms-reportes-2-84007dd8-97b7-4a2d-bc4f-29666740c1c1
+2026-11-14T09:38:11.678-03:00  INFO 25852 --- [ms-reportes] [ubicacion-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Request joining group due to: need to re-join with the given member-id: ms-reportes-2-b3adec01-d613-43a6-8036-af4c4d982d44
+2026-11-14T09:38:11.678-03:00  INFO 25852 --- [ms-reportes] [ubicacion-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Request joining group due to: need to re-join with the given member-id: ms-reportes-1-fbbc3946-6161-4b90-aef9-b180f7bb817d
+2026-11-14T09:38:11.679-03:00  INFO 25852 --- [ms-reportes] [s-eventos-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2026-11-14T09:38:11.679-03:00  INFO 25852 --- [ms-reportes] [s-eventos-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2026-11-14T09:38:11.679-03:00  INFO 25852 --- [ms-reportes] [s-eventos-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2026-11-14T09:38:11.679-03:00  INFO 25852 --- [ms-reportes] [s-eventos-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] (Re-)joining group
+2026-11-14T09:38:11.679-03:00  INFO 25852 --- [ms-reportes] [ubicacion-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2026-11-14T09:38:11.679-03:00  INFO 25852 --- [ms-reportes] [s-eventos-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] (Re-)joining group
+2026-11-14T09:38:11.679-03:00  INFO 25852 --- [ms-reportes] [ubicacion-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2026-11-14T09:38:11.679-03:00  INFO 25852 --- [ms-reportes] [ubicacion-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2026-11-14T09:38:11.679-03:00  INFO 25852 --- [ms-reportes] [s-eventos-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] (Re-)joining group
+2026-11-14T09:38:11.679-03:00  INFO 25852 --- [ms-reportes] [ubicacion-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] (Re-)joining group
+2026-11-14T09:38:11.679-03:00  INFO 25852 --- [ms-reportes] [ubicacion-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] (Re-)joining group
+2026-11-14T09:38:11.679-03:00  INFO 25852 --- [ms-reportes] [ubicacion-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] (Re-)joining group
+2026-11-14T09:38:14.689-03:00  INFO 25852 --- [ms-reportes] [s-eventos-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Successfully joined group with generation Generation{generationId=9, memberId='ms-reportes-0-cb3aa92a-7c82-44b9-b702-dc1546933ad1', protocol='cooperative-sticky'}
+2026-11-14T09:38:14.690-03:00  INFO 25852 --- [ms-reportes] [ubicacion-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Successfully joined group with generation Generation{generationId=9, memberId='ms-reportes-0-47313d5e-e553-49d3-88e2-dea82cec8fbe', protocol='cooperative-sticky'}
+2026-11-14T09:38:14.694-03:00  INFO 25852 --- [ms-reportes] [ubicacion-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Successfully joined group with generation Generation{generationId=9, memberId='ms-reportes-2-b3adec01-d613-43a6-8036-af4c4d982d44', protocol='cooperative-sticky'}
+2026-11-14T09:38:14.695-03:00  INFO 25852 --- [ms-reportes] [ubicacion-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Successfully joined group with generation Generation{generationId=9, memberId='ms-reportes-1-fbbc3946-6161-4b90-aef9-b180f7bb817d', protocol='cooperative-sticky'}
+2026-11-14T09:38:14.697-03:00  INFO 25852 --- [ms-reportes] [s-eventos-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Successfully joined group with generation Generation{generationId=9, memberId='ms-reportes-2-84007dd8-97b7-4a2d-bc4f-29666740c1c1', protocol='cooperative-sticky'}
+2026-11-14T09:38:14.697-03:00  INFO 25852 --- [ms-reportes] [s-eventos-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Successfully joined group with generation Generation{generationId=9, memberId='ms-reportes-1-b85cc666-937d-4e76-98e2-f09768ce8a47', protocol='cooperative-sticky'}
+2026-11-14T09:38:14.714-03:00  INFO 25852 --- [ms-reportes] [s-eventos-2-C-1] o.a.k.c.c.i.AbstractStickyAssignor       : Final assignment of partitions to consumers: 
+{ms-reportes-0-cb3aa92a-7c82-44b9-b702-dc1546933ad1=[homefixer.solicitudes.eventos-0], ms-reportes-0-47313d5e-e553-49d3-88e2-dea82cec8fbe=[homefixer.tecnicos.ubicacion-0], ms-reportes-1-fbbc3946-6161-4b90-aef9-b180f7bb817d=[homefixer.tecnicos.ubicacion-1], ms-reportes-2-b3adec01-d613-43a6-8036-af4c4d982d44=[homefixer.tecnicos.ubicacion-2], ms-reportes-2-84007dd8-97b7-4a2d-bc4f-29666740c1c1=[homefixer.solicitudes.eventos-2], ms-reportes-1-b85cc666-937d-4e76-98e2-f09768ce8a47=[homefixer.solicitudes.eventos-1]}
+2026-11-14T09:38:14.715-03:00  INFO 25852 --- [ms-reportes] [s-eventos-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Finished assignment for group at generation 9: {ms-reportes-0-cb3aa92a-7c82-44b9-b702-dc1546933ad1=Assignment(partitions=[homefixer.solicitudes.eventos-0]), ms-reportes-0-47313d5e-e553-49d3-88e2-dea82cec8fbe=Assignment(partitions=[homefixer.tecnicos.ubicacion-0]), ms-reportes-1-fbbc3946-6161-4b90-aef9-b180f7bb817d=Assignment(partitions=[homefixer.tecnicos.ubicacion-1]), ms-reportes-2-b3adec01-d613-43a6-8036-af4c4d982d44=Assignment(partitions=[homefixer.tecnicos.ubicacion-2]), ms-reportes-2-84007dd8-97b7-4a2d-bc4f-29666740c1c1=Assignment(partitions=[homefixer.solicitudes.eventos-2]), ms-reportes-1-b85cc666-937d-4e76-98e2-f09768ce8a47=Assignment(partitions=[homefixer.solicitudes.eventos-1])}
+2026-11-14T09:38:14.782-03:00  INFO 25852 --- [ms-reportes] [s-eventos-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Successfully synced group in generation Generation{generationId=9, memberId='ms-reportes-0-cb3aa92a-7c82-44b9-b702-dc1546933ad1', protocol='cooperative-sticky'}
+2026-11-14T09:38:14.784-03:00  INFO 25852 --- [ms-reportes] [s-eventos-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Updating assignment with
 	Assigned partitions:                       [homefixer.solicitudes.eventos-0]
 	Current owned partitions:                  []
 	Added partitions (assigned - owned):       [homefixer.solicitudes.eventos-0]
 	Revoked partitions (owned - assigned):     []
 
-2026-11-07T10:17:31.903-03:00  INFO 26800 --- [ms-reportes] [ubicacion-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Notifying assignor about the new Assignment(partitions=[homefixer.tecnicos.ubicacion-2])
-2026-11-07T10:17:31.904-03:00  INFO 26800 --- [ms-reportes] [s-eventos-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Notifying assignor about the new Assignment(partitions=[homefixer.solicitudes.eventos-0])
-2026-11-07T10:17:31.903-03:00  INFO 26800 --- [ms-reportes] [ubicacion-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Updating assignment with
+2026-11-14T09:38:14.784-03:00  INFO 25852 --- [ms-reportes] [s-eventos-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Notifying assignor about the new Assignment(partitions=[homefixer.solicitudes.eventos-0])
+2026-11-14T09:38:14.784-03:00  INFO 25852 --- [ms-reportes] [ubicacion-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Successfully synced group in generation Generation{generationId=9, memberId='ms-reportes-0-47313d5e-e553-49d3-88e2-dea82cec8fbe', protocol='cooperative-sticky'}
+2026-11-14T09:38:14.785-03:00  INFO 25852 --- [ms-reportes] [ubicacion-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Updating assignment with
+	Assigned partitions:                       [homefixer.tecnicos.ubicacion-0]
+	Current owned partitions:                  []
+	Added partitions (assigned - owned):       [homefixer.tecnicos.ubicacion-0]
+	Revoked partitions (owned - assigned):     []
+
+2026-11-14T09:38:14.785-03:00  INFO 25852 --- [ms-reportes] [ubicacion-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Notifying assignor about the new Assignment(partitions=[homefixer.tecnicos.ubicacion-0])
+2026-11-14T09:38:14.789-03:00  INFO 25852 --- [ms-reportes] [ubicacion-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Successfully synced group in generation Generation{generationId=9, memberId='ms-reportes-1-fbbc3946-6161-4b90-aef9-b180f7bb817d', protocol='cooperative-sticky'}
+2026-11-14T09:38:14.789-03:00  INFO 25852 --- [ms-reportes] [ubicacion-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Updating assignment with
 	Assigned partitions:                       [homefixer.tecnicos.ubicacion-1]
 	Current owned partitions:                  []
 	Added partitions (assigned - owned):       [homefixer.tecnicos.ubicacion-1]
 	Revoked partitions (owned - assigned):     []
 
-2026-11-07T10:17:31.903-03:00  INFO 26800 --- [ms-reportes] [ubicacion-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Notifying assignor about the new Assignment(partitions=[homefixer.tecnicos.ubicacion-0])
-2026-11-07T10:17:31.904-03:00  INFO 26800 --- [ms-reportes] [s-eventos-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Notifying assignor about the new Assignment(partitions=[homefixer.solicitudes.eventos-1])
-2026-11-07T10:17:31.904-03:00  INFO 26800 --- [ms-reportes] [ubicacion-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Notifying assignor about the new Assignment(partitions=[homefixer.tecnicos.ubicacion-1])
-2026-11-07T10:17:31.906-03:00  INFO 26800 --- [ms-reportes] [s-eventos-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Adding newly assigned partitions: homefixer.solicitudes.eventos-0
-2026-11-07T10:17:31.906-03:00  INFO 26800 --- [ms-reportes] [ubicacion-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Adding newly assigned partitions: homefixer.tecnicos.ubicacion-2
-2026-11-07T10:17:31.906-03:00  INFO 26800 --- [ms-reportes] [s-eventos-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Adding newly assigned partitions: homefixer.solicitudes.eventos-1
-2026-11-07T10:17:31.906-03:00  INFO 26800 --- [ms-reportes] [ubicacion-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Adding newly assigned partitions: homefixer.tecnicos.ubicacion-0
-2026-11-07T10:17:31.906-03:00  INFO 26800 --- [ms-reportes] [s-eventos-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Adding newly assigned partitions: homefixer.solicitudes.eventos-2
-2026-11-07T10:17:31.906-03:00  INFO 26800 --- [ms-reportes] [ubicacion-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Adding newly assigned partitions: homefixer.tecnicos.ubicacion-1
-2026-11-07T10:17:31.916-03:00  INFO 26800 --- [ms-reportes] [ubicacion-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Found no committed offset for partition homefixer.tecnicos.ubicacion-1
-2026-11-07T10:17:31.916-03:00  INFO 26800 --- [ms-reportes] [ubicacion-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Found no committed offset for partition homefixer.tecnicos.ubicacion-2
-2026-11-07T10:17:31.916-03:00  INFO 26800 --- [ms-reportes] [ubicacion-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Found no committed offset for partition homefixer.tecnicos.ubicacion-0
-2026-11-07T10:17:31.918-03:00  INFO 26800 --- [ms-reportes] [s-eventos-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Setting offset for partition homefixer.solicitudes.eventos-2 to the committed offset FetchPosition{offset=184, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9094 (id: 3 rack: null)], epoch=5}}
-2026-11-07T10:17:31.918-03:00  INFO 26800 --- [ms-reportes] [s-eventos-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Setting offset for partition homefixer.solicitudes.eventos-1 to the committed offset FetchPosition{offset=204, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9093 (id: 2 rack: null)], epoch=5}}
-2026-11-07T10:17:31.918-03:00  INFO 26800 --- [ms-reportes] [s-eventos-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Setting offset for partition homefixer.solicitudes.eventos-0 to the committed offset FetchPosition{offset=217, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=4}}
-2026-11-07T10:17:31.919-03:00  INFO 26800 --- [ms-reportes] [s-eventos-1-C-1] o.s.k.l.KafkaMessageListenerContainer    : reportes-metricas: partitions assigned: [homefixer.solicitudes.eventos-1]
-2026-11-07T10:17:31.919-03:00  INFO 26800 --- [ms-reportes] [s-eventos-2-C-1] o.s.k.l.KafkaMessageListenerContainer    : reportes-metricas: partitions assigned: [homefixer.solicitudes.eventos-2]
-2026-11-07T10:17:31.919-03:00  INFO 26800 --- [ms-reportes] [s-eventos-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : reportes-metricas: partitions assigned: [homefixer.solicitudes.eventos-0]
-2026-11-07T10:17:31.929-03:00  INFO 26800 --- [ms-reportes] [ubicacion-2-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Resetting offset for partition homefixer.tecnicos.ubicacion-2 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9093 (id: 2 rack: null)], epoch=5}}.
-2026-11-07T10:17:31.929-03:00  INFO 26800 --- [ms-reportes] [ubicacion-0-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Resetting offset for partition homefixer.tecnicos.ubicacion-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9094 (id: 3 rack: null)], epoch=5}}.
-2026-11-07T10:17:31.930-03:00  INFO 26800 --- [ms-reportes] [ubicacion-1-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Resetting offset for partition homefixer.tecnicos.ubicacion-1 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=4}}.
-2026-11-07T10:17:31.930-03:00  INFO 26800 --- [ms-reportes] [ubicacion-2-C-1] o.s.k.l.KafkaMessageListenerContainer    : reportes-metricas: partitions assigned: [homefixer.tecnicos.ubicacion-2]
-2026-11-07T10:17:31.930-03:00  INFO 26800 --- [ms-reportes] [ubicacion-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : reportes-metricas: partitions assigned: [homefixer.tecnicos.ubicacion-0]
-2026-11-07T10:17:31.931-03:00  INFO 26800 --- [ms-reportes] [ubicacion-1-C-1] o.s.k.l.KafkaMessageListenerContainer    : reportes-metricas: partitions assigned: [homefixer.tecnicos.ubicacion-1]
-2026-11-07T10:22:28.251-03:00  INFO 26800 --- [ms-reportes] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-11-07T10:23:46.963-03:00  INFO 26800 --- [ms-reportes] [ntContainer#0-1] c.h.r.listener.SolicitudEventListener    : [ACK] Evento fd0f6e90-126f-43ad-ae06-7089e926138e [solicitud.creada] registrado en métricas
-2026-11-07T10:23:47.369-03:00  INFO 26800 --- [ms-reportes] [s-eventos-1-C-1] c.h.r.k.SolicitudEventosKafkaListener    : [KAFKA][CONSUME] SOLICITUD_CREADA solicitud=13 estado=CREADA partition=1 offset=204
-2026-11-07T10:23:54.634-03:00  INFO 26800 --- [ms-reportes] [ntContainer#0-1] c.h.r.listener.SolicitudEventListener    : [ACK] Evento 36bdf885-d8de-4918-a8f6-f8c5bc6614fc [solicitud.creada] registrado en métricas
-2026-11-07T10:23:54.664-03:00  INFO 26800 --- [ms-reportes] [s-eventos-1-C-1] c.h.r.k.SolicitudEventosKafkaListener    : [KAFKA][CONSUME] SOLICITUD_CREADA solicitud=14 estado=CREADA partition=1 offset=205
-2026-11-07T10:25:30.595-03:00  INFO 26800 --- [ms-reportes] [ntContainer#0-1] c.h.r.listener.SolicitudEventListener    : [ACK] Evento 005336aa-3ed2-4d71-8a97-5586df0b36fd [solicitud.tecnico-asignado] registrado en métricas
-2026-11-07T10:25:30.619-03:00  INFO 26800 --- [ms-reportes] [s-eventos-1-C-1] c.h.r.k.SolicitudEventosKafkaListener    : [KAFKA][CONSUME] TECNICO_ASIGNADO solicitud=14 estado=ACEPTADA partition=1 offset=206
-2026-11-07T10:25:54.869-03:00  INFO 26800 --- [ms-reportes] [ntContainer#0-1] c.h.r.listener.SolicitudEventListener    : [ACK] Evento 3ccbccc4-d2b2-4255-a452-8b15f6c78d34 [solicitud.tecnico-asignado] registrado en métricas
-2026-11-07T10:25:54.889-03:00  INFO 26800 --- [ms-reportes] [s-eventos-1-C-1] c.h.r.k.SolicitudEventosKafkaListener    : [KAFKA][CONSUME] TECNICO_ASIGNADO solicitud=13 estado=ACEPTADA partition=1 offset=207
-2026-11-07T10:26:28.936-03:00  INFO 26800 --- [ms-reportes] [ubicacion-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Node -2 disconnected.
-2026-11-07T10:26:29.122-03:00  INFO 26800 --- [ms-reportes] [s-eventos-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Node -2 disconnected.
-2026-11-07T10:26:29.123-03:00  INFO 26800 --- [ms-reportes] [ubicacion-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Node -2 disconnected.
-2026-11-07T10:26:29.133-03:00  INFO 26800 --- [ms-reportes] [ubicacion-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Node -1 disconnected.
-2026-11-07T10:26:29.133-03:00  INFO 26800 --- [ms-reportes] [s-eventos-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Node -1 disconnected.
-2026-11-07T10:26:29.137-03:00  INFO 26800 --- [ms-reportes] [s-eventos-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Node -1 disconnected.
-2026-11-07T10:27:28.257-03:00  INFO 26800 --- [ms-reportes] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-11-07T10:32:28.259-03:00  INFO 26800 --- [ms-reportes] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-14T09:38:14.790-03:00  INFO 25852 --- [ms-reportes] [ubicacion-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Notifying assignor about the new Assignment(partitions=[homefixer.tecnicos.ubicacion-1])
+2026-11-14T09:38:14.790-03:00  INFO 25852 --- [ms-reportes] [s-eventos-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Adding newly assigned partitions: homefixer.solicitudes.eventos-0
+2026-11-14T09:38:14.790-03:00  INFO 25852 --- [ms-reportes] [ubicacion-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Adding newly assigned partitions: homefixer.tecnicos.ubicacion-0
+2026-11-14T09:38:14.790-03:00  INFO 25852 --- [ms-reportes] [ubicacion-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Adding newly assigned partitions: homefixer.tecnicos.ubicacion-1
+2026-11-14T09:38:14.794-03:00  INFO 25852 --- [ms-reportes] [ubicacion-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Successfully synced group in generation Generation{generationId=9, memberId='ms-reportes-2-b3adec01-d613-43a6-8036-af4c4d982d44', protocol='cooperative-sticky'}
+2026-11-14T09:38:14.794-03:00  INFO 25852 --- [ms-reportes] [s-eventos-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Successfully synced group in generation Generation{generationId=9, memberId='ms-reportes-1-b85cc666-937d-4e76-98e2-f09768ce8a47', protocol='cooperative-sticky'}
+2026-11-14T09:38:14.794-03:00  INFO 25852 --- [ms-reportes] [s-eventos-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Successfully synced group in generation Generation{generationId=9, memberId='ms-reportes-2-84007dd8-97b7-4a2d-bc4f-29666740c1c1', protocol='cooperative-sticky'}
+2026-11-14T09:38:14.795-03:00  INFO 25852 --- [ms-reportes] [s-eventos-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Updating assignment with
+	Assigned partitions:                       [homefixer.solicitudes.eventos-1]
+	Current owned partitions:                  []
+	Added partitions (assigned - owned):       [homefixer.solicitudes.eventos-1]
+	Revoked partitions (owned - assigned):     []
+
+2026-11-14T09:38:14.794-03:00  INFO 25852 --- [ms-reportes] [ubicacion-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Updating assignment with
+	Assigned partitions:                       [homefixer.tecnicos.ubicacion-2]
+	Current owned partitions:                  []
+	Added partitions (assigned - owned):       [homefixer.tecnicos.ubicacion-2]
+	Revoked partitions (owned - assigned):     []
+
+2026-11-14T09:38:14.795-03:00  INFO 25852 --- [ms-reportes] [s-eventos-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Notifying assignor about the new Assignment(partitions=[homefixer.solicitudes.eventos-1])
+2026-11-14T09:38:14.795-03:00  INFO 25852 --- [ms-reportes] [ubicacion-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Notifying assignor about the new Assignment(partitions=[homefixer.tecnicos.ubicacion-2])
+2026-11-14T09:38:14.795-03:00  INFO 25852 --- [ms-reportes] [s-eventos-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Adding newly assigned partitions: homefixer.solicitudes.eventos-1
+2026-11-14T09:38:14.795-03:00  INFO 25852 --- [ms-reportes] [s-eventos-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Updating assignment with
+	Assigned partitions:                       [homefixer.solicitudes.eventos-2]
+	Current owned partitions:                  []
+	Added partitions (assigned - owned):       [homefixer.solicitudes.eventos-2]
+	Revoked partitions (owned - assigned):     []
+
+2026-11-14T09:38:14.795-03:00  INFO 25852 --- [ms-reportes] [ubicacion-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Adding newly assigned partitions: homefixer.tecnicos.ubicacion-2
+2026-11-14T09:38:14.795-03:00  INFO 25852 --- [ms-reportes] [s-eventos-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Notifying assignor about the new Assignment(partitions=[homefixer.solicitudes.eventos-2])
+2026-11-14T09:38:14.795-03:00  INFO 25852 --- [ms-reportes] [s-eventos-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Adding newly assigned partitions: homefixer.solicitudes.eventos-2
+2026-11-14T09:38:14.816-03:00  INFO 25852 --- [ms-reportes] [ubicacion-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Found no committed offset for partition homefixer.tecnicos.ubicacion-1
+2026-11-14T09:38:14.816-03:00  INFO 25852 --- [ms-reportes] [ubicacion-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Found no committed offset for partition homefixer.tecnicos.ubicacion-2
+2026-11-14T09:38:14.820-03:00  INFO 25852 --- [ms-reportes] [ubicacion-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Setting offset for partition homefixer.tecnicos.ubicacion-0 to the committed offset FetchPosition{offset=25, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9094 (id: 3 rack: null)], epoch=9}}
+2026-11-14T09:38:14.820-03:00  INFO 25852 --- [ms-reportes] [s-eventos-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-0, groupId=reportes-metricas] Setting offset for partition homefixer.solicitudes.eventos-0 to the committed offset FetchPosition{offset=217, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=8}}
+2026-11-14T09:38:14.820-03:00  INFO 25852 --- [ms-reportes] [s-eventos-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Setting offset for partition homefixer.solicitudes.eventos-1 to the committed offset FetchPosition{offset=208, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9093 (id: 2 rack: null)], epoch=7}}
+2026-11-14T09:38:14.820-03:00  INFO 25852 --- [ms-reportes] [s-eventos-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Setting offset for partition homefixer.solicitudes.eventos-2 to the committed offset FetchPosition{offset=184, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9094 (id: 3 rack: null)], epoch=9}}
+2026-11-14T09:38:14.820-03:00  INFO 25852 --- [ms-reportes] [s-eventos-1-C-1] o.s.k.l.KafkaMessageListenerContainer    : reportes-metricas: partitions assigned: [homefixer.solicitudes.eventos-1]
+2026-11-14T09:38:14.820-03:00  INFO 25852 --- [ms-reportes] [s-eventos-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : reportes-metricas: partitions assigned: [homefixer.solicitudes.eventos-0]
+2026-11-14T09:38:14.820-03:00  INFO 25852 --- [ms-reportes] [ubicacion-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : reportes-metricas: partitions assigned: [homefixer.tecnicos.ubicacion-0]
+2026-11-14T09:38:14.836-03:00  INFO 25852 --- [ms-reportes] [ubicacion-1-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=ms-reportes-1, groupId=reportes-metricas] Resetting offset for partition homefixer.tecnicos.ubicacion-1 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=8}}.
+2026-11-14T09:38:14.836-03:00  INFO 25852 --- [ms-reportes] [ubicacion-2-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=ms-reportes-2, groupId=reportes-metricas] Resetting offset for partition homefixer.tecnicos.ubicacion-2 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9093 (id: 2 rack: null)], epoch=7}}.
+2026-11-14T09:38:14.836-03:00  INFO 25852 --- [ms-reportes] [ubicacion-1-C-1] o.s.k.l.KafkaMessageListenerContainer    : reportes-metricas: partitions assigned: [homefixer.tecnicos.ubicacion-1]
+2026-11-14T09:38:14.836-03:00  INFO 25852 --- [ms-reportes] [ubicacion-2-C-1] o.s.k.l.KafkaMessageListenerContainer    : reportes-metricas: partitions assigned: [homefixer.tecnicos.ubicacion-2]
+2026-11-14T09:38:14.903-03:00  INFO 25852 --- [ms-reportes] [s-eventos-0-C-1] c.h.r.k.SolicitudEventosKafkaListener    : [KAFKA][CONSUME] SOLICITUD_CREADA solicitud=15 estado=CREADA partition=0 offset=217
+2026-11-14T09:38:14.924-03:00  INFO 25852 --- [ms-reportes] [s-eventos-0-C-1] c.h.r.k.SolicitudEventosKafkaListener    : [KAFKA][CONSUME] ESTADO_ACTUALIZADO solicitud=15 estado=CANCELADA partition=0 offset=218
+2026-11-14T09:38:14.924-03:00  INFO 25852 --- [ms-reportes] [s-eventos-2-C-1] o.s.k.l.KafkaMessageListenerContainer    : reportes-metricas: partitions assigned: [homefixer.solicitudes.eventos-2]
+2026-11-14T09:43:10.934-03:00  INFO 25852 --- [ms-reportes] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
