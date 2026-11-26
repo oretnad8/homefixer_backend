@@ -1,262 +1,247 @@
-# 🛠️ HomeFixer Backend Ecosystem
+# 🛠️ HomeFixer — Plataforma Cloud Native de servicios para el hogar
 
-![Java](https://img.shields.io/badge/Java-17+-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Java](https://img.shields.io/badge/Java-17-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.2.4-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
 ![Spring Cloud](https://img.shields.io/badge/Spring_Cloud-2023.0.1-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-16-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![Supabase](https://img.shields.io/badge/Supabase-Auth_%2B_PostgreSQL-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white)
+![RabbitMQ](https://img.shields.io/badge/RabbitMQ-3.13-FF6600?style=for-the-badge&logo=rabbitmq&logoColor=white)
+![Apache Kafka](https://img.shields.io/badge/Apache_Kafka-3_brokers-231F20?style=for-the-badge&logo=apachekafka&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker_Compose-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 
-HomeFixer es una plataforma integral diseñada bajo una **arquitectura de microservicios cloud-native** que conecta a clientes que necesitan reparaciones u obras en el hogar con técnicos especializados. 
+HomeFixer conecta a clientes que necesitan reparaciones u obras en el hogar con técnicos especializados. Está construida con una **arquitectura de microservicios cloud-native**: un API Gateway, descubrimiento de servicios con Eureka, mensajería con RabbitMQ y streaming de eventos con Apache Kafka.
 
-Este repositorio contiene todo el ecosistema backend, diseñado para ser altamente escalable, resiliente, modular y seguro.
+**Asignatura:** DSY1107 — Desarrollo Cloud Native · Duoc UC
 
----
+## 👥 Integrantes
 
-## 🚀 Tecnologías Principales
-
-- **Lenguaje:** Java 17
-- **Framework Core:** Spring Boot 3.2.x
-- **Cloud & Discovery:** Spring Cloud 2023.0.x (Netflix Eureka, Spring Cloud Gateway, OpenFeign)
-- **Persistencia:** Spring Data JPA / Hibernate
-- **Base de Datos:** PostgreSQL / MySQL (Soporte multibase según configuración)
-- **Seguridad:** JWT (JSON Web Tokens) en API Gateway y soporte preparado para Azure AD (MSAL)
-- **Mensajería:** RabbitMQ (workflow, RPC, DLQ; ver `MENSAJERIA.md`) y Apache Kafka (streaming de eventos y métricas en tiempo real; ver `KAFKA.md`)
-- **Documentación API:** SpringDoc OpenAPI 3 (Swagger UI)
-- **Herramientas Adicionales:** Lombok, Maven (Multi-módulo)
+| Nombre | RUT |
+|---|---|
+| Brayan Oyarce | 19.778.809-7 |
+| Dante Rojas | 18.698.772-1 |
+| Cristofer Lobos | 19.343.166-6 |
 
 ---
 
-## 🏗 Arquitectura del Sistema (UML)
+## 🎯 Objetivos
 
-El sistema utiliza un **API Gateway** como único punto de entrada para los clientes web/móviles. El Gateway se encarga del enrutamiento dinámico y la validación de seguridad (CORS y JWT). 
-Todos los microservicios se registran dinámicamente en el **Servidor Eureka**, lo que permite:
-- Balanceo de carga interno en el lado del cliente (Ribbon/LoadBalancer).
-- Resolución de nombres transparente mediante **OpenFeign**.
+- Permitir que un cliente cree una solicitud de servicio y que se le asigne un técnico cercano y con la especialidad adecuada.
+- Cubrir el ciclo completo del servicio: solicitud, asignación, llegada, ejecución, cobro, pago y valoración.
+- Desacoplar los microservicios mediante mensajería asíncrona confiable (RabbitMQ).
+- Procesar los eventos de negocio como un stream (Kafka) para tener métricas en tiempo real, auditoría y tracking de técnicos.
+- Autenticar con Google (OAuth 2.0 / OIDC) usando Supabase como proveedor de identidad.
 
-### Diagrama de Arquitectura de Contenedores (C4 / Despliegue)
+---
+
+## 🚀 Tecnologías
+
+| Capa | Tecnología |
+|---|---|
+| Frontend | Next.js 16 · React 19 · Tailwind CSS 4 (`fronend-home/`) |
+| Backend | Java 17 · Spring Boot 3.2 · Spring Cloud 2023.0 (Gateway, Eureka, OpenFeign) · Maven multimódulo |
+| Identidad | Supabase Auth (OAuth 2.0 / OIDC con Google); el Gateway valida el JWT con `issuer-uri` (Nimbus) |
+| Persistencia | Spring Data JPA sobre **Supabase PostgreSQL** (base gestionada en la nube) |
+| Mensajería | RabbitMQ 3.13 en Docker (eventos, RPC, ACK manual, DLQ, clúster de 2 nodos) |
+| Streaming | Apache Kafka en Docker (3 ZooKeeper + 3 brokers, RF 3) · Kafka UI |
+| Documentación API | SpringDoc OpenAPI 3 (Swagger UI) |
+
+---
+
+## 🏗 Arquitectura
+
+El proyecto se ejecuta de forma local. Los servicios gestionados en la nube son **Supabase Auth** y **Supabase PostgreSQL**. RabbitMQ y Kafka corren en contenedores con **Docker Compose**.
 
 ```mermaid
-graph TD
-    %% Define styles
-    classDef client fill:#1f77b4,stroke:#fff,stroke-width:2px,color:#fff,rx:5px;
-    classDef gateway fill:#ff7f0e,stroke:#fff,stroke-width:2px,color:#fff,rx:5px;
-    classDef discovery fill:#2ca02c,stroke:#fff,stroke-width:2px,color:#fff,rx:5px;
-    classDef ms fill:#9467bd,stroke:#fff,stroke-width:2px,color:#fff,rx:5px;
-    classDef db fill:#d62728,stroke:#fff,stroke-width:2px,color:#fff,rx:15px;
+flowchart LR
+    U((Usuario)) --> FE[Frontend Next.js<br/>:3000]
+    FE -- "Login con Google" --> SA[Supabase Auth<br/>OAuth 2.0 / OIDC]
+    SA -- "JWT" --> FE
+    FE -- "REST + Bearer JWT" --> GW[API Gateway :8080<br/>valida JWT · rutas · CORS]
+    GW -. "registro / descubrimiento" .- EU[Eureka :8761]
 
-    %% Nodes
-    ClientWeb(Cliente Web App) :::client
-    ClientMovil(Cliente App Móvil) :::client
+    GW --> MS[11 microservicios<br/>ms-usuarios · ms-solicitudes · ms-pagos · ...]
+    MS --> DB[(Supabase PostgreSQL)]
 
-    APIGateway(API Gateway\n:8080\nFiltros, JWT, Rutas) :::gateway
-    EurekaServer(Eureka Discovery Server\n:8761) :::discovery
-    
-    MSAuth(ms-autenticacion\n:8083) :::ms
-    MSUser(ms-usuarios\n:8081) :::ms
-    MSSolicitudes(ms-solicitudes\n:8082) :::ms
-    MSUbicacion(ms-ubicacion\n:8085) :::ms
-    MSPagos(ms-pagos\n:8087) :::ms
-    MSValoraciones(ms-valoraciones\n:8088) :::ms
-    MSMaestria(ms-maestria\n:8084) :::ms
-    MSNotificacion(ms-notificacion\n:8086) :::ms
-    
-    DBUser[(DB Usuarios)] :::db
-    DBSolicitudes[(DB Solicitudes)] :::db
-    DBPagos[(DB Pagos)] :::db
-    DBValoraciones[(DB Valoraciones)] :::db
+    subgraph Docker Compose
+        RMQ[RabbitMQ<br/>:5672 · :15672]
+        KF[Kafka x3 + ZooKeeper x3<br/>:9092-9094]
+        KUI[Kafka UI :8095]
+    end
 
-    %% Connections
-    ClientWeb -->|REST / HTTPS| APIGateway
-    ClientMovil -->|REST / HTTPS| APIGateway
-
-    APIGateway -->|Ruteo y Load Balancing| MSAuth
-    APIGateway -->|Ruteo y Load Balancing| MSUser
-    APIGateway -->|Ruteo y Load Balancing| MSSolicitudes
-    APIGateway -->|Ruteo y Load Balancing| MSUbicacion
-    APIGateway -->|Ruteo y Load Balancing| MSPagos
-    APIGateway -->|Ruteo y Load Balancing| MSValoraciones
-    
-    %% Eureka Registrations
-    APIGateway -.->|Registra/Descubre| EurekaServer
-    MSAuth -.->|Registra| EurekaServer
-    MSUser -.->|Registra| EurekaServer
-    MSSolicitudes -.->|Registra| EurekaServer
-    MSUbicacion -.->|Registra| EurekaServer
-    MSPagos -.->|Registra| EurekaServer
-    MSValoraciones -.->|Registra| EurekaServer
-    MSMaestria -.->|Registra| EurekaServer
-    MSNotificacion -.->|Registra| EurekaServer
-
-    %% Internal Communication (OpenFeign)
-    MSUser -->|OpenFeign| MSValoraciones
-    MSSolicitudes -->|OpenFeign| MSUser
-    MSSolicitudes -->|OpenFeign| MSUbicacion
-    MSPagos -->|OpenFeign| MSSolicitudes
-    
-    %% DB Connections
-    MSUser --> DBUser
-    MSSolicitudes --> DBSolicitudes
-    MSPagos --> DBPagos
-    MSValoraciones --> DBValoraciones
+    MS <-- "eventos · RPC" --> RMQ
+    MS <-- "eventos de negocio · GPS" --> KF
+    KUI --> KF
 ```
+
+**¿Por qué esta arquitectura?**
+- **API Gateway** como único punto de entrada: centraliza la seguridad (JWT), CORS y el ruteo con balanceo (`lb://`).
+- **Eureka + OpenFeign:** los servicios se encuentran por nombre, sin IPs fijas.
+- **Supabase:** delega la autenticación con Google y la base de datos a un servicio gestionado, sin credenciales en el código.
+- **RabbitMQ** para el workflow transaccional (cobro, pago, reputación) y **Kafka** para el stream de eventos que se retiene y se puede releer (métricas, auditoría, tracking).
+- **Docker Compose:** la infraestructura de mensajería se levanta igual en cualquier equipo.
 
 ---
 
-## 📦 Módulos y Microservicios
+## 📦 Módulos y microservicios
 
-| Módulo / Microservicio | Puerto | Descripción | Persistencia |
-| ---------------------- | :----: | ----------- | :-----------: |
-| **`eureka-server`** | `8761` | Servidor de descubrimiento de servicios (Service Registry). | No |
-| **`api-gateway`** | `8080` | Punto de entrada único. Maneja ruteo, filtros globales, CORS y validación de tokens JWT. | No |
-| **`ms-usuarios`** | `8081` | Gestión de perfiles, modelo de herencia (Usuarios, Clientes, Técnicos), reputación y estados. | Sí |
-| **`ms-solicitudes`** | `8082` | Core de negocio: Gestión de solicitudes de servicio, estados, cotizaciones y asignaciones. | Sí |
-| **`ms-autenticacion`**| `8083` | Identity Provider interno. Generación y validación de JWT, login, registro. | No |
-| **`ms-maestria`** | `8084` | Especialidades, certificaciones e insignias para validar las habilidades de los técnicos. | Sí |
-| **`ms-ubicacion`** | `8085` | Lógica geoespacial, cálculo de distancias y algoritmos de proximidad de técnicos. | No |
-| **`ms-notificacion`** | `8086` | Servicio asíncrono para el envío de alertas (WebSockets, Emails, SMS). | No |
-| **`ms-pagos`** | `8087` | Procesamiento de transacciones, integración con pasarelas, generación de recibos. | Sí |
-| **`ms-valoraciones`** | `8088` | Gestión de reseñas, comentarios y actualización del rating de técnicos y clientes. | Sí |
-| **`ms-promociones`** | `8089` | Motor de descuentos, cupones y membresías premium para técnicos. | Sí |
-| **`ms-reportes`** | `8090` | Consolidación de métricas, analíticas del sistema y tableros administrativos. Métricas en tiempo real desde Kafka (SSE). | No |
-| **`ms-kafka-admin`** | `8091` | Administración de Kafka: tópicos, configuraciones, particiones, consumer groups, lag, reset de offsets y DLT. | No |
-| **`shared`** | `N/A` | Módulo común empaquetado como dependencia (Librería). Contiene DTOs compartidos, Enums globales y utilidades. | No |
+| Módulo | Puerto | Descripción | Rutas en el Gateway |
+|---|:-:|---|---|
+| `eureka-server` | 8761 | Service registry | — |
+| `api-gateway` | 8080 | Punto de entrada único: valida el JWT de Supabase, CORS y ruteo | — |
+| `ms-usuarios` | 8081 | Perfiles (Usuario → Cliente / Técnico), reputación y estados | `/api/usuarios/**`, `/api/clientes/**`, `/api/tecnicos/**` |
+| `ms-solicitudes` | 8082 | Core de negocio: solicitudes, asignación, estados y chat. Servidor RPC | `/api/solicitudes/**`, `/api/chat/**` |
+| `ms-autenticacion` | 8083 | Sincroniza el usuario autenticado en Supabase con la plataforma (`POST /api/auth/sync`) | `/api/auth/**` |
+| `ms-maestria` | 8084 | Categorías, especialidades, certificaciones e insignias | `/api/maestria/**`, `/api/categorias/**` |
+| `ms-ubicacion` | 8085 | Geolocalización, técnicos cercanos, tracking GPS (productor Kafka) | `/api/ubicacion/**` |
+| `ms-notificacion` | 8086 | Notificaciones a usuarios y auditoría de eventos | `/api/notificaciones/**`, `/api/admin/**` |
+| `ms-pagos` | 8087 | Cobros y pagos | `/api/pagos/**` |
+| `ms-valoraciones` | 8088 | Reseñas y calificaciones | `/api/valoraciones/**` |
+| `ms-promociones` | 8089 | Descuentos, cupones y membresías | `/api/promociones/**` |
+| `ms-reportes` | 8090 | Dashboard y métricas en tiempo real desde Kafka (SSE) | `/api/reportes/**` |
+| `ms-kafka-admin` | 8091 | Administración de Kafka: tópicos, consumer groups, lag, offsets, DLT y generador de carga | `/api/kafka/**` |
+| `shared` | — | Librería común: DTOs, enums, topología RabbitMQ y publicador Kafka | — |
 
 ---
 
-## 📊 Diagramas UML de Dominio e Interacción
-
-### 1. Diagrama de Entidad Relación (Módulo Usuarios)
-El sistema utiliza una estrategia de persistencia de herencia (Ej. `JOINED`) para los usuarios de la plataforma, optimizando la base de datos para distinguir roles y responsabilidades.
-
-```mermaid
-classDiagram
-    class Usuario {
-        +Long id
-        +String nombre
-        +String email
-        +String telefono
-        +String password
-        +iniciarSesion()
-        +recuperarPassword()
-    }
-    
-    class Cliente {
-        +List~Direccion~ direccionesGuardadas
-        +crearSolicitud()
-        +valorarTecnico()
-    }
-    
-    class Tecnico {
-        +boolean validado
-        +double calificacion_promedio
-        +String nivel_reputacion
-        +List~Especialidad~ especialidades
-        +aceptarSolicitud()
-        +enviarCotizacion()
-    }
-
-    Usuario <|-- Cliente : Herencia (JOINED)
-    Usuario <|-- Tecnico : Herencia (JOINED)
-```
-
-### 2. Diagrama de Secuencia (Flujo: Cliente Solicita Servicio)
-Este diagrama muestra cómo interactúan los distintos microservicios, el Gateway y Eureka cuando un usuario crea una solicitud de servicio.
+## 🔐 Manejo de APIs y autenticación
 
 ```mermaid
 sequenceDiagram
     autonumber
-    actor Cliente
-    participant Gateway as API Gateway
-    participant Eureka as Eureka Server
-    participant Solicitudes as ms-solicitudes
-    participant Ubicacion as ms-ubicacion
-    participant Notificacion as ms-notificacion
+    actor Usuario
+    participant FE as Frontend
+    participant SA as Supabase Auth
+    participant GW as API Gateway
+    participant MS as Microservicio
 
-    Cliente->>Gateway: POST /api/solicitudes (Token JWT)
-    Gateway->>Gateway: Valida JWT (Filtro Seguridad)
-    
-    Gateway->>Eureka: Obtiene instancia de ms-solicitudes
-    Eureka-->>Gateway: 10.0.0.5:8082
-    
-    Gateway->>Solicitudes: Forward Request (Headers inyectados)
-    
-    Solicitudes->>Solicitudes: Valida payload de Solicitud
-    
-    Solicitudes->>Eureka: Obtiene instancia de ms-ubicacion
-    Eureka-->>Solicitudes: 10.0.0.6:8085
-    
-    Solicitudes->>Ubicacion: OpenFeign: buscarTecnicosCercanos(coords, especialidad)
-    Ubicacion-->>Solicitudes: Retorna Lista[Tecnicos]
-    
-    Solicitudes->>Solicitudes: Guarda Solicitud en DB (Estado: PENDIENTE)
-    
-    par Envío de Notificaciones Asíncrono
-        Solicitudes->>Notificacion: Evento(Kafka/Feign): notificarNuevaSolicitud(Lista[Tecnicos])
-        Notificacion-->>Tecnicos: Push Notification / Email
-    end
-    
-    Solicitudes-->>Gateway: 201 Created (Solicitud DTO)
-    Gateway-->>Cliente: Response 201 Created
+    Usuario->>FE: "Ingresar con Google"
+    FE->>SA: OAuth 2.0 / OIDC
+    SA-->>FE: access_token (JWT)
+    FE->>GW: GET /api/... (Authorization: Bearer JWT)
+    GW->>GW: Valida firma, issuer y audience (authenticated)
+    GW->>MS: Reenvía la petición (lb:// vía Eureka)
+    MS-->>GW: Respuesta DTO
+    GW-->>FE: 200 OK
 ```
 
----
-
-## 🔒 Seguridad y Configuración
-
-El proyecto está diseñado bajo los principios de los **12-Factor Apps** y está listo para entornos Cloud. **No existen credenciales sensibles hardcodeadas en el código fuente**. Todo se maneja mediante variables de entorno o archivos `.env`.
-
-### Variables Globales Recomendadas
-- `SPRING_DATASOURCE_URL`: (Ej: `jdbc:mysql://localhost:3306/homefixer_bd?useSSL=false`)
-- `SPRING_DATASOURCE_USERNAME`: Usuario de la BD.
-- `SPRING_DATASOURCE_PASSWORD`: Contraseña de la BD.
-- `JWT_SECRET`: Llave secreta encriptada (HMAC-SHA256) usada para firmar y validar tokens en el Gateway y Auth.
-- `AZURE_CLIENT_ID` y `AZURE_TENANT_ID`: (Opcional) Si se utiliza integración MSAL / Azure AD.
-
-*(Por defecto, para desarrollo local, si no se definen variables, el sistema usará `localhost:3306` con credenciales genéricas para la base de datos).*
+- **Síncrono HTTP:** OpenFeign entre servicios. Por ejemplo, ms-solicitudes llama a ms-ubicacion (técnicos cercanos) y a ms-usuarios (especialidad del técnico).
+- **Síncrono por mensajería (RPC):** exchange `homefixer.rpc` con `reply_to` y `correlation_id`, timeout de 5 s y respuesta 503 si no llega.
+- **Swagger UI:** `http://localhost:<PUERTO>/swagger-ui/index.html` en cada servicio. El Gateway también agrupa las docs de todos los servicios en `/v3/api-docs/<servicio>`.
 
 ---
 
-## 📖 Documentación de APIs (Swagger / OpenAPI 3)
+## 🐇 Mensajería con RabbitMQ
 
-El sistema utiliza **SpringDoc OpenAPI 3** configurado transversalmente para documentar todos los endpoints expuestos de manera automática.
+La topología está en `shared/.../messaging` (`MessagingConstants`, `EventQueues`, `EventPublisher`).
 
-Para acceder a la consola interactiva local (Swagger UI) de cualquier microservicio en ejecución, navegue a:
-`http://localhost:<PUERTO>/swagger-ui/index.html`
+| Exchange | Tipo | Uso |
+|---|---|---|
+| `homefixer.events` | topic | Eventos de negocio (pub/sub) |
+| `homefixer.rpc` | direct | Request/Reply hacia ms-solicitudes |
+| `homefixer.dlx` | direct | Dead Letter Exchange → una `*.dlq` por cola |
 
-Por ejemplo:
-- **ms-usuarios:** [http://localhost:8081/swagger-ui/index.html](http://localhost:8081/swagger-ui/index.html)
-- **ms-solicitudes:** [http://localhost:8082/swagger-ui/index.html](http://localhost:8082/swagger-ui/index.html)
+| Evento | Productor | Consumidores |
+|---|---|---|
+| `solicitud.creada` / `solicitud.tecnico-asignado` | ms-solicitudes | notificación, reportes |
+| `solicitud.estado-actualizado` | ms-solicitudes | notificación, reportes, **pagos** (genera el cobro) |
+| `pago.procesado` | ms-pagos | notificación, **solicitudes** (COMPLETADA → PAGADA) |
+| `valoracion.registrada` | ms-valoraciones | notificación, **usuarios** (recalcula la reputación) |
+| `certificacion.aprobada` / `rechazada` | ms-maestria | notificación |
+| `chat.mensaje` | ms-solicitudes | notificación |
+
+**Confiabilidad**
+- Publisher confirms (`correlated`) y returns: el broker confirma cada mensaje y avisa de los que no se pueden enrutar.
+- ACK manual en los consumidores (`prefetch: 10`); los rechazos no vuelven a la cola y van a la DLQ. ms-notificacion reintenta 3 veces antes de rechazar.
+- Colas y mensajes durables, TTL de 24 h y largo máximo de 10.000 mensajes por cola.
+- Consumidores idempotentes por `eventoId`.
+- Clúster de 2 nodos opcional en `docker-compose.cluster.yml` (`rabbitmq1` :15672 y `rabbitmq2` :15673).
 
 ---
 
-## 🛠️ Cómo Ejecutar el Proyecto (Desarrollo Local)
+## 📡 Streaming con Apache Kafka
 
-Debido a la naturaleza distribuida de la plataforma, el orden de inicio es importante. Puedes usar los scripts proporcionados (`start-all.bat` o `start-all.ps1`), o seguir los pasos manualmente:
+Kafka **complementa** a RabbitMQ: cada hecho de negocio también se publica como evento en Kafka, donde queda retenido y se puede releer. Si Kafka cae, el negocio sigue funcionando por RabbitMQ (con `KAFKA_ENABLED=false` un servicio deja de usar Kafka).
 
-1. **Infraestructura Base:** Asegúrate de tener tu motor de base de datos MySQL/PostgreSQL ejecutándose en el puerto por defecto, RabbitMQ (`docker compose up -d`) y Kafka:
+**Clúster (`docker-compose.kafka.yml`):** 3 ZooKeeper en quórum, 3 brokers, `acks=all`, `min.insync.replicas=2` y `unclean.leader.election.enable=false`. El clúster tolera la caída de un broker sin perder datos.
+
+| Tópico | Part. | RF | Key | Retención |
+|---|:-:|:-:|---|---|
+| `homefixer.solicitudes.eventos` | 3 | 3 | `solicitudId` | 7 días |
+| `homefixer.tecnicos.ubicacion` | 3 | 3 | `tecnicoId` | 24 h, compactado |
+| `*.DLT` | 3 | 3 | — | 14 días |
+
+Los tópicos se crean con `kafka/create-topics.sh` (contenedor `kafka-init`).
+
+```mermaid
+flowchart LR
+    SOL[ms-solicitudes] & PAG[ms-pagos] & VAL[ms-valoraciones] --> T1[[solicitudes.eventos]]
+    UBI[ms-ubicacion<br/>+ simulador GPS] --> T2[[tecnicos.ubicacion]]
+    T1 & T2 -- reportes-metricas --> REP[ms-reportes] -- "SSE /api/reportes/stream" --> FE[Frontend /admin/streaming]
+    T1 -- notificacion-auditoria --> NOT[ms-notificacion]
+    T2 -- ubicacion-tracking --> UB2[ms-ubicacion tracking]
+    REP & NOT & UB2 -. fallo .-> DLT[[*.DLT]] -- dlt-auditoria --> ADM[ms-kafka-admin]
+```
+
+- **Productor:** `acks=all`, idempotente y con compresión `lz4`. La key mantiene el orden por solicitud o por técnico.
+- **Consumidores:** commit manual del offset después de procesar, `concurrency: 3` (un hilo por partición) y DLT para los mensajes que fallan.
+- **Métricas en tiempo real:** solicitudes por estado y categoría, ingresos, calificaciones y técnicos en línea, vía `GET /api/reportes/metricas/tiempo-real` y SSE en `/api/reportes/stream`.
+- **Supervisión:** Kafka UI en `http://localhost:8095` y `ms-kafka-admin` (lag por consumer group, reset de offsets, DLT, `POST /api/kafka/admin/simular?eventos=N` para la demo de carga).
+
+---
+
+## 🛠️ Cómo ejecutar (local)
+
+**Requisitos:** Java 17, Node.js, Docker Desktop y un proyecto de Supabase con el proveedor Google habilitado.
+
+1. **Variables de entorno.** Crea un `.env` en la raíz (no se sube al repositorio) con:
+   `SUPABASE_DB_URL`, `SUPABASE_DB_USER`, `SUPABASE_DB_PASSWORD`, `SUPABASE_JWT_ISSUER`, `SUPABASE_JWT_AUDIENCE`, `SUPABASE_JWT_SECRET`, `SUPABASE_SERVICE_ROLE_KEY` y `ADMIN_EMAILS`.
+   El frontend usa `fronend-home/.env` con `NEXT_PUBLIC_API_URL`, `NEXT_PUBLIC_SUPABASE_URL` y `NEXT_PUBLIC_SUPABASE_ANON_KEY`.
+2. **Infraestructura en Docker:**
    ```bash
-   docker compose -f docker-compose.kafka.yml up -d     # 3 Zookeeper + 3 brokers + tópicos
-   docker compose -f docker-compose.kafka-ui.yml up -d  # Kafka UI en http://localhost:8095
+   docker compose up -d                                  # RabbitMQ → http://localhost:15672 (guest/guest)
+   docker compose -f docker-compose.kafka.yml up -d      # 3 ZooKeeper + 3 brokers + tópicos
+   docker compose -f docker-compose.kafka-ui.yml up -d   # Kafka UI → http://localhost:8095
    ```
-2. **Construir el Proyecto Multimódulo:**
-   En la raíz del proyecto, instala todos los módulos. Esto compilará el módulo `shared` y lo hará disponible.
+3. **Compilar el backend:**
    ```bash
-   mvn clean install -DskipTests
+   ./mvnw clean install -DskipTests
    ```
-3. **Paso 1: Iniciar el Service Registry:**
-   Inicia `eureka-server` (Puerto `8761`). Espera a que el panel web de Eureka esté disponible en `http://localhost:8761`.
-4. **Paso 2: Iniciar el Gateway:**
-   Inicia `api-gateway` (Puerto `8080`). Este microservicio ya empezará a buscar a Eureka para registrarse.
-5. **Paso 3: Iniciar Microservicios Core:**
-   Levanta los demás servicios de negocio según necesites probar (ej: `ms-usuarios`, `ms-solicitudes`). Se registrarán en Eureka de forma automática tras unos instantes.
+4. **Levantar los microservicios.** `start-all.ps1` carga el `.env` y arranca Eureka, el Gateway y los 11 microservicios en orden. `stop-all.ps1` los detiene.
+   ```powershell
+   .\start-all.ps1
+   ```
+5. **Levantar el frontend:**
+   ```bash
+   cd fronend-home
+   npm install
+   npm run dev        # http://localhost:3000
+   ```
+
+| Consola | URL |
+|---|---|
+| Frontend | http://localhost:3000 |
+| Eureka | http://localhost:8761 |
+| API Gateway | http://localhost:8080 |
+| RabbitMQ Management | http://localhost:15672 |
+| Kafka UI | http://localhost:8095 |
 
 ---
 
-## 🤝 Contribución y Patrones de Diseño
+## 🧩 Patrones de diseño
 
-- **DTO Pattern:** Todas las respuestas de la API utilizan Data Transfer Objects en lugar de exponer entidades JPA directamente.
-- **Service Layer Pattern:** Lógica de negocio separada en la capa `@Service`.
-- **Global Exception Handling:** Manejador de excepciones transversal con `@ControllerAdvice` para devolver siempre el mismo formato de error estándar a través del Gateway.
-- **Feign Clients:** La comunicación interna (Síncrona) debe hacerse mediante interfaces `@FeignClient` definidas de preferencia en el módulo donde se invocan, evitando acoplamiento.
+- **API Gateway + Service Registry** (Spring Cloud Gateway + Eureka).
+- **DTO** en todas las respuestas; las entidades JPA no se exponen.
+- **Service Layer** y manejo global de errores con `@ControllerAdvice`.
+- **Event-driven:** publish/subscribe, request/reply, dead letter y consumidores idempotentes.
+- **12-Factor:** sin credenciales en el código; todo se configura por variables de entorno.
 
 ---
-*Desarrollado para la Plataforma HomeFixer.*
+
+## 📁 Entregables
+
+1. Presentación del sistema (PPT, máximo 15 diapositivas).
+2. Video de evidencia del front y el back (máximo 5 minutos).
+3. Código fuente: este repositorio.
+
+---
+*HomeFixer — Duoc UC, DSY1107 Desarrollo Cloud Native.*

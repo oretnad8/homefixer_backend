@@ -3,23 +3,19 @@
 > next build
 
 ▲ Next.js 16.3.7 (Turbopack)
-- Environments: .env.local
-✓ Running next.config.ts took 111ms
+- Environments: .env
+✓ Running next.config.ts took 29ms
 
   Creating an optimized production build ...
-(node:31280) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/Pc%20Tester/Desktop/6to/cloud.native/homefixer/fronend-home/tailwind.config.ts?id=1794659906259 is not specified and it doesn't parse as CommonJS.
-Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
-To eliminate this warning, add "type": "module" to \\?\C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\fronend-home\package.json.
-(Use `node --trace-warnings ...` to show where the warning was created)
-✓ Compiled successfully in 2.9s
+✓ Compiled successfully in 2.0s
   Running TypeScript ...
-  Finished TypeScript in 3.8s ...
+  Finished TypeScript in 2.5s ...
   Collecting page data using 7 workers ...
   Generating static pages using 7 workers (0/24) ...
   Generating static pages using 7 workers (6/24) 
   Generating static pages using 7 workers (12/24) 
   Generating static pages using 7 workers (18/24) 
-✓ Generating static pages using 7 workers (24/24) in 672ms
+✓ Generating static pages using 7 workers (24/24) in 1909ms
   Finalizing page optimization ...
 
 Route (app)
@@ -67,5 +63,6 @@ Route (app)
 ▲ Next.js 16.3.7
 - Local:         http://localhost:3000
 - Network:       http://192.168.1.13:3000
-✓ Ready in 268ms
-✓ Running next.config.ts took 37ms
+✓ Ready in 462ms
+✓ Running next.config.ts took 55ms
+^C^C¿Desea terminar el trabajo por lotes (S/N)? 

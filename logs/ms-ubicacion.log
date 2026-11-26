@@ -85,54 +85,54 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.4)
 
-2026-11-14T09:36:50.366-03:00  INFO 6604 --- [ms-ubicacion] [           main] c.h.ubicacion.MsUbicacionApplication     : Starting MsUbicacionApplication using Java 21.0.12 with PID 6604 (C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-ubicacion\target\classes started by drojas in C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-ubicacion)
-2026-11-14T09:36:50.368-03:00  INFO 6604 --- [ms-ubicacion] [           main] c.h.ubicacion.MsUbicacionApplication     : No active profile set, falling back to 1 default profile: "default"
-2026-11-14T09:36:51.008-03:00  INFO 6604 --- [ms-ubicacion] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-11-14T09:36:51.121-03:00  INFO 6604 --- [ms-ubicacion] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 107 ms. Found 1 JPA repository interface.
-2026-11-14T09:36:51.320-03:00  INFO 6604 --- [ms-ubicacion] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=bec37f5f-068a-3e8f-a762-1aae63885193
-2026-11-14T09:36:51.451-03:00  WARN 6604 --- [ms-ubicacion] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
-2026-11-14T09:36:51.452-03:00  WARN 6604 --- [ms-ubicacion] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2026-11-14T09:36:51.651-03:00  INFO 6604 --- [ms-ubicacion] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
-2026-11-14T09:36:51.662-03:00  INFO 6604 --- [ms-ubicacion] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-11-14T09:36:51.662-03:00  INFO 6604 --- [ms-ubicacion] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
-2026-11-14T09:36:51.721-03:00  INFO 6604 --- [ms-ubicacion] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-11-14T09:36:51.722-03:00  INFO 6604 --- [ms-ubicacion] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1310 ms
-2026-11-14T09:36:51.847-03:00  INFO 6604 --- [ms-ubicacion] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-11-14T09:36:51.885-03:00  INFO 6604 --- [ms-ubicacion] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2026-11-14T09:36:51.907-03:00  INFO 6604 --- [ms-ubicacion] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-11-14T09:36:52.059-03:00  INFO 6604 --- [ms-ubicacion] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-11-14T09:36:52.083-03:00  INFO 6604 --- [ms-ubicacion] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-11-14T09:36:54.345-03:00  INFO 6604 --- [ms-ubicacion] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@58b3eb1
-2026-11-14T09:36:54.347-03:00  INFO 6604 --- [ms-ubicacion] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-11-14T09:36:54.576-03:00  WARN 6604 --- [ms-ubicacion] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-11-14T09:36:55.668-03:00  INFO 6604 --- [ms-ubicacion] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-11-14T09:36:56.527-03:00  INFO 6604 --- [ms-ubicacion] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-11-14T09:36:56.908-03:00  WARN 6604 --- [ms-ubicacion] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-11-14T09:36:56.981-03:00  INFO 6604 --- [ms-ubicacion] [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'ms-usuarios' URL not provided. Will try picking an instance via load-balancing.
-2026-11-14T09:36:57.036-03:00  INFO 6604 --- [ms-ubicacion] [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'ms-maestria' URL not provided. Will try picking an instance via load-balancing.
-2026-11-14T09:36:57.527-03:00  INFO 6604 --- [ms-ubicacion] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2026-11-14T09:36:57.546-03:00  WARN 6604 --- [ms-ubicacion] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2026-11-14T09:36:57.589-03:00  INFO 6604 --- [ms-ubicacion] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2026-11-14T09:36:57.662-03:00  INFO 6604 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2026-11-14T09:36:57.665-03:00  INFO 6604 --- [ms-ubicacion] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-11-14T09:36:57.682-03:00  INFO 6604 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2026-11-14T09:36:57.682-03:00  INFO 6604 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2026-11-14T09:36:57.682-03:00  INFO 6604 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2026-11-14T09:36:57.682-03:00  INFO 6604 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2026-11-14T09:36:57.682-03:00  INFO 6604 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2026-11-14T09:36:57.682-03:00  INFO 6604 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2026-11-14T09:36:57.682-03:00  INFO 6604 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2026-11-14T09:36:57.914-03:00  INFO 6604 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2026-11-14T09:36:57.916-03:00  INFO 6604 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2026-11-14T09:36:57.918-03:00  INFO 6604 --- [ms-ubicacion] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2026-11-14T09:36:57.921-03:00  INFO 6604 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1794659817921 with initial instances count: 3
-2026-11-14T09:36:57.923-03:00  INFO 6604 --- [ms-ubicacion] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MS-UBICACION with eureka with status UP
-2026-11-14T09:36:57.923-03:00  INFO 6604 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1794659817923, current=UP, previous=STARTING]
-2026-11-14T09:36:57.924-03:00  INFO 6604 --- [ms-ubicacion] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-UBICACION/DROJAS.localdomain:ms-ubicacion:8085: registering service...
-2026-11-14T09:36:57.940-03:00  INFO 6604 --- [ms-ubicacion] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path ''
-2026-11-14T09:36:57.940-03:00  INFO 6604 --- [ms-ubicacion] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8085
-2026-11-14T09:36:57.954-03:00  INFO 6604 --- [ms-ubicacion] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-UBICACION/DROJAS.localdomain:ms-ubicacion:8085 - registration status: 204
-2026-11-14T09:36:57.982-03:00  INFO 6604 --- [ms-ubicacion] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+2026-11-18T20:05:34.946-03:00  INFO 25072 --- [ms-ubicacion] [           main] c.h.ubicacion.MsUbicacionApplication     : Starting MsUbicacionApplication using Java 21.0.12 with PID 25072 (C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-ubicacion\target\classes started by drojas in C:\Users\Pc Tester\Desktop\6to\cloud.native\homefixer\ms-ubicacion)
+2026-11-18T20:05:34.949-03:00  INFO 25072 --- [ms-ubicacion] [           main] c.h.ubicacion.MsUbicacionApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-11-18T20:05:35.623-03:00  INFO 25072 --- [ms-ubicacion] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-18T20:05:35.752-03:00  INFO 25072 --- [ms-ubicacion] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 124 ms. Found 1 JPA repository interface.
+2026-11-18T20:05:35.976-03:00  INFO 25072 --- [ms-ubicacion] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=bec37f5f-068a-3e8f-a762-1aae63885193
+2026-11-18T20:05:36.101-03:00  WARN 25072 --- [ms-ubicacion] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-11-18T20:05:36.103-03:00  WARN 25072 --- [ms-ubicacion] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-11-18T20:05:36.342-03:00  INFO 25072 --- [ms-ubicacion] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
+2026-11-18T20:05:36.354-03:00  INFO 25072 --- [ms-ubicacion] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-18T20:05:36.354-03:00  INFO 25072 --- [ms-ubicacion] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-11-18T20:05:36.422-03:00  INFO 25072 --- [ms-ubicacion] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-18T20:05:36.423-03:00  INFO 25072 --- [ms-ubicacion] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1424 ms
+2026-11-18T20:05:36.561-03:00  INFO 25072 --- [ms-ubicacion] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-18T20:05:36.608-03:00  INFO 25072 --- [ms-ubicacion] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-11-18T20:05:36.632-03:00  INFO 25072 --- [ms-ubicacion] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-18T20:05:36.785-03:00  INFO 25072 --- [ms-ubicacion] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-18T20:05:36.804-03:00  INFO 25072 --- [ms-ubicacion] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-18T20:05:39.125-03:00  INFO 25072 --- [ms-ubicacion] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1a02ebe0
+2026-11-18T20:05:39.125-03:00  INFO 25072 --- [ms-ubicacion] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-18T20:05:39.380-03:00  WARN 25072 --- [ms-ubicacion] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-18T20:05:40.574-03:00  INFO 25072 --- [ms-ubicacion] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-18T20:05:41.488-03:00  INFO 25072 --- [ms-ubicacion] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-18T20:05:41.915-03:00  WARN 25072 --- [ms-ubicacion] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-11-18T20:05:41.989-03:00  INFO 25072 --- [ms-ubicacion] [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'ms-usuarios' URL not provided. Will try picking an instance via load-balancing.
+2026-11-18T20:05:42.041-03:00  INFO 25072 --- [ms-ubicacion] [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'ms-maestria' URL not provided. Will try picking an instance via load-balancing.
+2026-11-18T20:05:42.690-03:00  INFO 25072 --- [ms-ubicacion] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-11-18T20:05:42.715-03:00  WARN 25072 --- [ms-ubicacion] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-11-18T20:05:42.778-03:00  INFO 25072 --- [ms-ubicacion] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-11-18T20:05:42.859-03:00  INFO 25072 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-11-18T20:05:42.862-03:00  INFO 25072 --- [ms-ubicacion] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-18T20:05:42.880-03:00  INFO 25072 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-11-18T20:05:42.880-03:00  INFO 25072 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-11-18T20:05:42.880-03:00  INFO 25072 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-11-18T20:05:42.880-03:00  INFO 25072 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-11-18T20:05:42.880-03:00  INFO 25072 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-11-18T20:05:42.880-03:00  INFO 25072 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-11-18T20:05:42.880-03:00  INFO 25072 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-11-18T20:05:43.133-03:00  INFO 25072 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-11-18T20:05:43.134-03:00  INFO 25072 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-11-18T20:05:43.136-03:00  INFO 25072 --- [ms-ubicacion] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-11-18T20:05:43.139-03:00  INFO 25072 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1795043143139 with initial instances count: 4
+2026-11-18T20:05:43.143-03:00  INFO 25072 --- [ms-ubicacion] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MS-UBICACION with eureka with status UP
+2026-11-18T20:05:43.144-03:00  INFO 25072 --- [ms-ubicacion] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1795043143144, current=UP, previous=STARTING]
+2026-11-18T20:05:43.145-03:00  INFO 25072 --- [ms-ubicacion] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-UBICACION/DROJAS.localdomain:ms-ubicacion:8085: registering service...
+2026-11-18T20:05:43.162-03:00  INFO 25072 --- [ms-ubicacion] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path ''
+2026-11-18T20:05:43.163-03:00  INFO 25072 --- [ms-ubicacion] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8085
+2026-11-18T20:05:43.179-03:00  INFO 25072 --- [ms-ubicacion] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-UBICACION/DROJAS.localdomain:ms-ubicacion:8085 - registration status: 204
+2026-11-18T20:05:43.219-03:00  INFO 25072 --- [ms-ubicacion] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
 	allow.auto.create.topics = true
 	auto.commit.interval.ms = 5000
 	auto.include.jmx.reporter = true
@@ -226,11 +226,11 @@
 	ssl.truststore.type = JKS
 	value.deserializer = class org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
 
-2026-11-14T09:36:58.073-03:00  INFO 6604 --- [ms-ubicacion] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
-2026-11-14T09:36:58.073-03:00  INFO 6604 --- [ms-ubicacion] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
-2026-11-14T09:36:58.073-03:00  INFO 6604 --- [ms-ubicacion] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1794659818072
-2026-11-14T09:36:58.075-03:00  INFO 6604 --- [ms-ubicacion] [           main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Subscribed to topic(s): homefixer.tecnicos.ubicacion
-2026-11-14T09:36:58.080-03:00  INFO 6604 --- [ms-ubicacion] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+2026-11-18T20:05:43.356-03:00  INFO 25072 --- [ms-ubicacion] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
+2026-11-18T20:05:43.356-03:00  INFO 25072 --- [ms-ubicacion] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
+2026-11-18T20:05:43.356-03:00  INFO 25072 --- [ms-ubicacion] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1795043143353
+2026-11-18T20:05:43.360-03:00  INFO 25072 --- [ms-ubicacion] [           main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Subscribed to topic(s): homefixer.tecnicos.ubicacion
+2026-11-18T20:05:43.364-03:00  INFO 25072 --- [ms-ubicacion] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
 	allow.auto.create.topics = true
 	auto.commit.interval.ms = 5000
 	auto.include.jmx.reporter = true
@@ -324,11 +324,11 @@
 	ssl.truststore.type = JKS
 	value.deserializer = class org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
 
-2026-11-14T09:36:58.087-03:00  INFO 6604 --- [ms-ubicacion] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
-2026-11-14T09:36:58.087-03:00  INFO 6604 --- [ms-ubicacion] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
-2026-11-14T09:36:58.087-03:00  INFO 6604 --- [ms-ubicacion] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1794659818087
-2026-11-14T09:36:58.088-03:00  INFO 6604 --- [ms-ubicacion] [           main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Subscribed to topic(s): homefixer.tecnicos.ubicacion
-2026-11-14T09:36:58.089-03:00  INFO 6604 --- [ms-ubicacion] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+2026-11-18T20:05:43.371-03:00  INFO 25072 --- [ms-ubicacion] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
+2026-11-18T20:05:43.371-03:00  INFO 25072 --- [ms-ubicacion] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
+2026-11-18T20:05:43.371-03:00  INFO 25072 --- [ms-ubicacion] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1795043143371
+2026-11-18T20:05:43.372-03:00  INFO 25072 --- [ms-ubicacion] [           main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Subscribed to topic(s): homefixer.tecnicos.ubicacion
+2026-11-18T20:05:43.374-03:00  INFO 25072 --- [ms-ubicacion] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
 	allow.auto.create.topics = true
 	auto.commit.interval.ms = 5000
 	auto.include.jmx.reporter = true
@@ -422,72 +422,228 @@
 	ssl.truststore.type = JKS
 	value.deserializer = class org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
 
-2026-11-14T09:36:58.094-03:00  INFO 6604 --- [ms-ubicacion] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
-2026-11-14T09:36:58.094-03:00  INFO 6604 --- [ms-ubicacion] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
-2026-11-14T09:36:58.094-03:00  INFO 6604 --- [ms-ubicacion] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1794659818094
-2026-11-14T09:36:58.094-03:00  INFO 6604 --- [ms-ubicacion] [           main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Subscribed to topic(s): homefixer.tecnicos.ubicacion
-2026-11-14T09:36:58.105-03:00  INFO 6604 --- [ms-ubicacion] [           main] c.h.ubicacion.MsUbicacionApplication     : Started MsUbicacionApplication in 8.128 seconds (process running for 8.529)
-2026-11-14T09:36:58.436-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Cluster ID: VWi1Ej-hR5-sBUuujyKUoA
-2026-11-14T09:36:58.436-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Cluster ID: VWi1Ej-hR5-sBUuujyKUoA
-2026-11-14T09:36:58.436-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Cluster ID: VWi1Ej-hR5-sBUuujyKUoA
-2026-11-14T09:36:58.437-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Discovered group coordinator localhost:9094 (id: 2147483644 rack: null)
-2026-11-14T09:36:58.437-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Discovered group coordinator localhost:9094 (id: 2147483644 rack: null)
-2026-11-14T09:36:58.437-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Discovered group coordinator localhost:9094 (id: 2147483644 rack: null)
-2026-11-14T09:36:58.440-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] (Re-)joining group
-2026-11-14T09:36:58.440-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] (Re-)joining group
-2026-11-14T09:36:58.440-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] (Re-)joining group
-2026-11-14T09:36:58.469-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Request joining group due to: need to re-join with the given member-id: ms-ubicacion-2-fb3aa8ec-eeaa-40bb-b629-955ff7be2c03
-2026-11-14T09:36:58.470-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
-2026-11-14T09:36:58.470-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] (Re-)joining group
-2026-11-14T09:36:58.470-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Request joining group due to: need to re-join with the given member-id: ms-ubicacion-0-ccc1519d-128f-4232-a8b2-a2289957c688
-2026-11-14T09:36:58.470-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Request joining group due to: need to re-join with the given member-id: ms-ubicacion-1-b26e634c-11c3-4f50-9b07-5ab617d58849
-2026-11-14T09:36:58.471-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
-2026-11-14T09:36:58.471-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
-2026-11-14T09:36:58.471-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] (Re-)joining group
-2026-11-14T09:36:58.471-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] (Re-)joining group
-2026-11-14T09:37:01.493-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Successfully joined group with generation Generation{generationId=7, memberId='ms-ubicacion-0-ccc1519d-128f-4232-a8b2-a2289957c688', protocol='cooperative-sticky'}
-2026-11-14T09:37:01.498-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-0-C-1] o.a.k.c.c.i.AbstractStickyAssignor       : Final assignment of partitions to consumers: 
-{ms-ubicacion-0-ccc1519d-128f-4232-a8b2-a2289957c688=[homefixer.tecnicos.ubicacion-0], ms-ubicacion-2-fb3aa8ec-eeaa-40bb-b629-955ff7be2c03=[homefixer.tecnicos.ubicacion-2], ms-ubicacion-1-b26e634c-11c3-4f50-9b07-5ab617d58849=[homefixer.tecnicos.ubicacion-1]}
-2026-11-14T09:37:01.498-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Finished assignment for group at generation 7: {ms-ubicacion-0-ccc1519d-128f-4232-a8b2-a2289957c688=Assignment(partitions=[homefixer.tecnicos.ubicacion-0]), ms-ubicacion-2-fb3aa8ec-eeaa-40bb-b629-955ff7be2c03=Assignment(partitions=[homefixer.tecnicos.ubicacion-2]), ms-ubicacion-1-b26e634c-11c3-4f50-9b07-5ab617d58849=Assignment(partitions=[homefixer.tecnicos.ubicacion-1])}
-2026-11-14T09:37:01.500-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Successfully joined group with generation Generation{generationId=7, memberId='ms-ubicacion-2-fb3aa8ec-eeaa-40bb-b629-955ff7be2c03', protocol='cooperative-sticky'}
-2026-11-14T09:37:01.508-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Successfully joined group with generation Generation{generationId=7, memberId='ms-ubicacion-1-b26e634c-11c3-4f50-9b07-5ab617d58849', protocol='cooperative-sticky'}
-2026-11-14T09:37:01.607-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Successfully synced group in generation Generation{generationId=7, memberId='ms-ubicacion-0-ccc1519d-128f-4232-a8b2-a2289957c688', protocol='cooperative-sticky'}
-2026-11-14T09:37:01.608-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Updating assignment with
+2026-11-18T20:05:43.380-03:00  INFO 25072 --- [ms-ubicacion] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
+2026-11-18T20:05:43.380-03:00  INFO 25072 --- [ms-ubicacion] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
+2026-11-18T20:05:43.380-03:00  INFO 25072 --- [ms-ubicacion] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1795043143380
+2026-11-18T20:05:43.380-03:00  INFO 25072 --- [ms-ubicacion] [           main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Subscribed to topic(s): homefixer.tecnicos.ubicacion
+2026-11-18T20:05:43.392-03:00  INFO 25072 --- [ms-ubicacion] [           main] c.h.ubicacion.MsUbicacionApplication     : Started MsUbicacionApplication in 8.928 seconds (process running for 9.434)
+2026-11-18T20:05:43.861-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Cluster ID: VWi1Ej-hR5-sBUuujyKUoA
+2026-11-18T20:05:43.861-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Cluster ID: VWi1Ej-hR5-sBUuujyKUoA
+2026-11-18T20:05:43.861-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Cluster ID: VWi1Ej-hR5-sBUuujyKUoA
+2026-11-18T20:05:43.863-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Discovered group coordinator localhost:9094 (id: 2147483644 rack: null)
+2026-11-18T20:05:43.863-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Discovered group coordinator localhost:9094 (id: 2147483644 rack: null)
+2026-11-18T20:05:43.863-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Discovered group coordinator localhost:9094 (id: 2147483644 rack: null)
+2026-11-18T20:05:43.865-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] (Re-)joining group
+2026-11-18T20:05:43.865-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] (Re-)joining group
+2026-11-18T20:05:43.865-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] (Re-)joining group
+2026-11-18T20:05:43.885-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Request joining group due to: need to re-join with the given member-id: ms-ubicacion-2-20e779b9-07df-4a4d-be68-8e3dafb90011
+2026-11-18T20:05:43.885-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2026-11-18T20:05:43.885-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] (Re-)joining group
+2026-11-18T20:05:43.888-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Request joining group due to: need to re-join with the given member-id: ms-ubicacion-1-d80b42ea-222c-4b72-a263-869682c8de32
+2026-11-18T20:05:43.888-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Request joining group due to: need to re-join with the given member-id: ms-ubicacion-0-bf6bf7fb-fd1c-4211-bd76-7d0e137b0c22
+2026-11-18T20:05:43.888-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2026-11-18T20:05:43.888-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2026-11-18T20:05:43.888-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] (Re-)joining group
+2026-11-18T20:05:43.888-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] (Re-)joining group
+2026-11-18T20:05:46.892-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Successfully joined group with generation Generation{generationId=15, memberId='ms-ubicacion-1-d80b42ea-222c-4b72-a263-869682c8de32', protocol='cooperative-sticky'}
+2026-11-18T20:05:46.892-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Successfully joined group with generation Generation{generationId=15, memberId='ms-ubicacion-0-bf6bf7fb-fd1c-4211-bd76-7d0e137b0c22', protocol='cooperative-sticky'}
+2026-11-18T20:05:46.892-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Successfully joined group with generation Generation{generationId=15, memberId='ms-ubicacion-2-20e779b9-07df-4a4d-be68-8e3dafb90011', protocol='cooperative-sticky'}
+2026-11-18T20:05:46.898-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-2-C-1] o.a.k.c.c.i.AbstractStickyAssignor       : Final assignment of partitions to consumers: 
+{ms-ubicacion-2-20e779b9-07df-4a4d-be68-8e3dafb90011=[homefixer.tecnicos.ubicacion-2], ms-ubicacion-1-d80b42ea-222c-4b72-a263-869682c8de32=[homefixer.tecnicos.ubicacion-1], ms-ubicacion-0-bf6bf7fb-fd1c-4211-bd76-7d0e137b0c22=[homefixer.tecnicos.ubicacion-0]}
+2026-11-18T20:05:46.900-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Finished assignment for group at generation 15: {ms-ubicacion-2-20e779b9-07df-4a4d-be68-8e3dafb90011=Assignment(partitions=[homefixer.tecnicos.ubicacion-2]), ms-ubicacion-0-bf6bf7fb-fd1c-4211-bd76-7d0e137b0c22=Assignment(partitions=[homefixer.tecnicos.ubicacion-0]), ms-ubicacion-1-d80b42ea-222c-4b72-a263-869682c8de32=Assignment(partitions=[homefixer.tecnicos.ubicacion-1])}
+2026-11-18T20:05:46.908-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Successfully synced group in generation Generation{generationId=15, memberId='ms-ubicacion-0-bf6bf7fb-fd1c-4211-bd76-7d0e137b0c22', protocol='cooperative-sticky'}
+2026-11-18T20:05:46.908-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Successfully synced group in generation Generation{generationId=15, memberId='ms-ubicacion-1-d80b42ea-222c-4b72-a263-869682c8de32', protocol='cooperative-sticky'}
+2026-11-18T20:05:46.908-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Successfully synced group in generation Generation{generationId=15, memberId='ms-ubicacion-2-20e779b9-07df-4a4d-be68-8e3dafb90011', protocol='cooperative-sticky'}
+2026-11-18T20:05:46.908-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Updating assignment with
 	Assigned partitions:                       [homefixer.tecnicos.ubicacion-0]
 	Current owned partitions:                  []
 	Added partitions (assigned - owned):       [homefixer.tecnicos.ubicacion-0]
 	Revoked partitions (owned - assigned):     []
 
-2026-11-14T09:37:01.608-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Notifying assignor about the new Assignment(partitions=[homefixer.tecnicos.ubicacion-0])
-2026-11-14T09:37:01.609-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Successfully synced group in generation Generation{generationId=7, memberId='ms-ubicacion-1-b26e634c-11c3-4f50-9b07-5ab617d58849', protocol='cooperative-sticky'}
-2026-11-14T09:37:01.610-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Successfully synced group in generation Generation{generationId=7, memberId='ms-ubicacion-2-fb3aa8ec-eeaa-40bb-b629-955ff7be2c03', protocol='cooperative-sticky'}
-2026-11-14T09:37:01.610-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Updating assignment with
-	Assigned partitions:                       [homefixer.tecnicos.ubicacion-2]
-	Current owned partitions:                  []
-	Added partitions (assigned - owned):       [homefixer.tecnicos.ubicacion-2]
-	Revoked partitions (owned - assigned):     []
-
-2026-11-14T09:37:01.610-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Notifying assignor about the new Assignment(partitions=[homefixer.tecnicos.ubicacion-2])
-2026-11-14T09:37:01.610-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Updating assignment with
+2026-11-18T20:05:46.908-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Updating assignment with
 	Assigned partitions:                       [homefixer.tecnicos.ubicacion-1]
 	Current owned partitions:                  []
 	Added partitions (assigned - owned):       [homefixer.tecnicos.ubicacion-1]
 	Revoked partitions (owned - assigned):     []
 
-2026-11-14T09:37:01.610-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Notifying assignor about the new Assignment(partitions=[homefixer.tecnicos.ubicacion-1])
-2026-11-14T09:37:01.612-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Adding newly assigned partitions: homefixer.tecnicos.ubicacion-1
-2026-11-14T09:37:01.612-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Adding newly assigned partitions: homefixer.tecnicos.ubicacion-0
-2026-11-14T09:37:01.612-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Adding newly assigned partitions: homefixer.tecnicos.ubicacion-2
-2026-11-14T09:37:01.631-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Found no committed offset for partition homefixer.tecnicos.ubicacion-1
-2026-11-14T09:37:01.631-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Found no committed offset for partition homefixer.tecnicos.ubicacion-2
-2026-11-14T09:37:01.633-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Setting offset for partition homefixer.tecnicos.ubicacion-0 to the committed offset FetchPosition{offset=25, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9094 (id: 3 rack: null)], epoch=9}}
-2026-11-14T09:37:01.633-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : ubicacion-tracking: partitions assigned: [homefixer.tecnicos.ubicacion-0]
-2026-11-14T09:37:01.656-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-2-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Resetting offset for partition homefixer.tecnicos.ubicacion-2 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9093 (id: 2 rack: null)], epoch=7}}.
-2026-11-14T09:37:01.656-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-1-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Resetting offset for partition homefixer.tecnicos.ubicacion-1 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=8}}.
-2026-11-14T09:37:01.657-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-2-C-1] o.s.k.l.KafkaMessageListenerContainer    : ubicacion-tracking: partitions assigned: [homefixer.tecnicos.ubicacion-2]
-2026-11-14T09:37:01.657-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-1-C-1] o.s.k.l.KafkaMessageListenerContainer    : ubicacion-tracking: partitions assigned: [homefixer.tecnicos.ubicacion-1]
-2026-11-14T09:41:57.688-03:00  INFO 6604 --- [ms-ubicacion] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-11-14T09:45:58.561-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Node -2 disconnected.
-2026-11-14T09:45:58.561-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Node -2 disconnected.
-2026-11-14T09:45:58.687-03:00  INFO 6604 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Node -3 disconnected.
-2026-11-14T09:46:57.694-03:00  INFO 6604 --- [ms-ubicacion] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-18T20:05:46.908-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Notifying assignor about the new Assignment(partitions=[homefixer.tecnicos.ubicacion-0])
+2026-11-18T20:05:46.908-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Notifying assignor about the new Assignment(partitions=[homefixer.tecnicos.ubicacion-1])
+2026-11-18T20:05:46.908-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Updating assignment with
+	Assigned partitions:                       [homefixer.tecnicos.ubicacion-2]
+	Current owned partitions:                  []
+	Added partitions (assigned - owned):       [homefixer.tecnicos.ubicacion-2]
+	Revoked partitions (owned - assigned):     []
+
+2026-11-18T20:05:46.909-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Notifying assignor about the new Assignment(partitions=[homefixer.tecnicos.ubicacion-2])
+2026-11-18T20:05:46.911-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Adding newly assigned partitions: homefixer.tecnicos.ubicacion-1
+2026-11-18T20:05:46.911-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Adding newly assigned partitions: homefixer.tecnicos.ubicacion-0
+2026-11-18T20:05:46.911-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Adding newly assigned partitions: homefixer.tecnicos.ubicacion-2
+2026-11-18T20:05:46.919-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Found no committed offset for partition homefixer.tecnicos.ubicacion-1
+2026-11-18T20:05:46.919-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Found no committed offset for partition homefixer.tecnicos.ubicacion-2
+2026-11-18T20:05:46.921-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Setting offset for partition homefixer.tecnicos.ubicacion-0 to the committed offset FetchPosition{offset=64, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9094 (id: 3 rack: null)], epoch=10}}
+2026-11-18T20:05:46.922-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : ubicacion-tracking: partitions assigned: [homefixer.tecnicos.ubicacion-0]
+2026-11-18T20:05:46.936-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-1-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Resetting offset for partition homefixer.tecnicos.ubicacion-1 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=9}}.
+2026-11-18T20:05:46.936-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-2-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Resetting offset for partition homefixer.tecnicos.ubicacion-2 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9093 (id: 2 rack: null)], epoch=10}}.
+2026-11-18T20:05:46.937-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-1-C-1] o.s.k.l.KafkaMessageListenerContainer    : ubicacion-tracking: partitions assigned: [homefixer.tecnicos.ubicacion-1]
+2026-11-18T20:05:46.937-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-2-C-1] o.s.k.l.KafkaMessageListenerContainer    : ubicacion-tracking: partitions assigned: [homefixer.tecnicos.ubicacion-2]
+2026-11-18T20:06:17.769-03:00  INFO 25072 --- [ms-ubicacion] [nio-8085-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-18T20:06:17.769-03:00  INFO 25072 --- [ms-ubicacion] [nio-8085-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-18T20:06:17.772-03:00  INFO 25072 --- [ms-ubicacion] [nio-8085-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-11-18T20:06:18.387-03:00  INFO 25072 --- [ms-ubicacion] [nio-8085-exec-4] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 32768
+	bootstrap.servers = [localhost:9092, localhost:9093, localhost:9094]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = ms-ubicacion-1
+	compression.type = lz4
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 30000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 10
+	max.block.ms = 3000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 10000
+	retries = 10
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+2026-11-18T20:06:18.398-03:00  INFO 25072 --- [ms-ubicacion] [nio-8085-exec-4] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=ms-ubicacion-1] Instantiated an idempotent producer.
+2026-11-18T20:06:18.411-03:00  INFO 25072 --- [ms-ubicacion] [nio-8085-exec-4] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
+2026-11-18T20:06:18.411-03:00  INFO 25072 --- [ms-ubicacion] [nio-8085-exec-4] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
+2026-11-18T20:06:18.411-03:00  INFO 25072 --- [ms-ubicacion] [nio-8085-exec-4] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1795043178411
+2026-11-18T20:06:18.436-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] org.apache.kafka.clients.Metadata        : [Producer clientId=ms-ubicacion-1] Cluster ID: VWi1Ej-hR5-sBUuujyKUoA
+2026-11-18T20:06:18.436-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=ms-ubicacion-1] ProducerId set to 10001 with epoch 0
+2026-11-18T20:06:18.524-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=64
+2026-11-18T20:07:25.894-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=65
+2026-11-18T20:07:55.669-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=66
+2026-11-18T20:08:25.665-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=67
+2026-11-18T20:08:54.610-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=68
+2026-11-18T20:08:56.065-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=69
+2026-11-18T20:09:25.672-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=70
+2026-11-18T20:09:55.675-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=71
+2026-11-18T20:10:25.668-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=72
+2026-11-18T20:10:42.886-03:00  INFO 25072 --- [ms-ubicacion] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-18T20:10:55.670-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=73
+2026-11-18T20:11:25.662-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=74
+2026-11-18T20:11:55.663-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=75
+2026-11-18T20:12:25.670-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=76
+2026-11-18T20:12:55.688-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=77
+2026-11-18T20:13:21.795-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=78
+2026-11-18T20:13:25.674-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=79
+2026-11-18T20:13:55.666-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=80
+2026-11-18T20:14:25.679-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=81
+2026-11-18T20:14:44.233-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-1-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-1, groupId=ubicacion-tracking] Node -3 disconnected.
+2026-11-18T20:14:44.247-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-0, groupId=ubicacion-tracking] Node -2 disconnected.
+2026-11-18T20:14:44.250-03:00  INFO 25072 --- [ms-ubicacion] [cking-gps-2-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=ms-ubicacion-2, groupId=ubicacion-tracking] Node -2 disconnected.
+2026-11-18T20:14:55.674-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=82
+2026-11-18T20:15:25.684-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=ms-ubicacion-1] Node -1 disconnected.
+2026-11-18T20:15:25.685-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=ms-ubicacion-1] Node -3 disconnected.
+2026-11-18T20:15:26.063-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=83
+2026-11-18T20:15:42.895-03:00  INFO 25072 --- [ms-ubicacion] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-18T20:15:56.068-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=84
+2026-11-18T20:17:08.149-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=85
+2026-11-18T20:18:08.086-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=86
+2026-11-18T20:18:25.652-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=87
+2026-11-18T20:18:55.674-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=88
+2026-11-18T20:19:25.666-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=89
+2026-11-18T20:19:55.679-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=90
+2026-11-18T20:20:23.618-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=91
+2026-11-18T20:20:42.909-03:00  INFO 25072 --- [ms-ubicacion] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-18T20:20:43.829-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=92
+2026-11-18T20:20:54.070-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=93
+2026-11-18T20:21:24.076-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=94
+2026-11-18T20:21:54.078-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=95
+2026-11-18T20:22:24.075-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=96
+2026-11-18T20:22:53.422-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=97
+2026-11-18T20:23:24.083-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=98
+2026-11-18T20:23:54.064-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=99
+2026-11-18T20:25:05.073-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=100
+2026-11-18T20:25:42.911-03:00  INFO 25072 --- [ms-ubicacion] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-18T20:26:06.060-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=101
+2026-11-18T20:27:07.061-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=102
+2026-11-18T20:28:08.116-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=103
+2026-11-18T20:28:48.015-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=104
+2026-11-18T20:28:53.556-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=105
+2026-11-18T20:29:23.414-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=106
+2026-11-18T20:29:45.656-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=107
+2026-11-18T20:29:53.425-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=108
+2026-11-18T20:30:23.435-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=109
+2026-11-18T20:30:42.918-03:00  INFO 25072 --- [ms-ubicacion] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-18T20:30:53.449-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=110
+2026-11-18T20:31:23.435-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=111
+2026-11-18T20:31:53.432-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=112
+2026-11-18T20:32:23.433-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=113
+2026-11-18T20:32:53.435-03:00  INFO 25072 --- [ms-ubicacion] [ ms-ubicacion-1] c.h.shared.kafka.KafkaEventPublisher     : [KAFKA][PUBLISH] homefixer.tecnicos.ubicacion UBICACION key=1 -> partition=0 offset=114
+^C
